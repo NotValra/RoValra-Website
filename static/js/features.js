@@ -1,5 +1,5 @@
 
-export const SETTINGS_CONFIG = {
+const SETTINGS_CONFIG = {
     Marketplace: {
         title: "Marketplace",
         settings: {
