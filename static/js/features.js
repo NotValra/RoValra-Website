@@ -1,5 +1,5 @@
 
-const SETTINGS_CONFIG = {
+var SETTINGS_CONFIG = {
     Marketplace: {
         title: "Marketplace",
         settings: {
