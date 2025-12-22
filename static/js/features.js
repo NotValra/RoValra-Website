@@ -1,5 +1,5 @@
 
-var SETTINGS_CONFIG = {
+var featuresData = {
     Marketplace: {
         title: "Marketplace",
         settings: {
@@ -550,7 +550,7 @@ var SETTINGS_CONFIG = {
                 ],
                 type: "checkbox",
                 default: false,
-                exclusiveWith: ['spoofAsStudio', 'spoofAsOnline']
+                exclusiveWith: ['spoofAsStudio']
             },
             spoofAsStudio: {
                 label: "Spoof status as In Studio",
@@ -561,7 +561,7 @@ var SETTINGS_CONFIG = {
                 ],
                 type: "checkbox",
                 default: false,
-                exclusiveWith: ['spoofAsOffline', 'spoofAsOnline']
+                exclusiveWith: ['spoofAsOffline']
             },
 
 
