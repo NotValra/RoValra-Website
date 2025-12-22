@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get support for RoValra.">
+    <title>RoValra - Support</title>
+
+    <link rel="preload" href="../static/fonts/BuilderSans-Regular-400.otf" as="font"
+        type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="../static/fonts/builderExtended-bold-700_0.otf" as="font"
+        type="font/otf" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/img/GILBERT.png">
+    <style>
+        .svg-container {
+            width: min(90vw, 800px);
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .svg-container svg {
+            width: 100%;
+            height: auto;
+            transform-origin: center center;
+            transform: scale(1);
+        }
+
+        .svg-stack {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .svg-base {
+            position: relative;
+            z-index: 3;
+        }
+
+        .svg-blur-small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            filter: blur(10px);
+            opacity: 0.15;
+            transition: filter 2.5s cubic-bezier(0.19, 1, 0.22, 1),
+                opacity 2.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .svg-blur-large {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            filter: blur(20px);
+            opacity: 0.25;
+            transition: filter 3s cubic-bezier(0.19, 1, 0.22, 1),
+                opacity 3s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .support-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            background: var(--glass-background, rgba(15, 15, 15, 0.7));
+            backdrop-filter: var(--glass-backdrop-filter, blur(10px));
+            -webkit-backdrop-filter: var(--glass-backdrop-filter, blur(10px));
+            border: var(--glass-border, 1px solid rgba(255, 255, 255, 0.1));
+            border-radius: var(--border-radius-lg, 1rem);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+           
+        }
+
+        .support-card>div {
+            position: relative;
+            z-index: 1;
+        }
+
+        .support-card h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+        }
+
+        .support-card p {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .card-icon-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .support-card:hover .card-icon-wrapper {
+            transform: scale(1.1);
+        }
+
+        .card-icon-wrapper.discord {
+            background: linear-gradient(135deg, #5865F2, #7289DA);
+        }
+
+        .card-icon-wrapper.email {
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+        }
+
+        .card-icon-wrapper.faq {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .card-icon-wrapper i {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .support-card {
+                padding: 1.5rem;
+            }
+
+            .card-icon-wrapper {
+                width: 70px;
+                height: 70px;
+            }
+
+            .support-card h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .support-card {
+                padding: 1.25rem;
+            }
+
+            .card-icon-wrapper {
+                width: 60px;
+                height: 60px;
+            }
+
+            .card-icon-wrapper i {
+                font-size: 2.5rem !important;
+            }
+        }
+
+        .fancy-support-link {
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+            line-height: 1;
+            margin-top: 0.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .fancy-support-link:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .fancy-support-button {
+            position: relative;
+            width: 182px;
+            height: 64px;
+            border: none;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(255, 107.88, 107.88, 0.05) 0%, rgba(255, 162.01, 104.21, 0.05) 1%, rgba(255, 232.75, 106.66, 0.05) 47%, rgba(106.68, 255, 255, 0.05) 99%, rgba(200.17, 105.45, 255, 0.05) 100%), rgba(255, 255, 255, 0.17);
+            background-blend-mode: linear-burn, normal;
+            box-shadow: 0px 0px 13.8px rgba(255, 255, 255, 0.11) inset;
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            padding: 0;
+            font-family: 'font-bold', sans-serif;
+            font-weight: 700;
+            color: white;
+        }
+
+        .fancy-support-button:hover {
+            transform: scale(1.12);
+        }
+
+        .fancy-support-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(255, 107.88, 107.88, 0.50) 0%, rgba(255, 162.01, 104.21, 0.50) 20%, rgba(255, 232.75, 106.66, 0.50) 47%, rgba(106.68, 255, 255, 0.50) 73%, rgba(200.17, 105.45, 255, 0.50) 100%), white;
+            background-blend-mode: linear-burn, normal;
+            box-shadow: 0px 0px 13.8px rgba(255, 255, 255, 0.28) inset;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .fancy-support-button:hover::before {
+            opacity: 1;
+        }
+
+        .fancy-support-button>span {
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s ease;
+        }
+
+        .fancy-support-button:hover>span {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .fancy-support-button-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            transition: color 0.3s ease;
+        }
+
+        .fancy-support-button:hover .fancy-support-button-content {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .fancy-support-button-content i {
+            margin-right: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .external-link-indicator {
+            display: inline-block;
+            margin-left: 6px;
+            font-size: 0.8em;
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+        }
+
+        .fancy-support-button:hover .external-link-indicator {
+            opacity: 1;
+        }
+
+        .tooltip-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip-wrapper .tooltip-text {
+            visibility: hidden;
+            width: 140px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.75rem;
+            pointer-events: none;
+        }
+
+        .tooltip-wrapper:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .fancy-support-button {
+                width: 160px;
+                height: 56px;
+                border-radius: 20px;
+            }
+
+            .fancy-support-button:hover {
+                transform: scale(1.08);
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .fancy-support-button {
+                width: 160px;
+                height: 56px;
+                border-radius: 20px;
+            }
+
+            .fancy-support-button:hover {
+                transform: scale(1.08);
+            }
+        }
+
+        .faq-container {
+            background: var(--glass-background, rgba(15, 15, 15, 0.7));
+            backdrop-filter: var(--glass-backdrop-filter, blur(10px));
+            -webkit-backdrop-filter: var(--glass-backdrop-filter, blur(10px));
+            border: var(--glass-border, 1px solid rgba(255, 255, 255, 0.1));
+            border-radius: var(--border-radius-lg, 1rem);
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+         
+            transition: all 0.3s ease;
+        }
+
+        .faq-container h2 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0rem;
+            text-align: center;
+        }
+
+        .accordion-item {
+            border: none;
+            background-color: transparent;
+            margin-bottom: 0.75rem;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+
+        .accordion-item:last-child {
+            font-size: 1.3rem;
+            border: none;
+        }
+
+        .accordion-button {
+            background-color: rgba(40, 40, 40, 0.75);
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 600;
+            padding: 1.2rem 1.5rem;
+            border-radius: 16px;
+            border: none !important;
+            font-size: 1.3rem;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: rgba(255, 255, 255, 0.92);
+            background-color: rgba(40, 40, 40, 0.75);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: none;
+        }
+
+        .accordion-button::after {
+            filter: brightness(0) invert(1);
+            transition: transform 0.25s ease;
+        }
+
+        .accordion-button:hover {
+            color: rgba(255, 255, 255, 0.92);
+            background-color: rgba(40, 40, 40, 0.75);
+            transform: none;
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            padding: 1.5rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+            background-color: rgba(25, 25, 25, 0.75);
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+
+        .accordion-item:first-of-type .accordion-button {
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        .accordion-item:last-of-type .accordion-button.collapsed {
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        #faqSection {
+            transition: opacity 0.35s ease;
+            margin-bottom: 5rem;
+        }
+
+        #faqSection.collapsing {
+            visibility: visible;
+        }
+
+        #faqSection.collapse:not(.show) {
+            display: block !important;
+            height: 0 !important;
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+        }
+
+        #faqSection.collapse.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #faqSection .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .fa-chevron-down {
+            transition: transform 0.4s ease;
+        }
+
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 1.5rem;
+            }
+
+            .accordion-button {
+                padding: 1rem 1.25rem;
+                font-size: 1.2rem;
+            }
+
+            .accordion-body {
+                padding: 1.25rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .faq-container {
+                padding: 1.25rem;
+            }
+
+            .accordion-button {
+                padding: 0.9rem 1rem;
+                font-size: 1.1rem;
+            }
+
+            .accordion-body {
+                padding: 1rem;
+                font-size: 1.15rem;
+                font-weight: 500;
+            }
+
+            .faq-container h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .accordion-header {
+            margin-bottom: 0;
+        }
+
+        .accordion-collapse {
+            border: 0;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .faq-container *:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:focus-visible {
+            border-color: rgba(255, 255, 255, 0.08) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-wrapper">
+        <div class="background" id="bg"></div>
+        <div class="gradient-mask"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="d-flex d-lg-none social-icons-mobile order-3 ms-auto">
+                <a href="https://github.com/NotValra/RoValra" class="nav-link mobile-social-link" title="GitHub"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://discord.gg/GHd5cSKJRk" class="nav-link mobile-social-link" title="Discord"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse order-2" id="navbarNav">
+                <ul class="navbar-nav ms-0 text-left">
+                    <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../features/">Features</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/support">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../changelogs/">Changelogs</a></li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="https://github.com/NotValra/RoValra" class="nav-link" title="GitHub" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="https://discord.gg/GHd5cSKJRk" class="nav-link" title="Discord" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="hero-section text-center">
+            <div class="container">
+                <div class="svg-container" id="svgContainer">
+                    <div class="svg-stack" id="svgStack">
+                        <svg class="svg-base" viewBox="0 0 1640 664" preserveAspectRatio="xMidYMid meet" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m123.1 265.7c70 0 110.9-30.2 110.9-88.4 0-43.1-29.5-66.7-81.4-72.6l-46.8-5.2c-22.5-2.5-34.3-11-34.3-23.2 0-15.4 14.4-23.9 37.2-23.9 27.3 0 57.5 8.1 85.8 28.7l33.6-45.3c-30.2-21.7-68.5-35.3-117.5-35.3-59.3 0-99.5 30.2-99.5 82.5 0 35.3 22.1 66.6 84 72.9l42.7 4.1c22.9 2.5 36.5 9.2 36.5 25.4 0 18.4-17.7 28.3-51.2 28.3-37.2 0-64.8-13.6-87.7-33.8l-35.3 44.5c29.8 25.4 73.6 41.3 123 41.3zm224.7 0c30.9 0 54.1-14.8 64.1-33.5l7 1.8v28h57.5v-196.3h-57.5v124.5c-14 14-30.2 23.5-52.3 23.5-31 0-44.6-16.9-44.6-42.3v-105.7h-57.5v117.8c0 43.9 19.9 82.2 83.3 82.2zm226.5 66.3v-78.5c14 6.7 31.4 12.2 60.8 12.2 71.9 0 111.3-40.5 111.3-101.7 0-68.9-39.1-102-93.6-102-39.4 0-54.9 15.8-71.1 33.1l-7.4-2.2v-27.2h-57.4v266.3zm56.7-116.4c-26.2 0-43.8-7-56.7-14v-64.5c17.7-14.7 34.2-23.2 57.1-23.2 36.4 0 56.7 17.3 56.7 50.1 0 30.6-20.6 51.6-57.1 51.6zm203 116.4v-78.5c14 6.7 31.3 12.2 60.8 12.2 71.8 0 111.2-40.5 111.2-101.7 0-68.9-39-102-93.6-102-39.4 0-54.9 15.8-71.1 33.1l-7.3-2.2v-27.2h-57.5v266.3zm56.7-116.4c-26.1 0-43.8-7-56.7-14v-64.5c17.7-14.7 34.3-23.2 57.1-23.2 36.5 0 56.7 17.3 56.7 50.1 0 30.6-20.6 51.6-57.1 51.6zm251.3 50.1c75.5 0 115.6-40.9 115.6-101.7 0-61.1-40.1-102-115.6-102-75.9 0-116.1 40.9-116.1 102 0 60.8 40.2 101.7 116.1 101.7zm0-52c-38.7 0-57.9-19.8-57.9-49.7 0-30.2 19.2-50.1 57.9-50.1 39 0 57.4 19.9 57.4 50.1 0 29.9-18.4 49.7-57.4 49.7zm203.3 48.3v-121.2c11.8-14 28.4-25.8 57.1-25.8 15.8 0 33.9 3 46.4 6.3v-55.3c-10.7-2.6-21.7-4-33.9-4-32.4 0-51.9 12.5-62.6 35.7l-7-2.2v-29.8h-57.5v196.3zm253.1-48.3c-23.2 0-39.8-9.5-39.8-33.8v-65.2h76.6v-49h-76.6v-46.5h-57.4v46.5h-36.9v49h36.9v72.9c0 50.5 32.7 78.1 92.8 78.1 11.8 0 33.1-2.2 45.3-6.6v-53.1c-12.2 4.4-25.8 7.7-40.9 7.7z"
+                                fill="url(#paint0_linear_support)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_support" x1="25.0235" y1="21.9148" x2="864.985"
+                                    y2="853.07" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF6C6C" />
+                                    <stop offset="0.205" stop-color="#FFA268" />
+                                    <stop offset="0.47" stop-color="#FFE96B" />
+                                    <stop offset="0.73" stop-color="#6BFFFF" />
+                                    <stop offset="1" stop-color="#C869FF" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                        <svg class="svg-blur-small" width="1640" height="664" viewBox="0 0 1640 664" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode:hard-light">
+                                <path
+                                    d="m123.1 265.7c70 0 110.9-30.2 110.9-88.4 0-43.1-29.5-66.7-81.4-72.6l-46.8-5.2c-22.5-2.5-34.3-11-34.3-23.2 0-15.4 14.4-23.9 37.2-23.9 27.3 0 57.5 8.1 85.8 28.7l33.6-45.3c-30.2-21.7-68.5-35.3-117.5-35.3-59.3 0-99.5 30.2-99.5 82.5 0 35.3 22.1 66.6 84 72.9l42.7 4.1c22.9 2.5 36.5 9.2 36.5 25.4 0 18.4-17.7 28.3-51.2 28.3-37.2 0-64.8-13.6-87.7-33.8l-35.3 44.5c29.8 25.4 73.6 41.3 123 41.3zm224.7 0c30.9 0 54.1-14.8 64.1-33.5l7 1.8v28h57.5v-196.3h-57.5v124.5c-14 14-30.2 23.5-52.3 23.5-31 0-44.6-16.9-44.6-42.3v-105.7h-57.5v117.8c0 43.9 19.9 82.2 83.3 82.2zm226.5 66.3v-78.5c14 6.7 31.4 12.2 60.8 12.2 71.9 0 111.3-40.5 111.3-101.7 0-68.9-39.1-102-93.6-102-39.4 0-54.9 15.8-71.1 33.1l-7.4-2.2v-27.2h-57.4v266.3zm56.7-116.4c-26.2 0-43.8-7-56.7-14v-64.5c17.7-14.7 34.2-23.2 57.1-23.2 36.4 0 56.7 17.3 56.7 50.1 0 30.6-20.6 51.6-57.1 51.6zm203 116.4v-78.5c14 6.7 31.3 12.2 60.8 12.2 71.8 0 111.2-40.5 111.2-101.7 0-68.9-39-102-93.6-102-39.4 0-54.9 15.8-71.1 33.1l-7.3-2.2v-27.2h-57.5v266.3zm56.7-116.4c-26.1 0-43.8-7-56.7-14v-64.5c17.7-14.7 34.3-23.2 57.1-23.2 36.5 0 56.7 17.3 56.7 50.1 0 30.6-20.6 51.6-57.1 51.6zm251.3 50.1c75.5 0 115.6-40.9 115.6-101.7 0-61.1-40.1-102-115.6-102-75.9 0-116.1 40.9-116.1 102 0 60.8 40.2 101.7 116.1 101.7zm0-52c-38.7 0-57.9-19.8-57.9-49.7 0-30.2 19.2-50.1 57.9-50.1 39 0 57.4 19.9 57.4 50.1 0 29.9-18.4 49.7-57.4 49.7zm203.3 48.3v-121.2c11.8-14 28.4-25.8 57.1-25.8 15.8 0 33.9 3 46.4 6.3v-55.3c-10.7-2.6-21.7-4-33.9-4-32.4 0-51.9 12.5-62.6 35.7l-7-2.2v-29.8h-57.5v196.3zm253.1-48.3c-23.2 0-39.8-9.5-39.8-33.8v-65.2h76.6v-49h-76.6v-46.5h-57.4v46.5h-36.9v49h36.9v72.9c0 50.5 32.7 78.1 92.8 78.1 11.8 0 33.1-2.2 45.3-6.6v-53.1c-12.2 4.4-25.8 7.7-40.9 7.7z"
+                                    fill="url(#paint0_linear_support_small)" style="mix-blend-mode:plus-darker" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_support_small" x1="25.0235" y1="21.9148" x2="864.985"
+                                    y2="883.07" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF6C6C" />
+                                    <stop offset="0.205" stop-color="#FFA268" />
+                                    <stop offset="0.47" stop-color="#FFE96B" />
+                                    <stop offset="0.73" stop-color="#6BFFFF" />
+                                    <stop offset="1" stop-color="#C869FF" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                        <svg class="svg-blur-large" width="1640" height="664" viewBox="0 0 1640 664" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m123.1 265.7c70 0 110.9-30.2 110.9-88.4 0-43.1-29.5-66.7-81.4-72.6l-46.8-5.2c-22.5-2.5-34.3-11-34.3-23.2 0-15.4 14.4-23.9 37.2-23.9 27.3 0 57.5 8.1 85.8 28.7l33.6-45.3c-30.2-21.7-68.5-35.3-117.5-35.3-59.3 0-99.5 30.2-99.5 82.5 0 35.3 22.1 66.6 84 72.9l42.7 4.1c22.9 2.5 36.5 9.2 36.5 25.4 0 18.4-17.7 28.3-51.2 28.3-37.2 0-64.8-13.6-87.7-33.8l-35.3 44.5c29.8 25.4 73.6 41.3 123 41.3zm224.7 0c30.9 0 54.1-14.8 64.1-33.5l7 1.8v28h57.5v-196.3h-57.5v124.5c-14 14-30.2 23.5-52.3 23.5-31 0-44.6-16.9-44.6-42.3v-105.7h-57.5v117.8c0 43.9 19.9 82.2 83.3 82.2zm226.5 66.3v-78.5c14 6.7 31.4 12.2 60.8 12.2 71.9 0 111.3-40.5 111.3-101.7 0-68.9-39.1-102-93.6-102-39.4 0-54.9 15.8-71.1 33.1l-7.4-2.2v-27.2h-57.4v266.3zm56.7-116.4c-26.2 0-43.8-7-56.7-14v-64.5c17.7-14.7 34.2-23.2 57.1-23.2 36.4 0 56.7 17.3 56.7 50.1 0 30.6-20.6 51.6-57.1 51.6zm203 116.4v-78.5c14 6.7 31.3 12.2 60.8 12.2 71.8 0 111.2-40.5 111.2-101.7 0-68.9-39-102-93.6-102-39.4 0-54.9 15.8-71.1 33.1l-7.3-2.2v-27.2h-57.5v266.3zm56.7-116.4c-26.1 0-43.8-7-56.7-14v-64.5c17.7-14.7 34.3-23.2 57.1-23.2 36.5 0 56.7 17.3 56.7 50.1 0 30.6-20.6 51.6-57.1 51.6zm251.3 50.1c75.5 0 115.6-40.9 115.6-101.7 0-61.1-40.1-102-115.6-102-75.9 0-116.1 40.9-116.1 102 0 60.8 40.2 101.7 116.1 101.7zm0-52c-38.7 0-57.9-19.8-57.9-49.7 0-30.2 19.2-50.1 57.9-50.1 39 0 57.4 19.9 57.4 50.1 0 29.9-18.4 49.7-57.4 49.7zm203.3 48.3v-121.2c11.8-14 28.4-25.8 57.1-25.8 15.8 0 33.9 3 46.4 6.3v-55.3c-10.7-2.6-21.7-4-33.9-4-32.4 0-51.9 12.5-62.6 35.7l-7-2.2v-29.8h-57.5v196.3zm253.1-48.3c-23.2 0-39.8-9.5-39.8-33.8v-65.2h76.6v-49h-76.6v-46.5h-57.4v46.5h-36.9v49h36.9v72.9c0 50.5 32.7 78.1 92.8 78.1 11.8 0 33.1-2.2 45.3-6.6v-53.1c-12.2 4.4-25.8 7.7-40.9 7.7z"
+                                fill="url(#paint1_linear_support)" style="mix-blend-mode:plus-darker" />
+                            <defs>
+                                <linearGradient id="paint1_linear_support" x1="25.0235" y1="21.9148" x2="864.985"
+                                    y2="883.07" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF6C6C" />
+                                    <stop offset="0.205" stop-color="#FFA268" />
+                                    <stop offset="0.47" stop-color="#FFE96B" />
+                                    <stop offset="0.73" stop-color="#6BFFFF" />
+                                    <stop offset="1" stop-color="#C869FF" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <p class="lead mb-0 description-text">
+                    Get help with RoValra - find answers to common questions or contact us.
+                </p>
+            </div>
+        </header>
+
+        <section class="support-options py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 d-flex">
+                        <div class="support-card">
+                            <div>
+                                <div class="card-icon-wrapper discord">
+                                    <i class="fab fa-discord fa-3x"></i>
+                                </div>
+                                <h3>Discord Support</h3>
+                                <p>Join our Discord community for quick support and to chat and hang out.</p>
+                            </div>
+                            <a href="https://discord.gg/GHd5cSKJRk" class="fancy-support-button discord-gradient"
+                                target="_blank" rel="noopener noreferrer" aria-label="Join Discord (opens in new tab)">
+                                <span>Join Discord <i class="fas fa-external-link-alt external-link-indicator"
+                                        aria-hidden="true"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex">
+                        <div class="support-card">
+                            <div>
+                                <div class="card-icon-wrapper email">
+                                    <i class="fas fa-envelope fa-3x"></i>
+                                </div>
+                                <h3>Email Support</h3>
+                                <p>If you have any questions or issues you can contact us via email.</p>
+                            </div>
+                            <a href="mailto:rovalracontact@gmail.com" class="fancy-support-button email-gradient"
+                                aria-label="Email Us (opens email client)">
+                                <span>Email Us <i class="fas fa-envelope-open external-link-indicator"
+                                        aria-hidden="true"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex mx-auto">
+                        <div class="support-card">
+                            <div>
+                                <div class="card-icon-wrapper faq">
+                                    <i class="fas fa-question-circle fa-3x"></i>
+                                </div>
+                                <h3>Frequently Asked Questions</h3>
+                                <p>Check out our FAQ section below for quick answers to common questions.</p>
+                            </div>
+                            <button class="fancy-support-button faq-gradient tooltip-wrapper" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faqSection" aria-expanded="false"
+                                aria-controls="faqSection">
+                                <span>View FAQs <i class="fas fa-chevron-down external-link-indicator"
+                                        aria-hidden="true"></i></span>
+                                <span class="tooltip-text">Opens FAQ section below</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collapse mt-0 mb-5" id="faqSection">
+            <div class="container">
+                <div class="faq-container">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                    <i class="fas fa-shield-alt me-2"></i> Is this extension malicious?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" class="accordion-collapse collapse show"
+                                aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No. But don't just take my word for it, read the <a
+                                        href="https://github.com/NotValra/RoValra" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-info text-decoration-underline fw-bold">source code</a> yourself.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                    <i class="fab fa-firefox-browser me-2"></i> Does this extension support firefox?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No, but it might be coming at some point.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                    <i class="fas fa-ban me-2"></i> Is it bannable to use the extension?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No, This extension follows Roblox's ToS, if Roblox doesn't like a feature being
+                                    possible they can just patch it.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                    <i class="fas fa-dollar-sign me-2"></i> Is everything free?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, everything is free and will forever be free.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                    <i class="fas fa-gift me-2"></i> Why are you making a completely free extension?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    I made this extension for myself to use, and I just made it public cuz why not.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                                    <i class="fas fa-lightbulb me-2"></i> I have a feature request, where do I request
+                                    it?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can request it in my <a href="https://discord.gg/GHd5cSKJRk" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-info text-decoration-underline fw-bold">Discord Server</a>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                                    <i class="fas fa-sync-alt me-2"></i> Are you actively updating the extension?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes and no. I only really update / add stuff if I want to or something breaks. Cuz I
+                                    don't make anything out of this, so I still wanna keep it fun for me.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
+                                    <i class="fas fa-comment me-2"></i> I have feedback where can I tell you it?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can send the feedback in my <a href="https://discord.gg/GHd5cSKJRk"
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="text-info text-decoration-underline fw-bold">Discord Server</a> in the
+                                    suggestions channel.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9">
+                                    <i class="fas fa-user-cog me-2"></i> Who is developing RoValra?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Valra is the only one who is developing the extension.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading10">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10">
+                                    <i class="fas fa-toggle-off me-2"></i> There's a feature I don't want, can I disable
+                                    it?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, all features can be disabled in <a
+                                        href="https://www.roblox.com/my/account?rovalra=info#!/info" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-info text-decoration-underline fw-bold">settings</a>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-minimal">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <div class="text-light opacity-75" id="copyright-year">© 2024 RoValra. Not affiliated with Roblox Corporation.
+                </div>
+                <div>
+                    <a href="../privacy/" class="text-light opacity-75 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="../tou/" class="text-light opacity-75 text-decoration-none">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <script>
+        const config = {
+            initialBlur: 5,
+            blurDuration: 1,
+            scaleStart: 1.14,
+            scaleEnd: 1,
+            scaleDuration: 2000
+        };
+
+        const bg = document.getElementById("bg");
+        const svgBlurSmall = document.querySelector(".svg-blur-small");
+        const svgBlurLarge = document.querySelector(".svg-blur-large");
+
+        let scaleStartTime = performance.now();
+
+        if (bg) {
+            bg.style.filter = `blur(${config.initialBlur}px)`;
+            setTimeout(() => {
+                bg.style.transition = `filter ${config.blurDuration}s ease-out`;
+                bg.style.filter = `blur(0px)`;
+            }, 50);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                if (svgBlurSmall) {
+                    svgBlurSmall.style.filter = 'blur(25px)';
+                    svgBlurSmall.style.opacity = '0.35';
+                }
+                if (svgBlurLarge) {
+                    svgBlurLarge.style.filter = 'blur(75px)';
+                    svgBlurLarge.style.opacity = '0.8';
+                }
+            }, 50);
+
+            const faqSection = document.getElementById('faqSection');
+            const faqButton = document.querySelector('[data-bs-target="#faqSection"]');
+            const chevron = faqButton ? faqButton.querySelector('.fa-chevron-down') : null;
+
+            if (faqButton && faqSection) {
+                const faqCollapse = new bootstrap.Collapse(faqSection, { toggle: false });
+
+                const container = faqSection.querySelector('.container');
+                if (container) {
+                    container.style.width = '100%';
+                    container.style.maxWidth = '1320px';
+                    container.style.paddingLeft = '12px';
+                    container.style.paddingRight = '12px';
+                }
+
+                faqButton.addEventListener('click', function (event) {
+                    if (faqSection.classList.contains('show')) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        if (chevron) {
+                            chevron.style.transform = 'rotate(0deg)';
+                        }
+
+                        const supportOptionsSection = document.querySelector('.support-options');
+                        if (supportOptionsSection) {
+                            supportOptionsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                            setTimeout(() => {
+                                faqCollapse.hide();
+                            }, 1000);
+                        } else {
+                            faqCollapse.hide();
+                        }
+                    } else {
+                        const faqCollapseInstance = bootstrap.Collapse.getInstance(faqSection) || new bootstrap.Collapse(faqSection, { toggle: false });
+                        faqCollapseInstance.show();
+                    }
+                });
+
+                faqSection.addEventListener('show.bs.collapse', function () {
+                    if (chevron) {
+                        chevron.style.transform = 'rotate(180deg)';
+                    }
+                });
+
+                faqSection.addEventListener('shown.bs.collapse', function () {
+                    faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+
+                faqSection.addEventListener('hide.bs.collapse', function () {
+                });
+
+                const accordionButtons = document.querySelectorAll('#faqAccordion .accordion-button');
+                accordionButtons.forEach(button => {
+                    button.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                    });
+                });
+
+                const accordionItems = document.querySelectorAll('#faqAccordion .accordion-collapse');
+                accordionItems.forEach(item => {
+                    item.addEventListener('shown.bs.collapse', function (e) {
+                        e.stopPropagation();
+                    });
+                });
+            }
+        });
+
+        (function animate() {
+            const now = performance.now();
+            const elapsed = now - scaleStartTime;
+            const t = Math.min(elapsed / config.scaleDuration, 1);
+            const easeOut = 1 - Math.pow(1 - t, 3);
+            const scale = config.scaleStart + (config.scaleEnd - config.scaleStart) * easeOut;
+
+            if (bg) {
+                bg.style.transform = `
+                translate(-50%, -50%)
+                rotate(-15deg)
+                scale(${scale})
+              `;
+            }
+
+            requestAnimationFrame(animate);
+        })();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('copyright-year').innerHTML = `© ${new Date().getFullYear()} RoValra. Not affiliated with Roblox Corporation.`;
+        });
+    </script>
+
+</body>
+
+</html>

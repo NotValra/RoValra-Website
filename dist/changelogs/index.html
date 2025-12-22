@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay up to date with the latest updates and changes to RoValra">
+    <title>RoValra - Changelogs</title>
+    <link rel="preload" href="../static/fonts/builderExtended-bold-700_0.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/img/GILBERT.png">
+
+    <style>
+        .svg-stack {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .svg-base {
+            position: relative;
+            z-index: 3;
+        }
+
+        .svg-blur-small,
+        .svg-blur-large {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            transform-origin: center center;
+        }
+        
+        .svg-blur-small {
+            z-index: 2;
+            filter: blur(10px); 
+            opacity: 0.15; 
+            transition: filter 2.5s cubic-bezier(0.19, 1, 0.22, 1),
+                        opacity 2.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .svg-blur-large {
+            z-index: 1;
+            filter: blur(20px); 
+            opacity: 0.25; 
+            transition: filter 3s cubic-bezier(0.19, 1, 0.22, 1),
+                        opacity 3s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .svg-container {
+            width: min(90vw, 900px); 
+            max-width: 100%;         
+            padding-left: 1rem;      
+            padding-right: 1rem;     
+            margin-left: auto;       
+            margin-right: auto;      
+            position: relative;
+        }
+
+        @media (max-width: 576px) { 
+            .svg-container {
+                width: 98vw;           
+                padding-left: 0.25rem; 
+                padding-right: 0.25rem;
+            }
+        }
+
+        .svg-container svg {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-wrapper">
+        <div class="background" id="bg"></div>
+        <div class="gradient-mask"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="d-flex d-lg-none social-icons-mobile order-3 ms-auto">
+                <a href="https://github.com/NotValra/RoValra" class="nav-link mobile-social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://discord.gg/GHd5cSKJRk" class="nav-link mobile-social-link" title="Discord" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+            
+            <div class="collapse navbar-collapse order-2" id="navbarNav">
+                <ul class="navbar-nav ms-0 text-left">
+                    <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../features/">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../support/">Support</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/changelogs">Changelogs</a></li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="https://github.com/NotValra/RoValra" class="nav-link" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="https://discord.gg/GHd5cSKJRk" class="nav-link" title="Discord" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container mt-5">
+            <header class="text-center mb-5" style="padding-top: 1rem;">
+                <div class="svg-container" id="svgContainer" style="margin-top: 1rem; margin-bottom: 0.5rem;">
+                    <div class="svg-stack" id="svgStack">
+                        <svg class="svg-base" viewBox="0 0 1640 664" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m100.2 185.6c36.9 0 64.2-11.9 86.2-30.7l-26.3-29.9c-19.1 13.9-35.4 20.9-60.7 20.9-38.6 0-55.9-21.5-55.9-53.2 0-31.7 17.3-53.1 55.9-53.1 24.8 0 41.8 6.4 60.4 21.4l26.8-30.7c-21.6-19.1-49.5-30.4-86.4-30.4-59.6 0-99.3 35-99.3 92.8 0 57.8 39.7 92.9 99.3 92.9zm144.7-2.6v-87.2c9.3-8.8 19.1-16.5 36.9-16.5 25 0 33.5 12.4 33.5 30.4v73.3h40.3v-84.3c0-35.6-21.4-55.8-57-55.8-25.3 0-41.6 10.4-48.8 23.8l-4.9-1.6v-65.2h-40.2v183.1zm185.7 2.6c22.4 0 38.7-8.8 50.6-20.9l4.9 1v17.3h38.7v-77.1c0-49-34.1-63-72.5-63-26.9 0-50.1 7.8-71.2 18.6l14.2 27.4c21.4-10.6 39.9-15 57-15 21.6 0 32.5 7.2 33.8 25.3v0.5h-45.2c-40.7 0-64.2 12.6-64.2 42.8 0 24.2 19.9 43.1 53.9 43.1zm7.7-29.4c-14.9 0-22.4-4.9-22.4-14 0-8.2 6.4-13.6 24.5-13.6h45.7v7.2c-10.6 11.1-29.2 20.4-47.8 20.4zm154 26.8v-87.2c8.5-8.8 19.6-16.5 37.7-16.5 24 0 32.8 12.4 32.8 30.4v73.3h40.2v-84.3c0-30.7-16.5-55.8-57.8-55.8-27.1 0-41 10.4-48 23.8l-4.9-1.6v-19.6h-40.2v137.5zm204.8 51.6c58 0 86.4-28.4 86.4-81.8v-107.3h-40.2v15.5l-4.9 1.3c-12.4-12.1-27.1-19.4-51.1-19.4-36.1 0-64.2 24-64.2 68.4 0 38.2 21.9 66.8 68.6 66.8 22.2 0 36.6-9.3 46.7-23l4.9 1.6v4.6c0 24.8-14 39.8-46.5 39.8-19.6 0-39.9-5.7-53.6-13.2l-13.7 30.4c16.3 9.1 39 16.3 67.6 16.3zm5.9-92.1c-26 0-39.2-11.6-39.2-31.2 0-21.2 13.4-32.8 39.2-32.8 14.7 0 26.3 2.9 40.3 8.8v34.3c-9.1 11.4-22.2 20.9-40.3 20.9zm191.7 43.1c20.9 0 43.8-3.6 62.4-13.2l-13.4-29.4c-14.7 6.7-33.5 10.1-49 10.1-27.9 0-44.6-8.3-49.8-25.3h116.9v-13.7c0-42.5-25.6-71.2-77.7-71.2-47.7 0-79.4 28.7-79.4 72.8 0 41.8 31.7 69.9 90 69.9zm-10.6-112.2c24.8 0 35.6 9.8 37.4 26.5h-76.3c4.6-17.2 18.8-26.5 38.9-26.5zm139 109.6v-183.1h-40.2v183.1zm102.4 2.6c52.9 0 81-28.7 81-71.2 0-42.8-28.1-71.5-81-71.5-53.1 0-81.2 28.7-81.2 71.5 0 42.5 28.1 71.2 81.2 71.2zm0-36.4c-27.1 0-40.5-13.9-40.5-34.8 0-21.2 13.4-35.1 40.5-35.1 27.3 0 40.2 13.9 40.2 35.1 0 20.9-12.9 34.8-40.2 34.8zm169 85.4c58 0 86.4-28.4 86.4-81.8v-107.3h-40.3v15.5l-4.9 1.3c-12.3-12.1-27.1-19.4-51-19.4-36.2 0-64.3 24-64.3 68.4 0 38.2 22 66.8 68.6 66.8 22.2 0 36.7-9.3 46.7-23l4.9 1.6v4.6c0 24.8-13.9 39.8-46.4 39.8-19.6 0-40-5.7-53.6-13.2l-13.7 30.4c16.2 9.1 38.9 16.3 67.6 16.3zm5.9-92.1c-26.1 0-39.2-11.6-39.2-31.2 0-21.2 13.4-32.8 39.2-32.8 14.7 0 26.3 2.9 40.2 8.8v34.3c-9 11.4-22.2 20.9-40.2 20.9zm172.6 43.1c39.2 0 66-15.2 66-48 0-26.6-18.1-35.9-45.7-39.5l-26.3-3.1c-14.7-2-18.8-5.9-18.8-11.3 0-6.2 6.4-9.8 18.8-9.8 11.9 0 30.2 2.3 49 13.7l18.1-26.3c-21.2-13.7-46.7-18.4-68.6-18.4-36.9 0-57.5 17.1-57.5 44.7 0 22.1 15.2 36.6 49.5 40.7l17.8 2.1c16 1.8 22.7 4.6 22.7 12.4 0 8-8.3 11.8-27.4 11.8-20.6 0-39.9-6.7-52.6-16l-17.5 26.6c17.8 12.9 40.2 20.4 72.5 20.4z" fill="url(#paint0_linear_changelogs)"/>
+                            <defs>
+                              <linearGradient id="paint0_linear_changelogs" x1="25.0235" y1="21.9148" x2="864.985" y2="883.07" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6C6C"/>
+                                <stop offset="0.205" stop-color="#FFA268"/>
+                                <stop offset="0.47" stop-color="#FFE96B"/>
+                                <stop offset="0.73" stop-color="#6BFFFF"/>
+                                <stop offset="1" stop-color="#C869FF"/>
+                              </linearGradient>
+                            </defs>
+                        </svg>
+
+                        <svg class="svg-blur-small" viewBox="0 0 1640 664" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g style="mix-blend-mode:hard-light">
+                                <path d="m100.2 185.6c36.9 0 64.2-11.9 86.2-30.7l-26.3-29.9c-19.1 13.9-35.4 20.9-60.7 20.9-38.6 0-55.9-21.5-55.9-53.2 0-31.7 17.3-53.1 55.9-53.1 24.8 0 41.8 6.4 60.4 21.4l26.8-30.7c-21.6-19.1-49.5-30.4-86.4-30.4-59.6 0-99.3 35-99.3 92.8 0 57.8 39.7 92.9 99.3 92.9zm144.7-2.6v-87.2c9.3-8.8 19.1-16.5 36.9-16.5 25 0 33.5 12.4 33.5 30.4v73.3h40.3v-84.3c0-35.6-21.4-55.8-57-55.8-25.3 0-41.6 10.4-48.8 23.8l-4.9-1.6v-65.2h-40.2v183.1zm185.7 2.6c22.4 0 38.7-8.8 50.6-20.9l4.9 1v17.3h38.7v-77.1c0-49-34.1-63-72.5-63-26.9 0-50.1 7.8-71.2 18.6l14.2 27.4c21.4-10.6 39.9-15 57-15 21.6 0 32.5 7.2 33.8 25.3v0.5h-45.2c-40.7 0-64.2 12.6-64.2 42.8 0 24.2 19.9 43.1 53.9 43.1zm7.7-29.4c-14.9 0-22.4-4.9-22.4-14 0-8.2 6.4-13.6 24.5-13.6h45.7v7.2c-10.6 11.1-29.2 20.4-47.8 20.4zm154 26.8v-87.2c8.5-8.8 19.6-16.5 37.7-16.5 24 0 32.8 12.4 32.8 30.4v73.3h40.2v-84.3c0-30.7-16.5-55.8-57.8-55.8-27.1 0-41 10.4-48 23.8l-4.9-1.6v-19.6h-40.2v137.5zm204.8 51.6c58 0 86.4-28.4 86.4-81.8v-107.3h-40.2v15.5l-4.9 1.3c-12.4-12.1-27.1-19.4-51.1-19.4-36.1 0-64.2 24-64.2 68.4 0 38.2 21.9 66.8 68.6 66.8 22.2 0 36.6-9.3 46.7-23l4.9 1.6v4.6c0 24.8-14 39.8-46.5 39.8-19.6 0-39.9-5.7-53.6-13.2l-13.7 30.4c16.3 9.1 39 16.3 67.6 16.3zm5.9-92.1c-26 0-39.2-11.6-39.2-31.2 0-21.2 13.4-32.8 39.2-32.8 14.7 0 26.3 2.9 40.3 8.8v34.3c-9.1 11.4-22.2 20.9-40.3 20.9zm191.7 43.1c20.9 0 43.8-3.6 62.4-13.2l-13.4-29.4c-14.7 6.7-33.5 10.1-49 10.1-27.9 0-44.6-8.3-49.8-25.3h116.9v-13.7c0-42.5-25.6-71.2-77.7-71.2-47.7 0-79.4 28.7-79.4 72.8 0 41.8 31.7 69.9 90 69.9zm-10.6-112.2c24.8 0 35.6 9.8 37.4 26.5h-76.3c4.6-17.2 18.8-26.5 38.9-26.5zm139 109.6v-183.1h-40.2v183.1zm102.4 2.6c52.9 0 81-28.7 81-71.2 0-42.8-28.1-71.5-81-71.5-53.1 0-81.2 28.7-81.2 71.5 0 42.5 28.1 71.2 81.2 71.2zm0-36.4c-27.1 0-40.5-13.9-40.5-34.8 0-21.2 13.4-35.1 40.5-35.1 27.3 0 40.2 13.9 40.2 35.1 0 20.9-12.9 34.8-40.2 34.8zm169 85.4c58 0 86.4-28.4 86.4-81.8v-107.3h-40.3v15.5l-4.9 1.3c-12.3-12.1-27.1-19.4-51-19.4-36.2 0-64.3 24-64.3 68.4 0 38.2 22 66.8 68.6 66.8 22.2 0 36.7-9.3 46.7-23l4.9 1.6v4.6c0 24.8-13.9 39.8-46.4 39.8-19.6 0-40-5.7-53.6-13.2l-13.7 30.4c16.2 9.1 38.9 16.3 67.6 16.3zm5.9-92.1c-26.1 0-39.2-11.6-39.2-31.2 0-21.2 13.4-32.8 39.2-32.8 14.7 0 26.3 2.9 40.2 8.8v34.3c-9 11.4-22.2 20.9-40.2 20.9zm172.6 43.1c39.2 0 66-15.2 66-48 0-26.6-18.1-35.9-45.7-39.5l-26.3-3.1c-14.7-2-18.8-5.9-18.8-11.3 0-6.2 6.4-9.8 18.8-9.8 11.9 0 30.2 2.3 49 13.7l18.1-26.3c-21.2-13.7-46.7-18.4-68.6-18.4-36.9 0-57.5 17.1-57.5 44.7 0 22.1 15.2 36.6 49.5 40.7l17.8 2.1c16 1.8 22.7 4.6 22.7 12.4 0 8-8.3 11.8-27.4 11.8-20.6 0-39.9-6.7-52.6-16l-17.5 26.6c17.8 12.9 40.2 20.4 72.5 20.4z" fill="url(#paint1_linear_changelogs)" style="mix-blend-mode:plus-darker"/>
+                            </g>
+                            <defs>
+                               <linearGradient id="paint1_linear_changelogs" x1="25.0235" y1="21.9148" x2="864.985" y2="883.07" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF0000"/>
+                                <stop offset="0.205" stop-color="#FF6200"/>
+                                <stop offset="0.47" stop-color="#FFD900"/>
+                                <stop offset="0.73" stop-color="#00FFFF"/>
+                                <stop offset="1" stop-color="#A200FF"/>
+                              </linearGradient>
+                            </defs>
+                        </svg>
+
+                        <svg class="svg-blur-large" viewBox="0 0 1640 664" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m100.2 185.6c36.9 0 64.2-11.9 86.2-30.7l-26.3-29.9c-19.1 13.9-35.4 20.9-60.7 20.9-38.6 0-55.9-21.5-55.9-53.2 0-31.7 17.3-53.1 55.9-53.1 24.8 0 41.8 6.4 60.4 21.4l26.8-30.7c-21.6-19.1-49.5-30.4-86.4-30.4-59.6 0-99.3 35-99.3 92.8 0 57.8 39.7 92.9 99.3 92.9zm144.7-2.6v-87.2c9.3-8.8 19.1-16.5 36.9-16.5 25 0 33.5 12.4 33.5 30.4v73.3h40.3v-84.3c0-35.6-21.4-55.8-57-55.8-25.3 0-41.6 10.4-48.8 23.8l-4.9-1.6v-65.2h-40.2v183.1zm185.7 2.6c22.4 0 38.7-8.8 50.6-20.9l4.9 1v17.3h38.7v-77.1c0-49-34.1-63-72.5-63-26.9 0-50.1 7.8-71.2 18.6l14.2 27.4c21.4-10.6 39.9-15 57-15 21.6 0 32.5 7.2 33.8 25.3v0.5h-45.2c-40.7 0-64.2 12.6-64.2 42.8 0 24.2 19.9 43.1 53.9 43.1zm7.7-29.4c-14.9 0-22.4-4.9-22.4-14 0-8.2 6.4-13.6 24.5-13.6h45.7v7.2c-10.6 11.1-29.2 20.4-47.8 20.4zm154 26.8v-87.2c8.5-8.8 19.6-16.5 37.7-16.5 24 0 32.8 12.4 32.8 30.4v73.3h40.2v-84.3c0-30.7-16.5-55.8-57.8-55.8-27.1 0-41 10.4-48 23.8l-4.9-1.6v-19.6h-40.2v137.5zm204.8 51.6c58 0 86.4-28.4 86.4-81.8v-107.3h-40.2v15.5l-4.9 1.3c-12.4-12.1-27.1-19.4-51.1-19.4-36.1 0-64.2 24-64.2 68.4 0 38.2 21.9 66.8 68.6 66.8 22.2 0 36.6-9.3 46.7-23l4.9 1.6v4.6c0 24.8-14 39.8-46.5 39.8-19.6 0-39.9-5.7-53.6-13.2l-13.7 30.4c16.3 9.1 39 16.3 67.6 16.3zm5.9-92.1c-26 0-39.2-11.6-39.2-31.2 0-21.2 13.4-32.8 39.2-32.8 14.7 0 26.3 2.9 40.3 8.8v34.3c-9.1 11.4-22.2 20.9-40.3 20.9zm191.7 43.1c20.9 0 43.8-3.6 62.4-13.2l-13.4-29.4c-14.7 6.7-33.5 10.1-49 10.1-27.9 0-44.6-8.3-49.8-25.3h116.9v-13.7c0-42.5-25.6-71.2-77.7-71.2-47.7 0-79.4 28.7-79.4 72.8 0 41.8 31.7 69.9 90 69.9zm-10.6-112.2c24.8 0 35.6 9.8 37.4 26.5h-76.3c4.6-17.2 18.8-26.5 38.9-26.5zm139 109.6v-183.1h-40.2v183.1zm102.4 2.6c52.9 0 81-28.7 81-71.2 0-42.8-28.1-71.5-81-71.5-53.1 0-81.2 28.7-81.2 71.5 0 42.5 28.1 71.2 81.2 71.2zm0-36.4c-27.1 0-40.5-13.9-40.5-34.8 0-21.2 13.4-35.1 40.5-35.1 27.3 0 40.2 13.9 40.2 35.1 0 20.9-12.9 34.8-40.2 34.8zm169 85.4c58 0 86.4-28.4 86.4-81.8v-107.3h-40.3v15.5l-4.9 1.3c-12.3-12.1-27.1-19.4-51-19.4-36.2 0-64.3 24-64.3 68.4 0 38.2 22 66.8 68.6 66.8 22.2 0 36.7-9.3 46.7-23l4.9 1.6v4.6c0 24.8-13.9 39.8-46.4 39.8-19.6 0-40-5.7-53.6-13.2l-13.7 30.4c16.2 9.1 38.9 16.3 67.6 16.3zm5.9-92.1c-26.1 0-39.2-11.6-39.2-31.2 0-21.2 13.4-32.8 39.2-32.8 14.7 0 26.3 2.9 40.2 8.8v34.3c-9 11.4-22.2 20.9-40.2 20.9zm172.6 43.1c39.2 0 66-15.2 66-48 0-26.6-18.1-35.9-45.7-39.5l-26.3-3.1c-14.7-2-18.8-5.9-18.8-11.3 0-6.2 6.4-9.8 18.8-9.8 11.9 0 30.2 2.3 49 13.7l18.1-26.3c-21.2-13.7-46.7-18.4-68.6-18.4-36.9 0-57.5 17.1-57.5 44.7 0 22.1 15.2 36.6 49.5 40.7l17.8 2.1c16 1.8 22.7 4.6 22.7 12.4 0 8-8.3 11.8-27.4 11.8-20.6 0-39.9-6.7-52.6-16l-17.5 26.6c17.8 12.9 40.2 20.4 72.5 20.4z" fill="url(#paint2_linear_changelogs)" style="mix-blend-mode:plus-darker"/>
+                            <defs>
+                              <linearGradient id="paint2_linear_changelogs" x1="25.0235" y1="21.9148" x2="864.985" y2="883.07" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF6C6C"/>
+                                <stop offset="0.205" stop-color="#FFA268"/>
+                                <stop offset="0.47" stop-color="#FFE96B"/>
+                                <stop offset="0.73" stop-color="#6BFFFF"/>
+                                <stop offset="1" stop-color="#C869FF"/>
+                              </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <p class="lead mb-0 description-text">
+            
+                </p>
+            </header>
+
+            <section class="changelog-section" style="margin-top: 1rem;">
+                <div id="changelog-container">
+                    <div class="changelog-card mb-4"><div class="text-center p-3">Loading changelogs...</div></div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-minimal"> 
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <div class="text-light opacity-75" id="copyright-year">© 2024 RoValra. Not affiliated with Roblox Corporation.</div>
+                <div>
+                    <a href="../privacy/" class="text-light opacity-75 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="../tou/" class="text-light opacity-75 text-decoration-none">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script>
+       const config = {
+         initialBlur: 5,
+         blurDuration: 1,
+         scaleStart: 1.14,
+         scaleEnd: 1,
+         scaleDuration: 2000
+       };
+
+       const bg = document.getElementById("bg");
+       const svgBlurSmall = document.querySelector(".svg-blur-small");
+       const svgBlurLarge = document.querySelector(".svg-blur-large");
+
+       let scaleStartTime = performance.now();
+
+       if (bg) {
+           bg.style.filter = `blur(${config.initialBlur}px)`;
+            setTimeout(() => {
+              bg.style.transition = `filter ${config.blurDuration}s ease-out`;
+              bg.style.filter = `blur(0px)`;
+            }, 50);
+       }
+
+       document.addEventListener('DOMContentLoaded', () => {
+           setTimeout(() => {
+               if (svgBlurSmall) {
+                   svgBlurSmall.style.filter = 'blur(25px)';
+                   svgBlurSmall.style.opacity = '0.35';
+               }
+               if (svgBlurLarge) {
+                   svgBlurLarge.style.filter = 'blur(75px)';
+                   svgBlurLarge.style.opacity = '0.8';
+               }
+           }, 50); 
+       });
+
+       function update() {
+         const now = performance.now();
+         const elapsed = now - scaleStartTime;
+         const t = Math.min(elapsed / config.scaleDuration, 1);
+         const easeOut = 1 - Math.pow(1 - t, 3);
+         
+         if (bg) {
+             const scale = config.scaleStart + (config.scaleEnd - config.scaleStart) * easeOut;
+             bg.style.transform = `
+               translate(-50%, -50%)
+               rotate(-15deg)
+               scale(${scale})
+             `;
+         }
+
+         if (elapsed < config.scaleDuration) {
+           requestAnimationFrame(update);
+         }
+       }
+       
+       if (bg) {
+           update(); 
+       }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const changelogContainer = document.getElementById('changelog-container');
+
+            fetch('../static/json/changelogs.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    changelogContainer.innerHTML = '';
+
+                    const releases = data.releases;
+
+                    if (!Array.isArray(releases) || releases.length === 0) {
+                        throw new Error('No release data found in changelogs.json.');
+                    }
+
+                    releases.forEach((release, index) => {
+                        const card = document.createElement('div');
+                        card.className = 'changelog-card mb-4';
+
+                        let latestBadge = '';
+                        if (index === 0) {
+                            latestBadge = '<span class="latest-badge ms-2">Latest</span>';
+                        }
+
+                        const releaseBodyHTML = `<div class="release-body">${release.body}</div>`;
+
+                        card.innerHTML = `
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <h3 class="release-title mb-1 text-center text-lg-start me-lg-3">
+                                    <span class="update-text">Update</span>
+                                    <span class="release-version">${release.tag_name}</span>
+                                    ${latestBadge}
+                                </h3>
+                                <a href="${release.url}" class="release-meta-link" target="_blank" rel="noopener noreferrer">
+                                    ${new Date(release.published_date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                    <i class="fab fa-github github-icon"></i>
+                                </a>
+                            </div>
+                            <hr class="changelog-divider">
+                        `;
+                        card.innerHTML += releaseBodyHTML;
+                        changelogContainer.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    changelogContainer.innerHTML = '<div class="alert alert-danger" role="alert">Could not load changelogs. Please try again later.</div>';
+                });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('copyright-year').innerHTML = `© ${new Date().getFullYear()} RoValra. Not affiliated with Roblox Corporation.`;
+        });
+    </script>
+</body>
+</html>

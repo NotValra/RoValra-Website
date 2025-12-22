@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Use for RoValra APIs and services.">
+    <title>RoValra - Terms of Use</title>
+
+    <link rel="preload" href="../static/fonts/BuilderSans-Regular-400.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="../static/fonts/builderExtended-bold-700_0.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="icon" href="../static/img/GILBERT.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <style>
+        .tou-content {
+            background: var(--glass-background, rgba(15, 15, 15, 0.7));
+            backdrop-filter: var(--glass-backdrop-filter, blur(10px));
+            -webkit-backdrop-filter: var(--glass-backdrop-filter, blur(10px));
+            border: var(--glass-border, 1px solid rgba(255, 255, 255, 0.1));
+            border-radius: var(--border-radius-lg, 1rem);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .tou-content h1, .tou-content h2, .tou-content h3 {
+            color: var(--heading-color, #fff);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .tou-content h1 { font-size: 2rem; }
+        .tou-content h2 { font-size: 1.75rem; }
+        .tou-content h3 { font-size: 1.25rem; }
+
+        .tou-content ul {
+            padding-left: 1.5rem;
+        }
+
+        .tou-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .effective-date {
+            font-style: italic;
+            color: var(--text-muted, #aaa);
+            margin-bottom: 2rem;
+        }
+
+        .tou-content a {
+            color: #7bf0ff;
+        }
+
+        .tou-content a:hover {
+            color: #a1f5ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-wrapper">
+        <div class="background" id="bg"></div>
+        <div class="gradient-mask"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="d-flex d-lg-none social-icons-mobile order-3 ms-auto">
+                <a href="https://github.com/NotValra/RoValra" class="nav-link mobile-social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://discord.gg/GHd5cSKJRk" class="nav-link mobile-social-link" title="Discord" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+            
+            <div class="collapse navbar-collapse order-2" id="navbarNav">
+                <ul class="navbar-nav ms-0 text-left">
+                    <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../features/">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../support/">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../changelogs/">Changelogs</a></li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="https://github.com/NotValra/RoValra" class="nav-link" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="https://discord.gg/GHd5cSKJRk" class="nav-link" title="Discord" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container mt-5">            
+            <div class="tou-content">
+                <p>Loading terms of use... If this persists, the content may be updating.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-minimal">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <div class="text-light opacity-75" id="copyright-year">© 2024 RoValra. Not affiliated with Roblox Corporation.</div>
+                <div>
+                    <a href="../privacy/" class="text-light opacity-75 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="./" class="text-light opacity-75 text-decoration-none">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        const config = { initialBlur: 5, blurDuration: 1, scaleStart: 1.14, scaleEnd: 1, scaleDuration: 2000 };
+        const bg = document.getElementById("bg");
+        if (bg) {
+            bg.style.filter = `blur(${config.initialBlur}px)`;
+            setTimeout(() => {
+                bg.style.transition = `filter ${config.blurDuration}s ease-out`;
+                bg.style.filter = `blur(0px)`;
+            }, 50);
+
+            let currentScale = config.scaleStart;
+            let scaleStartTime = performance.now();
+
+            function update() {
+                const now = performance.now();
+                const elapsed = now - scaleStartTime;
+                const t = Math.min(elapsed / config.scaleDuration, 1);
+                const easeOut = 1 - Math.pow(1 - t, 3);
+
+                currentScale = config.scaleStart + (config.scaleEnd - config.scaleStart) * easeOut;
+
+                bg.style.transform = `translate(-50%, -50%) rotate(-15deg) scale(${currentScale})`;
+                requestAnimationFrame(update);
+            }
+            update();
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('copyright-year').innerHTML = `© ${new Date().getFullYear()} RoValra. Not affiliated with Roblox Corporation.`;
+
+            const touContainer = document.querySelector('.tou-content');
+            const touUrl = '../static/tou.md';
+
+            function markdownToHtml(md) {
+                return md
+                    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+                    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                    .replace(/^\* (.*$)/gim, '<li>$1</li>')
+                    .replace(/(\r\n|\n|\r){2,}/g, '<br><br>')
+                    .replace(/<\/li><br><br><li>/g, '</li><li>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/`(.*?)`/g, '<code>$1</code>')
+                    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+                    .replace(/^(?!<[hluo]|<br>|<li>)(.*)$/gim, '<p>$1</p>')
+                    .replace(/<p><(h[1-3]|ul|li)>/g, '<$1>')
+                    .replace(/<\/(h[1-3]|ul|li)><\/p>/g, '</$1>')
+                    .replace(/<p><br><\/p>/g, '')
+                    .replace(/<p><\/p>/g, '')
+                    .replace(/<li>/g, '<ul><li>')
+                    .replace(/<\/li>\n<\/ul>/g, '</li></ul>')
+                    .replace(/<\/li>(?!<li>)/g, '</li></ul>')
+                    .replace(/<\/ul><ul>/g, '');
+            }
+
+            fetch(touUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    let effectiveDate = '';
+                    const dateMatch = text.match(/\*\*Effective Date:\*\* (.*)/);
+                    if (dateMatch) {
+                        effectiveDate = `<p class="effective-date">Last updated: ${dateMatch[1]}</p>`;
+                        text = text.replace(dateMatch[0], '');
+                    }
+
+                    let html = markdownToHtml(text);
+
+                    const h1Match = html.match(/<h1>(.*?)<\/h1>/);
+                    if (h1Match) {
+                        html = html.replace(h1Match[0], `${h1Match[0]}${effectiveDate}`);
+                    }
+
+                    touContainer.innerHTML = html;
+                })
+                .catch(error => {
+                    touContainer.innerHTML = '<p>Could not load the terms of use. Please try again later or visit our <a href="https://github.com/NotValra/RoValra/blob/main/TermsOfUse.md" target="_blank" rel="noopener noreferrer">GitHub repository</a> to view it directly.</p>';
+                });
+        });
+    </script>
+</body>
+</html>
