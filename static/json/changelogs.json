@@ -1,216 +1,216 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4-beta.4",
+            "name": "v2.4-beta.4",
+            "published_date": "December 22, 2025",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Fixed inactive private servers showing in quick play</li>\n<li>Fixed quick ban / anti bot issues.</li>\n<li>private inventory checker ported.</li>\n<li>Fixed images not showing on the globe.</li>\n<li>Fixed sometimes a servers city would only be shown and not city + region</li>\n<li>Added btroblox support to hidden games</li>\n<li>Fixed roseal incompatibility with the avatar editor filters</li>\n<li>Added proper support for roseals server list</li>\n<li>Fixed some minor styling issues with the quickplay</li>\n<li>Ported sales and revenue feature as a deprecated feature</li>\n<li>Fixed avatar filters being able to load any page if the right conditions were met</li>\n<li>Made the 40% method not use a cors work aka full release ready</li>\n<li>Attempted to make closest region setting more consistently find the closest region.</li>\n<li>Added settings for the different filter options in the server list</li>\n<li>fixed thumbnail issues with outfits viewer</li>\n<li>removed cors proxy as it is not needed anymore</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.4"
+        },
+        {
+            "tag_name": "v2.4-beta.3",
+            "name": "v2.4-beta.3",
+            "published_date": "December 20, 2025",
+            "body": "<ul>\n<li><strong>Hopefully full release will be done soon</strong></li>\n<li><strong>changes</strong></li>\n<li>Fixed the globe taking a bit too long to load.</li>\n<li>Fixed the place version a server is running sometimes not being displayed</li>\n<li>Renamed the \"Anti Account Stalking\" Tab to \"Privacy\" to allow for more privacy focused features</li>\n<li>Added a streamer mode.</li>\n<li>Fixed a few misc bugs related to developing.</li>\n<li>Added a markdown test page as an easter egg out of pure boredom</li>\n<li>Added a bunch of xss safety to pretty much everything just in case.</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.3"
+        },
+        {
+            "tag_name": "v2.4-beta.2",
+            "name": "v2.4-beta.2",
+            "published_date": "December 19, 2025",
+            "body": "<ul>\n<li><strong>This fixes bugs, and adds some nice qol additions. Thanks to everyone who helped bug hunt!!</strong></li>\n<li><strong>Changes</strong></li>\n<li>Fixed margin issue in the bots text.</li>\n<li>Added root place tag to the rootplace of the subplace</li>\n<li>Fixed the quickplay being in places where it shouldn't</li>\n<li>Fixed some quickplay issues</li>\n<li>Fixed total spent api error handling.</li>\n<li>Fixed settings page z-index being a dumb high number</li>\n<li>Fixed some onboarding issues</li>\n<li>Fixed server info in the join modal getting stuck waiting for client when joining experiences you dont have access to</li>\n<li>Added improved tags to the settings page</li>\n<li>Fixed some incorrect descriptions on the settings page</li>\n<li>Added an option to always show developer settings preventing you from having to do the easter egg everytime</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.2"
+        },
+        {
+            "tag_name": "v2.4-beta.1",
+            "name": "v2.4-beta.1",
+            "published_date": "December 18, 2025",
+            "body": "<ul>\n<li><strong>v2.4 beta 1 of the big rework!!!!</strong></li>\n<li><strong>This is not the final release. 3 features are yet to be ported and please report any of the bugs  you may find.</strong></li>\n<li><strong>New features</strong></li>\n<li>Completely reworked the entire extensions optimization to future proof it.</li>\n<li>Added a thing showing what server id, region, place version etc you are joining if the data is there.</li>\n<li>Added a Private Server Quick play feature, basically allowing you to quickly join private servers by using the quick play feature.</li>\n<li>Added a donation button on peoples profiles allow you to easily donate via pls donate to someone.</li>\n<li>Added an Outfit viewer, allowing you to view the outfits a user saved.</li>\n<li>Added a total spent feature allowing you to see how much u spent on roblox in total</li>\n<li>Added anti stalking features, one that spoofs ur online status to being in studio and one that spoof you as offline. thanks to Julia for the help.</li>\n<li>Added RAP on peoples profile, and when pressed it will show you the users limiteds.</li>\n<li>Added a quick ban and anti bot feature, basically allowing you to quickly ban people in groups and quickly scan and ban possible bots in groups.</li>\n<li>Added an item filter to the avatar editor, allowing you to filter by lots of different things like effects, limited etc</li>\n<li>Added a search bar to the avatar editor allowing you to quickly search for items.</li>\n<li>Added a setting used by Roblox staff as a setting inside the developer settings, it adds a “impersonate” button a users profile.</li>\n<li>Added a setting to enable Roblox's official early access programs ui in settings, It doesnt allow you to join any programs and its just for show (developer settings)</li>\n<li>Added a way to easily save 40% Robux when buying avatar items, and 10% Robux when buying gamepasses.</li>\n<li>Added a feature that prevents the memory of Roblox Tabs from increasing over time to speed up loading and responsiveness of the site.</li>\n<li>Added a fix for the buttons to open up continue playing and Favorites and more being the width of the entire page with 90% of that is invisible to the user.</li>\n<li>Added server performance to the serverlist </li>\n<li>Added Version filters to the server list, allowing you to filter by servers running on a specific version.</li>\n<li>Added an option that simulates RoValra downtime (in developer settings)</li>\n<li>Added an option to join a different region if no server was found in the region you are trying to join.</li>\n<li>Added a way to view item dependencies like meshes and textures on items</li>\n<li>Added support for client only experience trailers.</li>\n<li>Reworked the serverlist to look way better and generally fit in with roblox more, and a bit of the filtering to work better and be easier to understand and read.</li>\n<li>Reworked the instant joiner ui to look better and fit in more with Roblox, and added game filters.</li>\n<li>Reworked multiple uis to fit in more with Roblox.</li>\n<li>Reworked the subplaces feature, the code was old and messy, and now it should work better and be easier to use.</li>\n<li>Recoded the user hidden experiences from scratch making it a lot better, and adding filters, credits to zed256 for making a proof of concept.</li>\n<li>Reworked the preferred region play button to join the server closest to you instead of you having to pick one (The old version is still there)</li>\n<li><strong>Changes</strong></li>\n<li>Changed some styling on the private server bulk set inactive / active to fit in more.</li>\n<li>Fixed the CSS fixes breaking some RoQoL features and RoSeal features</li>\n<li>Fixed the settings page not scaling with different screen sizes.</li>\n<li>Attempted to fix a crash related to the region selector.</li>\n<li>Quality of Life improvements and ui improvements and other misc changes to the settings page</li>\n<li>Countless changes to basically every script in the extension to attempt to make it more optimized and over all a smoother experience</li>\n<li>Removed the css fix for profile pictures squishing since Roblox fixed it. Instead I renamed the css fixes to site fixes and added new fixes.</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.1"
+        },
+        {
+            "tag_name": "2.3.2",
+            "name": "hotfix 2.3.2",
+            "published_date": "October 29, 2025",
+            "body": "<ul>\n<li><strong>Edit: bug fixes / updates unrelated to 2.4 will not be uploaded here to prevent confusion with the source code difference. They will only be uploaded on the chrome webstore until 2.4 is released</strong></li>\n<li><strong>changes</strong></li>\n<li>added support for the new Roblox profile ui</li>\n<li>made the instant joiner on by default</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.2"
+        },
+        {
+            "tag_name": "2.3.1.9",
+            "name": "v2.3.1.9",
+            "published_date": "October 26, 2025",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Removed servers under 1 hour of uptime saying \"new server\" since it was useless.</li>\n<li>Added quickplay support to groups.</li>\n<li>Made subplaces titles able go down to 2 lines instead of just one.</li>\n<li>Fixed a vuln (thanks to zeg for reporting)</li>\n<li><strong>Im still working on v2.4 this update just had to get pushed for safety reasons, so I decided to include some other quality of life changes with it.</strong></li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.9"
+        },
+        {
+            "tag_name": "2.3.1.8",
+            "name": "update 2.3.1.8",
+            "published_date": "September 25, 2025",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Every change is related to Roblox updating the server list API and me adding support for the change before they roll it out to everyone.</li>\n<li>Removed the user sniper since the api update will completely patch it (thank you Roblox)</li>\n<li>Removed some server list filters as they would also be effected by the api update.</li>\n<li>Added a fallback for the region selector to use RoValra's api to get servers cuz of the api change.</li>\n<li>Added a fallback for the preferred region play button to use RoValra's api to get servers cuz of the api change.</li>\n<li><strong>This update is just a quick patch, the bigger update that im working on (v2.3.2) is still being worked on.</strong></li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.8"
+        },
+        {
+            "tag_name": "2.3.1.7",
+            "name": "2.3.1.7",
+            "published_date": "August 30, 2025",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Removed a limit in the quick play and Preferred region play button that made it unable to search more than 20 pages. Completely forgot about this limit and only just noticed, now they should consistently find the region you want in bigger games.</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.7"
+        },
+        {
+            "tag_name": "2.3.1.6",
+            "name": "update 2.3.1.6",
+            "published_date": "August 27, 2025",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Disabled a feature that was accidently left on by default which was not meant to be public, and anyone who used it got refunded.</li>\n<li>Fixed some overlapping issues.</li>\n<li>Added woozynate to the credits for making fisch which is where Gilbert (the logo) is from.</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.6"
+        },
+        {
+            "tag_name": "2.3.1.5",
+            "name": "update 2.3.1.5",
+            "published_date": "August 26, 2025",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Updated the server version to support a 1 letter capitalization Roblox did 💔</li>\n<li>Updated text saying the hidden catalog was patched to saying it was unpatched (Roblox works in interesting ways)</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.5"
+        },
+        {
+            "tag_name": "v2.3.1",
+            "name": "v2.3.1",
+            "published_date": "August 25, 2025",
+            "body": "<ul>\n<li><strong>New Features</strong></li>\n<li>Added server version to the server list (shows the game version the server is running on), And recoded the script that adds that stuff.</li>\n<li>Added an export and import settings feature.</li>\n<li>Added a thing displaying the current game version and the oldest game version a server is running on.</li>\n<li>Added a RoValra badge for people who contributed to the project &lt;3</li>\n<li>Made the hidden games on profiles show more hidden games.</li>\n<li>Improved the filter by oldest / newest servers by making it way more accurate.</li>\n<li>Server Side Improvements and optimization (Backend stuff)</li>\n<li><strong>Changes</strong></li>\n<li>Made it clear to a user that some regions arent running 24/7 to prevent confusion. </li>\n<li>Disabled the Quick Private server link copying for maintenance.</li>\n<li>Fixed the hidden user experiences removing elements that it shouldnt.</li>\n<li>Fixed the Quick Play button only working on the home page, and a lot other improvements.</li>\n<li>Fixed a bug where the globe would not add new regions, and made other improvements.</li>\n<li>Fixed the Instant Join button showing on your profile.</li>\n<li>Removed the tabs permission.</li>\n<li>Small fixes to improve the extensions compatibility</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.3.1"
+        },
+        {
+            "tag_name": "v2.3",
+            "name": "v2.3",
+            "published_date": "August 21, 2025",
+            "body": "<ul>\n<li><strong>New Features</strong></li>\n<li>Added a quick play button, with preferred region support.</li>\n<li>Added custom RoValra badges for the Roblox badges section, for specific users only. If you contributed to RoValra in a meaningful way and you want a badge pls lmk.</li>\n<li>Added secret / developer settings.</li>\n<li>Added a search bar to settings.</li>\n<li>Added support for filtering by lowest player count and highest player count when using the region selector.</li>\n<li>Added support for excluding full servers when using the server uptime filter.</li>\n<li>Added bulk setting private servers inactive and active.</li>\n<li><strong>Changes</strong></li>\n<li>Made the hidden catalog disabled by default since Roblox patched it :broken_heart:</li>\n<li>Fixed the preferred Region Play Button not having full light mode support (kinda forgot about that)</li>\n<li>Fixed the Remove R6 Warning breaking stuff</li>\n<li>Fixed hidden games on groups showing up where they shouldnt.</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.3"
+        },
+        {
+            "tag_name": "2.2.31",
+            "name": "v2.2.31",
+            "published_date": "August 19, 2025",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Fixed a bug where the filters would not show if a user is using a different language than english.</li>\n<li><strong>*This fix was made very fast at like 11 pm*</strong></li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.31"
+        },
+        {
+            "tag_name": "2.2.30",
+            "name": "Updated 2.2.30",
+            "published_date": "August 17, 2025",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Updated back to v2.2.2 after the rollback.</li>\n<li>Fixed the extension not working if the RoValra servers has issues.</li>\n<li>Optimized the Servers (Backend)</li>\n</ul>",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.30"
+        },
+        {
             "tag_name": "2.2.2",
-            "name": "2.2.2",
+            "name": "Update 2.2.2",
             "published_date": "August 14, 2025",
-            "body": "<ul>\n<li><strong>I recommend downloading the RoValra.zip since the source seems to be missing some images</strong></li>\n<li><strong>New features</strong></li>\n<li><strong>Uptime Server Tracking FOR FREE YIPPEEEE!</strong></li>\n<li>Reworked the servers list, by adding region and uptime, and improving the share button and showing full server id.</li>\n<li>Completely reworked the region selector and added it to the servers list filter (and removed the old one)</li>\n<li>Added filters to the servers list allowing a user to filter by region, newest / oldest servers, random servers, Smallest servers, Available space, And servers with less than a specific amount of players.</li>\n<li>Added a CSS fix for the avatar icon on users profile sometimes squishing (happens mostly when using a lot of extensions, and this is a Roblox issue which I fixed)</li>\n<li>Made the region selector automatically support new Roblox Datacenters (Hopefully this works)</li>\n<li><strong>Changes</strong></li>\n<li>Added support for the new Roblox community experiences UI (The UI experimental and has not fully rolled out)</li>\n<li>Added support for checking hidden experiences on communities if they dont have any none hidden experiences</li>\n<li>Added support for the react avatar editor on the r6 warning feature.</li>\n<li>Replaced the old region selector with a ui letting the user know where the new one is.</li>\n<li>Fixed Hidden user games not working in the new BTRoblox update</li>\n<li>Fixed subplace tab not always getting added.</li>\n<li>Removed the R6 fix cuz it was buggy and poorly made.</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>I recommend downloading the RoValra.zip since the source seems to be missing some images</strong></li>\n<li><strong>New features</strong></li>\n<li><strong>Uptime Server Tracking FOR FREE YIPPEEEE!</strong></li>\n<li>Reworked the servers list, by adding region and uptime, and improving the share button and showing full server id. </li>\n<li>Completely reworked the region selector and added it to the servers list filter (and removed the old one)</li>\n<li>Added filters to the servers list allowing a user to filter by region, newest / oldest servers, random servers, Smallest servers, Available space, And servers with less than a specific amount of players.</li>\n<li>Added a CSS fix for the avatar icon on users profile sometimes squishing (happens mostly when using a lot of extensions, and this is a Roblox issue which I fixed)</li>\n<li>Made the region selector automatically support new Roblox Datacenters (Hopefully this works)</li>\n<li><strong>Changes</strong></li>\n<li>Added support for the new Roblox community experiences UI (The UI experimental and has not fully rolled out)</li>\n<li>Added support for checking hidden experiences on communities if they dont have any none hidden experiences</li>\n<li>Added support for the react avatar editor on the r6 warning feature.</li>\n<li>Replaced the old region selector with a ui letting the user know where the new one is.</li>\n<li>Fixed Hidden user games not working in the new BTRoblox update </li>\n<li>Fixed subplace tab not always getting added.</li>\n<li>Removed the R6 fix cuz it was buggy and poorly made.</li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.2"
         },
         {
             "tag_name": "2.2.1",
-            "name": "2.2.1",
+            "name": "Update 2.2.1",
             "published_date": "July 13, 2025",
-            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>added RoQol as an easter egg</li>\n<li>fixed an issue where RoValra were removing the edit game button.</li>\n<li>fixed preferred region loading speed</li>\n<li>fixed preferred region missing some regions.</li>\n<li>Private inventory checker showing up on the groups part if using BTRoblox and the user isnt in any groups</li>\n<li>Attempted to fix the subplace issue (again)</li>\n<li>Fixed some misinformation on the settings page, and made other stuff a bit clearer</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>added RoQol as an easter egg</li>\n<li>fixed an issue where RoValra were removing the edit game button.</li>\n<li>fixed preferred region loading speed </li>\n<li>fixed preferred region missing some regions.</li>\n<li>Private inventory checker showing up on the groups part if using BTRoblox and the user isnt in any groups</li>\n<li>Attempted to fix the subplace issue (again)</li>\n<li>Fixed some misinformation on the settings page, and made other stuff a bit clearer</li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.1"
         },
         {
             "tag_name": "2.2",
-            "name": "2.2",
+            "name": "Update 2.2",
             "published_date": "June 25, 2025",
-            "body": "<ul>\n<li><strong>New features</strong></li>\n<li>Bot detection that shows if a Roblox game is botted.</li>\n<li>Estimated unpending robux for transactions page (Should work butttttt might not i couldnt really test it.)</li>\n<li>Redesigned settings page (again)</li>\n<li>Reworks of some older features, to make them better and less ugly / buggy</li>\n<li>Finally fixing the invite feature (I HATE CODING THIS SO MUCH)</li>\n<li>Quality of life changes to the server section on game pages like the full server id showing</li>\n<li>All ban reasons, all ban durations and a little more since I randomly found them while looking for stuff.</li>\n<li>Improvements to the simple region selector ui (i got bored)</li>\n<li>region selector and preferred region gives you more information so a user doesnt think it broke</li>\n<li>RoSeal easter egg page and rokitty easter egg page</li>\n<li>Prob more I HONESTLY CANT REMEMBER IM GOING CRAZY yipe</li>\n<li><strong>Bug fixxies</strong></li>\n<li>Hopefully fixed the subplaces tab not always showing up</li>\n<li>Fixed the hidden user experiences button not showing up and the ui being bugged after a BTRoblox update (I believe)</li>\n<li>Fixed the private inventory viewer not working on light mode (No idea if this was in 2.1.9 or if it came in development)</li>\n<li>Fixed the launch logo not working with the new Roblox UI</li>\n<li>Prob more I cannot remember.</li>\n<li><strong>Server uptime is still in the works. I really wanted this update out since I have been dealing with boring and annoying stuff iykyk</strong></li>\n<li><strong>If you enjoy the update / extension please feel free to leave a 5 star review on the chrome webstore</strong></li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>New features</strong></li>\n<li>Bot detection that shows if a Roblox game is botted.</li>\n<li>Estimated unpending robux for transactions page (Should work butttttt might not i couldnt really test it.)</li>\n<li>Redesigned settings page (again)</li>\n<li>Reworks of some older features, to make them better and less ugly / buggy</li>\n<li>Finally fixing the invite feature (I HATE CODING THIS SO MUCH)</li>\n<li>Quality of life changes to the server section on game pages like the full server id showing</li>\n<li>All ban reasons, all ban durations and a little more since I randomly found them while looking for stuff.</li>\n<li>Improvements to the simple region selector ui (i got bored)</li>\n<li>region selector and preferred region gives you more information so a user doesnt think it broke</li>\n<li>RoSeal easter egg page and rokitty easter egg page</li>\n<li>Prob more I HONESTLY CANT REMEMBER IM GOING CRAZY yipe</li>\n<li><strong>Bug fixxies</strong></li>\n<li>Hopefully fixed the subplaces tab not always showing up</li>\n<li>Fixed the hidden user experiences button not showing up and the ui being bugged after a BTRoblox update (I believe)</li>\n<li>Fixed the private inventory viewer not working on light mode (No idea if this was in 2.1.9 or if it came in development)</li>\n<li>Fixed the launch logo not working with the new Roblox UI</li>\n<li>Prob more I cannot remember.</li>\n<li><strong>Server uptime is still in the works. I really wanted this update out since I have been dealing with boring and annoying stuff iykyk</strong></li>\n<li><strong>If you enjoy the update / extension please feel free to leave a 5 star review on the chrome webstore</strong></li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.2"
         },
         {
             "tag_name": "2.1.9",
-            "name": "2.1.9",
+            "name": "update 2.1.9",
             "published_date": "May 06, 2025",
-            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>A feature allowing you to change the logo that shows up when joining a game (Since people werent happy that roblox changed it to the new app icon)</li>\n<li>The server id sending to my api is also being added, which u can turn off if you want to.</li>\n<li>and bug fixes</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>A feature allowing you to change the logo that shows up when joining a game (Since people werent happy that roblox changed it to the new app icon)</li>\n<li>The server id sending to my api is also being added, which u can turn off if you want to.</li>\n<li>and bug fixes</li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.9"
         },
         {
             "tag_name": "2.1.8.5",
-            "name": "2.1.8.5",
+            "name": "Update 2.1.8.5",
             "published_date": "April 28, 2025",
-            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>bug fixes for the known issues.</li>\n<li>a setting to turn on and off Private inventory viewer (somehow completely forgot to add this)</li>\n<li>did some changes to the settings page code making it a lot easier for me to add new settings.</li>\n<li>fixed ping calulation being off on the simple region selector ui</li>\n<li>added a button on the simple ui allowing you to check regions on a different page allowing for a lot of regions</li>\n<li>changed sorting on the simple region selector to be based off the users location instead of what region has the most servers</li>\n<li>Old roblox admin panel recreation easter egg :)</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>bug fixes for the known issues.</li>\n<li>a setting to turn on and off Private inventory viewer (somehow completely forgot to add this)</li>\n<li>did some changes to the settings page code making it a lot easier for me to add new settings.</li>\n<li>fixed ping calulation being off on the simple region selector ui</li>\n<li>added a button on the simple ui allowing you to check regions on a different page allowing for a lot of regions</li>\n<li>changed sorting on the simple region selector to be based off the users location instead of what region has the most servers</li>\n<li>Old roblox admin panel recreation easter egg :)</li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.8.5"
         },
         {
             "tag_name": "2.1.8",
-            "name": "2.1.8",
+            "name": "update 2.1.8",
             "published_date": "April 24, 2025",
-            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>region selector ui rework (2 uis to choose from, 1 a lot better than the other)</li>\n<li>join preferred region play button inspired by RoQoL</li>\n<li>Tabs to the settings page, so each settings category like games, catalog etc would be under a tab.</li>\n<li>multiple easter egg pages for example roblox.com/cats will have cats.</li>\n<li>hidden catalog updating the items title if it changed while having the ability to see the original title</li>\n<li>A thing that estimates how many robux will stop pending with 24 hours or 72 hours (Best for ugc creators and only works on groups for now.)</li>\n<li>Made some improvements to the setting page code</li>\n<li>general ui improvements and bug fixes.</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>region selector ui rework (2 uis to choose from, 1 a lot better than the other)</li>\n<li>join preferred region play button inspired by RoQoL</li>\n<li>Tabs to the settings page, so each settings category like games, catalog etc would be under a tab.</li>\n<li>multiple easter egg pages for example roblox.com/cats will have cats. </li>\n<li>hidden catalog updating the items title if it changed while having the ability to see the original title</li>\n<li>A thing that estimates how many robux will stop pending with 24 hours or 72 hours (Best for ugc creators and only works on groups for now.)</li>\n<li>Made some improvements to the setting page code</li>\n<li>general ui improvements and bug fixes.</li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.8"
         },
         {
             "tag_name": "2.1.7.6",
-            "name": "2.1.7.6",
+            "name": "Update 2.1.7.6",
             "published_date": "April 18, 2025",
-            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>edit: the install issue wasnt fixed. The RoValra-main.3.zip has the fix.</li>\n<li>Fixed a very rare issue where the extension would not install correctly.</li>\n<li>Updated the hidden catalog to support my back end changes.</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>edit: the install issue wasnt fixed. The RoValra-main.3.zip has the fix.</li>\n<li>Fixed a very rare issue where the extension would not install correctly.</li>\n<li>Updated the hidden catalog to support my back end changes.</li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.7.6"
         },
         {
             "tag_name": "2.1.7.5",
-            "name": "2.1.7.5",
+            "name": "update 2.1.7.5",
             "published_date": "March 27, 2025",
-            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Removed a few lines of code that broke the entire extension :)</li>\n<li>other bug fixes :)</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Removed a few lines of code that broke the entire extension :)</li>\n<li>other bug fixes :)</li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.7.5"
         },
         {
             "tag_name": "2.1.7",
-            "name": "2.1.7",
+            "name": "Update 2.1.7",
             "published_date": "March 23, 2025",
-            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Added a hidden catalog.</li>\n<li>Reworked the private inventory checker.</li>\n<li>Added the ability check if a user with a private inventory owns a bunch of different items.</li>\n<li>Added some text on the sales and revenue if the stats are likely incorrect.</li>\n<li>prob more i cant remember...</li>\n<li><strong>Fixes</strong></li>\n<li>Fixed some settings not being on correctly when first installing.</li>\n<li>Fixed some stuff related to the hidden games on groups.</li>\n<li>Prob did more i cant remember....</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes</strong></li>\n<li>Added a hidden catalog.</li>\n<li>Reworked the private inventory checker.</li>\n<li>Added the ability check if a user with a private inventory owns a bunch of different items.</li>\n<li>Added some text on the sales and revenue if the stats are likely incorrect.</li>\n<li>prob more i cant remember...</li>\n<li><strong>Fixes</strong></li>\n<li>Fixed some settings not being on correctly when first installing.</li>\n<li>Fixed some stuff related to the hidden games on groups.</li>\n<li>Prob did more i cant remember....</li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.7"
         },
         {
             "tag_name": "pre-2.1.7",
-            "name": "Pre-2.1.7",
+            "name": "pre release 2.1.7",
             "published_date": "March 16, 2025",
-            "body": "<h1>This version is quite broken, Please only use it if the features added makes it worth it.</h1>\n<ul>\n<li>Changes:</li>\n<li>Added a hidden catalog  browser, shows Roblox made items before they are uploaded on the official catalog.</li>\n<li>Added a filter system to private inventories.</li>\n<li>This is a Pre release cuz the hidden catalog doesnt have light mode support, and cuz i wanted to see how well my server can handle more people using this, since all this stuff is really new to me.</li>\n</ul>\n",
+            "body": "<h1>This version is quite broken, Please only use it if the features added makes it worth it.</h1>\n<ul>\n<li><strong>Changes:</strong></li>\n<li><strong>Added a hidden catalog  browser, shows Roblox made items before they are uploaded on the official catalog.</strong></li>\n<li><strong>Added a filter system to private inventories.</strong></li>\n<li><strong>This is a Pre release cuz the hidden catalog doesnt have light mode support, and cuz i wanted to see how well my server can handle more people using this, since all this stuff is really new to me. </strong></li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/pre-2.1.7"
         },
         {
             "tag_name": "2.1.6.5",
-            "name": "2.1.6.5",
+            "name": "update 2.1.6.5",
             "published_date": "March 02, 2025",
-            "body": "<ul>\n<li>Changes:</li>\n<li>Updated the extension to use a new thumbnail API for the hidden experiences and subplaces since Roblox deleted the old one.</li>\n<li>Removed some permissions that was accidently left in from testing.</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes:</strong></li>\n<li><strong>Updated the extension to use a new thumbnail API for the hidden experiences and subplaces since Roblox deleted the old one.</strong></li>\n<li><strong>Removed some permissions that was accidently left in from testing.</strong></li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.6.5"
         },
         {
             "tag_name": "2.1.6",
-            "name": "2.1.6",
+            "name": "update 2.1.6",
             "published_date": "February 25, 2025",
-            "body": "<ul>\n<li>Changes:</li>\n<li>Added text letting the user know that the user sniper was patched.</li>\n<li>Fixed bugs like the user sniper not showing on install.</li>\n<li>Made basically every part of the ui fit in better with the new update to roblox.</li>\n<li>Reworked the user sniper ui (thanks to dante for letting me use a lot of inspo from his extension, <a href=\"https://chromewebstore.google.com/detail/betterblox-roblox-last-on/lplhnhhlblehjmmkcpjbojiaanbpgnpd\">betterblox</a>)</li>\n<li>and more idrk, i still got a lot to add but holy moly im tired :)</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes:</strong></li>\n<li><strong>Added text letting the user know that the user sniper was patched.</strong></li>\n<li><strong>Fixed bugs like the user sniper not showing on install.</strong></li>\n<li><strong>Made basically every part of the ui fit in better with the new update to roblox.</strong></li>\n<li><strong>Reworked the user sniper ui (thanks to dante for letting me use a lot of inspo from his extension, [betterblox](https://chromewebstore.google.com/detail/betterblox-roblox-last-on/lplhnhhlblehjmmkcpjbojiaanbpgnpd))</strong></li>\n<li><strong>and more idrk, i still got a lot to add but holy moly im tired :)</strong></li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.6"
         },
         {
             "tag_name": "2.1.5",
-            "name": "2.1.5",
+            "name": "",
             "published_date": "February 05, 2025",
-            "body": "<ul>\n<li>Changes:</li>\n<li>Added a feature allowing you to check if a user with a private inv owns a specific item.</li>\n<li>Reworked the credits page, it felt too cluttered.</li>\n<li>Changed around some stuff on the settings page, so now hidden games on groups are actually under the community category.</li>\n<li>Added a setting to toggle off the universal user sniper.</li>\n<li>Added more detailed descriptions for some of the settings.</li>\n<li>Made the universal user sniper way easier to use by making it remember the the progress it made if u accidently close it / stop it, and some - other QoL changes too.</li>\n<li>Fixes:</li>\n<li>Fixed the hidden games on groups being all weird and a bit broken.</li>\n<li>Fixed some button issues on the settings page.</li>\n<li>Fixed some UI related stuff on the settings page too.</li>\n<li>Fixed a spelling mistake (only for the chrome version cuz I found it while writing this hehe)</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes:</strong></li>\n<li>Added a feature allowing you to check if a user with a private inv owns a specific item.</li>\n<li>Reworked the credits page, it felt too cluttered.</li>\n<li>Changed around some stuff on the settings page, so now hidden games on groups are actually under the community category.</li>\n<li>Added a setting to toggle off the universal user sniper.</li>\n<li>Added more detailed descriptions for some of the settings.</li>\n<li>Made the universal user sniper way easier to use by making it remember the the progress it made if u accidently close it / stop it, and some - other QoL changes too.</li>\n<li><strong>Fixes:</strong></li>\n<li>Fixed the hidden games on groups being all weird and a bit broken.</li>\n<li>Fixed some button issues on the settings page.</li>\n<li>Fixed some UI related stuff on the settings page too.</li>\n<li>Fixed a spelling mistake (only for the chrome version cuz I found it while writing this hehe)</li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.5"
         },
         {
             "tag_name": "pre-2.1.5",
-            "name": "Pre-v2.1.5",
+            "name": "Pre-Release v2.1.5",
             "published_date": "January 29, 2025",
-            "body": "<ul>\n<li>Changes:</li>\n<li>Changed some stuff related to the credits page.</li>\n<li>Fixed some stuff erroring.</li>\n<li>Prob some more changes that i dont remember.</li>\n<li>This is a pre-release cuz I wont be uploading it to chrome</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes:</strong></li>\n<li><strong>Changed some stuff related to the credits page.</strong></li>\n<li><strong>Fixed some stuff erroring.</strong></li>\n<li><strong>Prob some more changes that i dont remember.</strong></li>\n<li><strong>This is a pre-release cuz I wont be uploading it to chrome</strong></li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/pre-2.1.5"
         },
         {
             "tag_name": "2.1.4",
-            "name": "2.1.4",
+            "name": "update 2.1.4",
             "published_date": "January 27, 2025",
-            "body": "<ul>\n<li>Changes:</li>\n<li>I changed a few things related to looks on the settings page and prob some more stuff i honestly dont remember.</li>\n<li>Im uploading this since this is the version im gonna be uploading to the chrome webstore. (Praying that the bugs are gone)</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes:</strong></li>\n<li><strong>I changed a few things related to looks on the settings page and prob some more stuff i honestly dont remember.</strong></li>\n<li><strong>Im uploading this since this is the version im gonna be uploading to the chrome webstore. (Praying that the bugs are gone)</strong></li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.4"
         },
         {
             "tag_name": "2.1.3",
-            "name": "2.1.3",
+            "name": "update 2.1.3",
             "published_date": "January 24, 2025",
-            "body": "<ul>\n<li>Changes:</li>\n<li>Fixed an issue that required manifest v2 to start Roblox up.</li>\n<li>Changed the RoValra settings button so you can now middle click it.</li>\n<li>Added light mode support for the universal user sniper (finally)</li>\n<li>Added user name support for the universal user sniper (finally)</li>\n<li>Changed the &quot;servers searched&quot; to actually show the numbers of servers searched instead of the amount of requests.</li>\n<li>Added some text that tells u if it werent able to find the user in the universal user sniper.</li>\n</ul>\n",
+            "body": "<ul>\n<li><strong>Changes:</strong></li>\n<li><strong>Fixed an issue that required manifest v2 to start Roblox up.</strong></li>\n<li><strong>Changed the RoValra settings button so you can now middle click it.</strong></li>\n<li><strong>Added light mode support for the universal user sniper (finally)</strong></li>\n<li><strong>Added user name support for the universal user sniper (finally)</strong></li>\n<li><strong>Changed the \"servers searched\" to actually show the numbers of servers searched instead of the amount of requests.</strong></li>\n<li><strong>Added some text that tells u if it werent able to find the user in the universal user sniper.</strong></li>\n</ul>",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.3"
-        },
-        {
-            "tag_name": "2.1.2",
-            "name": "2.1.2",
-            "published_date": "January 21, 2025",
-            "body": "<ul>\n<li>Changes:</li>\n<li>Made my extension not require RoSeal to launch into the actual roblox and not the microsoft store version (thanks julia for letting me know)</li>\n<li>Removed a few useless settings cuz some were broken and never really used and some where kinda useless</li>\n<li>Added credits to Julia for letting me know that my extension required RoSeal :)</li>\n<li>Also changed the universal invite link to the roblox:// deep link so it doesnt require roseal</li>\n<li><strong>I forgot to upload the source before adding this release making the source code version of this download not work</strong></li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.2"
-        },
-        {
-            "tag_name": "2.1.1.9",
-            "name": "2.1.1.9",
-            "published_date": "January 19, 2025",
-            "body": "<ul>\n<li>Changes:</li>\n<li>Fixed the universal user sniper.</li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.1.9"
-        },
-        {
-            "tag_name": "2.1.1.8",
-            "name": "2.1.1.8",
-            "published_date": "January 16, 2025",
-            "body": "<ul>\n<li>Changes</li>\n<li>Fixed the issue were the extension would open up the Microsoft version of roblox.</li>\n<li>This fix was not added on the user sniper on peoples profile since that would make it way slower making it completely useless.</li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.1.8"
-        },
-        {
-            "tag_name": "2.1.1.7",
-            "name": "2.1.1.7",
-            "published_date": "January 13, 2025",
-            "body": "<h1>changes</h1>\n<ul>\n<li>added a refresh button that fetches new servers in the region selector.</li>\n<li>And did some other stuff ig that i dont really remember</li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.1.7"
-        },
-        {
-            "tag_name": "2.1.1.6",
-            "name": "v2.1.1.6",
-            "published_date": "January 11, 2025",
-            "body": "<ul>\n<li>Changes:</li>\n<li>fixed everything i broke in the last update (I hope)</li>\n<li>and did some other stuff</li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.1.6"
-        },
-        {
-            "tag_name": "2.1.1.5",
-            "name": "v2.1.1.5",
-            "published_date": "January 10, 2025",
-            "body": "<ul>\n<li>Remove all third party apis to make google happy</li>\n<li>made people in the us finally able to use the best ping button!</li>\n<li>added a universal user sniper that does not require a user to be on ur friends list.</li>\n</ul>\n<blockquote>\n<p>[!WARNING]\nThis update broke all avatar features.</p>\n<h1>Changes:</h1>\n</blockquote>\n<h1>fixes:</h1>\n<ul>\n<li>Fixed a bug where the extension would completely break if you were running roblox on a language setting other than english.</li>\n<li>more stuff maybe idrk im tired give me a break</li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.1.5"
-        },
-        {
-            "tag_name": "2.1.1",
-            "name": "2.1.1",
-            "published_date": "January 08, 2025",
-            "body": "<h1>Changes</h1>\n<ul>\n<li>Added full light mode support.</li>\n<li>Added an overlay to display all servers in a specific region using the region selector.</li>\n<li>Completely redesigned the settings page from the ground up</li>\n<li>Added a universal server invite system that allows users to share links to their servers without requiring others to have any extensions installed. Unlike most extensions, which require the person receiving the link to also have the extension installed, this system works without that limitation.</li>\n<li>Added a Credits page in the RoValra Settings, to recognize and give credit to the people who contributed. (And an info page that has some info about the extension)</li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.1"
-        },
-        {
-            "tag_name": "2.1.1-Pre-release",
-            "name": "Pre-2.1.1",
-            "published_date": "January 06, 2025",
-            "body": "<h2>Changes:</h2>\n<ul>\n<li>Redesigned the settings page.</li>\n<li>Added a server list for the region a user picked.</li>\n<li>added some light mode support.</li>\n</ul>\n<h2>Known issues:</h2>\n<ul>\n<li>Light mode support is not anywhere near good enough.</li>\n<li>The github and discord links are not the right color.</li>\n<li>And some other css issues mostly relating to the settings page.</li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.1-Pre-release"
-        },
-        {
-            "tag_name": "2.1",
-            "name": "2.1",
-            "published_date": "January 06, 2025",
-            "body": "<h1>Changes:</h1>\n<ul>\n<li>Added the ability to view subplaces, with focus on making games with a lot of subplaces easier to view.</li>\n<li>Added a feature that allows you to remove the r6 warning when switching to r6</li>\n<li>added a feature that stops roblox from switching ur character to r15 automatically when equipping dynamic heads and will instead force it back into r6</li>\n<li>Fixed the region selector sending a bunch of requests to the roblox api.</li>\n<li>Fixed the region selector being off by default.</li>\n<li>Prob fixed more i cant remember.</li>\n<li>I recommend downloading on the <a href=\"https://chromewebstore.google.com/detail/RoValra/njcickgebhnpgmoodjdgohkclfplejli?hl=en\">google web store</a></li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1"
-        },
-        {
-            "tag_name": "2.0",
-            "name": "2.0",
-            "published_date": "January 04, 2025",
-            "body": "<h1>Google Web Store Release!</h1>\n<p><a href=\"https://chromewebstore.google.com/detail/rovalra/njcickgebhnpgmoodjdgohkclfplejli\">https://chromewebstore.google.com/detail/rovalra/njcickgebhnpgmoodjdgohkclfplejli</a></p>\n<h1>Changes</h1>\n<ul>\n<li>Remade a bunch of the UI elements</li>\n<li>Added a settings page</li>\n<li>And some other changes i cant remember tbh</li>\n</ul>\n<h1>Known issues</h1>\n<p>The region selector gets rate limited quite a bit, i already got a fix for it just waiting on google to accept it\nThe load more button might show up even if there is nothing more to load when viewing hidden games on groups</p>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.0"
-        },
-        {
-            "tag_name": "1.8",
-            "name": "1.8",
-            "published_date": "December 31, 2024",
-            "body": "<h1>Happy new years.</h1>\n<p>Heres an update to the extension. This update is meant to prepare for a chrome webstore release, by improving stuff and relying less on their party APIs.</p>\n<ul>\n<li>Completely removed any third party API that i used to get server ip and other stuff. I instead replaced it with a json file with all roblox's servers, and to replace the other third party API uses i switched to roblox's APIs, there is still one third party API but thats it.</li>\n<li>Since im not limited by the third party APIs the extension can now show servers in the US per state instead of just being one.</li>\n<li>Made the extension store servers you found for 3 hours, so you can have the highest chance possible of finding the server with the best ping when using the &quot;best ping&quot; feature.</li>\n<li>Also did some UI changes.</li>\n</ul>\n<blockquote>\n<p>[!WARNING]\nDon't download this version, if u care about it being stable. I left in a lot of test code and broke some stuff. If you want a stable version use <a href=\"https://github.com/NotValra/RoValra/releases/tag/1.7\">1.7</a></p>\n<h2>Changes</h2>\n</blockquote>\n<h2>Known incompatibles</h2>\n<ul>\n<li>Since I dont want to use third party APIs the limitation of the best ping feature not working for people in the US is still a thing. Im planning on allowing the user to input their state manually in the future.</li>\n</ul>\n<h2>Known issues</h2>\n<ul>\n<li>I accidently left in my test code relating to updating so it wont show the overlay and instead it will just open a broken link. Luckily im expecting the next update to be on the Chrome webstore, meaning you shouldnt see the issue</li>\n</ul>\n<h2>Credits</h2>\n<p>7_lz helped me a lot with the process of switching away from third party APIs by providing me with the json and just general help</p>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/1.8"
-        },
-        {
-            "tag_name": "1.7",
-            "name": "1.7",
-            "published_date": "December 27, 2024",
-            "body": "<h1>Changes</h1>\n<ul>\n<li>Added a user sniper (explained in detail <a href=\"https://github.com/NotValra/RoValra?tab=readme-ov-file#features\">here</a>)</li>\n<li>Made the region searcher not require RoQoL (finally)</li>\n<li>Change the file locations to folders to make it easier for people to edit and for me to edit too 😭</li>\n<li>If you notice any bugs please report them to me on either discord or github.</li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/1.7"
-        },
-        {
-            "tag_name": "1.6.5",
-            "name": "1.6.5",
-            "published_date": "December 26, 2024",
-            "body": "<h1>Changes</h1>\n<ul>\n<li>Made some improvements to the regions ui</li>\n<li>Added a &quot;Best Ping&quot; button which will automatically find the server closest to you with the best ping + fps so no lag at all</li>\n<li><em>Might not be the best best ping bc roblox puts more resources into more important servers so for example in my case im closer to nl but the de server gives me better ping</em></li>\n<li>If you are located in the USA using the &quot;Best ping&quot; button wont work and instead puts u in FR servers (for me at least)</li>\n<li>So bc of that i added a warning that lets you know if you are located in the USA</li>\n<li><em>This is a limitation with the IP geolocation api i use</em></li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/1.6.5"
-        },
-        {
-            "tag_name": "1.6.1",
-            "name": "1.6.1",
-            "published_date": "December 26, 2024",
-            "body": "<h1>Features</h1>\n<ul>\n<li><strong>Added a notification that notifies the user when a new update releases (Can be turned off)</strong></li>\n<li><strong>If you have any ideas you want me to add shoot me a dm on discord: Valra</strong></li>\n</ul>\n<h1><strong>Fixes:</strong></h1>\n<ul>\n<li><strong>Fixed completely breaking the region selected in 1.6</strong></li>\n<li><em>Also the source code part of this might be the old version. I acidently updated the files after making this release so just make sure u are downloading the RoValra file</em></li>\n</ul>\n",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/1.6.1"
         }
     ],
     "error_message": null,
-    "last_updated": "2025-08-14T20:51:31.808140Z"
+    "last_updated": "2025-12-22T15:31:14.000Z"
 }
