@@ -637,7 +637,7 @@
                                 <p>Join our Discord community for quick support and to chat and hang out.</p>
                             </div>
                             <a href="https://discord.gg/GHd5cSKJRk" class="fancy-support-button discord-gradient"
-                                target="_blank" rel="noopener noreferrer" aria-label="Join Discord (opens in new tab)">
+                                target="_blank" rel="noopener noreferrer" aria-label="Join Discord">
                                 <span>Join Discord <i class="fas fa-external-link-alt external-link-indicator"
                                         aria-hidden="true"></i></span>
                             </a>
@@ -653,8 +653,8 @@
                                 <h3>Email Support</h3>
                                 <p>If you have any questions or issues you can contact us via email.</p>
                             </div>
-                            <a href="mailto:rovalracontact@gmail.com" class="fancy-support-button email-gradient"
-                                aria-label="Email Us (opens email client)">
+                            <a href="#" id="email-support-btn" class="fancy-support-button email-gradient"
+                                aria-label="Email Us">
                                 <span>Email Us <i class="fas fa-envelope-open external-link-indicator"
                                         aria-hidden="true"></i></span>
                             </a>
@@ -687,7 +687,7 @@
             <div class="container">
                 <div class="faq-container">
                     <h2>Frequently Asked Questions</h2>
-                    <div class="accordion" id="faqAccordion">
+                    <div class="accordion" id="faqAccordion" style="margin-top: 5px;">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="faqHeading1">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -710,7 +710,7 @@
                             <h2 class="accordion-header" id="faqHeading2">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                                    <i class="fab fa-firefox-browser me-2"></i> Does this extension support firefox?
+                                    <i class="fab fa-firefox-browser me-2"></i> Does this extension support Firefox?
                                 </button>
                             </h2>
                             <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
@@ -852,6 +852,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading11">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapse11" aria-expanded="false" aria-controls="faqCollapse11">
+                                    <i class="fas fa-check me-2"></i> Does RoValra work with other extensions?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse11" class="accordion-collapse collapse" aria-labelledby="faqHeading11"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes RoValra officially supports all of these extensions RoPro, BTRoblox, BetterBlox v1, RoGold, RoSeal and RoQoL. And other extensions not listed are likely to still work.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -907,6 +921,14 @@
                     svgBlurLarge.style.opacity = '0.8';
                 }
             }, 50);
+
+            const emailBtn = document.getElementById('email-support-btn');
+            if (emailBtn) {
+                emailBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = atob('bWFpbHRvOnJvdmFscmFjb250YWN0QGdtYWlsLmNvbQ==');
+                });
+            }
 
             const faqSection = document.getElementById('faqSection');
             const faqButton = document.querySelector('[data-bs-target="#faqSection"]');
