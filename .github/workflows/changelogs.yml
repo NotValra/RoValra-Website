@@ -1,0 +1,34 @@
+name: Update Changelogs
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run update script
+        run: python main.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add static/json/changelogs.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update changelogs [skip ci]" && git push)
