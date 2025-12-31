@@ -1,6 +1,13 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.1",
+            "name": "v2.4.1",
+            "published_date": "December 27, 2025",
+            "body": "New Features\r\n- Added total Earned (Thanks to Kanibal02 on github for contributing)\r\n- Added more sorting to Hidden Experiences on groups and profiles (Thanks to Zed128 for contributing)\r\n- Added Roblox API documentation that documents apis the extension found while you were using Roblox (Developer setting)\r\n- Added Quick outfit switching to game pages (off by default)\r\n\r\nFixes / changes\r\n- Fixed a setting being out of sync\r\n- Reduced the file size.\r\n- Fixed onboarding not scaling with different screen sizes\r\n- Fixed sorting by recently updated not sorting correctly (Thanks to Zed128 for contributing)\r\n- Fixed badges not supporting legacy profile",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.1"
+        },
+        {
             "tag_name": "v2.4",
             "name": "Update 2.4",
             "published_date": "December 24, 2025",
@@ -202,15 +209,8 @@
             "published_date": "January 29, 2025",
             "body": "Changes:\r\nChanged some stuff related to the credits page.\r\nFixed some stuff erroring.\r\nProb some more changes that i dont remember.\r\n\r\nThis is a pre-release cuz I wont be uploading it to chrome",
             "url": "https://github.com/NotValra/RoValra/releases/tag/pre-2.1.5"
-        },
-        {
-            "tag_name": "2.1.4",
-            "name": "update 2.1.4",
-            "published_date": "January 27, 2025",
-            "body": "Changes:\r\nI changed a few things related to looks on the settings page and prob some more stuff i honestly dont remember.\r\nIm uploading this since this is the version im gonna be uploading to the chrome webstore. (Praying that the bugs are gone)",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.4"
         }
     ],
     "error_message": null,
-    "last_updated": "2025-12-27T01:27:39.057245Z"
+    "last_updated": "2025-12-30T01:39:34.782412Z"
 }
