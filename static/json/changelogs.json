@@ -1,6 +1,13 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.2",
+            "name": "v2.4.2",
+            "published_date": "December 30, 2025",
+            "body": "This is gonna be the last update for a little while now.\r\n\r\nAlso it is rovalras anniversary today yay\r\n \r\nNew stuff\r\n- Added a site fix for experience title text getting cut off at the top and bottom on profiles.\r\n- Added a thing making \"What am i joining\" close when clicking the background, which is on by default but can be disabled.\r\nFixes/Changes\r\n- Fixed there not being a download button in \"What Am I joining\" if you dont have the client installed\r\n- Fixed inventory checker loading on pages it shouldnt\r\n- Fixed bundles not working with the 40% method\r\n- Added update detection that tells you if your 40% method game is outdated.\r\n- Added a little review reminder to the popup when pressing the extensions logo.\r\n- Started changing all color stuff to variables like how it should have been from the start\r\n- Fixed searching in settings not working",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.2"
+        },
+        {
             "tag_name": "v2.4.1",
             "name": "v2.4.1",
             "published_date": "December 27, 2025",
@@ -202,15 +209,8 @@
             "published_date": "February 05, 2025",
             "body": "Changes:\r\n- Added a feature allowing you to check if a user with a private inv owns a specific item.\r\n- Reworked the credits page, it felt too cluttered.\r\n- Changed around some stuff on the settings page, so now hidden games on groups are actually under the community category.\r\n- Added a setting to toggle off the universal user sniper.\r\n- Added more detailed descriptions for some of the settings.\r\n- Made the universal user sniper way easier to use by making it remember the the progress it made if u accidently close it / stop it, and some - other QoL changes too.\r\n\r\nFixes:\r\n- Fixed the hidden games on groups being all weird and a bit broken.\r\n- Fixed some button issues on the settings page.\r\n- Fixed some UI related stuff on the settings page too.\r\n- Fixed a spelling mistake (only for the chrome version cuz I found it while writing this hehe)",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.5"
-        },
-        {
-            "tag_name": "pre-2.1.5",
-            "name": "Pre-Release v2.1.5",
-            "published_date": "January 29, 2025",
-            "body": "Changes:\r\nChanged some stuff related to the credits page.\r\nFixed some stuff erroring.\r\nProb some more changes that i dont remember.\r\n\r\nThis is a pre-release cuz I wont be uploading it to chrome",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/pre-2.1.5"
         }
     ],
     "error_message": null,
-    "last_updated": "2025-12-30T01:39:34.782412Z"
+    "last_updated": "2025-12-31T01:40:13.355674Z"
 }
