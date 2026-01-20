@@ -1,6 +1,13 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.3",
+            "name": "v2.4.3",
+            "published_date": "January 19, 2026",
+            "body": "Additions\r\n- Added server Ip and Datacenter id to the server list (off by default)\r\n- Added a pop up asking for a review, which is made in a way where it doesnt force you to leave a review and it isnt annoying.\r\n\r\nchanges\r\n- Removed private inventory checker as Roblox patched it.\r\n- Fixed streamer mode robux hiding not hiding robux in places where it should have\r\n- Made the donation button not show on your profile.\r\n- Fixed possible issues where the extension would try and get data before the website was done loading\r\n- Changed the \"player count unknown\" when using the region filter to random thumbnails with a tooltip explaining\r\n- Changed the subplace tab to be on the same line as other tabs instead of below\r\n- Attempted to improve the join closest server to be way more consistent.\r\n- Removed the \"Start server\" when no server is running and instead made it start automatically.\r\n- Fixed quick outfits not handling width of the ui being too small correctly\r\ndevelopment changes\r\n- moved most the css to different files for maintainability.\r\n- made configs for development making it easier to find stuff that should be done differently or stuff like unsafe innerhtml\r\n- made a new sanitizer that uses dompurify + some custom logic to make it easier to add and use.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.3"
+        },
+        {
             "tag_name": "v2.4.2",
             "name": "v2.4.2",
             "published_date": "December 30, 2025",
@@ -202,15 +209,8 @@
             "published_date": "February 25, 2025",
             "body": "Changes:\r\nAdded text letting the user know that the user sniper was patched.\r\nFixed bugs like the user sniper not showing on install.\r\nMade basically every part of the ui fit in better with the new update to roblox.\r\nReworked the user sniper ui (thanks to dante for letting me use a lot of inspo from his extension, [betterblox](https://chromewebstore.google.com/detail/betterblox-roblox-last-on/lplhnhhlblehjmmkcpjbojiaanbpgnpd))\r\nand more idrk, i still got a lot to add but holy moly im tired :)",
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.6"
-        },
-        {
-            "tag_name": "2.1.5",
-            "name": "",
-            "published_date": "February 05, 2025",
-            "body": "Changes:\r\n- Added a feature allowing you to check if a user with a private inv owns a specific item.\r\n- Reworked the credits page, it felt too cluttered.\r\n- Changed around some stuff on the settings page, so now hidden games on groups are actually under the community category.\r\n- Added a setting to toggle off the universal user sniper.\r\n- Added more detailed descriptions for some of the settings.\r\n- Made the universal user sniper way easier to use by making it remember the the progress it made if u accidently close it / stop it, and some - other QoL changes too.\r\n\r\nFixes:\r\n- Fixed the hidden games on groups being all weird and a bit broken.\r\n- Fixed some button issues on the settings page.\r\n- Fixed some UI related stuff on the settings page too.\r\n- Fixed a spelling mistake (only for the chrome version cuz I found it while writing this hehe)",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.5"
         }
     ],
     "error_message": null,
-    "last_updated": "2026-01-19T00:24:19.982637Z"
+    "last_updated": "2026-01-20T00:22:20.749324Z"
 }
