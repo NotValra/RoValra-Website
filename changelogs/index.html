@@ -73,6 +73,10 @@
             width: 100%;
             height: auto;
         }
+
+        .changelog-card {
+            border-radius: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -115,7 +119,7 @@
     </nav>
 
     <main class="main-content">
-        <div class="container mt-5">
+        <div class="container mt-5" style="max-width: 1140px;">
             <header class="text-center mb-5" style="padding-top: 1rem;">
                 <div class="svg-container" id="svgContainer" style="margin-top: 1rem; margin-bottom: 0.5rem;">
                     <div class="svg-stack" id="svgStack">
@@ -282,6 +286,16 @@
 
                         const releaseBodyHTML = `<div class="release-body">${marked.parse(release.body || '')}</div>`;
 
+                        let chromePill = '';
+                        if (release.chrome_release_date) {
+                            chromePill = `
+                                <a href="${release.chrome_url}" class="release-meta-link me-2" target="_blank" rel="noopener noreferrer" style="background-color: #1a73e8; border-color: #1a73e8; color: white; display: inline-flex; align-items: center;" title="Released on Chrome Web Store">
+                                    ${release.chrome_release_date}
+                                    <i class="fab fa-chrome ms-2" style="position: relative; top: 0px;"></i>
+                                </a>
+                            `;
+                        }
+
                         card.innerHTML = `
                             <div class="d-flex justify-content-between align-items-center flex-wrap">
                                 <h3 class="release-title mb-1 text-center text-lg-start me-lg-3">
@@ -289,10 +303,13 @@
                                     <span class="release-version">${release.tag_name}</span>
                                     ${latestBadge}
                                 </h3>
-                                <a href="${release.url}" class="release-meta-link" target="_blank" rel="noopener noreferrer">
-                                    ${new Date(release.published_date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                                    <i class="fab fa-github github-icon"></i>
-                                </a>
+                                <div class="d-flex align-items-center">
+                                    ${chromePill}
+                                    <a href="${release.url}" class="release-meta-link" target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                                        ${new Date(release.published_date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                        <i class="fab fa-github github-icon ms-2"></i>
+                                    </a>
+                                </div>
                             </div>
                             <hr class="changelog-divider">
                         `;

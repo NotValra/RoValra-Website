@@ -1,3 +1,7 @@
+// Settings config (not developer settings)
+
+
+
 var featuresData = {
     Marketplace: {
         title: "Marketplace",
@@ -271,6 +275,12 @@ var featuresData = {
                         description: ["This shows indicators for servers you cannot join like if someone is playing in a private server"],
                         type: "checkbox",
                         default: true
+                    },
+                    EnableDatacenterandId: {
+                        label: "Show Datacenter ID and Server Ip",
+                        description: "This shows the Datacenter ID server Ip of servers in the server list.",
+                        type: "checkbox",
+                        default: false,
                     }
                 }
 
@@ -320,12 +330,7 @@ var featuresData = {
                 type: "checkbox",
                 default: true
             },
-            privateInventoryEnabled: {
-                label: "Private Inventory Viewer",
-                description: ["This allows you to view a user's private inventory by scanning a lot of items at once to check if they own them."],
-                type: "checkbox",
-                default: true,
-            },
+
             donationbuttonEnable: {
                 label: "Donation Button",
                 description: ["This will add a donation button to a user's profile, which allows you to donate to someone via PLS Donate"],
