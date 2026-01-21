@@ -209,6 +209,31 @@
         .hero-section {
             overflow: visible !important;
         }
+
+        .rovalra-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.5;
+            cursor: default;
+        }
+
+        .rovalra-pill.experimental {
+            background-color: rgb(2, 170, 81);
+            color: #FFFFFF;
+        }
+
+        .rovalra-pill.beta {
+            background-color: rgb(51, 95, 255);
+            color: #FFFFFF;
+        }
+
+        .rovalra-pill.deprecated {
+            background-color: rgb(220, 53, 69);
+            color: #FFFFFF;
+        }
     </style>
 </head>
 
@@ -416,7 +441,33 @@
 
                             const featureTitle = document.createElement('div');
                             featureTitle.className = 'feature-title';
-                            featureTitle.textContent = feature.label.replace(/^Enable\s+/i, '');
+
+                            const titleText = document.createElement('span');
+                            titleText.textContent = feature.label.replace(/^Enable\s+/i, '');
+                            featureTitle.appendChild(titleText);
+
+                            if (feature.experimental) {
+                                const pill = document.createElement('span');
+                                pill.className = 'rovalra-pill experimental ms-2';
+                                pill.textContent = 'Experimental';
+                                if (typeof feature.experimental === 'string') pill.title = feature.experimental;
+                                featureTitle.appendChild(pill);
+                            }
+                            if (feature.deprecated) {
+                                const pill = document.createElement('span');
+                                pill.className = 'rovalra-pill deprecated ms-2';
+                                pill.textContent = 'Deprecated';
+                                if (typeof feature.deprecated === 'string') pill.title = feature.deprecated;
+                                featureTitle.appendChild(pill);
+                            }
+                            if (feature.beta) {
+                                const pill = document.createElement('span');
+                                pill.className = 'rovalra-pill beta ms-2';
+                                pill.textContent = 'Beta';
+                                if (typeof feature.beta === 'string') pill.title = feature.beta;
+                                featureTitle.appendChild(pill);
+                            }
+
                             featureContentWrapper.appendChild(featureTitle);
 
                             const description = feature.description || [];
