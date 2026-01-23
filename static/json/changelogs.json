@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.4",
+            "name": "v2.4.4",
+            "published_date": "January 22, 2026",
+            "body": "New stuff:\r\n- Added recent servers.\r\n- Added a thing to make it possible for Roblox to tell what traffic comes from RoValra to help the people at Roblox yay\r\n\r\nchanges\r\n- Changed the 40% method to automatically create and update the game so you dont have to go in studio and do it manually.\r\n- Fixed some api requests happening a bit too much\r\n- Improved preferred region.\r\n- Fixed owner text on improved join modal being white on light mode making it not visible\r\n- Fixed unpending robux accidently sanitizing html.\r\n- Fixed hidden experiences issues.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.4",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.4.3",
             "name": "v2.4.3",
             "published_date": "January 19, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.6.5",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.1.6",
-            "name": "update 2.1.6",
-            "published_date": "February 25, 2025",
-            "body": "Changes:\r\nAdded text letting the user know that the user sniper was patched.\r\nFixed bugs like the user sniper not showing on install.\r\nMade basically every part of the ui fit in better with the new update to roblox.\r\nReworked the user sniper ui (thanks to dante for letting me use a lot of inspo from his extension, [betterblox](https://chromewebstore.google.com/detail/betterblox-roblox-last-on/lplhnhhlblehjmmkcpjbojiaanbpgnpd))\r\nand more idrk, i still got a lot to add but holy moly im tired :)",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.6",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.4.3",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-01-22T00:24:10.171283Z"
+    "last_updated": "2026-01-23T00:23:35.198573Z"
 }
