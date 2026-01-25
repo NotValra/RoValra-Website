@@ -6,7 +6,7 @@
             "published_date": "January 22, 2026",
             "body": "New stuff:\r\n- Added recent servers.\r\n- Added a thing to make it possible for Roblox to tell what traffic comes from RoValra to help the people at Roblox yay\r\n\r\nchanges\r\n- Changed the 40% method to automatically create and update the game so you dont have to go in studio and do it manually.\r\n- Fixed some api requests happening a bit too much\r\n- Improved preferred region.\r\n- Fixed owner text on improved join modal being white on light mode making it not visible\r\n- Fixed unpending robux accidently sanitizing html.\r\n- Fixed hidden experiences issues.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.4",
-            "chrome_release_date": null,
+            "chrome_release_date": "January 24, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.4.3",
-        "is_latest": false
+        "version": "2.4.4",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-01-24T00:22:29.541754Z"
+    "last_updated": "2026-01-25T00:25:33.417648Z"
 }
