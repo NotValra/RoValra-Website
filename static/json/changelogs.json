@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.5",
+            "name": "v2.4.5",
+            "published_date": "January 25, 2026",
+            "body": "New stuff:\r\n- Added rovalra latency simulation to developer settings.\r\n- Added a \"Do not show again\" button to the review pop up\r\n- Added Region and place version to private servers.\r\n- Added quick private server link copy and regenerate\r\n\r\nChanges:\r\n- Fixed an issue where an important part of the script would blindly accept corrupted information breaking parts of the extension.\r\n- Fixed server performance sometimes showing when server list modifications is disabled\r\n- Fixed Server list filters not being added when server list modifications is disabled.\r\n- Fixed quickplay covering friends in some cases.\r\n- Updated the fishstrap share link to their new link",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.5",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.4.4",
             "name": "v2.4.4",
             "published_date": "January 22, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/pre-2.1.7",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.1.6.5",
-            "name": "update 2.1.6.5",
-            "published_date": "March 02, 2025",
-            "body": "Changes:\r\nUpdated the extension to use a new thumbnail API for the hidden experiences and subplaces since Roblox deleted the old one.\r\nRemoved some permissions that was accidently left in from testing.",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.6.5",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.4.4",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-01-25T00:25:33.417648Z"
+    "last_updated": "2026-01-26T00:24:56.375967Z"
 }
