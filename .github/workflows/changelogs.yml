@@ -2,7 +2,7 @@ name: Update Changelogs
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -30,5 +30,5 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add static/json/changelogs.json
+          git add static/json/changelogs.json static/js/features.js
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update changelogs [skip ci]" && git push)
