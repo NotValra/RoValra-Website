@@ -27,8 +27,8 @@ var featuresData = {
                 label: "Save 10%-40% Robux on Purchases",
                 description: ["This adds a button allowing you to save 40% on items on the catalog and 10% on gamepasses",
                     "Keep in mind a group is required for this to work.",
-                    "https://www.youtube.com/watch?v=-kUAWWmmkaQ Video guide showing a step by step on how to set it up.",
-                    "**When buying something there will be a 'Save X Robux' Button which when pressed will give you a full guide on how to setup the 40% Method**"
+                   
+                    "**When buying something there will be a 'Save X Robux' Button which when pressed will set up the experience required for it to work for you.**"
               
                 ],
                 type: "checkbox",
@@ -162,6 +162,12 @@ var featuresData = {
                 type: "checkbox",
                 default: true
             },
+            recentServersEnabled: {
+                label: "Recent Servers",
+                description: ["Shows the 4 most recent servers you joined under an experience."],
+                type: "checkbox",
+                default: true
+            },
             TotalServersEnabled: {
                 label: "Total Servers",
                 description: ["This shows the total amount of servers RoValra is tracking under that experience."],
@@ -287,11 +293,11 @@ var featuresData = {
             },
             PrivateQuickLinkCopy: {
                 label: "Quick Private Server Link Copy and Generation",
-                description: ["This feature has been disabled for maintenance",
+                description: [
                     "This allows you to quickly copy a private server link or generate a new private server link"
                 ],
-                deprecated: "This feature is currently disabled. It is technically not deprecated and will come back when finished."
-
+                type: "checkbox",
+                default: true
             },
 
         }
