@@ -6,7 +6,7 @@
             "published_date": "January 25, 2026",
             "body": "New stuff:\r\n- Added rovalra latency simulation to developer settings.\r\n- Added a \"Do not show again\" button to the review pop up\r\n- Added Region and place version to private servers.\r\n- Added quick private server link copy and regenerate\r\n\r\nChanges:\r\n- Fixed an issue where an important part of the script would blindly accept corrupted information breaking parts of the extension.\r\n- Fixed server performance sometimes showing when server list modifications is disabled\r\n- Fixed Server list filters not being added when server list modifications is disabled.\r\n- Fixed quickplay covering friends in some cases.\r\n- Updated the fishstrap share link to their new link",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.5",
-            "chrome_release_date": null,
+            "chrome_release_date": "January 27, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.4.4",
-        "is_latest": false
+        "version": "2.4.5",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-01-27T12:12:10.751598Z"
+    "last_updated": "2026-01-27T13:21:49.513683Z"
 }
