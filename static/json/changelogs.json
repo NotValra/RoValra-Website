@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.6",
+            "name": "v2.4.6",
+            "published_date": "January 29, 2026",
+            "body": "Changes:\r\n- Removed all uses of auth.roblox.com/v1/logout to get the csrf token\r\n- Fixed the quick play button snapping when added to featured games containers. Thanks to alice for the help.\r\n- Fixed recent servers duplicating when spam clicking refresh.\r\n- Fixed https://github.com/NotValra/RoValra/issues/34\r\n- Updated the quickplay.scss to be readable lol\r\n- Changed quickplay private server name from dompurify to safeHtml since it is better for that use case.\r\n- Moved more css to a .scss file\r\n- Fixed what am i joining server id sometimes going on a different line if too long\r\n- Fixed corrupted preferred region value not being reset to the default",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.6",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.4.5",
             "name": "v2.4.5",
             "published_date": "January 25, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.7",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "pre-2.1.7",
-            "name": "pre release 2.1.7",
-            "published_date": "March 16, 2025",
-            "body": "# This version is quite broken, Please only use it if the features added makes it worth it.\r\nChanges:\r\nAdded a hidden catalog  browser, shows Roblox made items before they are uploaded on the official catalog.\r\nAdded a filter system to private inventories.\r\n\r\nThis is a Pre release cuz the hidden catalog doesnt have light mode support, and cuz i wanted to see how well my server can handle more people using this, since all this stuff is really new to me. ",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/pre-2.1.7",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.4.5",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-01-29T14:18:58.732224Z"
+    "last_updated": "2026-01-29T15:15:07.909295Z"
 }
