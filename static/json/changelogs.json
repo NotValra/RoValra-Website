@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.7",
+            "name": "v2.4.7",
+            "published_date": "February 05, 2026",
+            "body": "New stuff\r\n- Added legacy donation badges here for a limited time.\r\n- Added draggable groups. thanks to qBorder\r\n- Added a download button allowing you to download any asset from the create.roblox.com page\r\n\r\nChanges\r\n- Fixed globe sorting regions by state and not by city making san jose and los angeles both have the combined total as their servers\r\n- Fixed roseal improved server list breaking recent servers\r\n- Fixed Roblox breaking multiple profile features.\r\n- Changed total servers back to using total servers in the counts api",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.7",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.4.6",
             "name": "v2.4.6",
             "published_date": "January 29, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.7.5",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.1.7",
-            "name": "Update 2.1.7",
-            "published_date": "March 23, 2025",
-            "body": "**Changes**\r\n- Added a hidden catalog.\r\n- Reworked the private inventory checker.\r\n- Added the ability check if a user with a private inventory owns a bunch of different items.\r\n- Added some text on the sales and revenue if the stats are likely incorrect.\r\n- prob more i cant remember...\r\n\r\n**Fixes**\r\n\r\n- Fixed some settings not being on correctly when first installing.\r\n- Fixed some stuff related to the hidden games on groups.\r\n- Prob did more i cant remember....",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.7",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.4.6",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-02-05T18:22:25.717789Z"
+    "last_updated": "2026-02-05T19:18:56.126941Z"
 }
