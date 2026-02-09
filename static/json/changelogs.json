@@ -15,7 +15,7 @@
             "published_date": "January 29, 2026",
             "body": "Changes:\r\n- Removed all uses of auth.roblox.com/v1/logout to get the csrf token\r\n- Fixed the quick play button snapping when added to featured games containers. Thanks to alice for the help.\r\n- Fixed recent servers duplicating when spam clicking refresh.\r\n- Fixed https://github.com/NotValra/RoValra/issues/34\r\n- Updated the quickplay.scss to be readable lol\r\n- Changed quickplay private server name from dompurify to safeHtml since it is better for that use case.\r\n- Moved more css to a .scss file\r\n- Fixed what am i joining server id sometimes going on a different line if too long\r\n- Fixed corrupted preferred region value not being reset to the default",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.6",
-            "chrome_release_date": "February 2, 2026",
+            "chrome_release_date": "February 1, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-02-09T05:35:10.227106Z"
+    "last_updated": "2026-02-09T06:30:39.237591Z"
 }
