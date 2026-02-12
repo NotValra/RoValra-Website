@@ -6,7 +6,7 @@
             "published_date": "February 05, 2026",
             "body": "New stuff\r\n- Added legacy donation badges here for a limited time.\r\n- Added draggable groups. thanks to qBorder\r\n- Added a download button allowing you to download any asset from the create.roblox.com page\r\n\r\nChanges\r\n- Fixed globe sorting regions by state and not by city making san jose and los angeles both have the combined total as their servers\r\n- Fixed roseal improved server list breaking recent servers\r\n- Fixed Roblox breaking multiple profile features.\r\n- Changed total servers back to using total servers in the counts api",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.7",
-            "chrome_release_date": "February 8, 2026",
+            "chrome_release_date": "February 9, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -277,5 +277,5 @@
         "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-02-12T07:26:36.448013Z"
+    "last_updated": "2026-02-12T08:17:39.723967Z"
 }
