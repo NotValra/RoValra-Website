@@ -50,6 +50,12 @@ var featuresData = {
                 description: ["This feature shows an items dependencies which means you are able to view the texture, mesh and more of an item."],
                 type: "checkbox",
                 default: true,
+            },
+            priceFloorEnabled: {
+                label: "Show Price Floor",
+                description: "This will show the price floor when viewing items, and shows if the item you are viewing is sold at or above the price floor.",
+                type: "checkbox",
+                default: true
             }
 
 
@@ -166,7 +172,8 @@ var featuresData = {
                 label: "Recent Servers",
                 description: ["Shows the 4 most recent servers you joined under an experience."],
                 type: "checkbox",
-                default: true
+                default: true,
+                storageKey: "rovalra_server_history"
             },
             TotalServersEnabled: {
                 label: "Total Servers",
@@ -413,7 +420,8 @@ var featuresData = {
                     "Just hold down on a community for a moment and drag it up or down."
                 ],
                 type: "checkbox",
-                default: true
+                default: true,
+                storageKey: "rovalra_groups_order"
             }
 
         }
@@ -438,6 +446,15 @@ var featuresData = {
                 description: ["Allowing you to quickly search for items in the avatar editor."],
                 type: "checkbox",
                 default: true
+            },
+            avatarRotatorEnabled: {
+                label: "Avatar Rotator",
+                description: ["Adds an avatar Rotator allowing you to Rotate between different avatars on a set interval.",
+                    "Allowing you to have a random avatar equipped every time you join an experience or respawn."
+                ],
+                type: "checkbox",
+                default: true,
+                storageKey: ["rovalra_avatar_rotator_enabled", "rovalra_avatar_rotator_ids", "rovalra_avatar_rotator_interval"]
             }
         }
     },
@@ -501,6 +518,12 @@ var featuresData = {
                 type: "checkbox",
                 default: true
             },
+            qolTogglesEnabled: {
+                label: "Adds quality of life toggles to the nav bar",
+                description: "Allowing you to quickly change your online status or experience status without going into settings.",
+                type: "checkbox",
+                default: true
+            },
             cssfixesEnabled: {
                 label: "Site Fixes",
                 description: ["This fixes various site issues or just poor design choices by Roblox.",],
@@ -516,6 +539,12 @@ var featuresData = {
                     gameTitleIssueEnable: {
                         label: "Fix the experience title issues",
                         description: "Fixes the top and bottom of experience titles on profiles getting cut off.",
+                        type: "checkbox",
+                        default: true,
+                    },
+                    FixCartRemoveButton: {
+                        label: "Fix Cart Remove Button Size",
+                        description: "Fixes the size of the remove item from cart button being super small in the shopping cart.",
                         type: "checkbox",
                         default: true,
                     }
@@ -544,7 +573,8 @@ var featuresData = {
                         description: ["Upload your custom image. Maximum file size is 1MB."],
                         type: "file",
                         default: null,
-                        compressSettingName: "compressCustomLogo"
+                        compressSettingName: "compressCustomLogo",
+                        storageKey: "customLogoData"
                     },
                     compressCustomLogo: {
                         label: "Compress Custom Icon",
