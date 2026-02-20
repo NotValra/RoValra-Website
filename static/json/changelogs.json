@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.9",
+            "name": "v2.4.9",
+            "published_date": "February 20, 2026",
+            "body": "New Stuff:\r\n- Added quick copy id in the right click context menu (off by default)\r\n- Added quick copy universe id in the right click context menu (off by default)\r\n- Added a toggle for optional permissions in settings, so u can disable them if you dont want them enabled at a later date\r\n- Added a feature making equipping multiple accessories seamless.\r\n- Added a beta programs toggle to the nav bar (off by default)\r\n- Added a new category in settings for Navigation related features\r\n- Added a [test page](https://www.roblox.com/test) used for testing ui related things in rovalra.\r\n- Added donator perks to the settings page showing what you get for donating.\r\n- Made streamer mode hide previous usernames in settings.\r\n\r\nChanges:\r\n- Fixed a bug where quality of life toggles would allow for an inf horizontal scroll.\r\n- Fixed out of sync setting.\r\n- Fixed RoValra getting recent servers in the background even when recent servers is disabled.\r\n- Fixed recent servers flooding the networks tab with presence api requests, sorry to anyone trying to develop stuff.\r\n- Fixed view user outfits button being incompatible with some extensions.\r\n- Fixed view user outfits styling issues thats been bugging me for a while.\r\n- Fixed Avatar rotator not displaying all avatars\r\n- Fixed the 40% method not adding save x robux to cart if opening the cart on the main catalog page\r\n- Fixed RoValra not verifying that the fallback server is actually active when using preferred region.\r\n- Fixed odd spacing on the quality of life toggles.\r\n- Attempted to fix an issue where the custom roblox launch ui could crash your browser if left running in the background for too long.\r\n- Changed the slider color in settings to match robloxs slider.\r\n- Updated the view user outfits ui to match the ui of the rest of the extension\r\n- Updated background.js heavily making it a lot easier to work with.\r\n- Reworked the way RoValra creates game cards and item cards, to be easier to work with and a lot better in general.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.9",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.4.8",
             "name": "v2.4.8",
             "published_date": "February 13, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.8",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.1.7.6",
-            "name": "Update 2.1.7.6",
-            "published_date": "April 18, 2025",
-            "body": "**Changes**\r\n- edit: the install issue wasnt fixed. The RoValra-main.3.zip has the fix.\r\n- Fixed a very rare issue where the extension would not install correctly.\r\n- Updated the hidden catalog to support my back end changes.",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.1.7.6",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.4.8",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-02-20T15:18:21.843433Z"
+    "last_updated": "2026-02-20T16:15:00.659827Z"
 }

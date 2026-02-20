@@ -104,7 +104,7 @@ var featuresData = {
                         label: "Change the normal Play button to join your preferred region in Quick Play",
                         description: ["This makes the Roblox Play button in the Quick Play join servers closest to you, instead of a random region."],
                         type: "checkbox",
-                        default: false
+                        default: true
                     }
                 }
             },
@@ -435,6 +435,12 @@ var featuresData = {
                 type: "checkbox",
                 default: true
             },
+            multiEquipEnabled: {
+                label: "Multi-Equip",
+                description: ["Allows you to equip multiple items like accessories seamlessly without having to use the advanced tab."],
+                type: "checkbox",
+                default: true
+            },
             avatarFiltersEnabled: {
                 label: "Avatar Filters",
                 description: ["Adds filters to the avatar page, allowing you to filter by effect items, limited, offsale / onsale and more."],
@@ -485,6 +491,24 @@ var featuresData = {
             },
         }
     },
+    Navigation: {
+        title: "Navigation",
+        settings: {
+                    qolTogglesEnabled: {
+            label: "Adds quality of life toggles to the nav bar",
+            description: "Allowing you to quickly change your online status or experience status without going into settings.",
+            type: "checkbox",
+            default: true
+        },
+        betaProgramsEnabled: {
+            label: "Adds a beta programs toggle to the nav bar",
+            description: "This allows you to toggle beta programs you are enrolled into easily.",
+            type: "checkbox",
+            default: false
+        }
+        }
+
+    },
     Miscellaneous: {
         title: "Miscellaneous",
         settings: {
@@ -518,11 +542,20 @@ var featuresData = {
                 type: "checkbox",
                 default: true
             },
-            qolTogglesEnabled: {
-                label: "Adds quality of life toggles to the nav bar",
-                description: "Allowing you to quickly change your online status or experience status without going into settings.",
+
+            copyIdEnabled: {
+                label: "Allows you to quickly copy an id of a thing you are right clicking.",
+                description: "This adds a copy id button directly into the right click context menu so you don't have  to open the link and copy the id from the link.",
                 type: "checkbox",
-                default: true
+                default: false,
+                requiredPermissions: ["contextMenus"],
+            },
+            copyUniverseIdEnabled: {
+                label: "Allows you to quickly copy a universe id",
+                description: "This adds a copy universe id button directly into the right click context menu.",
+                type: "checkbox",
+                default: false,
+                requiredPermissions: ["contextMenus"],
             },
             cssfixesEnabled: {
                 label: "Site Fixes",
@@ -608,7 +641,7 @@ var featuresData = {
                     settingsPageInfo: {
                         label: "Hide Private Information on the settings page",
                         description: ["This visually replaces your Email, Phone Number, Sessions and account location with 'RoValra Streamer Mode Enabled'",
-                            "And completely hides your Age Group and Birthday."],
+                            "And completely hides your Age Group, previous usernames in settings and Birthday."],
                         type: "checkbox",
                         default: true,
                     },
