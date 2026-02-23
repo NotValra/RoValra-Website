@@ -15,7 +15,7 @@
             "published_date": "February 13, 2026",
             "body": "With this update the legacy donator badge is officially unobtainable specifically 1 day after chrome accepts the update. And fully replaced with the new donation badges.\r\n\r\nNew stuff\r\n- Added a feature that shows the price floor of the item type you are viewing and if the item you are viewing is at, above or below (even tho that shouldn't be possible LOL) the price floor.\r\n- Added quality of life toggles to the nav bar that allows you to toggle your online status and experience status without going into settings\r\n- Added avatar rotator.\r\n- Added Clear storage to the settings page, used to clear the storage of features.\r\n- Added a site fix for the remove item from cart button being the incorrect size (thank me later Roblox)\r\n\r\nChanges\r\n- Attempted to improve the automatic region finding (again), now using a easier to debug system scoring each server based off the distance from you to them, and if it doesn't find the closest server with the RoValra api it will fall back to scanning manually as an attempt to improve it on smaller games. Also added some text for inactive and loadbalancing servers.\r\n- Changed the building of the extension very slightly just making it not minify whitespace.\r\n- Changed the download assets from create page to download meshes as .mesh instead of .obj\r\n- Changed donation links to a new donation link\r\n- Fixed RoValra adding quick genarate and copy private server links to expired private servers.\r\n- Fixed not interested not being clickable on recommended games while quickplay is active\r\n- Fixed oauth not working\r\n- Fixed RoValra modifying help.roblox.com",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.8",
-            "chrome_release_date": "February 13, 2026",
+            "chrome_release_date": "February 14, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-02-23T16:22:38.548195Z"
+    "last_updated": "2026-02-23T17:28:17.968060Z"
 }
