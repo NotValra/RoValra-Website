@@ -16,7 +16,7 @@ var featuresData = {
             },
             hiddenCatalogEnabled: {
                 label: "Hidden Catalog",
-                description: ["Shows Roblox made items before they are on the official catalog.",
+                description: ["Shows Roblox made items before they are on the official marketplace.",
 
                 ],
                 deprecated: "Patched by Roblox",
@@ -25,10 +25,10 @@ var featuresData = {
             },
             SaveLotsRobuxEnabled: {
                 label: "Save 10%-40% Robux on Purchases",
-                description: ["This adds a button allowing you to save 40% on items on the catalog and 10% on gamepasses",
+                description: ["This adds a button allowing you to save 40% on items on the marketplace and 10% on gamepasses",
                     "Keep in mind a group is required for this to work.",
 
-                    "**When buying something there will be a 'Save X Robux' Button which when pressed will set up the experience required for it to work for you.**"
+                    "**When buying something there will be a 'Save X Robux' Button which when pressed will set up the experience required for it to work for you, if not already set up.**"
 
                 ],
                 type: "checkbox",
@@ -42,6 +42,13 @@ var featuresData = {
                         type: "input",
                         default: null,
                         placeholder: "Enter Place ID here..."
+                    },
+                    configureGame: {
+                        label: "Configure Experience",
+                        description: "Open the setup to configure an experience for the 40% method without needing to be in a purchase flow.",
+                        type: "button",
+                        buttonText: "Open Setup",
+                        event: "rovalra:open40methodSetup"
                     }
                 }
             },
@@ -56,8 +63,19 @@ var featuresData = {
                 description: "This will show the price floor when viewing items, and shows if the item you are viewing is sold at or above the price floor.",
                 type: "checkbox",
                 default: true
-            }
-
+            },
+            ParentItemsEnabled: {
+                label: "Show what bundle an item is a part of.",
+                description: "When viewing items pages of items inside of a bundle it will tell you what bundle that item is from.",
+                type: "checkbox",
+                default: true
+            },
+            PreviousPriceEnabled: {
+                label: "Previous Price to item cards and on item pages.",
+                description: "This shows the price of an offsale item before it went offsale.",
+                type: "checkbox",
+                default: true,
+            },
 
         }
     },
@@ -76,7 +94,7 @@ var featuresData = {
                 childSettings: {
                     robloxPreferredRegion: {
                         label: "Preferred Region",
-                        description: ["Select your preferred region for joining games.",
+                        description: ["Select your preferred region for joining experiences.",
                             "**Automatic** will automatically attempt to find the closest region to you."],
                         type: "select",
                         options: "REGIONS",
@@ -87,7 +105,7 @@ var featuresData = {
             },
             QuickPlayEnable: {
                 label: "Quick Play Button",
-                description: ["This will add a quick play button to games so you can quickly join the game without opening the game page.",
+                description: ["This will add a quick play button to experiences so you can quickly join the experience without opening the experience page.",
                     "If you have Preferred Region Play Button enabled it will also add a Preferred Region quick play button to quickly join your preferred region.",
                     "This is made to look like the official Roblox client's Quick Play button."
                 ],
@@ -110,7 +128,7 @@ var featuresData = {
             },
             whatamIJoiningEnabled: {
                 label: "What Am I Joining",
-                description: ["This shows the server ID, region, if it's a private server, and more info about the server you are joining when joining a game.",
+                description: ["This shows the server ID, region, if it's a private server, and more info about the server you are joining when joining an experience.",
                 ],
                 type: "checkbox",
                 default: true,
@@ -148,15 +166,21 @@ var featuresData = {
                     }
                 }
             },
+            EnableDevProducts: {
+                label: "View Developer Products",
+                description: "This allows you to view the developer products of an experience directly on the store page.",
+                type: "checkbox",
+                default: true
+            },
             QuickOutfitsEnabled: {
                 label: "Quick Equip Outfits",
-                description: ["This allows you to quickly switch your avatar on the a games page."],
+                description: ["This allows you to quickly switch your avatar on the an experience page."],
                 type: "checkbox",
                 default: false
             },
             botdataEnabled: {
                 label: "Bot Data",
-                description: ["Shows if a game has a lot of bots in the description of the game.",
+                description: ["Shows if an experience has a lot of bots in the description of the experience.",
                     "It doesn't show the amount of bots, since the sample size is too small to give an accurate number."
                 ],
                 type: "checkbox",
@@ -164,9 +188,18 @@ var featuresData = {
             },
             subplacesEnabled: {
                 label: "Subplaces",
-                description: ["Shows the subplaces of an experience."],
+                description: ["This adds a tab to an experience page that shows the subplaces of the experience."],
                 type: "checkbox",
                 default: true
+            },
+            updateHistoryEnabled: {
+                label: "Update History",
+                description: ["This adds a tab to an experience page that has a heatmap showing the update history of an experience.",
+                    "This feature was heavily inspired by a RoPro v2 feature."
+                ],
+                type: "checkbox",
+                default: true,
+                beta: "This feature is lacking update history data. It will slowly get it over time."
             },
             recentServersEnabled: {
                 label: "Recent Servers",
@@ -182,7 +215,7 @@ var featuresData = {
                 default: true
             },
             GameVersionEnabled: {
-                label: "Game Version",
+                label: "Experience Version",
                 description: ["This shows the current version an experience is on.",
                     "Useful for developers."
                 ],
@@ -264,7 +297,7 @@ var featuresData = {
                         label: "Show the entire ServerID",
                         description: ["This shows the entire ServerID",
                             "By default Roblox only shows a part of it.",
-                            "It will hide ServerIDs of servers that you are playing in or friends are playing in unless hovered over."
+                            "It will hide ServerIDs of servers that you are playing in or connections are playing in unless hovered over."
                         ],
                         type: "checkbox",
                         default: true
@@ -313,16 +346,16 @@ var featuresData = {
         title: "Profile",
         settings: {
             userGamesEnabled: {
-                label: "Hidden User Games",
-                description: ["Shows a users hidden games on their profile."],
+                label: "Hidden User Experiences",
+                description: ["Shows a users hidden experiences on their profile."],
                 type: "checkbox",
                 default: true
             },
             userSniperEnabled: {
                 label: "Instant Joiner",
-                description: ["This joins a user instantly when they go into a game, best used for people with a lot of people trying to join them.",
+                description: ["This joins a user instantly when they go into an experience, best used for people with a lot of people trying to join them.",
                     "### Requirements",
-                    "- This feature requires the user to have their joins enabled for everyone or for you to be friends with them."
+                    "- This feature requires the user to have their joins enabled for everyone or for you to be connected with them."
                 ],
                 type: "checkbox",
                 default: true,
@@ -334,6 +367,12 @@ var featuresData = {
                         default: false
                     }
                 }
+            },
+            trustedConnectionsEnabled: {
+                label: "Trusted Connections",
+                description: "This feature allows you to accept, request and remove trusted connections on the site for eligible connections.",
+                type: "checkbox",
+                default: true
             },
             PrivateServerBulkEnabled: {
                 label: "Private Server Bulk Removal",
@@ -349,6 +388,36 @@ var featuresData = {
                 description: ["This will add a donation button to a user's profile, which allows you to donate to someone via PLS Donate"],
                 type: "checkbox",
                 default: true,
+            },
+
+            categorizeWearingEnabled: {
+                label: "Improved Currently Wearing",
+                description: ["Separates the 'Currently Wearing' section on profiles into categories like Items, Emotes, Body Parts and Animations.",
+                    "Also improves the item cards making them look a bit better and adds total outfit price.",
+                    "This feature was heavily inspired by a [roseal](https://www.roseal.live/) feature."
+                ],
+                type: "checkbox",
+                default: true,
+                childSettings: {
+                    CategorizeBodyParts: {
+                        label: "Body Parts in its own category",
+                        description: "This puts Body Parts into its own category",
+                        type: "checkbox",
+                        default: true
+                    },
+                    CategorizeEmotes: {
+                        label: "Emotes in its own category",
+                        description: "This puts Emotes into its own category",
+                        type: "checkbox",
+                        default: true
+                    },
+                    CategorizeAnimations: {
+                        label: "Animations in its own category",
+                        description: "This puts Animations into its own category",
+                        type: "checkbox",
+                        default: true
+                    }
+                }
             },
             userRapEnabled: {
                 label: "User RAP",
@@ -494,18 +563,51 @@ var featuresData = {
     Navigation: {
         title: "Navigation",
         settings: {
-                    qolTogglesEnabled: {
-            label: "Adds quality of life toggles to the nav bar",
-            description: "Allowing you to quickly change your online status or experience status without going into settings.",
-            type: "checkbox",
-            default: true
-        },
-        betaProgramsEnabled: {
-            label: "Adds a beta programs toggle to the nav bar",
-            description: "This allows you to toggle beta programs you are enrolled into easily.",
-            type: "checkbox",
-            default: false
-        }
+            qolTogglesEnabled: {
+                label: "Adds quality of life toggles to the navigation bar",
+                description: "Allowing you to quickly change your online status or experience status without going into settings.",
+                type: "checkbox",
+                default: true
+            },
+            betaProgramsEnabled: {
+                label: "Adds a beta programs toggle to the navigation bar",
+                description: "This allows you to toggle beta programs you are enrolled into easily.",
+                type: "checkbox",
+                default: false
+            },
+            quickSearchEnabled: {
+                label: "Quick Search",
+                description: "This adds an autocomplete to the search dropdown for users, connections and experiences",
+                type: "checkbox",
+                default: true,
+                childSettings: {
+                    userSearchEnabled: {
+                        label: "Quick User Search",
+                        description: "Shows a user that matched what you searched in the search dropdown.",
+                        type: "checkbox",
+                        default: true
+                    },
+                    gameSearchEnabled: {
+                        label: "Quick Experience Search",
+                        description: "Shows an experience that has the best match to what you searched in the search dropdown.",
+                        type: "checkbox",
+                        default: true
+                    },
+                    friendSearchEnabled: {
+                        label: "Quick Connection Search",
+                        description: "Shows a list of connections that has the best match to what you searched in the search dropdown.",
+                        type: "checkbox",
+                        default: true
+                    }
+                }
+            },
+            searchHistoryEnabled: {
+                label: "Search History",
+                description: "This tracks what you search on Roblox and allows you to view it.",
+                type: "checkbox",
+                default: true,
+                storageKey: "rovalra_search_history"
+            }
         }
 
     },
@@ -557,6 +659,7 @@ var featuresData = {
                 default: false,
                 requiredPermissions: ["contextMenus"],
             },
+
             cssfixesEnabled: {
                 label: "Site Fixes",
                 description: ["This fixes various site issues or just poor design choices by Roblox.",],
@@ -591,10 +694,16 @@ var featuresData = {
                 type: "checkbox",
                 default: true
             },
-
+            firstAccountEnabled: {
+                label: "First Account?",
+                description: "This adds a section in Roblox's settings showing if Roblox considers your Roblox account the first Roblox account you created.",
+                type: "checkbox",
+                default: true,
+                storageKey: "rovalra_first_account_cache"
+            },
             revertLogo: {
                 label: "Change the app launch icon",
-                description: ["This changes the icon that shows when you join a game.",
+                description: ["This changes the icon that shows when you join an experience.",
                     "Old icon is the icon it had before they changed it to the new app client icon.",
                     "And of course, a custom icon can be any image you want."
                 ],
