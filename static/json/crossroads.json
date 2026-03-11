@@ -38,12 +38,16 @@
   "camera": {
     "far": 400
   },
+  "tooltip": {
+    "text": "Crossroads by Roblox, ported to glb by Luke Steel. Optimized by Valra",
+    "link": "https://sketchfab.com/3d-models/crossroads-6eba14662bd048f9bc1ca10e63b5622f"
+  },
   "skybox": [
     "https://www.rovalra.com/static/img/sky512_rt.png",
     "https://www.rovalra.com/static/img/sky512_lf.png",
-    "https://www.rovalra.com/static/img/sky512_dn.png",
     "https://www.rovalra.com/static/img/sky512_up.png",
-    "https://www.rovalra.com/static/img/sky512_bk.png",
-    "https://www.rovalra.com/static/img/sky512_ft.png"
+    "https://www.rovalra.com/static/img/sky512_dn.png",
+    "https://www.rovalra.com/static/img/sky512_ft.png",
+    "https://www.rovalra.com/static/img/sky512_bk.png"
   ]
 }
