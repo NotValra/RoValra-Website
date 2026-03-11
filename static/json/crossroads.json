@@ -1,0 +1,49 @@
+{
+  "model": {
+    "url": "assets/environments/crossroads.glb",
+    "position": [
+      8,
+      -1,
+      12
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "castShadow": false,
+    "receiveShadow": true
+  },
+  "atmosphere": {
+    "showFloor": false,
+    "lights": [
+      {
+        "type": "AmbientLight",
+        "color": "#bba1a1",
+        "intensity": 2
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "#999999",
+        "intensity": 2,
+        "position": [
+          10,
+          20,
+          10
+        ],
+        "castShadow": true
+      }
+    ]
+  },
+  "camera": {
+    "far": 400
+  },
+  "skybox": [
+    "https://www.rovalra.com/static/img/sky512_rt.png",
+    "https://www.rovalra.com/static/img/sky512_lf.png",
+    "https://www.rovalra.com/static/img/sky512_dn.png",
+    "https://www.rovalra.com/static/img/sky512_up.png",
+    "https://www.rovalra.com/static/img/sky512_bk.png",
+    "https://www.rovalra.com/static/img/sky512_ft.png"
+  ]
+}
