@@ -1,6 +1,6 @@
 {
   "model": {
-    "url": "assets/environments/crossroads.glb",
+    "url": "https://www.rovalra.com/static/img/crossroads.glb",
     "position": [
       8,
       -1,
@@ -27,9 +27,9 @@
         "color": "#999999",
         "intensity": 2,
         "position": [
-          10,
-          20,
-          10
+          -10,
+          15,
+          -10
         ],
         "castShadow": true
       }
