@@ -6,7 +6,7 @@
             "published_date": "March 09, 2026",
             "body": "New stuff:\r\n- Added developer products to the store tab on experiences.\r\n- Added Update History feature showing a heatmap of a games update history heavily inspired by RoPro v2s update history (Beta but on by default)\r\n- Added a feature showing the previous price of off sale items in currently wearing.\r\n- Added a feature that completely redesigns robloxs currently wearing ui, heavily inspired by RoSeals improved currently wearing.\r\n- Added a feature showing what bundle an item is from when viewing items that are in bundles on the catalog.\r\n- Added a feature that autocompletes searches for games, users and friends\r\n- Added a feature that shows your search history when using robloxs search feature.\r\n- Added a feature showing if Roblox thinks your account is the first account you ever created.\r\n- Added a feature allowing you to add, remove and accept trusted connections on the site.\r\n\r\nChanges:\r\n- Reworked the outfits ui a bit making it a lot better.\r\n- made it clearer when you don't have permissions to manage games when using the 40% method.\r\n- made only one dropdown able to be able to show at a time.\r\n- made a clear selected for the avatar rotator\r\n- made a \"Open Setup\" button in the settings page for the 40% method so its easier to configure.\r\n- made an option in the group dropdown in the 40% method for if you don't have a group, explaining how to set it up.\r\n- Fixed an issue with the dropdown ui where the arrow could get stuck in the pointing up position after selecting an option.\r\n- Fixed right click copy id not supporting developer products.\r\n- Fixed outfits viewers links being incorrect on assets inside of bundles.\r\n- Fixed a bug where hidden games on user profiles would get stuck loading for a very long time.\r\n- Fixed avatar rotator showing the same avatars when pressing load more (Roblox is never consistent)\r\n- Fixed subplaces getting subplaces without a user being on the tab.\r\n- Fixed download button not being added cuz roblox changed the element for no reason YAY\r\n- Fixed avatar rotator overlaying the create button.\r\n- Fixed save x robux being added to limited items.\r\n- Fixed placeholder text in input boxes overlaying the value in the input box in settings.\r\n- Fixed server list filters not showing player count and correct thumbnails when the data is there.\r\n- Fixed uses of old names of things like experiences in settings\r\n- Improved the items.js script a bit.\r\n- Attempted to improve avatar rotators consistency",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.10",
-            "chrome_release_date": null,
+            "chrome_release_date": "March 14, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.4.9",
-        "is_latest": false
+        "version": "2.4.10",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-03-14T11:08:00.551229Z"
+    "last_updated": "2026-03-14T12:13:10.504914Z"
 }
