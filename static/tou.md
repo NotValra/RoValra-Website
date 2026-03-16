@@ -1,6 +1,6 @@
 # API Terms of Use
 
-**Last Updated:** August 15, 2025
+**Last Updated:** March 16, 2026
 
 ## Introduction
 Welcome, developer! The RoValra API is a non-profit passion project created to enhance the Roblox experience, primarily through our [RoValra Chrome extension](https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli).
@@ -18,7 +18,7 @@ You are free to use the RoValra API for your projects under the following condit
 
 ## Prohibited Use
 You may not use the API for any of the following purposes:
-*   In any project or application that violates the [Roblox Terms of Service](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), regardless of whether the API itself is used for the violating action.
+*   In any project or application that violates or violated the [Roblox Terms of Service](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), regardless of whether the API itself is used for the violating action.
 *   For any form of data scraping, data mining, or mass data collection.
 *   To reverse-engineer or attempt to gain unauthorized access to our systems.
 *   To create a service that directly competes with the RoValra extension without our express written permission. A service is considered to be in direct competition if it replicates features that use our API in a way that is substantially similar to the RoValra extension, to the point where it could be considered a functional replacement by a typical user. This restriction does not apply to features that are novel or were implemented in your project before they appeared in RoValra.
