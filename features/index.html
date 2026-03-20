@@ -416,6 +416,7 @@
             try {
                 if (typeof featuresData !== 'undefined') {
                     for (const categoryKey in featuresData) {
+                        if (categoryKey === 'Developer') continue;
                         const categoryGroup = featuresData[categoryKey];
                         const categoryCard = document.createElement('div');
                         categoryCard.className = 'category-card';
@@ -442,8 +443,9 @@
                             const featureTitle = document.createElement('div');
                             featureTitle.className = 'feature-title';
 
+                            const titleTextContent = Array.isArray(feature.label) ? feature.label[0] : feature.label;
                             const titleText = document.createElement('span');
-                            titleText.textContent = feature.label.replace(/^Enable\s+/i, '');
+                            titleText.textContent = titleTextContent.replace(/^Enable\s+/i, '');
                             featureTitle.appendChild(titleText);
 
                             if (feature.experimental) {
