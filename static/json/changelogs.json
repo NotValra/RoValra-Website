@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.12.5",
+            "name": "v2.4.12.5",
+            "published_date": "March 27, 2026",
+            "body": "# **Hot fix**\r\n\r\n- Fixed status not being applied if you aren't a donator\r\n- Fixed environment not being applied if you aren't a donator.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.12.5",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.4.12",
             "name": "v2.4.12",
             "published_date": "March 27, 2026",
@@ -260,15 +269,6 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.1",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.2",
-            "name": "Update 2.2",
-            "published_date": "June 25, 2025",
-            "body": "**New features**\r\n- Bot detection that shows if a Roblox game is botted.\r\n- Estimated unpending robux for transactions page (Should work butttttt might not i couldnt really test it.)\r\n- Redesigned settings page (again)\r\n- Reworks of some older features, to make them better and less ugly / buggy\r\n- Finally fixing the invite feature (I HATE CODING THIS SO MUCH)\r\n- Quality of life changes to the server section on game pages like the full server id showing\r\n- All ban reasons, all ban durations and a little more since I randomly found them while looking for stuff.\r\n- Improvements to the simple region selector ui (i got bored)\r\n- region selector and preferred region gives you more information so a user doesnt think it broke\r\n- RoSeal easter egg page and rokitty easter egg page\r\n- Prob more I HONESTLY CANT REMEMBER IM GOING CRAZY yipe\r\n\r\n**Bug fixxies**\r\n- Hopefully fixed the subplaces tab not always showing up\r\n- Fixed the hidden user experiences button not showing up and the ui being bugged after a BTRoblox update (I believe)\r\n- Fixed the private inventory viewer not working on light mode (No idea if this was in 2.1.9 or if it came in development)\r\n- Fixed the launch logo not working with the new Roblox UI\r\n- Prob more I cannot remember.\r\n\r\n**Server uptime is still in the works. I really wanted this update out since I have been dealing with boring and annoying stuff iykyk**\r\n\r\n**If you enjoy the update / extension please feel free to leave a 5 star review on the chrome webstore**",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.2",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-03-27T12:20:23.775960Z"
+    "last_updated": "2026-03-27T13:33:23.169387Z"
 }
