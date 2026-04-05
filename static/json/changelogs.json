@@ -24,7 +24,7 @@
             "published_date": "March 20, 2026",
             "body": "New stuff:\r\n- Added profile 3d render, allowing for effect items, animations and way more cool stuff thanks to RoAvatar (off by default as experimental for now)\r\n- Added custom environments to 3d avatar renders on profiles\r\n- Added developer settings making it a lot easier to make environments\r\n- Added status bubble that shows on your profile where u can set a custom status for anyone with RoValra to see.\r\n- Added group funds in the nav bar, showing your group funds and pending group funds.\r\n- Added locale support in RoValra, which will be community driven translations to make sure it is as accurate as possible. (Not entirely done)\r\n- Added better credits to the people who contributed to RoValra\r\n- Added a feature that shows if a user is ID verified on Roblox or not.\r\n- Added more functionality to the beta programs navigation bar selector, now showing if the beta program is in an allowlist, and the platforms its on.\r\n- Added a \"friends Since\" feature thats shows you how long you have been friends with a user\r\n- Added \"Robux After Purchase\" feature, which pretty much brings back the \"Your balance after this transaction will be x\" to the new Roblox Purchase UI\r\n\r\nChanges\r\n- Renamed all mentions of \"connections\" to \"friends\"\r\n- Added 40% method support to Robloxs new purchase ui.\r\n- Fixed settings separator for descriptions showing when a setting doesnt have a description\r\n- Fixed improved currently wearing not showing any items for other categories if the user doesnt have any items in the items category.\r\n- Fixed gamepasses not having the \"save x amount\" button added for the 10%-40% method\r\n- Fixed preferred region falling back to manually scanning fallback, if all the servers in the closest region has been joined before. It now correctly checks the second closest and third closest etc with the rovalra api until it finds a server.\r\n- Fixed subplaces not having a load more button.\r\n- Fixed a bug where RoValra badges could be removed right after being added to the site.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.11",
-            "chrome_release_date": "March 24, 2026",
+            "chrome_release_date": "March 23, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-04-05T20:10:25.591905Z"
+    "last_updated": "2026-04-05T21:11:38.430163Z"
 }
