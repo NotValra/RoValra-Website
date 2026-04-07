@@ -6,7 +6,7 @@
             "published_date": "March 27, 2026",
             "body": "# **Hot fix**\r\n\r\n- Fixed status not being applied if you aren't a donator\r\n- Fixed environment not being applied if you aren't a donator.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.12.5",
-            "chrome_release_date": null,
+            "chrome_release_date": "April 6, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.4.11",
-        "is_latest": false
+        "version": "2.4.12.5",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-04-07T01:38:40.466056Z"
+    "last_updated": "2026-04-07T03:09:06.675073Z"
 }
