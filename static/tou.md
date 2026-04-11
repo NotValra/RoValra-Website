@@ -1,8 +1,22 @@
-# API Terms of Use
+# RoValra Terms of Service & API Terms of Use
 
-**Last Updated:** March 16, 2026
+**Last Updated:** April 11, 2026
 
-## Introduction
+## Donator Perks (Gamepasses)
+
+RoValra offers optional "Donator Tiers" or "Perks" purchased via **Roblox Gamepasses**. These perks provide social, cosmetic, or extension-based benefits within the RoValra ecosystem.
+
+*   **Independence from API Terms:** The purchase of a Donator Perk is entirely independent of the RoValra API. Buying a gamepass does not grant special API privileges or immunity. Your status as a developer and your status as a donator are separate; violating API terms will lead to API revocation regardless of your donator status.
+*   **Agreement to Roblox ToS:** By purchasing a RoValra Gamepass, you agree to abide by the [Roblox Terms of Service](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use). All transactions are handled by Roblox; you acknowledge and agree to **Roblox’s No-Refund Policy** regarding virtual items and Gamepasses.
+*   **Zero-Tolerance Content Policy:** You are strictly prohibited from submitting, attempting to display, or storing content through donator perks (such as custom tags or profile settings) that includes racial slurs, hate speech, sexually explicit/suggestive material, impersonation of staff, or malicious links.
+*   **Attempted Violations:** Our systems may perform client-side and server-side checks to filter inappropriate content. **The act of attempting to submit or set prohibited text is a violation of these terms, even if our filters prevent the text from being displayed publicly.** 
+*   **Revocation, Notification, and Appeals:**
+    *   **Right to Revoke:** We reserve the right to revoke your perks, badges, or tier access at any time for violations of these terms or API abuse.
+    *   **Notification:** We may not notify you immediately when your perks have been revoked. However, we will make a good-faith effort to inform you of the action taken and the reason behind it.
+    *   **Appeals:** We will attempt to provide a formal appeal process for users who believe their perks were revoked in error. Please note that the final decision rests solely with the RoValra administration.
+*   **Finality of Removal:** If your perks are revoked and an appeal is denied (or not sought), you forfeit the right to the benefits provided by the Gamepass. No compensation, replacement, or refund will be provided.
+
+## API Introduction
 Welcome, developer! The RoValra API is a non-profit passion project created to enhance the Roblox experience, primarily through our [RoValra Chrome extension](https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli).
 
 These terms ensure a fair and sustainable environment for all users. By accessing or using our API, you agree to be bound by them.
