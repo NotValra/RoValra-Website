@@ -190,6 +190,8 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: false,
+                locked: 'Feature broke and Roblox made their own version.',
+                isPermanent: true,
                 childSettings: {
                     Enableautoplay: {
                         label: 'Auto Play Trailer',
@@ -215,6 +217,15 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: false,
+            },
+            privateGameDetectionEnabled: {
+                label: 'View Private / Moderated Games',
+                description: [
+                    'This recreates the experience page of private / moderated games, allowing you to view them.',
+                ],
+                type: 'checkbox',
+                default: false,
+                requiredPermissions: ['webRequest'],
             },
             botdataEnabled: {
                 label: 'Bot Data',
@@ -422,7 +433,7 @@ var featuresData = {
                 description: [
                     'This joins a user instantly when they go into an experience, best used for people with a lot of people trying to join them.',
                     '### Requirements',
-                    '- This feature requires the user to have their joins enabled for everyone or for you to be connected with them.',
+                    '- This feature requires the user to have their joins enabled for everyone or for you to be friends with them.',
                 ],
                 type: 'checkbox',
                 default: true,
@@ -465,6 +476,7 @@ var featuresData = {
                         description: [
                             "Choose a custom environment for your own profile's 3D render.",
                             'This only applies when viewing your own profile.',
+                            'If you arent a RoValra donator it will add a e:x into your about me so other RoValra users can see your environment',
                         ],
                         type: 'select',
                         options: [
@@ -509,6 +521,7 @@ var featuresData = {
                 description: [
                     'This feature allows you to accept, request and remove trusted friends on the site for eligible friends.',
                     'Eligible friends must be ID or face-scan verified and within your age bracket (13–17 or 18+).',
+                    'Trusted Friends might not be available in some regions.',
                     '**Note:** Roblox uses an algorithm that may prevent adding someone even if they meet these requirements. [Learn more here.](https://en.help.roblox.com/hc/en-us/articles/46158344285204)',
                 ],
                 type: 'checkbox',
@@ -517,7 +530,22 @@ var featuresData = {
             friendsSinceEnabled: {
                 label: 'Friends Since',
                 description:
-                    'This feature shows how long you have been friends with someone on your friends list.',
+                    'This feature shows how long you have been friends with someone on their profile and in your friends list.',
+                type: 'checkbox',
+                default: true,
+            },
+
+            showFriendedFromEnabled: {
+                label: 'Show Friended From',
+                description:
+                    'This shows where you became friends with a user e.g in game, profile etc',
+                type: 'checkbox',
+                default: true,
+            },
+            bulkUnfriendEnabled: {
+                label: 'Bulk Unfriend',
+                description:
+                    'This allows you to unfriend people from your friends list in bulk',
                 type: 'checkbox',
                 default: true,
             },
@@ -640,6 +668,13 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            bannedUserDetectionEnabled: {
+                label: 'View Banned Users Profile',
+                description: ['Allows you to view banned users Profile.'],
+                type: 'checkbox',
+                default: false,
+                requiredPermissions: ['webRequest'],
+            },
         },
     },
     Communities: {
@@ -707,6 +742,13 @@ var featuresData = {
                 description: [
                     'Allows you to equip multiple items like accessories seamlessly without having to use the advanced tab.',
                 ],
+                type: 'checkbox',
+                default: true,
+            },
+            stickyAvatarEnabled: {
+                label: 'Sticky Avatar Preview',
+                description:
+                    'This forces the avatar preview to always be in view on the avatar editor.',
                 type: 'checkbox',
                 default: true,
             },
@@ -852,6 +894,13 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
             },
+            transactionsSidebarLinkEnabled: {
+                label: 'My Transactions sidebar link',
+                description:
+                    'Adds a My Transactions link below Communities in the Roblox sidebar.',
+                type: 'checkbox',
+                default: false,
+            },
             quickSearchEnabled: {
                 label: 'Quick Search',
                 description:
@@ -926,6 +975,26 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
                 requiredPermissions: ['webNavigation'],
+            },
+            Customfont: {
+                label: 'Custom font',
+                description: [
+                    'This allows to set custom font for the Roblox website.',
+                ],
+                type: 'checkbox',
+                default: false,
+                childSettings: {
+                    Customfontlink: {
+                        label: 'Google Fonts link',
+                        description: [
+                            'You can find Fonts at https://fonts.google.com/',
+                            'The link should look like "https://fonts.google.com/specimen/Comic+Neue"',
+                        ],
+                        type: 'input',
+                        default: null,
+                        placeholder: 'Enter Font Link here...',
+                    },
+                },
             },
             ServerdataEnabled: {
                 label: "Send Server IDs and Place IDs to RoValra's API",
@@ -1345,6 +1414,15 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
             },
+            showUserAgeEnabled: {
+                label: 'Show Friend Age Range',
+                description:
+                    'This shows the account age range of anyone on your friends list.',
+                type: 'checkbox',
+                default: false,
+                locked: 'This was made when Roblox decided it was a good idea to leak everyones age range. It was only made to spread light on the issue and the issue has now been resolved.',
+                isPermanent: true,
+            },
             EnableVideoTest: {
                 label: ['Video test'],
                 description: [
@@ -1380,6 +1458,15 @@ var featuresData = {
             },
             rendererDeveloperToggles: {
                 label: '3D renderer Developer toggles',
+                type: 'checkbox',
+                default: false,
+            },
+            forceFallbackAuth: {
+                label: 'Force Fallback Authentication',
+                description: [
+                    'Forces the use of the fallback verification system instead of OAuth.',
+                    'This auth is used in cases where OAuth doesnt work',
+                ],
                 type: 'checkbox',
                 default: false,
             },
