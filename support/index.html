@@ -652,6 +652,7 @@
                                 </div>
                                 <h3>Email Support</h3>
                                 <p>If you have any questions or issues you can contact us via email.</p>
+                                <p><a href="#" id="copymail" style="cursor: pointer;">rovalracontact@gmail.com</a> (click to copy)</p>
                             </div>
                             <a href="#" id="email-support-btn" class="fancy-support-button email-gradient"
                                 aria-label="Email Us">
@@ -1021,6 +1022,23 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('copyright-year').innerHTML = `© ${new Date().getFullYear()} RoValra. Not affiliated with Roblox Corporation.`;
         });
+    </script>
+
+    <script>
+        const p = document.getElementById("copymail");
+
+        p.addEventListener("click", async () => {
+            try {
+                const email = p.textContent;
+                await navigator.clipboard.writeText(p.textContent);
+                p.textContent = "Copied to clipboard!";
+                setTimeout(() => {
+                    p.textContent = email;
+                }, 1500);
+            } catch (err) {
+                console.error("Failed to copy:", err);
+            }
+      });
     </script>
 
 </body>
