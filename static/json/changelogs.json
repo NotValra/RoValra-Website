@@ -6,7 +6,7 @@
             "published_date": "April 11, 2026",
             "body": "New stuff:\r\n- Added sticky avatar preview, thanks to @zoinbase for making it.\r\n- Added banned user profiles, allowing you to view banned user profiles  (off by default)\r\n- Added Private and moderated experience viewer (off by default)\r\n- Added custom font for the Roblox site, thanks to @aliceenight for making it\r\n- Added a new fallback auth so people who cannot use Robloxs oauth is still able to have donator perks\r\n- Added Bulk Friend removal.\r\n- Added a feature showing where a user added you from. e.g in game, profile search etc.\r\n- Added a site fix for Robloxs new very poorly made Favorites carousel, pretty much made it look how it should :D\r\n- Added my transactions to side bar, thanks to @tigodev1 for making it\r\n- Made RoValra generate a Roblox API key automatically allowing RoValra to use more APIs. The api key is only used locally.\r\n- Made status max characters 128 instead of 50\r\n\r\nChanges:\r\n- Improved the compiling / building process of the extension, thanks to @tigodev1 for improving it\r\n- Improved Region Selector, making it join new servers to make it have a higher likely hood of joining fuller servers.\r\n- Improved styling and other small improvements for consistency in trading related features.\r\n- Improved the donator page in settings.\r\n- Improved caching logic, thanks to @cornusandu for improving it.\r\n- Improved multiple scripts storage / caching logic to future proof them\r\n- Improved the rap.js styling\r\n- Fixed hidden profile experiences link sometimes not working cuz I did a little mistake\r\n- Fixed skin tones not being applied in some cases when using quick outfits and avatar rotator\r\n- Fixed 40% method save robux button not having proper light mode support.\r\n- Fixed improved currently wearing displaying deleted items as \"not found\"\r\n- Fixed improved currently wearing displaying \"limiteds\" as \"limitedU\"\r\n- Fixed server list filters considered full servers as inactive.\r\n- Fixed search history duplicating when using spa navigation\r\n- Fixed hidden community experiences duplicating when using spa navigation\r\n- Fixed group funds duplicating when using spa navigation\r\n- Fixed issue with Robloxs new side bar, thanks to @aliceenight for making it\r\n- Fixed rovalra apis not returning a new accessToken when the old one expired.\r\n- Fixed copy id showing outside of Roblox\r\n- Fixed RoValra not saying if servers in a region went inactive.\r\n- Attempted to fix an issue where the 10%-40% method displayed the wrong saved robux amount\r\n- Made any part of rovalra that generate user thumbnails able to generate banned users thumbnail\r\n- Disabled experience trailer feature.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.13",
-            "chrome_release_date": null,
+            "chrome_release_date": "April 13, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.4.12.5",
-        "is_latest": false
+        "version": "2.4.13",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-04-13T11:31:34.010912Z"
+    "last_updated": "2026-04-13T12:29:44.749401Z"
 }
