@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.14",
+            "name": "v2.4.14",
+            "published_date": "April 14, 2026",
+            "body": "New stuff:\r\n- Added a proper environment creator for the 3d profile renderer. Allowing you to create your own custom client sided environment in prep for community made environments\r\n- Added profile gradient, allowing you to make a gradient for your profile background. (Donator perk tier 2)\r\n- Added a Donator leaderboard that shows the top 10 donators.\r\n\r\nChanges:\r\n- Reduced the amount of requests status sends by caching the response locally.\r\n- Improved unpending tomorrow, thanks to @Kanibal02\r\n- Heavily reworked a lot of logic in the 10%-40% method feature, in an attempt to make it more consistent and stable.\r\n- Fixed bulk unfriend not working without RoSeal.\r\n- Fixed bulk unfriend showing the display name instead of username.\r\n- Fixed friend since and friends from causing styling issues.\r\n- Fixed banned games displaying the wrong reason why a game is unavailable if content deleted.\r\n- Fixed banned games assuming the creator is a user.\r\n- Fixed broken icons not having none square ratio support.\r\n- Fixed the 40% method not displaying if a creator disabled purchasing in experiences.\r\n- Fixed group icons on profiles overflowing\r\n- Fixed Transactions being added to other  parts of the site than just the side bar\r\n- Fixed issues where api requests that should not be cached locally were cached locally\r\n- Fixed private / moderated experience viewer sometimes showing the wrong create and update date",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.14",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.4.13",
             "name": "v2.4.13",
             "published_date": "April 11, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.30",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.2.2",
-            "name": "Update 2.2.2",
-            "published_date": "August 14, 2025",
-            "body": "**I recommend downloading the RoValra.zip since the source seems to be missing some images**\r\n\r\n**New features**\r\n- **Uptime Server Tracking FOR FREE YIPPEEEE!**\r\n- Reworked the servers list, by adding region and uptime, and improving the share button and showing full server id. \r\n- Completely reworked the region selector and added it to the servers list filter (and removed the old one)\r\n- Added filters to the servers list allowing a user to filter by region, newest / oldest servers, random servers, Smallest servers, Available space, And servers with less than a specific amount of players.\r\n- Added a CSS fix for the avatar icon on users profile sometimes squishing (happens mostly when using a lot of extensions, and this is a Roblox issue which I fixed)\r\n- Made the region selector automatically support new Roblox Datacenters (Hopefully this works)\r\n\r\n**Changes**\r\n- Added support for the new Roblox community experiences UI (The UI experimental and has not fully rolled out)\r\n- Added support for checking hidden experiences on communities if they dont have any none hidden experiences\r\n- Added support for the react avatar editor on the r6 warning feature.\r\n- Replaced the old region selector with a ui letting the user know where the new one is.\r\n- Fixed Hidden user games not working in the new BTRoblox update \r\n- Fixed subplace tab not always getting added.\r\n- Removed the R6 fix cuz it was buggy and poorly made.",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.2",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.4.13",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-04-14T13:37:37.930410Z"
+    "last_updated": "2026-04-14T14:38:58.426712Z"
 }
