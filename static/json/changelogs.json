@@ -6,7 +6,7 @@
             "published_date": "April 14, 2026",
             "body": "New stuff:\r\n- Added a proper environment creator for the 3d profile renderer. Allowing you to create your own custom client sided environment in prep for community made environments\r\n- Added profile gradient, allowing you to make a gradient for your profile background. (Donator perk tier 2)\r\n- Added a Donator leaderboard that shows the top 10 donators.\r\n\r\nChanges:\r\n- Reduced the amount of requests status sends by caching the response locally.\r\n- Improved unpending tomorrow, thanks to @Kanibal02\r\n- Heavily reworked a lot of logic in the 10%-40% method feature, in an attempt to make it more consistent and stable.\r\n- Fixed bulk unfriend not working without RoSeal.\r\n- Fixed bulk unfriend showing the display name instead of username.\r\n- Fixed friend since and friends from causing styling issues.\r\n- Fixed banned games displaying the wrong reason why a game is unavailable if content deleted.\r\n- Fixed banned games assuming the creator is a user.\r\n- Fixed broken icons not having none square ratio support.\r\n- Fixed the 40% method not displaying if a creator disabled purchasing in experiences.\r\n- Fixed group icons on profiles overflowing\r\n- Fixed Transactions being added to other  parts of the site than just the side bar\r\n- Fixed issues where api requests that should not be cached locally were cached locally\r\n- Fixed private / moderated experience viewer sometimes showing the wrong create and update date",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.14",
-            "chrome_release_date": null,
+            "chrome_release_date": "April 15, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.4.13",
-        "is_latest": false
+        "version": "2.4.14",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-04-15T10:34:36.520477Z"
+    "last_updated": "2026-04-15T11:26:03.553153Z"
 }
