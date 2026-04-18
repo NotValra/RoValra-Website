@@ -1,3 +1,11 @@
+import {
+    ROBUX_FIAT_ESTIMATE_DEFAULT_GRADIENT,
+    ROBUX_FIAT_ESTIMATE_STYLE_MODE_SOLID,
+    ROBUX_FIAT_ESTIMATE_STYLE_OPTIONS,
+    TRANSACTION_FIAT_CURRENCY_OPTIONS,
+    TRANSACTION_FIAT_RATE_OPTIONS,
+} from '../transactions/fiatConfig.js';
+
 // Settings config (not developer settings)
 
 var featuresData = {
@@ -280,6 +288,17 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            TotalSpentGamesEnabled: {
+                label: 'Total Spent on Experience',
+                description: [
+                    'This shows how much Robux you have spent total on this experience.',
+                    'This will scan your transactions in the background and store the total spent (locally)',
+                    'This may take a few mins before it works when first installing the extension.',
+                ],
+                type: 'checkbox',
+                default: true,
+                storageKey: 'rovalra_transactions_data',
+            },
             OldestVersionEnabled: {
                 label: 'Oldest Server Version',
                 description: [
@@ -530,10 +549,19 @@ var featuresData = {
             trustedConnectionsEnabled: {
                 label: 'Trusted Friends',
                 description: [
-                    'This feature allows you to accept, request and remove trusted friends on the site for eligible friends.',
+                    'This feature allows you to accept, request and remove trusted friends on the site by pressing the (...) on their profile, this will only work for eligible friends.',
                     'Eligible friends must be ID or face-scan verified and within your age bracket (13–17 or 18+).',
                     'Trusted Friends might not be available in some regions.',
                     '**Note:** Roblox uses an algorithm that may prevent adding someone even if they meet these requirements. [Learn more here.](https://en.help.roblox.com/hc/en-us/articles/46158344285204)',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
+            lastOnlineEnabled: {
+                label: 'Show Last Online / Last Seen',
+                description: [
+                    'Shows when a user was last online / seen on their profile.',
+                    'Only works for friends.',
                 ],
                 type: 'checkbox',
                 default: true,
@@ -550,6 +578,13 @@ var featuresData = {
                 label: 'Show Friended From',
                 description:
                     'This shows where you became friends with a user e.g in game, profile etc',
+                type: 'checkbox',
+                default: true,
+            },
+            lastPlayedTogetherEnabled: {
+                label: 'Most Played Together',
+                description:
+                    'Shows the experience you played the most with a friend on their profile.',
                 type: 'checkbox',
                 default: true,
             },
@@ -601,6 +636,16 @@ var featuresData = {
                         label: 'Status bubble for friends on home page, and other parts of the site where friends might show.',
                         type: 'checkbox',
                         default: true,
+                    },
+                    disableVideoAudio: {
+                        label: 'Disable Video Audio In status',
+                        description: [
+                            'Mutes audio on videos in statuses.',
+                            'Select people can set videos in their status, and this mutes it.',
+                            '**Only select people can add videos to their status, and the list wont expand**',
+                        ],
+                        type: 'checkbox',
+                        default: false,
                     },
                 },
             },
@@ -832,6 +877,77 @@ var featuresData = {
     transactions: {
         title: 'Transactions',
         settings: {
+            robuxFiatEstimatesEnabled: {
+                label: 'Robux Fiat Estimates',
+                description: [
+                    'Shows a money estimate beside Robux values on the transactions page, group revenue pages, and related Robux UI.',
+                    'You can choose both the display currency and whether the estimate uses Roblox purchase pricing or the current DevEx cash-out rate.',
+                ],
+                type: 'checkbox',
+                default: false,
+                experimental:
+                    'Sometimes shows the wrong amount. And it might causes some issues on the site.',
+                childSettings: {
+                    robuxFiatDisplayCurrency: {
+                        label: 'Display Currency',
+                        description: [
+                            'Select which currency RoValra should convert Robux estimates into.',
+                        ],
+                        type: 'select',
+                        options: TRANSACTION_FIAT_CURRENCY_OPTIONS,
+                        default: 'USD',
+                    },
+                    robuxFiatRateMode: {
+                        label: 'Valuation Mode',
+                        description: [
+                            'Normal Purchase Rate uses Roblox purchase pricing as the estimate source.',
+                            'DevEx Cash-Out Rate uses the current Roblox DevEx cash-out rate of $0.0038 per Earned Robux before converting to your selected currency.',
+                        ],
+                        type: 'select',
+                        options: TRANSACTION_FIAT_RATE_OPTIONS,
+                        default: 'normal',
+                    },
+                    robuxFiatEstimateStyleMode: {
+                        label: 'Text Style',
+                        description: [
+                            'Choose between a solid color or a two-color gradient for the fiat estimate text.',
+                        ],
+                        type: 'select',
+                        options: ROBUX_FIAT_ESTIMATE_STYLE_OPTIONS,
+                        default: ROBUX_FIAT_ESTIMATE_STYLE_MODE_SOLID,
+                    },
+                    robuxFiatEstimateColor: {
+                        label: 'Estimate Text Color',
+                        description: [
+                            'Pick the color used for the fiat estimate text shown next to Robux values. Used when Text Style is set to Solid Color.',
+                        ],
+                        type: 'color',
+                        default: '#7a7d81',
+                    },
+                    robuxFiatEstimateGradient: {
+                        label: 'Estimate Text Gradient',
+                        description: [
+                            'Customize the gradient used for the fiat estimate text. Used when Text Style is set to Gradient.',
+                        ],
+                        type: 'gradient',
+                        default: ROBUX_FIAT_ESTIMATE_DEFAULT_GRADIENT,
+                    },
+                    robuxFiatEstimateBold: {
+                        label: 'Bold Estimate Text',
+                        description: ['Render the fiat estimate text in bold.'],
+                        type: 'checkbox',
+                        default: false,
+                    },
+                    robuxFiatEstimateItalic: {
+                        label: 'Italic Estimate Text',
+                        description: [
+                            'Render the fiat estimate text in italic.',
+                        ],
+                        type: 'checkbox',
+                        default: false,
+                    },
+                },
+            },
             totalspentEnabled: {
                 label: 'Total Spent',
                 description: [
@@ -871,6 +987,55 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+                childSettings: {
+                    tradeShowItemValues: {
+                        label: 'Show Item Values',
+                        description:
+                            'Display Rolimons item values on individual trade item cards',
+                        type: 'checkbox',
+                        default: true,
+                    },
+                    tradeShowProjectedIndicator: {
+                        label: 'Show Projected Item Indicator',
+                        description: 'Display warning icon for projected items',
+                        type: 'checkbox',
+                        default: true,
+                    },
+                    tradeShowRareIndicator: {
+                        label: 'Show Rare Item Indicator',
+                        description: 'Display rare item indicator icon',
+                        type: 'checkbox',
+                        default: true,
+                    },
+                    tradeShowItemInfo: {
+                        label: 'Show Item Info / Trend / Demand',
+                        description:
+                            'Display item information tooltip with trend, demand and risk data',
+                        type: 'checkbox',
+                        default: true,
+                    },
+                    tradeShowTotalValue: {
+                        label: 'Show Total Trade Value',
+                        description:
+                            'Display total value summary line in trade offers',
+                        type: 'checkbox',
+                        default: true,
+                    },
+                    tradeShowTotalDemand: {
+                        label: 'Show Average Demand',
+                        description:
+                            'Display average demand summary line in trade offers',
+                        type: 'checkbox',
+                        default: true,
+                    },
+                    tradeShowDiffPills: {
+                        label: 'Show Value / RAP Difference Pills',
+                        description:
+                            'Display the value and RAP difference comparison pills at the bottom of the trade window',
+                        type: 'checkbox',
+                        default: true,
+                    },
+                },
             },
             tradePreviewEnabled: {
                 label: 'Trade Preview',
@@ -1059,6 +1224,15 @@ var featuresData = {
                     'This feature allows you to download assets like meshes, images, audios, etc from the create page.',
                 type: 'checkbox',
                 default: true,
+            },
+            legacyThemeSwitcherEnabled: {
+                label: 'Legacy Theme Switcher',
+                description: [
+                    'This adds a dropdown in the Roblox settings which replicates how the old theme switcher worked',
+                    "This means you won't have to switch to your preferred theme when logging in on a new browser",
+                ],
+                type: 'checkbox',
+                default: false,
             },
 
             copyIdEnabled: {

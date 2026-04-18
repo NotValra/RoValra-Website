@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.4.15",
+            "name": "v2.4.15",
+            "published_date": "April 18, 2026",
+            "body": "New stuff:\r\n- Most played Together, show what game you played the most with a user on their profile\r\n- Total Spent Per Game, shows how much you spent under each game\r\n- Robux Fiat Estimates, shows a money estimate beside Robux Values, Thanks to @tigodev1 for making it.\r\n- Legacy Theme Switcher, adds a theme selector that works like the old theme selector, Thanks to @lolct for making it.\r\n- Last seen / last online, showing when a user on your friends list was last online\r\n- Added Subgenre to Private / moderated games\r\n- Added a tooltip to private / moderated games showing the full amount of Visits, Active, Favorites and Max Players\r\n- Added functionality to the \"friends playing\" icon on RoValra created game cards, as RoValra gamecards sometimes replaces Robloxs\r\n- Added missing friends from sources, thanks to roseal.\r\n- Added Version text to the Subplace game cards.\r\n- Added more settings to trading related features for better extension compatibility \r\n- Improved the update heatmap, adding date range filters and smaller QoL tweaks.\r\n\r\nChanges:\r\n- Made the status input show how the status will look more properly\r\n- Made the status show instantly on stuff like home pages when hovering\r\n- Changed friends since and friends source to only show when viewing your own friends list.\r\n- Changed the background color of Profile buttons to be none transparent if a user has an environment or gradient enabled for readability.\r\n- Changed the max width of status to be smaller.\r\n- Fixed Voice chat supported showing unsupported when voice chat is supported\r\n- Fixed Private / moderated games breaking if a user doesnt have their language set to english\r\n- Fixed trading features sometimes showing the wrong difference\r\n- Fixed misc bugs related to Quick Search\r\n- Fixed styling issues related to the the include Robux toggle when trading\r\n- Attempted to fix an issue where  preffered region fallback location were not checked for inactively before allowing a user to join it.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.15",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.4.14",
             "name": "v2.4.14",
             "published_date": "April 14, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.31",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.2.30",
-            "name": "Updated 2.2.30",
-            "published_date": "August 17, 2025",
-            "body": "\r\nChanges\r\n- Updated back to v2.2.2 after the rollback.\r\n- Fixed the extension not working if the RoValra servers has issues.\r\n- Optimized the Servers (Backend)",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.30",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.4.14",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-04-18T18:17:26.271865Z"
+    "last_updated": "2026-04-18T19:19:15.837449Z"
 }
