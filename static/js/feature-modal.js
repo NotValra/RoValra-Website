@@ -16,18 +16,22 @@ if (featureModal) {
         let featureData = null;
         if (typeof featuresData !== 'undefined') {
             for (const sectionKey in featuresData) {
+                if (!Object.prototype.hasOwnProperty.call(featuresData, sectionKey)) continue;
+                
                 const section = featuresData[sectionKey];
-                if (section.settings) {
+                if (section && typeof section === 'object' && section.settings) {
                     for (const key in section.settings) {
+                        if (!Object.prototype.hasOwnProperty.call(section.settings, key)) continue;
                         const item = section.settings[key];
-                        if ((Array.isArray(item.label) ? item.label[0] : item.label) === title) {
+                        if (item && (Array.isArray(item.label) ? item.label[0] : item.label) === title) {
                             featureData = item;
                             break;
                         }
-                        if (item.childSettings) {
+                        if (item && item.childSettings) {
                             for (const childKey in item.childSettings) {
+                                if (!Object.prototype.hasOwnProperty.call(item.childSettings, childKey)) continue;
                                 const child = item.childSettings[childKey];
-                                if ((Array.isArray(child.label) ? child.label[0] : child.label) === title) {
+                                if (child && (Array.isArray(child.label) ? child.label[0] : child.label) === title) {
                                     featureData = child;
                                     break;
                                 }

@@ -1,10 +1,11 @@
-import {
-    ROBUX_FIAT_ESTIMATE_DEFAULT_GRADIENT,
-    ROBUX_FIAT_ESTIMATE_STYLE_MODE_SOLID,
-    ROBUX_FIAT_ESTIMATE_STYLE_OPTIONS,
-    TRANSACTION_FIAT_CURRENCY_OPTIONS,
-    TRANSACTION_FIAT_RATE_OPTIONS,
-} from '../transactions/fiatConfig.js';
+// Automatically mocked imports for website compatibility
+var ROBUX_FIAT_ESTIMATE_DEFAULT_GRADIENT = null;
+var ROBUX_FIAT_ESTIMATE_STYLE_MODE_SOLID = null;
+var ROBUX_FIAT_ESTIMATE_STYLE_OPTIONS = null;
+var TRANSACTION_FIAT_CURRENCY_OPTIONS = null;
+var TRANSACTION_FIAT_RATE_OPTIONS = null;
+
+
 
 // Settings config (not developer settings)
 

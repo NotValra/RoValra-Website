@@ -16,7 +16,20 @@ def update_features_config(tag_name):
     
     if response.status_code == 200:
         content = response.text
-        new_content = content.replace("export const SETTINGS_CONFIG =", "var featuresData =")
+        
+        import_pattern = r'import\s+\{([\s\S]*?)\}\s+from\s+[\'"].*?[\'"];?'
+        imports = re.findall(import_pattern, content)
+        mocks = []
+        for imp in imports:
+            vars_to_mock = [v.strip().split(' as ')[-1] for v in imp.split(',')]
+            mocks.extend([v for v in vars_to_mock if v])
+        
+        clean_content = re.sub(import_pattern, '', content)
+        new_content = clean_content.replace("export const SETTINGS_CONFIG =", "var featuresData =")
+        
+        if mocks:
+            mock_definitions = "\n".join([f"var {m} = null;" for m in sorted(set(mocks))])
+            new_content = f"// Automatically mocked imports for website compatibility\n{mock_definitions}\n\n{new_content}"
         
         if os.path.exists(FEATURES_FILE):
             try:
