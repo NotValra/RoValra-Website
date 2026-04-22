@@ -26,12 +26,12 @@
                     <li><a href="/#supportSection" class="nav-text-link">Support</a></li>
                     <li><a href="/changelogs/" class="nav-text-link">Changelogs</a></li>
                     <li>
-                        <a href="https://discord.gg/rovalra" target="_blank" rel="noopener noreferrer" title="Discord">
+                        <a href="https://discord.gg/aw6rEnFSjV" target="_blank" rel="noopener noreferrer" title="Discord">
                             <i class="fab fa-discord"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/NotValra/RoValra-Website" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <a href="https://github.com/NotValra/RoValra" target="_blank" rel="noopener noreferrer" title="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                     </li>
