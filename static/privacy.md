@@ -1,106 +1,118 @@
 **Privacy Policy for RoValra Chrome Extension**
 
-**Effective Date:** February 13, 2026
+**Effective Date:** April 22, 2026
 
 **Introduction**
 
 This Privacy Policy describes how the RoValra Chrome extension ("the Extension") handles user data. We are committed to protecting your privacy and ensuring transparency about our data practices.
 
-**1. Information Collection: General Users vs. Donators**
+<!-- section:information-collection:fas fa-info-circle -->
+## Information Collection
 
-Our data collection practices differ significantly depending on how you engage with the Extension.
+Our data collection practices differ based on how you engage with the Extension:
 
-**A. General Users (Non-Donators)**
-For the vast majority of users who use the free features of the Extension:
-*   RoValra does **not** collect, store, or transmit any personally identifiable information (PII).
-*   We do not track browsing history, emails, passwords, or names.
-*   The Extension primarily interacts with Roblox's services and APIs, developer-controlled APIs, and potentially other third-party APIs strictly to retrieve public data required for functionality.
+- **General Users (Non-Donators):**
+    - By default, RoValra does **not** collect, store, or transmit personally identifiable information (PII).
+    - We do not track browsing history, emails, passwords, or names.
+    - The Extension primarily interacts with official APIs strictly to retrieve public data.
+    - **Temporary Sessions:** For specific one-time actions, non-donators may initiate a temporary OAuth session. This data is stored for a maximum of **30 minutes**. Depending on the action performed, identifying information such as your Roblox User ID may persist in our records to fulfill the specific request.
+    - **User-Set Information:** In rare specific feature cases, we may store information you explicitly set (such as status text or specific configuration settings) for non-donators to ensure the functionality of the requested feature.
 
-**B. Donators (OAuth and Badge Features)**
-For users who have voluntarily donated to support RoValra and wish to utilize exclusive features (such as Donator Badges), we collect and store specific information. This collection occurs **only** after you explicitly authenticate via **OAuth** to verify your identity.
+- **Donators (OAuth and Badge Features):**
+    - Data collection occurs **only** after explicit OAuth authentication.
+    - **What is stored:**
+        - **Roblox User ID:** Used to uniquely identify your account.
+        - **Roblox Username:** To display your identity within the extension.
+        - **Donation Amount:** To track your contribution tier.
+        - **Donator Badge Status:** To remember your toggle preferences.
+        - **OAuth Tokens:** Cryptographic keys required to maintain your session.
+        - **User-Set Information:** This includes custom status text, environment choices, and other personalized settings configured within the RoValra extension.
 
-If you are a donator and choose to authenticate, we store the following data in our secure database:
-1.  **Roblox User ID:** (Public Information) To uniquely identify your account.
-2.  **Roblox Username:** (Public Information) To display your identity correctly within the extension.
-3.  **Donation Amount:** To track your contribution tier.
-4.  **Donator Badge Status:** To remember your preference (e.g., if you have toggled your badge ON or OFF).
-5.  **OAuth Tokens:** (Access & Refresh Tokens) Required to maintain your authenticated session.
-
-**2. OAuth Authentication & Token Usage**
-
+<!-- section:oauth-authentication:fas fa-lock -->
+## OAuth Authentication & Token Usage
 To manage Donator features, users must authenticate using Roblox's official OAuth system.
 
-*   **Background Processing:** Once you authorize the extension, the authentication process operates in the **background**. This ensures a seamless experience where you do not need to manually log in every time you use the extension.
-*   **Token Storage:** To maintain this background session, we are required by the OAuth protocol to store specific cryptographic keys:
-    *   **Access Token:** A short-lived key that allows us to verify your identity.
-    *   **Refresh Token:** A long-lived key used to generate new Access Tokens when old ones expire.
-
-**Strict Limitations on Token Usage:**
-It is critical to understand what these tokens are used for.
-1.  **Read-Only Scope:** The tokens allow us to **read** your public User ID and Profile. They **DO NOT** give us access to change your Roblox password, spend your Robux, trade items, or modify your games.
-2.  **Internal Modification Only:** The only "write" action permitted is modifying the visibility of your **RoValra Donator Badge**. This change occurs strictly within the **RoValra database**, not on the Roblox platform.
-
-**Permissions Requested:**
-We request the minimum permissions necessary, which are classified as **Low Risk**:
-
+- **Background Processing:** Authentication operates in the background for a seamless experience.
+- **Token Storage:** We store an **Access Token** (identity verification) and a **Refresh Token** (session maintenance).
+- **Temporary Usage:** Non-donators using specific features may utilize a short-lived OAuth token that expires and is deleted after 30 minutes.
+- **Strict Limitations:**
+    - **Read-Only Scope:** Tokens allow us to read public profile data only. They **cannot** spend Robux, change passwords, or trade items.
+    - **Low Risk Permissions:**
 | Permission            | Description                                                      | Risk Level |
 | :-------------------- | :--------------------------------------------------------------- | :--------- |
 | **Read User ID**      | View your Roblox User ID to know who you are.                    | **Low**    |
 | **Read User Profile** | View your username, display name, user avatar, and profile link. | **Low**    |
 
-**3. Optional Data Sharing (PlaceIds and ServerIds)**
+<!-- section:fallback-auth:fas fa-sign-in-alt -->
+## Fallback Authentication
 
-For certain features, the Extension sends specific, non-personal data—namely PlaceIds and serverIds—to a developer-controlled API. This data is used to enhance the functionality of the extension.
+In the event that the official Roblox OAuth system is unavailable or fails to function, RoValra provides a Fallback Authentication method:
 
-This feature is **completely optional** and can be turned off at any point in the extension's settings. When this feature is active, only the PlaceId and serverId are transmitted in the data payload. No data that could link a user to this information is explicitly logged by our software.
+- **Verification Method:** This process involves you favoriting a specific, designated Roblox experience for a few seconds and then unfavoriting it.
+- **Purpose:** This action allows our servers to verify your ownership of the account by checking public activity logs.
+- **Security:** This method does not require any passwords or sensitive tokens and is used solely to verify account identity when standard OAuth is offline.
 
-**4. User Rights: Access and Erasure**
+
+
+<!-- section:optional-data-sharing:fas fa-share-alt -->
+## Optional Data Sharing
+
+For certain features, the Extension may send specific non-personal data:
+- **Data points:** Transmits only **PlaceIds** and **serverIds**.
+- **Purpose:** Used to enhance server-tracking and uptime features.
+- **Control:** Completely optional; can be disabled in settings at any time.
+- **Privacy:** No data that could link a user to this info is explicitly logged.
+
+<!-- section:user-rights:fas fa-user-shield -->
+## User Rights: Access and Erasure
 
 We respect your control over your personal data. If you are a donator and your data is stored in our system, you have the following rights:
 
-1.  **Right to Access:** You may request a copy of the personal data we hold about you (User ID, Username, Donation Amount, Badge Status).
-2.  **Right to Erase (Right to be Forgotten):** You may request that we permanently delete your personal data from our database.
-    *   *Note: This will delete your User ID, Username, and revoke/delete your OAuth Tokens. You will lose the ability to display Donator Badges.*
+- **Right to Access:** You may request a copy of the data we hold (ID, Username, Tier).
+- **Right to Erase:** You may request permanent deletion of your data.
+    - *Note: This revokes tokens and removes access to Donator Badges.*
+- **Contact:** Email **RoValraContact@gmail.com** with subject "Right to Access" or "Right to Erase".
 
-To exercise these rights, please contact us via email at **RoValraContact@gmail.com** with one of the following subject lines:
-*   **Subject:** "Right to Access"
-*   **Subject:** "Right to Erase"
+<!-- section:data-security:fas fa-shield-alt -->
+## Data Security
 
-**5. Data Security**
+We use industry-standard security to protect our users:
 
-*   **General Users:** As the extension does not store or transmit personal data for general users to external servers, traditional server-side encryption for user databases is not applicable. Processing generally occurs on your local machine.
-*   **Donators:** For the specific subset of users (Donators) whose data is stored:
-    *   We use industry-standard security measures to protect the database containing User IDs and OAuth tokens.
-    *   OAuth tokens are treated with high sensitivity and are never shared with third parties.
-*   **Network Security:** All network interactions with our APIs are secured via **HTTPS** and protected by standard network infrastructure providers.
+- **Local Processing:** For general users, all processing occurs on your local machine.
+- **Secure Database:** Donator IDs and tokens are stored in a secured, encrypted database.
+- **Token Sensitivity:** Tokens are never shared with third parties.
+- **HTTPS:** All API interactions are secured via encrypted HTTPS tunnels.
 
-**6. Third-Party Services**
+<!-- section:third-party-services:fas fa-cloud -->
+## Third-Party Services
 
 To provide its features, RoValra interacts with several Application Programming Interfaces (APIs):
 
-1.  **Roblox's APIs:** Essential for interacting with the Roblox platform itself and performing the OAuth handshake.
-2.  **Developer-Controlled APIs (Valra):** The Extension interacts with various API endpoints managed by the RoValra developer to retrieve data, manage donator records, and support functionality (including the optional sharing of PlaceIds/serverIds).
-    *   **Infrastructure & Security:** **All** traffic between the Extension and any RoValra developer-controlled API is routed through **Cloudflare** for performance, optimization, and security (e.g., DDoS protection).
-    *   While the RoValra extension logic does not track your IP address for analytics, standard web traffic information—including your IP address—is necessarily processed by Cloudflare to establish the connection to our APIs. This applies to *any* interaction with our servers.
-    *   For information on how Cloudflare handles network data, please refer to [Cloudflare’s Privacy Policy](https://www.cloudflare.com/privacypolicy/).
-3.  **Other Third-Party APIs:** The Extension may interact with other external APIs not controlled by Roblox or the developer. These are used strictly to *retrieve* public information required for specific features.
+- **Roblox's APIs:** Essential for the platform interaction and OAuth.
+- **RoValra APIs:** Managed by the developer to handle donator records and data support.
+- **Cloudflare:** All traffic is routed through Cloudflare for performance and DDoS protection.
+- **Infrastructure:** Standard web traffic info (like IP addresses) is processed by Cloudflare to establish secure connections.
 
-**7. Data Retention**
+<!-- section:data-retention:fas fa-history -->
+## Data Retention
 
-*   **General Users:** Since no PII is collected, there is no retention period. Network logs processed by Cloudflare are retained according to their specific security policies.
-*   **Donators:** User IDs, Usernames, and OAuth tokens are retained indefinitely to allow you to maintain your donator status and badge preferences, unless you request a "Right to Erase."
+- **General Users:** No PII is collected by default. 
+- **Temporary Sessions:** Data from temporary OAuth actions (non-donators) is deleted automatically after a maximum of **30 minutes**.
+- **Donators:** IDs and tokens are retained indefinitely to maintain badge status unless erasure is requested.
 
-**8. Children's Privacy**
+<!-- section:children-privacy:fas fa-child -->
+## Children's Privacy
 
-The Extension is designed to be compliant with the Children's Online Privacy Protection Act (COPPA).
-*   **General Use:** We do not collect personal information from children via the general use of the extension.
-*   **Donation/OAuth Features:** The donation system and the associated OAuth login functionality are strictly limited to users aged **13 and older**. We do not knowingly process OAuth logins or store tokens for users under the age of 13.
+- **COPPA Compliance:** The extension is designed to be compliant with child safety regulations.
+- **General Use:** We may store Roblox User IDs and records of actions taken within the extension (such as the visibility of badges or the state of specific RoValra features) for users under 13. This is necessary to maintain feature persistence and consistency across the RoValra ecosystem.
 
-**Changes to This Privacy Policy**
+<!-- section:changes:fas fa-sync-alt -->
+## Changes to This Privacy Policy
 
 We may update this Privacy Policy from time to time. Any changes will be posted on this page, and we will update the “Effective Date.” Your continued use of the Extension after any changes signifies your acceptance of the new policy.
 
-**Contact Information**
+<!-- section:contact-information:fas fa-envelope -->
+## Contact Information
 
 If you have any questions or concerns about this Privacy Policy, you can contact us at:
 

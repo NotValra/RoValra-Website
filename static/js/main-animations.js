@@ -34,6 +34,10 @@ const config = {
   });
   
   (function animate() {
+    if (bg && bg.hasAttribute('data-static')) {
+        return;
+    }
+
     const now = performance.now();
     const elapsed = now - scaleStartTime;
     const t = Math.min(elapsed / config.scaleDuration, 1);
