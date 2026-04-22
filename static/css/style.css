@@ -1607,7 +1607,7 @@ body {
 
 .improved-text {
     font-family: 'builderExtended-bold', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: 700;
     letter-spacing: 0.05em;
     opacity: 0.95;
@@ -2981,4 +2981,5 @@ body.scrolled .nav-island::after {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.8;
     font-size: 1.05rem;
+    margin-top: 10px;
 }
