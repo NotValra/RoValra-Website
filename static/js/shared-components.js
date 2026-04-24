@@ -22,8 +22,8 @@
                     <img src="/static/img/logo-base.svg" class="nav-logo-img" alt="RoValra" width="120" height="30">
                 </a>
                 <ul class="nav-links">
-                    <li><a href="/#featuresSection" class="nav-text-link">Features</a></li>
-                    <li><a href="/#supportSection" class="nav-text-link">Support</a></li>
+                    <li><a href="/#features" class="nav-text-link">Features</a></li>
+                    <li><a href="/#support" class="nav-text-link">Support</a></li>
                     <li><a href="/changelogs/" class="nav-text-link">Changelogs</a></li>
                     <li>
                         <a href="https://discord.gg/aw6rEnFSjV" target="_blank" rel="noopener noreferrer" title="Discord">
@@ -54,7 +54,7 @@
         document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
         const scrollTopBtn = document.getElementById('scrollTopBtn');
-        const featuresSection = document.getElementById('featuresSection');
+        const featuresSection = document.getElementById('features');
 
         const handleScroll = () => {
             if (!scrollTopBtn) return;
