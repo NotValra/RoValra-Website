@@ -1,10 +1,281 @@
 {
-    "releases": [],
+    "releases": [
+        {
+            "tag_name": "v2.4.15",
+            "name": "v2.4.15",
+            "published_date": "April 18, 2026",
+            "body": "New stuff:\r\n- Most played Together, show what game you played the most with a user on their profile\r\n- Total Spent Per Game, shows how much you spent under each game\r\n- Robux Fiat Estimates, shows a money estimate beside Robux Values, Thanks to @tigodev1 for making it.\r\n- Legacy Theme Switcher, adds a theme selector that works like the old theme selector, Thanks to @lolct for making it.\r\n- Last seen / last online, showing when a user on your friends list was last online\r\n- Added Subgenre to Private / moderated games\r\n- Added a tooltip to private / moderated games showing the full amount of Visits, Active, Favorites and Max Players\r\n- Added functionality to the \"friends playing\" icon on RoValra created game cards, as RoValra gamecards sometimes replaces Robloxs\r\n- Added missing friends from sources, thanks to roseal.\r\n- Added Version text to the Subplace game cards.\r\n- Added more settings to trading related features for better extension compatibility \r\n- Improved the update heatmap, adding date range filters and smaller QoL tweaks.\r\n\r\nChanges:\r\n- Made the status input show how the status will look more properly\r\n- Made the status show instantly on stuff like home pages when hovering\r\n- Changed friends since and friends source to only show when viewing your own friends list.\r\n- Changed the background color of Profile buttons to be none transparent if a user has an environment or gradient enabled for readability.\r\n- Changed the max width of status to be smaller.\r\n- Fixed Voice chat supported showing unsupported when voice chat is supported\r\n- Fixed Private / moderated games breaking if a user doesnt have their language set to english\r\n- Fixed trading features sometimes showing the wrong difference\r\n- Fixed misc bugs related to Quick Search\r\n- Fixed styling issues related to the the include Robux toggle when trading\r\n- Attempted to fix an issue where  preffered region fallback location were not checked for inactively before allowing a user to join it.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.15",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.14",
+            "name": "v2.4.14",
+            "published_date": "April 14, 2026",
+            "body": "New stuff:\r\n- Added a proper environment creator for the 3d profile renderer. Allowing you to create your own custom client sided environment in prep for community made environments\r\n- Added profile gradient, allowing you to make a gradient for your profile background. (Donator perk tier 2)\r\n- Added a Donator leaderboard that shows the top 10 donators.\r\n\r\nChanges:\r\n- Reduced the amount of requests status sends by caching the response locally.\r\n- Improved unpending tomorrow, thanks to @Kanibal02\r\n- Heavily reworked a lot of logic in the 10%-40% method feature, in an attempt to make it more consistent and stable.\r\n- Fixed bulk unfriend not working without RoSeal.\r\n- Fixed bulk unfriend showing the display name instead of username.\r\n- Fixed friend since and friends from causing styling issues.\r\n- Fixed banned games displaying the wrong reason why a game is unavailable if content deleted.\r\n- Fixed banned games assuming the creator is a user.\r\n- Fixed broken icons not having none square ratio support.\r\n- Fixed the 40% method not displaying if a creator disabled purchasing in experiences.\r\n- Fixed group icons on profiles overflowing\r\n- Fixed Transactions being added to other  parts of the site than just the side bar\r\n- Fixed issues where api requests that should not be cached locally were cached locally\r\n- Fixed private / moderated experience viewer sometimes showing the wrong create and update date",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.14",
+            "chrome_release_date": "April 15, 2026",
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.13",
+            "name": "v2.4.13",
+            "published_date": "April 11, 2026",
+            "body": "New stuff:\r\n- Added sticky avatar preview, thanks to @zoinbase for making it.\r\n- Added banned user profiles, allowing you to view banned user profiles  (off by default)\r\n- Added Private and moderated experience viewer (off by default)\r\n- Added custom font for the Roblox site, thanks to @aliceenight for making it\r\n- Added a new fallback auth so people who cannot use Robloxs oauth is still able to have donator perks\r\n- Added Bulk Friend removal.\r\n- Added a feature showing where a user added you from. e.g in game, profile search etc.\r\n- Added a site fix for Robloxs new very poorly made Favorites carousel, pretty much made it look how it should :D\r\n- Added my transactions to side bar, thanks to @tigodev1 for making it\r\n- Made RoValra generate a Roblox API key automatically allowing RoValra to use more APIs. The api key is only used locally.\r\n- Made status max characters 128 instead of 50\r\n\r\nChanges:\r\n- Improved the compiling / building process of the extension, thanks to @tigodev1 for improving it\r\n- Improved Region Selector, making it join new servers to make it have a higher likely hood of joining fuller servers.\r\n- Improved styling and other small improvements for consistency in trading related features.\r\n- Improved the donator page in settings.\r\n- Improved caching logic, thanks to @cornusandu for improving it.\r\n- Improved multiple scripts storage / caching logic to future proof them\r\n- Improved the rap.js styling\r\n- Fixed hidden profile experiences link sometimes not working cuz I did a little mistake\r\n- Fixed skin tones not being applied in some cases when using quick outfits and avatar rotator\r\n- Fixed 40% method save robux button not having proper light mode support.\r\n- Fixed improved currently wearing displaying deleted items as \"not found\"\r\n- Fixed improved currently wearing displaying \"limiteds\" as \"limitedU\"\r\n- Fixed server list filters considered full servers as inactive.\r\n- Fixed search history duplicating when using spa navigation\r\n- Fixed hidden community experiences duplicating when using spa navigation\r\n- Fixed group funds duplicating when using spa navigation\r\n- Fixed issue with Robloxs new side bar, thanks to @aliceenight for making it\r\n- Fixed rovalra apis not returning a new accessToken when the old one expired.\r\n- Fixed copy id showing outside of Roblox\r\n- Fixed RoValra not saying if servers in a region went inactive.\r\n- Attempted to fix an issue where the 10%-40% method displayed the wrong saved robux amount\r\n- Made any part of rovalra that generate user thumbnails able to generate banned users thumbnail\r\n- Disabled experience trailer feature.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.13",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.12.5",
+            "name": "v2.4.12.5",
+            "published_date": "March 27, 2026",
+            "body": "# **Hot fix**\r\n\r\n- Fixed status not being applied if you aren't a donator\r\n- Fixed environment not being applied if you aren't a donator.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.12.5",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.12",
+            "name": "v2.4.12",
+            "published_date": "March 27, 2026",
+            "body": "new stuff:\r\n- Added a new donator perk for all tiers, allowing donators to set status and environments without adding it in their about me.\r\n- Added values to trades showing how much you are winning in value and rap and demand.\r\n- Added a risk calulator that shows how risky an item is (experimental and off by default)\r\n- Added a trade preview allowing you to see how much you are winning or losing in a trade without clicking on it.\r\n- Added icons for rares and projected on the trade page.\r\n- Added a small preview of the trade on the confirmation page so you dont accidentally send the wrong trade.\r\n- Made the time sent more readable on the trades.\r\n- Updated rap on users profile to support values, projected and rare marking too.\r\n- Added a trade filter allowing you to search for items in your completed, inbound, outbound or inactive trades.\r\n- Added values, demand, trend, projected, rare, and risk to item pages. \r\n- Added Proof Trades allowing you to quickly copy a trade proof for a given trade so you can easily proof it in rolimons\r\n- Added \"locked\" features to the setting page, in case features becomes broken to where they have to be disabled.\r\n- Made a bunch of improvements to the settings page.\r\n\r\nChanges:\r\n- Improved Profile Renderer reworks performance\r\n- Moved friend tracking requests used for features like \"friended since\" to background.js to make it more stable and to not flood the network tab\r\n- Improved status spoofing.\r\n- Made 3d renderer rework forcefully enable 3d renderer on profile to prevent confusion.\r\n- Fixed RoValra not checking if servers are active locally.\r\n- Lowered the amount of gamejoin api requests cuz of roblox changing rate limits\r\n- Added support for full masks in pricefloor.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.12",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.11",
+            "name": "v2.4.11",
+            "published_date": "March 20, 2026",
+            "body": "New stuff:\r\n- Added profile 3d render, allowing for effect items, animations and way more cool stuff thanks to RoAvatar (off by default as experimental for now)\r\n- Added custom environments to 3d avatar renders on profiles\r\n- Added developer settings making it a lot easier to make environments\r\n- Added status bubble that shows on your profile where u can set a custom status for anyone with RoValra to see.\r\n- Added group funds in the nav bar, showing your group funds and pending group funds.\r\n- Added locale support in RoValra, which will be community driven translations to make sure it is as accurate as possible. (Not entirely done)\r\n- Added better credits to the people who contributed to RoValra\r\n- Added a feature that shows if a user is ID verified on Roblox or not.\r\n- Added more functionality to the beta programs navigation bar selector, now showing if the beta program is in an allowlist, and the platforms its on.\r\n- Added a \"friends Since\" feature thats shows you how long you have been friends with a user\r\n- Added \"Robux After Purchase\" feature, which pretty much brings back the \"Your balance after this transaction will be x\" to the new Roblox Purchase UI\r\n\r\nChanges\r\n- Renamed all mentions of \"connections\" to \"friends\"\r\n- Added 40% method support to Robloxs new purchase ui.\r\n- Fixed settings separator for descriptions showing when a setting doesnt have a description\r\n- Fixed improved currently wearing not showing any items for other categories if the user doesnt have any items in the items category.\r\n- Fixed gamepasses not having the \"save x amount\" button added for the 10%-40% method\r\n- Fixed preferred region falling back to manually scanning fallback, if all the servers in the closest region has been joined before. It now correctly checks the second closest and third closest etc with the rovalra api until it finds a server.\r\n- Fixed subplaces not having a load more button.\r\n- Fixed a bug where RoValra badges could be removed right after being added to the site.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.11",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.10",
+            "name": "v2.4.10",
+            "published_date": "March 09, 2026",
+            "body": "New stuff:\r\n- Added developer products to the store tab on experiences.\r\n- Added Update History feature showing a heatmap of a games update history heavily inspired by RoPro v2s update history (Beta but on by default)\r\n- Added a feature showing the previous price of off sale items in currently wearing.\r\n- Added a feature that completely redesigns robloxs currently wearing ui, heavily inspired by RoSeals improved currently wearing.\r\n- Added a feature showing what bundle an item is from when viewing items that are in bundles on the catalog.\r\n- Added a feature that autocompletes searches for games, users and friends\r\n- Added a feature that shows your search history when using robloxs search feature.\r\n- Added a feature showing if Roblox thinks your account is the first account you ever created.\r\n- Added a feature allowing you to add, remove and accept trusted connections on the site.\r\n\r\nChanges:\r\n- Reworked the outfits ui a bit making it a lot better.\r\n- made it clearer when you don't have permissions to manage games when using the 40% method.\r\n- made only one dropdown able to be able to show at a time.\r\n- made a clear selected for the avatar rotator\r\n- made a \"Open Setup\" button in the settings page for the 40% method so its easier to configure.\r\n- made an option in the group dropdown in the 40% method for if you don't have a group, explaining how to set it up.\r\n- Fixed an issue with the dropdown ui where the arrow could get stuck in the pointing up position after selecting an option.\r\n- Fixed right click copy id not supporting developer products.\r\n- Fixed outfits viewers links being incorrect on assets inside of bundles.\r\n- Fixed a bug where hidden games on user profiles would get stuck loading for a very long time.\r\n- Fixed avatar rotator showing the same avatars when pressing load more (Roblox is never consistent)\r\n- Fixed subplaces getting subplaces without a user being on the tab.\r\n- Fixed download button not being added cuz roblox changed the element for no reason YAY\r\n- Fixed avatar rotator overlaying the create button.\r\n- Fixed save x robux being added to limited items.\r\n- Fixed placeholder text in input boxes overlaying the value in the input box in settings.\r\n- Fixed server list filters not showing player count and correct thumbnails when the data is there.\r\n- Fixed uses of old names of things like experiences in settings\r\n- Improved the items.js script a bit.\r\n- Attempted to improve avatar rotators consistency",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.10",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.9",
+            "name": "v2.4.9",
+            "published_date": "February 20, 2026",
+            "body": "New Stuff:\r\n- Added quick copy id in the right click context menu (off by default)\r\n- Added quick copy universe id in the right click context menu (off by default)\r\n- Added a toggle for optional permissions in settings, so u can disable them if you dont want them enabled at a later date\r\n- Added a feature making equipping multiple accessories seamless.\r\n- Added a beta programs toggle to the nav bar (off by default)\r\n- Added a new category in settings for Navigation related features\r\n- Added a [test page](https://www.roblox.com/test) used for testing ui related things in rovalra.\r\n- Added donator perks to the settings page showing what you get for donating.\r\n- Made streamer mode hide previous usernames in settings.\r\n\r\nChanges:\r\n- Fixed a bug where quality of life toggles would allow for an inf horizontal scroll.\r\n- Fixed out of sync setting.\r\n- Fixed RoValra getting recent servers in the background even when recent servers is disabled.\r\n- Fixed recent servers flooding the networks tab with presence api requests, sorry to anyone trying to develop stuff.\r\n- Fixed view user outfits button being incompatible with some extensions.\r\n- Fixed view user outfits styling issues thats been bugging me for a while.\r\n- Fixed Avatar rotator not displaying all avatars\r\n- Fixed the 40% method not adding save x robux to cart if opening the cart on the main catalog page\r\n- Fixed RoValra not verifying that the fallback server is actually active when using preferred region.\r\n- Fixed odd spacing on the quality of life toggles.\r\n- Attempted to fix an issue where the custom roblox launch ui could crash your browser if left running in the background for too long.\r\n- Changed the slider color in settings to match robloxs slider.\r\n- Updated the view user outfits ui to match the ui of the rest of the extension\r\n- Updated background.js heavily making it a lot easier to work with.\r\n- Reworked the way RoValra creates game cards and item cards, to be easier to work with and a lot better in general.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.9",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.8",
+            "name": "v2.4.8",
+            "published_date": "February 13, 2026",
+            "body": "With this update the legacy donator badge is officially unobtainable specifically 1 day after chrome accepts the update. And fully replaced with the new donation badges.\r\n\r\nNew stuff\r\n- Added a feature that shows the price floor of the item type you are viewing and if the item you are viewing is at, above or below (even tho that shouldn't be possible LOL) the price floor.\r\n- Added quality of life toggles to the nav bar that allows you to toggle your online status and experience status without going into settings\r\n- Added avatar rotator.\r\n- Added Clear storage to the settings page, used to clear the storage of features.\r\n- Added a site fix for the remove item from cart button being the incorrect size (thank me later Roblox)\r\n\r\nChanges\r\n- Attempted to improve the automatic region finding (again), now using a easier to debug system scoring each server based off the distance from you to them, and if it doesn't find the closest server with the RoValra api it will fall back to scanning manually as an attempt to improve it on smaller games. Also added some text for inactive and loadbalancing servers.\r\n- Changed the building of the extension very slightly just making it not minify whitespace.\r\n- Changed the download assets from create page to download meshes as .mesh instead of .obj\r\n- Changed donation links to a new donation link\r\n- Fixed RoValra adding quick genarate and copy private server links to expired private servers.\r\n- Fixed not interested not being clickable on recommended games while quickplay is active\r\n- Fixed oauth not working\r\n- Fixed RoValra modifying help.roblox.com",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.8",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.7",
+            "name": "v2.4.7",
+            "published_date": "February 05, 2026",
+            "body": "New stuff\r\n- Added legacy donation badges here for a limited time.\r\n- Added draggable groups. thanks to qBorder\r\n- Added a download button allowing you to download any asset from the create.roblox.com page\r\n\r\nChanges\r\n- Fixed globe sorting regions by state and not by city making san jose and los angeles both have the combined total as their servers\r\n- Fixed roseal improved server list breaking recent servers\r\n- Fixed Roblox breaking multiple profile features.\r\n- Changed total servers back to using total servers in the counts api",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.7",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.6",
+            "name": "v2.4.6",
+            "published_date": "January 29, 2026",
+            "body": "Changes:\r\n- Removed all uses of auth.roblox.com/v1/logout to get the csrf token\r\n- Fixed the quick play button snapping when added to featured games containers. Thanks to alice for the help.\r\n- Fixed recent servers duplicating when spam clicking refresh.\r\n- Fixed https://github.com/NotValra/RoValra/issues/34\r\n- Updated the quickplay.scss to be readable lol\r\n- Changed quickplay private server name from dompurify to safeHtml since it is better for that use case.\r\n- Moved more css to a .scss file\r\n- Fixed what am i joining server id sometimes going on a different line if too long\r\n- Fixed corrupted preferred region value not being reset to the default",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.6",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.5",
+            "name": "v2.4.5",
+            "published_date": "January 25, 2026",
+            "body": "New stuff:\r\n- Added rovalra latency simulation to developer settings.\r\n- Added a \"Do not show again\" button to the review pop up\r\n- Added Region and place version to private servers.\r\n- Added quick private server link copy and regenerate\r\n\r\nChanges:\r\n- Fixed an issue where an important part of the script would blindly accept corrupted information breaking parts of the extension.\r\n- Fixed server performance sometimes showing when server list modifications is disabled\r\n- Fixed Server list filters not being added when server list modifications is disabled.\r\n- Fixed quickplay covering friends in some cases.\r\n- Updated the fishstrap share link to their new link",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.5",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.4",
+            "name": "v2.4.4",
+            "published_date": "January 22, 2026",
+            "body": "New stuff:\r\n- Added recent servers.\r\n- Added a thing to make it possible for Roblox to tell what traffic comes from RoValra to help the people at Roblox yay\r\n\r\nchanges\r\n- Changed the 40% method to automatically create and update the game so you dont have to go in studio and do it manually.\r\n- Fixed some api requests happening a bit too much\r\n- Improved preferred region.\r\n- Fixed owner text on improved join modal being white on light mode making it not visible\r\n- Fixed unpending robux accidently sanitizing html.\r\n- Fixed hidden experiences issues.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.4",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.3",
+            "name": "v2.4.3",
+            "published_date": "January 19, 2026",
+            "body": "Additions\r\n- Added server Ip and Datacenter id to the server list (off by default)\r\n- Added a pop up asking for a review, which is made in a way where it doesnt force you to leave a review and it isnt annoying.\r\n\r\nchanges\r\n- Removed private inventory checker as Roblox patched it.\r\n- Fixed streamer mode robux hiding not hiding robux in places where it should have\r\n- Made the donation button not show on your profile.\r\n- Fixed possible issues where the extension would try and get data before the website was done loading\r\n- Changed the \"player count unknown\" when using the region filter to random thumbnails with a tooltip explaining\r\n- Changed the subplace tab to be on the same line as other tabs instead of below\r\n- Attempted to improve the join closest server to be way more consistent.\r\n- Removed the \"Start server\" when no server is running and instead made it start automatically.\r\n- Fixed quick outfits not handling width of the ui being too small correctly\r\ndevelopment changes\r\n- moved most the css to different files for maintainability.\r\n- made configs for development making it easier to find stuff that should be done differently or stuff like unsafe innerhtml\r\n- made a new sanitizer that uses dompurify + some custom logic to make it easier to add and use.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.3",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.2",
+            "name": "v2.4.2",
+            "published_date": "December 30, 2025",
+            "body": "This is gonna be the last update for a little while now.\r\n\r\nAlso it is rovalras anniversary today yay\r\n \r\nNew stuff\r\n- Added a site fix for experience title text getting cut off at the top and bottom on profiles.\r\n- Added a thing making \"What am i joining\" close when clicking the background, which is on by default but can be disabled.\r\nFixes/Changes\r\n- Fixed there not being a download button in \"What Am I joining\" if you dont have the client installed\r\n- Fixed inventory checker loading on pages it shouldnt\r\n- Fixed bundles not working with the 40% method\r\n- Added update detection that tells you if your 40% method game is outdated.\r\n- Added a little review reminder to the popup when pressing the extensions logo.\r\n- Started changing all color stuff to variables like how it should have been from the start\r\n- Fixed searching in settings not working",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.2",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4.1",
+            "name": "v2.4.1",
+            "published_date": "December 27, 2025",
+            "body": "New Features\r\n- Added total Earned (Thanks to Kanibal02 on github for contributing)\r\n- Added more sorting to Hidden Experiences on groups and profiles (Thanks to Zed128 for contributing)\r\n- Added Roblox API documentation that documents apis the extension found while you were using Roblox (Developer setting)\r\n- Added Quick outfit switching to game pages (off by default)\r\n\r\nFixes / changes\r\n- Fixed a setting being out of sync\r\n- Reduced the file size.\r\n- Fixed onboarding not scaling with different screen sizes\r\n- Fixed sorting by recently updated not sorting correctly (Thanks to Zed128 for contributing)\r\n- Fixed badges not supporting legacy profile",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.1",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4",
+            "name": "Update 2.4",
+            "published_date": "December 24, 2025",
+            "body": "This update was in the making for quite a while\r\n\r\nNew features\r\n- Completely reworked the entire extensions optimization to future proof it.\r\n- Added a thing showing what server id, region, place version etc you are joining if the data is there.\r\n- Added a Private Server Quick play feature, basically allowing you to quickly join private servers by using the quick play feature.\r\n- Added a donation button on peoples profiles allow you to easily donate via pls donate to someone.\r\n- Added an Outfit viewer, allowing you to view the outfits a user saved.\r\n- Added a total spent feature allowing you to see how much u spent on roblox in total\r\n- Added privacy features, one that spoofs ur online status to being in studio and one that spoofs it as offline , thanks to Julia for the help.\r\n- Added RAP on peoples profile, and when pressed it will show you the users limiteds.\r\n- Added a quick ban and anti bot feature, basically allowing you to quickly ban people in groups and quickly scan and ban possible bots in groups.\r\n- Added an item filter to the avatar editor, allowing you to filter by lots of different things like effects, limited etc\r\n- Added a search bar to the avatar editor allowing you to quickly search for items.\r\n- Added a setting used by Roblox staff as a setting inside the developer settings, it adds a \u201cimpersonate\u201d button a users profile.\r\n- Recoded the user hidden experiences from scratch making it a lot better, and adding filters, credits to zed256 for making a proof of concept.\r\n- Reworked the preferred region play button to join the server closest to you instead of you having to pick one (The old version is still there)\r\n- Added a streamer mode.\r\n- Added a setting to enable Roblox's official early access programs ui in settings, It doesnt allow you to join any programs and its just for show\r\n- Added a way to easily save 40% Robux when buying avatar items, and 10% Robux when buying gamepasses.\r\n- Added a feature that prevents the memory of Roblox Tabs from increasing over time to speed up loading and responsiveness of the site.\r\n- Added a fix for the buttons to open up continue playing and Favorites and more being the width of the entire page with 90% of that is invisible to the user.\r\n- Added server performance to the serverlist \r\n- Added Version filters to the server list, allowing you to filter by servers running on a specific version.\r\n- Added an option that simulates RoValra downtime (in developer settings)\r\n- Added an option to join a different region if no server was found in the region you are trying to join.\r\n- Added a way to view item dependencies like meshes and textures on items\r\n- Added support for client only experience trailers.\r\n- Reworked the serverlist to look way better and generally fit in with roblox more, and a bit of the filtering to work better and be easier to understand and read.\r\n- Reworked the instant joiner ui to look better and fit in more with Roblox, and added game filters.\r\n- Reworked multiple uis to fit in more with Roblox.\r\n- Reworked the subplaces feature, the code was old and messy, and now it should work better and be easier to use.\r\n\r\nChanges\r\n- Fixed the settings page not scaling with different screen sizes.\r\n- Attempted to fix a crash related to the region selector.\r\n- Quality of Life improvements and ui improvements and other misc changes to the settings page\r\n- Countless changes to basically every script in the extension to attempt to make it more optimized and over all a smoother experience\r\n- Removed the css fix for profile pictures squishing since Roblox fixed it. Instead I renamed the css fixes to site fixes and added new fixes.\r\n- Changed some styling on the private server bulk set inactive / active to fit in more.\r\n",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4-beta.4",
+            "name": "v2.4-beta.4",
+            "published_date": "December 22, 2025",
+            "body": "Changes\r\n- Fixed inactive private servers showing in quick play\r\n- Fixed quick ban / anti bot issues.\r\n- private inventory checker ported.\r\n- Fixed images not showing on the globe.\r\n- Fixed sometimes a servers city would only be shown and not city + region\r\n- Added btroblox support to hidden games\r\n- Fixed roseal incompatibility with the avatar editor filters\r\n- Added proper support for roseals server list\r\n- Fixed some minor styling issues with the quickplay\r\n- Ported sales and revenue feature as a deprecated feature\r\n- Fixed avatar filters being able to load any page if the right conditions were met\r\n- Made the 40% method not use a cors work aka full release ready\r\n- Attempted to make closest region setting more consistently find the closest region.\r\n- Added settings for the different filter options in the server list\r\n- fixed thumbnail issues with outfits viewer\r\n- removed cors proxy as it is not needed anymore",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.4",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4-beta.3",
+            "name": "v2.4-beta.3",
+            "published_date": "December 20, 2025",
+            "body": "Hopefully full release will be done soon\r\n\r\nchanges\r\n- Fixed the globe taking a bit too long to load.\r\n- Fixed the place version a server is running sometimes not being displayed\r\n- Renamed the \"Anti Account Stalking\" Tab to \"Privacy\" to allow for more privacy focused features\r\n- Added a streamer mode.\r\n- Fixed a few misc bugs related to developing.\r\n- Added a markdown test page as an easter egg out of pure boredom\r\n- Added a bunch of xss safety to pretty much everything just in case.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.3",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4-beta.2",
+            "name": "v2.4-beta.2",
+            "published_date": "December 19, 2025",
+            "body": "This fixes bugs, and adds some nice qol additions. Thanks to everyone who helped bug hunt!!\r\n\r\n\r\n**Changes**\r\n- Fixed margin issue in the bots text.\r\n- Added root place tag to the rootplace of the subplace\r\n- Fixed the quickplay being in places where it shouldn't\r\n- Fixed some quickplay issues\r\n- Fixed total spent api error handling.\r\n- Fixed settings page z-index being a dumb high number\r\n- Fixed some onboarding issues\r\n- Fixed server info in the join modal getting stuck waiting for client when joining experiences you dont have access to\r\n- Added improved tags to the settings page\r\n- Fixed some incorrect descriptions on the settings page\r\n- Added an option to always show developer settings preventing you from having to do the easter egg everytime",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.2",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.4-beta.1",
+            "name": "v2.4-beta.1",
+            "published_date": "December 18, 2025",
+            "body": "**v2.4 beta 1 of the big rework!!!!**\r\n\r\nThis is not the final release. 3 features are yet to be ported and please report any of the bugs  you may find.\r\n\r\n**New features**\r\n- Completely reworked the entire extensions optimization to future proof it.\r\n- Added a thing showing what server id, region, place version etc you are joining if the data is there.\r\n- Added a Private Server Quick play feature, basically allowing you to quickly join private servers by using the quick play feature.\r\n- Added a donation button on peoples profiles allow you to easily donate via pls donate to someone.\r\n- Added an Outfit viewer, allowing you to view the outfits a user saved.\r\n- Added a total spent feature allowing you to see how much u spent on roblox in total\r\n- Added anti stalking features, one that spoofs ur online status to being in studio and one that spoof you as offline. thanks to Julia for the help.\r\n- Added RAP on peoples profile, and when pressed it will show you the users limiteds.\r\n- Added a quick ban and anti bot feature, basically allowing you to quickly ban people in groups and quickly scan and ban possible bots in groups.\r\n- Added an item filter to the avatar editor, allowing you to filter by lots of different things like effects, limited etc\r\n- Added a search bar to the avatar editor allowing you to quickly search for items.\r\n- Added a setting used by Roblox staff as a setting inside the developer settings, it adds a \u201cimpersonate\u201d button a users profile.\r\n- Added a setting to enable Roblox's official early access programs ui in settings, It doesnt allow you to join any programs and its just for show (developer settings)\r\n- Added a way to easily save 40% Robux when buying avatar items, and 10% Robux when buying gamepasses.\r\n- Added a feature that prevents the memory of Roblox Tabs from increasing over time to speed up loading and responsiveness of the site.\r\n- Added a fix for the buttons to open up continue playing and Favorites and more being the width of the entire page with 90% of that is invisible to the user.\r\n- Added server performance to the serverlist \r\n- Added Version filters to the server list, allowing you to filter by servers running on a specific version.\r\n- Added an option that simulates RoValra downtime (in developer settings)\r\n- Added an option to join a different region if no server was found in the region you are trying to join.\r\n- Added a way to view item dependencies like meshes and textures on items\r\n- Added support for client only experience trailers.\r\n- Reworked the serverlist to look way better and generally fit in with roblox more, and a bit of the filtering to work better and be easier to understand and read.\r\n- Reworked the instant joiner ui to look better and fit in more with Roblox, and added game filters.\r\n- Reworked multiple uis to fit in more with Roblox.\r\n- Reworked the subplaces feature, the code was old and messy, and now it should work better and be easier to use.\r\n- Recoded the user hidden experiences from scratch making it a lot better, and adding filters, credits to zed256 for making a proof of concept.\r\n- Reworked the preferred region play button to join the server closest to you instead of you having to pick one (The old version is still there)\r\n**Changes**\r\n- Changed some styling on the private server bulk set inactive / active to fit in more.\r\n- Fixed the CSS fixes breaking some RoQoL features and RoSeal features\r\n- Fixed the settings page not scaling with different screen sizes.\r\n- Attempted to fix a crash related to the region selector.\r\n- Quality of Life improvements and ui improvements and other misc changes to the settings page\r\n- Countless changes to basically every script in the extension to attempt to make it more optimized and over all a smoother experience\r\n- Removed the css fix for profile pictures squishing since Roblox fixed it. Instead I renamed the css fixes to site fixes and added new fixes.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.1",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "2.3.2",
+            "name": "hotfix 2.3.2",
+            "published_date": "October 29, 2025",
+            "body": "Edit: bug fixes / updates unrelated to 2.4 will not be uploaded here to prevent confusion with the source code difference. They will only be uploaded on the chrome webstore until 2.4 is released\r\n\r\n**changes**\r\n- added support for the new Roblox profile ui\r\n- made the instant joiner on by default",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.2",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "2.3.1.9",
+            "name": "v2.3.1.9",
+            "published_date": "October 26, 2025",
+            "body": "**Changes**\r\n- Removed servers under 1 hour of uptime saying \"new server\" since it was useless.\r\n- Added quickplay support to groups.\r\n- Made subplaces titles able go down to 2 lines instead of just one.\r\n- Fixed a vuln (thanks to zeg for reporting)\r\n\r\nIm still working on v2.4 this update just had to get pushed for safety reasons, so I decided to include some other quality of life changes with it.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.9",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "2.3.1.8",
+            "name": "update 2.3.1.8",
+            "published_date": "September 25, 2025",
+            "body": "**Changes**\r\n- Every change is related to Roblox updating the server list API and me adding support for the change before they roll it out to everyone.\r\n- Removed the user sniper since the api update will completely patch it (thank you Roblox)\r\n- Removed some server list filters as they would also be effected by the api update.\r\n- Added a fallback for the region selector to use RoValra's api to get servers cuz of the api change.\r\n- Added a fallback for the preferred region play button to use RoValra's api to get servers cuz of the api change.\r\n\r\n**This update is just a quick patch, the bigger update that im working on (v2.3.2) is still being worked on.**",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.8",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "2.3.1.7",
+            "name": "2.3.1.7",
+            "published_date": "August 30, 2025",
+            "body": "**Changes**\r\n- Removed a limit in the quick play and Preferred region play button that made it unable to search more than 20 pages. Completely forgot about this limit and only just noticed, now they should consistently find the region you want in bigger games.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.7",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "2.3.1.6",
+            "name": "update 2.3.1.6",
+            "published_date": "August 27, 2025",
+            "body": "**Changes**\r\n- Disabled a feature that was accidently left on by default which was not meant to be public, and anyone who used it got refunded.\r\n- Fixed some overlapping issues.\r\n- Added woozynate to the credits for making fisch which is where Gilbert (the logo) is from.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.6",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "2.3.1.5",
+            "name": "update 2.3.1.5",
+            "published_date": "August 26, 2025",
+            "body": "**Changes**\r\n- Updated the server version to support a 1 letter capitalization Roblox did \ud83d\udc94\r\n- Updated text saying the hidden catalog was patched to saying it was unpatched (Roblox works in interesting ways)",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.5",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.3.1",
+            "name": "v2.3.1",
+            "published_date": "August 25, 2025",
+            "body": "**New Features**\r\n- Added server version to the server list (shows the game version the server is running on), And recoded the script that adds that stuff.\r\n- Added an export and import settings feature.\r\n- Added a thing displaying the current game version and the oldest game version a server is running on.\r\n- Added a RoValra badge for people who contributed to the project <3\r\n- Made the hidden games on profiles show more hidden games.\r\n- Improved the filter by oldest / newest servers by making it way more accurate.\r\n- Server Side Improvements and optimization (Backend stuff)\r\n\r\n**Changes**\r\n- Made it clear to a user that some regions arent running 24/7 to prevent confusion. \r\n- Disabled the Quick Private server link copying for maintenance.\r\n- Fixed the hidden user experiences removing elements that it shouldnt.\r\n- Fixed the Quick Play button only working on the home page, and a lot other improvements.\r\n- Fixed a bug where the globe would not add new regions, and made other improvements.\r\n- Fixed the Instant Join button showing on your profile.\r\n- Removed the tabs permission.\r\n- Small fixes to improve the extensions compatibility",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.3.1",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.3",
+            "name": "v2.3",
+            "published_date": "August 21, 2025",
+            "body": "**New Features**\r\n- Added a quick play button, with preferred region support.\r\n- Added custom RoValra badges for the Roblox badges section, for specific users only. If you contributed to RoValra in a meaningful way and you want a badge pls lmk.\r\n- Added secret / developer settings.\r\n- Added a search bar to settings.\r\n- Added support for filtering by lowest player count and highest player count when using the region selector.\r\n- Added support for excluding full servers when using the server uptime filter.\r\n- Added bulk setting private servers inactive and active.\r\n\r\n**Changes**\r\n- Made the hidden catalog disabled by default since Roblox patched it :broken_heart:\r\n- Fixed the preferred Region Play Button not having full light mode support (kinda forgot about that)\r\n- Fixed the Remove R6 Warning breaking stuff\r\n- Fixed hidden games on groups showing up where they shouldnt.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.3",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "2.2.31",
+            "name": "v2.2.31",
+            "published_date": "August 19, 2025",
+            "body": "**Changes**\r\n- Fixed a bug where the filters would not show if a user is using a different language than english.\r\n*This fix was made very fast at like 11 pm*",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.31",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        }
+    ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.4.14",
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-04-27T19:34:42.722796Z"
+    "last_updated": "2026-04-27T20:02:03.872414Z"
 }
