@@ -1,7 +1,5 @@
 // Automatically mocked imports for website compatibility
 var ROBUX_FIAT_ESTIMATE_DEFAULT_GRADIENT = null;
-var ROBUX_FIAT_ESTIMATE_STYLE_MODE_SOLID = null;
-var ROBUX_FIAT_ESTIMATE_STYLE_OPTIONS = null;
 var TRANSACTION_FIAT_CURRENCY_OPTIONS = null;
 var TRANSACTION_FIAT_RATE_OPTIONS = null;
 
@@ -15,6 +13,7 @@ var featuresData = {
         settings: {
             itemSalesEnabled: {
                 label: 'Item Sales',
+                contributors: [447170745],
                 description: [
                     'This shows the most up to date sales and revenue data we have.',
                     'The sales data is very likely to be inaccurate on items that are for sale, but very likely to be correct on off-sale items.',
@@ -23,24 +22,14 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
             },
-            hiddenCatalogEnabled: {
-                label: 'Hidden Catalog',
-                description: [
-                    'Shows Roblox made items before they are on the official marketplace.',
-                ],
-                deprecated: 'Patched by Roblox',
-                locked: 'This feature has been patched by Roblox and is no longer functional.',
-                isPermanent: true,
-                type: 'checkbox',
-                default: false,
-            },
             SaveLotsRobuxEnabled: {
                 label: 'Save 10%-40% Robux on Purchases',
                 description: [
-                    'This adds a button allowing you to save 40% on items on the marketplace and 10% on gamepasses',
+                    'This adds a button allowing you to save 40% on items on the marketplace',
                     'Keep in mind a group is required for this to work.',
 
                     "**When buying something there will be a 'Save X Robux' Button which when pressed will set up the experience required for it to work for you, if not already set up.**",
+                    '**Roblox is breaking the ability to save 10% Robux on gamepasses on may 29th.**',
                 ],
                 type: 'checkbox',
                 default: true,
@@ -123,6 +112,8 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+                contributors: ['8345351117', '447170745'],
+
                 childSettings: {
                     robloxPreferredRegion: {
                         label: 'Preferred Region',
@@ -146,6 +137,7 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+                contributors: ['48255812', '447170745'],
                 childSettings: {
                     privateservers: {
                         label: 'Show Private Servers in Quick Play',
@@ -154,6 +146,15 @@ var featuresData = {
                         ],
                         type: 'checkbox',
                         default: true,
+                    },
+                    PaidAccessPriceBadgeEnabled: {
+                        label: 'Show Paid Game Access Price',
+                        description: [
+                            'This adds a small box that shows the price of paid Games.',
+                        ],
+                        type: 'checkbox',
+                        default: true,
+                        contributors: ['10646979010'],
                     },
                     playbuttonpreferredregionenabled: {
                         label: 'Change the normal Play button to join your preferred region in Quick Play',
@@ -191,6 +192,13 @@ var featuresData = {
                     },
                 },
             },
+            EnableImprovedEvents: {
+                label: 'Improved Events',
+                description:
+                    'This allows you to view past events on experiences and how many are going.',
+                type: 'checkbox',
+                default: true,
+            },
             EnableGameTrailer: {
                 label: 'Experience Trailer',
                 description: [
@@ -218,6 +226,7 @@ var featuresData = {
                     'This allows you to view the developer products of an experience directly on the store page.',
                 type: 'checkbox',
                 default: true,
+                contributors: ['447170745', '10646979010'],
             },
             QuickOutfitsEnabled: {
                 label: 'Quick Equip Outfits',
@@ -227,14 +236,25 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
             },
-            privateGameDetectionEnabled: {
+            privateGameViewerEnabled: {
                 label: 'View Private / Moderated Games',
                 description: [
                     'This recreates the experience page of private / moderated games, allowing you to view them.',
                 ],
                 type: 'checkbox',
-                default: false,
-                requiredPermissions: ['webRequest'],
+                default: true,
+                childSettings: {
+                    privateGameDetectionFallbackEnabled: {
+                        label: 'Use background detection fallback',
+                        description: [
+                            'Uses background web requests to detect private games when the local tracker fails.',
+                            'This method is more reliable but requires additional permissions.',
+                        ],
+                        type: 'checkbox',
+                        default: false,
+                        requiredPermissions: ['webRequest'],
+                    },
+                },
             },
             botdataEnabled: {
                 label: 'Bot Data',
@@ -298,7 +318,7 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
-                storageKey: 'rovalra_transactions_data',
+                storageKey: 'rovalra_transactions_v2',
             },
             OldestVersionEnabled: {
                 label: 'Oldest Server Version',
@@ -435,6 +455,15 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            PlusPrivateServerTooltipEnabled: {
+                label: 'Roblox Plus Free Server Tooltip',
+                description: [
+                    'Adds a tooltip showing the original cost of a private server if it is free due to Roblox Plus.',
+                ],
+                type: 'checkbox',
+                default: true,
+                contributors: ['447170745', '546872490'],
+            },
         },
     },
     Profile: {
@@ -447,6 +476,7 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+                contributors: ['8345351117', '447170745'],
             },
             userSniperEnabled: {
                 label: 'Instant Joiner',
@@ -478,25 +508,17 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: false,
+                contributors: ['126448532', '447170745'],
+
                 experimental:
                     'This feature may cause performance issues. And may be buggy',
                 childSettings: {
-                    profileRenderUseApi: {
-                        label: 'Use RoValra API for Environment',
-                        description:
-                            "Uses RoValra's API to save your environment choice instead of your 'About Me' section.",
-                        type: 'checkbox',
-                        default: true,
-                        donatorTier: 1,
-                        donatorReason:
-                            'Donator 1 is required since RoValra doesnt have the resources to track the 200k+ user settings.',
-                    },
                     profileRenderEnvironment: {
                         label: '3D Profile Environment',
                         description: [
                             "Choose a custom environment for your own profile's 3D render.",
                             'This only applies when viewing your own profile.',
-                            'If you arent a RoValra donator it will add a e:x into your about me so other RoValra users can see your environment',
+                            '**This is saved on RoValras database so anyone with RoValra can view it. It being saved on RoValras database used to be a tier 1 Donator perk, we are working on a replacement perk.**',
                         ],
                         type: 'select',
                         options: [
@@ -551,9 +573,18 @@ var featuresData = {
                 label: 'Trusted Friends',
                 description: [
                     'This feature allows you to accept, request and remove trusted friends on the site by pressing the (...) on their profile, this will only work for eligible friends.',
-                    'Eligible friends must be ID or face-scan verified and within your age bracket (13–17 or 18+).',
                     'Trusted Friends might not be available in some regions.',
                     '**Note:** Roblox uses an algorithm that may prevent adding someone even if they meet these requirements. [Learn more here.](https://en.help.roblox.com/hc/en-us/articles/46158344285204)',
+                ],
+                type: 'checkbox',
+                default: true,
+                deprecated:
+                    'Roblox is working on an A/B test which does this exact thing. This feature will be disabled when it releases.',
+            },
+            currencyTransferEnabled: {
+                label: 'Send Robux',
+                description: [
+                    'This allows Roblox Plus Subscribers to start a currency transfer by pressing the (...) on anyones profile.',
                 ],
                 type: 'checkbox',
                 default: true,
@@ -571,6 +602,13 @@ var featuresData = {
                 label: 'Friends Since',
                 description:
                     'This feature shows how long you have been friends with someone on their profile and in your friends list.',
+                type: 'checkbox',
+                default: true,
+            },
+            groupRoleEnabled: {
+                label: 'Show Community Roles',
+                description:
+                    'Shows a users role in a community on their profile.',
                 type: 'checkbox',
                 default: true,
             },
@@ -618,45 +656,28 @@ var featuresData = {
                 description: [
                     'This allows you to set a status bubble on your profile that anyone with RoValra can see.',
                     'Also allows you to view other RoValra users status bubbles.',
-                    'This works by adding a little "s:" string to your about me.',
+                    '**This is saved on RoValras database so anyone with RoValra can view it. It being saved on RoValras database used to be a tier 1 Donator perk, we are working on a replacement perk.**',
                 ],
                 type: 'checkbox',
                 default: true,
                 childSettings: {
-                    statusBubbleUseApi: {
-                        label: 'Use RoValra API for Status',
-                        description:
-                            "Uses RoValra's API to save your status instead of your 'About Me' section.",
-                        type: 'checkbox',
-                        default: true,
-                        donatorTier: 1,
-                        donatorReason:
-                            'Donator 1 is required since RoValra doesnt have the resources to track the 200k+ user settings.',
-                    },
                     statusBubbleHomePage: {
                         label: 'Status bubble for friends on home page, and other parts of the site where friends might show.',
                         type: 'checkbox',
                         default: true,
-                    },
-                    disableVideoAudio: {
-                        label: 'Disable Video Audio In status',
-                        description: [
-                            'Mutes audio on videos in statuses.',
-                            'Select people can set videos in their status, and this mutes it.',
-                            '**Only select people can add videos to their status, and the list wont expand**',
-                        ],
-                        type: 'checkbox',
-                        default: false,
                     },
                 },
             },
             donationbuttonEnable: {
                 label: 'Donation Button',
                 description: [
-                    "This will add a donation button to a user's profile, which allows you to donate to someone via PLS Donate",
+                    "This will add a donation button to a user's profile, allowing you to donate directly from their profile without needing to join a game.",
                 ],
                 type: 'checkbox',
-                default: true,
+                default: false,
+                contributors: ['447170745', '8345351117'],
+                locked: 'This feature is currently unfinished and will be improved and finished next update.',
+                isPermanent: false,
             },
 
             categorizeWearingEnabled: {
@@ -759,12 +780,36 @@ var featuresData = {
                     },
                 },
             },
-            bannedUserDetectionEnabled: {
+            bannedUserViewerEnabled: {
                 label: 'View Banned Users Profile',
                 description: ['Allows you to view banned users Profile.'],
                 type: 'checkbox',
+                default: true,
+                childSettings: {
+                    bannedUserDetectionFallbackEnabled: {
+                        label: 'Use background detection fallback',
+                        description: [
+                            'Uses background web requests to detect banned users when the local tracker fails.',
+                            'This method is more reliable but requires additional permissions.',
+                        ],
+                        type: 'checkbox',
+                        default: false,
+                        requiredPermissions: ['webRequest'],
+                    },
+                },
+            },
+        },
+    },
+    Home: {
+        title: 'Home',
+        settings: {
+            AccurateContinueEnabled: {
+                label: 'Accurate Continue',
+                description: [
+                    'This sorts the continue accurately based off when you last played the game.',
+                ],
+                type: 'checkbox',
                 default: false,
-                requiredPermissions: ['webRequest'],
             },
         },
     },
@@ -776,6 +821,7 @@ var featuresData = {
                 description: ['Shows a communities hidden experiences.'],
                 type: 'checkbox',
                 default: true,
+                contributors: ['8345351117', '447170745'],
             },
             pendingRobuxEnabled: {
                 label: 'Unpending Robux',
@@ -797,6 +843,8 @@ var featuresData = {
                 experimental: 'Takes ages since Roblox has heavy rate limits.',
                 type: 'checkbox',
                 default: true,
+                locked: "This broke in a UI update, it wasn' that good to begin with cuz of rate limits",
+                isPermanent: false,
             },
             QuickActionsEnabled: {
                 label: 'Quick Actions',
@@ -805,6 +853,8 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+                locked: "This broke in a UI update, it wasn' that good to begin with cuz of rate limits",
+                isPermanent: false,
             },
             draggableGroupsEnabled: {
                 label: 'Draggable Communities',
@@ -816,6 +866,23 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
                 storageKey: 'rovalra_groups_order',
+                contributors: ['7982684834', '447170745'],
+            },
+            groupPlaceVisitsEnabled: {
+                label: 'Total Community Place Visits',
+                description: [
+                    "Shows the total number of visits across all of a community's experiences in the insights section.",
+                ],
+                type: 'checkbox',
+                default: true,
+            },
+            groupCreateDateEnabled: {
+                label: 'Community Creation Date',
+                description: [
+                    'Shows when a community was created in its header.',
+                ],
+                type: 'checkbox',
+                default: true,
             },
         },
     },
@@ -842,6 +909,7 @@ var featuresData = {
                     'This forces the avatar preview to always be in view on the avatar editor.',
                 type: 'checkbox',
                 default: true,
+                contributors: ['587159802'],
             },
             avatarFiltersEnabled: {
                 label: 'Avatar Filters',
@@ -886,6 +954,7 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: false,
+                contributors: ['193520242', '447170745'],
                 experimental:
                     'Sometimes shows the wrong amount. And it might causes some issues on the site.',
                 childSettings: {
@@ -908,27 +977,10 @@ var featuresData = {
                         options: TRANSACTION_FIAT_RATE_OPTIONS,
                         default: 'normal',
                     },
-                    robuxFiatEstimateStyleMode: {
-                        label: 'Text Style',
-                        description: [
-                            'Choose between a solid color or a two-color gradient for the fiat estimate text.',
-                        ],
-                        type: 'select',
-                        options: ROBUX_FIAT_ESTIMATE_STYLE_OPTIONS,
-                        default: ROBUX_FIAT_ESTIMATE_STYLE_MODE_SOLID,
-                    },
-                    robuxFiatEstimateColor: {
-                        label: 'Estimate Text Color',
-                        description: [
-                            'Pick the color used for the fiat estimate text shown next to Robux values. Used when Text Style is set to Solid Color.',
-                        ],
-                        type: 'color',
-                        default: '#7a7d81',
-                    },
                     robuxFiatEstimateGradient: {
                         label: 'Estimate Text Gradient',
                         description: [
-                            'Customize the gradient used for the fiat estimate text. Used when Text Style is set to Gradient.',
+                            'Customize the gradient used for the fiat estimate text.',
                         ],
                         type: 'gradient',
                         default: ROBUX_FIAT_ESTIMATE_DEFAULT_GRADIENT,
@@ -964,6 +1016,7 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+                contributors: ['546872490', '447170745'],
             },
             pendingrobuxtrans: {
                 label: 'Unpending Robux Transactions',
@@ -974,6 +1027,7 @@ var featuresData = {
                     'May be inaccurate. And will take ages depending on the amount of sales',
                 type: 'checkbox',
                 default: false,
+                contributors: ['546872490', '447170745'],
             },
         },
     },
@@ -1094,9 +1148,10 @@ var featuresData = {
             qolTogglesEnabled: {
                 label: 'Adds quality of life toggles to the navigation bar',
                 description:
-                    'Allowing you to quickly change your online status or experience status without going into settings.',
+                    'Allowing you to quickly change your online status, experience status, private server privacy, and inventory visibility without going into settings.',
                 type: 'checkbox',
                 default: true,
+                contributors: ['447170745', '8345351117'],
             },
             betaProgramsEnabled: {
                 label: 'Adds a beta programs toggle to the navigation bar',
@@ -1111,6 +1166,7 @@ var featuresData = {
                     'Adds a My Transactions link below Communities in the Roblox sidebar.',
                 type: 'checkbox',
                 default: false,
+                contributors: ['193520242', '447170745'],
             },
             quickSearchEnabled: {
                 label: 'Quick Search',
@@ -1194,6 +1250,7 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: false,
+                contributors: [48255812],
                 childSettings: {
                     Customfontlink: {
                         label: 'Google Fonts link',
@@ -1234,6 +1291,7 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: false,
+                contributors: ['2615068449'],
             },
 
             copyIdEnabled: {
@@ -1253,6 +1311,14 @@ var featuresData = {
                 requiredPermissions: ['contextMenus'],
             },
 
+            modernIconsEnabled: {
+                label: 'Modern Icons',
+                description: [
+                    'Replaces default Roblox playing and like icons on the site, with the new modern icons used by the client.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
             cssfixesEnabled: {
                 label: 'Site Fixes',
                 description: [
@@ -1380,6 +1446,7 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
                 exclusiveWith: ['spoofAsStudio', 'spoofAsOnline'],
+                contributors: ['447170745', '109176680'],
             },
             spoofAsStudio: {
                 label: 'Spoof status as In Studio',
@@ -1391,6 +1458,7 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
                 exclusiveWith: ['spoofAsOffline', 'spoofAsOnline'],
+                contributors: ['447170745', '109176680'],
             },
         },
     },
@@ -1668,6 +1736,24 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
             },
+            simulateRobloxJoinErrors: {
+                label: ['Simulate Roblox Join Errors'],
+                description: [
+                    'Simulates network errors for the Roblox Join API to test handling of critical join failures.',
+                ],
+                type: 'checkbox',
+                default: false,
+                childSettings: {
+                    simulateRobloxJoinHttpErrors: {
+                        label: ['Simulate Roblox Join 500 Errors'],
+                        description: [
+                            'Simulates HTTP 500 errors for the Roblox Join API to test handling of internal server errors.',
+                        ],
+                        type: 'checkbox',
+                        default: false,
+                    },
+                },
+            },
             forceReviewPopup: {
                 label: ['Force Review Popup'],
                 description: [
@@ -1698,6 +1784,23 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: false,
+            },
+            disablePrivateGameRedirection: {
+                label: 'Disable Private Game Redirection',
+                description: [
+                    'Disables the automatic redirection to the standard experience page when a public experience is detected in the private experience viewer.',
+                ],
+                type: 'checkbox',
+                default: false,
+            },
+            localStorageUsage: {
+                label: 'Show Local Storage Usage',
+                description: [
+                    "Displays the total storage used by RoValra in Chrome's local storage.",
+                ],
+                type: 'button',
+                buttonText: 'Calculate Storage',
+                event: 'rovalra:showLocalStorageUsage',
             },
         },
     },

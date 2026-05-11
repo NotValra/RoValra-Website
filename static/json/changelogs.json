@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5",
+            "name": "v2.5",
+            "published_date": "May 11, 2026",
+            "body": "New stuff:\r\n- Made status and environments saved via RoValra API free for everyone, with replacement donator 1 perks coming soon.\r\n- Improved Events, this feature allows you to see past events on games and how many signed up for the event.\r\n- Show Community Roles, Shows a users role in a community on their profile.\r\n- Total Community Visits, Shows the total Visits across A communities game\r\n- Group created date.\r\n- Currency Transfer on Profiles. Allowing Roblox Plus subscribers to easily transfer currency to anyone.\r\n- Modern Icons, switches the old playing and like icons out with the new icons used by the client\r\n- Paid game prices to item cards, thanks to @rav4toy for making it\r\n- More toggles in QoL toggles, thanks to @Zed128 for making it.\r\n- Roblox Plus Free Server Tooltip, shows the price of private servers if you have plus, thanks to @Kanibal02 for making it\r\n- Accurate continue, changes your continue to be accurate based off the the order you played them (off by default)\r\n- More thumbnail support on private / moderated games.\r\n- Contributors on settings, pretty much shows who contributed to each setting / feature.\r\n- Basic markdown support on statuses, thanks to @cornusandu for making it.\r\n- Added a missing friended source\r\n- Added a moderation system, meaning if you are caught doing not okay stuff some server side features may be revoked.\r\n- Made serverlist uptime show seconds and update the time live.\r\n- Made Private / moderated games load instantly\r\n\r\nChanges:\r\n- Added support for the new reworked server list Roblox is releasing.\r\n- Added support for values on bundles on the trading ui.\r\n- Fixed the globe failing to display some regions.\r\n- Fixed total spent showing the wrong amount\r\n- Fixed No gamepasses text showing on the dev products tab, thanks to @rav4toy for fixing it\r\n- Fixed Trading info on item pages not supporting spa navigation\r\n- Fixed dependencies not working on some items, thanks to for @aliceenight fixing it.\r\n- Fixed odd styling on the instant join after a Roblox update.\r\n- Fixed delta time being slightly off in the avatar renderer.\r\n- Fixed an issue where the site would crash if using RoValra, with specific other extensions while having specific features enabled.\r\n- Fixed 40% method not working with specific languages.\r\n- Fixed banned users failing to display deleted games on their profile.\r\n- Fixed RoValra made gamecards not having a like icon if they didnt have a like ratio.\r\n- Fixed private games not redirecting to the game page if the game isnt private or deleted.\r\n- Fixed 40% method adding save robux on limiteds.\r\n- Improved performance of the extension in some niche spots.\r\n- Improved fiat a lot, making it less buggy\r\n- Improved hidden games loading times (still needs some improvements)\r\n- Improved \"What am i joining\" making it more consistent with the rest of the uptime displaying ui by making it update uptime live, and making it display if its 100% accurate or not.\r\n- Made Private Games on by default and made it not require webRequest permissions\r\n- Made Banned User on by default and made it not require webRequest permissions\r\n- Made preferred region show if the gamejoin api is erroring with the error message, so a user knows why its happening + developer settings to simulate it.\r\n- Made RoValra load faster.\r\n- Did a bunch of changes to server list related features to improve them.\r\n- Removed the setting to disable status video audio, since audio is disabled by default now.\r\n- One time migration that migrates your description status and environment to the rovalra api.\r\n- Added Roblox-Bat which is a more secure way of sending Roblox requests. [Read more about how it works here](https://www.npmjs.com/package/roblox-bat)",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.4.15",
             "name": "v2.4.15",
             "published_date": "April 18, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.3",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.2.31",
-            "name": "v2.2.31",
-            "published_date": "August 19, 2025",
-            "body": "**Changes**\r\n- Fixed a bug where the filters would not show if a user is using a different language than english.\r\n*This fix was made very fast at like 11 pm*",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.2.31",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.4.15",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-05-11T15:07:40.318474Z"
+    "last_updated": "2026-05-11T16:58:15.291116Z"
 }
