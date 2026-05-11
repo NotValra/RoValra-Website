@@ -1,6 +1,6 @@
 **Privacy Policy for RoValra Chrome Extension**
 
-**Effective Date:** April 22, 2026
+**Effective Date:** May 11, 2026
 
 **Introduction**
 
@@ -15,7 +15,7 @@ Our data collection practices differ based on how you engage with the Extension:
     - By default, RoValra does **not** collect, store, or transmit personally identifiable information (PII).
     - We do not track browsing history, emails, passwords, or names.
     - The Extension primarily interacts with official APIs strictly to retrieve public data.
-    - **Temporary Sessions:** For specific one-time actions, non-donators may initiate a temporary OAuth session. This data is stored for a maximum of **30 minutes**. Depending on the action performed, identifying information such as your Roblox User ID may persist in our records to fulfill the specific request.
+    - **Server-Side Features:** To access specific server-side features, non-donators must initiate an OAuth session. This process works exactly like the authentication for donators, and identifying information (such as your Roblox User ID) is stored to provide and maintain requested functionality.
     - **User-Set Information:** In rare specific feature cases, we may store information you explicitly set (such as status text or specific configuration settings) for non-donators to ensure the functionality of the requested feature.
 
 - **Donators (OAuth and Badge Features):**
@@ -34,7 +34,7 @@ To manage Donator features, users must authenticate using Roblox's official OAut
 
 - **Background Processing:** Authentication operates in the background for a seamless experience.
 - **Token Storage:** We store an **Access Token** (identity verification) and a **Refresh Token** (session maintenance).
-- **Temporary Usage:** Non-donators using specific features may utilize a short-lived OAuth token that expires and is deleted after 30 minutes.
+- **Feature Usage:** All users (donators and non-donators) using specific server-side features utilize the same OAuth authentication system to maintain secure sessions and feature access.
 - **Strict Limitations:**
     - **Read-Only Scope:** Tokens allow us to read public profile data only. They **cannot** spend Robux, change passwords, or trade items.
     - **Low Risk Permissions:**
@@ -97,7 +97,7 @@ To provide its features, RoValra interacts with several Application Programming 
 ## Data Retention
 
 - **General Users:** No PII is collected by default. 
-- **Temporary Sessions:** Data from temporary OAuth actions (non-donators) is deleted automatically after a maximum of **30 minutes**.
+- **Non-Donators:** IDs and tokens for users accessing server-side features are retained to maintain feature functionality, consistent with donator data retention practices.
 - **Donators:** IDs and tokens are retained indefinitely to maintain badge status unless erasure is requested.
 
 <!-- section:children-privacy:fas fa-child -->
