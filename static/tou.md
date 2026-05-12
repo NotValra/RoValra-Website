@@ -1,6 +1,24 @@
 # RoValra Terms of Service & API Terms of Use
 
-**Last Updated:** April 22, 2026
+**Last Updated:** May 12, 2026
+
+<!-- section:scope:fas fa-users -->
+## Scope and Applicability
+
+These terms apply to **all users** of RoValra services, including but not limited to the RoValra browser extension, the RoValra API, and any associated features or services. Unless otherwise specified, references to "services," "features," or "benefits" within these terms encompass the entirety of the RoValra ecosystem. Violations of these terms may result in the suspension or permanent revocation of your access to any or all RoValra services, regardless of whether you are an API developer, extension user, or donator.
+
+<!-- section:general-enforcement:fas fa-gavel -->
+## General Policies and Enforcement
+
+The following policies apply to all users of RoValra services, regardless of their relationship with RoValra (API developer, extension user, donator, etc.):
+
+*   **Compliance with Roblox Terms of Service:** By using RoValra services, you agree to abide by the [Roblox Terms of Service](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use). Any violation of the Roblox ToS while using RoValra services may result in the suspension or permanent revocation of your access to RoValra services, in addition to any actions taken by Roblox.
+*   **Zero-Tolerance Content Policy:** You are strictly prohibited from submitting, attempting to display, or storing any content through RoValra services (such as profiles, tags, settings, or any user-generated fields) that includes racial slurs, hate speech, sexually explicit or suggestive material, impersonation of staff, malicious links, or any other content that violates applicable laws or regulations.
+*   **Attempted Violations:** Our systems may perform client-side and server-side checks to filter inappropriate content. **The act of attempting to submit or set prohibited content is a violation of these terms, even if our filters prevent the content from being displayed publicly.**
+*   **Right to Revoke Access:** We reserve the right to revoke your access to any or all RoValra services (including API keys, extension features, donator perks, badges, tier access, and any other benefits) at any time for violations of these terms, API abuse, or any other conduct we deem harmful to the RoValra community or services. This revocation may occur with or without prior notice.
+*   **Notification:** We may not notify you immediately when access has been revoked. However, we will make a good-faith effort to inform you of the action taken and the reason behind it.
+*   **Appeals:** We will attempt to provide a formal appeal process for users who believe their access was revoked in error. Please note that the final decision rests solely with the RoValra administration.
+*   **Finality of Revocation:** If your access is revoked and an appeal is denied (or not sought), you forfeit the right to the benefits provided by the revoked services. No compensation, replacement, or refund will be provided.
 
 <!-- section:donator-perks:fas fa-gift -->
 ## Donator Perks
@@ -9,17 +27,11 @@ RoValra offers optional "Donator Tiers" or "Perks" purchased via **Roblox Gamepa
 
 *   **Scope of Perks:** For the purposes of these terms, any reference to "Donator Perks," "Tiers," or "Benefits" refers to the entirety of the features, functional modifications, and benefits provided by the donation. Clauses within these terms apply to all such features collectively, even if a specific benefit is not explicitly enumerated in a particular section.
 *   **Independence from API Terms:** The purchase of a Donator Perk is entirely independent of the RoValra API. Buying a gamepass does not grant special API privileges or immunity. Your status as a developer and your status as a donator are separate; violating API terms will lead to API revocation regardless of your donator status.
-*   **Agreement to Roblox ToS:** By purchasing a RoValra Gamepass, you agree to abide by the [Roblox Terms of Service](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use). All transactions are handled by Roblox; you acknowledge and agree to **Roblox’s No-Refund Policy** regarding virtual items and Gamepasses.
+*   **Agreement to Roblox ToS:** By purchasing a RoValra Gamepass, you agree to abide by the [Roblox Terms of Service](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use). All transactions are handled by Roblox; you acknowledge and agree to **Roblox's No-Refund Policy** regarding virtual items and Gamepasses.
 *   **Right to Modify and Discontinue:** We reserve the right to modify, restructure, or remove any donator perk or tier at any time without prior notice. This includes the possibility of making previously exclusive perks available to all users for free. 
 *   **Service Sustainability and Shutdown:** RoValra is a passion project and does not guarantee the indefinite availability of donator-exclusive features. In the event of a project shutdown, lack of funding, or technical necessity, all perks may be permanently deactivated. No compensation, refunds, or replacements will be provided in these instances.
 *   **No Service Agreement:** Donator perks are provided "as-is." Purchasing a perk does not constitute a service-level agreement or a contract for continued maintenance. Perks are social and cosmetic licenses that exist solely within the current functional iteration of the extension.
-*   **Zero-Tolerance Content Policy:** You are strictly prohibited from submitting, attempting to display, or storing content through donator perks (such as custom tags or profile settings) that includes racial slurs, hate speech, sexually explicit/suggestive material, impersonation of staff, or malicious links.
-*   **Attempted Violations:** Our systems may perform client-side and server-side checks to filter inappropriate content. **The act of attempting to submit or set prohibited text is a violation of these terms, even if our filters prevent the text from being displayed publicly.** 
-*   **Revocation, Notification, and Appeals:**
-    *   **Right to Revoke:** We reserve the right to revoke your perks, badges, or tier access at any time for violations of these terms or API abuse.
-    *   **Notification:** We may not notify you immediately when your perks have been revoked. However, we will make a good-faith effort to inform you of the action taken and the reason behind it.
-    *   **Appeals:** We will attempt to provide a formal appeal process for users who believe their perks were revoked in error. Please note that the final decision rests solely with the RoValra administration.
-*   **Finality of Removal:** If your perks are revoked and an appeal is denied (or not sought), you forfeit the right to the benefits provided by the Gamepass. No compensation, replacement, or refund will be provided.
+*   **Enforcement:** Violations of the [General Policies and Enforcement](#general-policies-and-enforcement) policies outlined in these terms may result in the revocation of your donator perks, in addition to any other actions taken against your access to RoValra services.
 
 <!-- section:api-introduction:fas fa-info-circle -->
 ## API Introduction
