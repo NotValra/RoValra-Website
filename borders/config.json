@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "value": "none",
+    "label": "None",
+    "link": ""
+  },
+  {
+    "id": 2,
+    "value": "TestAnimation",
+    "label": "Test Animation",
+    "link": "https://www.rovalra.com/borders/testanimated.webp"
+  },
+  {
+    "id": 3,
+    "value": "TestStatic",
+    "label": "Test Static",
+    "link": "https://www.rovalra.com/borders/"
+  }
+]
