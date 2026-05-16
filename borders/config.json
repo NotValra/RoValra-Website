@@ -3,54 +3,73 @@
     "id": 1,
     "value": "none",
     "label": "None",
-    "link": ""
+    "link": "",
+    "gamepassId": null,
+    "artistId": null
   },
   {
     "id": 2,
-    "value": "CatEarsAnimated",
-    "label": "Animated Cat Ears",
-    "link": "https://www.rovalra.com/borders/animatedCatEars.webp"
-  },
-  {
-    "id": 3,
     "value": "CatEars",
     "label": "Cat Ears",
-    "link": "https://www.rovalra.com/borders/catears.webp"
-  },
-  {
-    "id": 4,
-    "value": "BrownCatEars",
-    "label": "Brown Cat Ears",
-    "link": "https://www.rovalra.com/borders/brown-cat-ears.webp"
-  },
-  {
-    "id": 5,
-    "value": "BrownCatEarsAnimated",
-    "label": "Brown Animated Cat Ears",
-    "link": "https://www.rovalra.com/borders/brown-animated-cat-ears.webp"
-  },
-  {
-    "id": 6,
-    "value": "PinkCatEars",
-    "label": "Pink Cat Ears",
-    "link": "https://www.rovalra.com/borders/pink-cat-ears.webp"
-  },
-  {
-    "id": 7,
-    "value": "PinkCatEarsAnimated",
-    "label": "Pink Animated Cat Ears",
-    "link": "https://www.rovalra.com/borders/pink-animated-cat%20ears.webp"
-  },
-  {
-    "id": 8,
-    "value": "PurpleCatEars",
-    "label": "Purple Cat Ears",
-    "link": "https://www.rovalra.com/borders/purple-cat-ears.webp"
-  },
-  {
-    "id": 9,
-    "value": "PurpleCatEarsAnimated",
-    "label": "Purple Animated Cat Ears",
-    "link": "https://www.rovalra.com/borders/purple-animated-cat%20ears.webp"
+    "gamepassId": null,
+    "artistId": null,
+    "variants": [
+      {
+        "value": "DefaultCatEars",
+        "label": "Default Cat Ears",
+        "link": "https://www.rovalra.com/borders/catears.webp",
+        "gamepassId": 1832435667,
+        "artistId": 48255812,
+        "animated": [
+          {
+            "value": "CatEarsAnimated",
+            "label": "Animated Cat Ears",
+            "link": "https://www.rovalra.com/borders/animatedCatEars.webp"
+          }
+        ]
+      },
+      {
+        "value": "BrownCatEars",
+        "label": "Brown Cat Ears",
+        "link": "https://www.rovalra.com/borders/brown-cat-ears.webp",
+        "gamepassId": 1832435667,
+        "artistId": 48255812,
+        "animated": [
+          {
+            "value": "BrownCatEarsAnimated",
+            "label": "Brown Animated Cat Ears",
+            "link": "https://www.rovalra.com/borders/brown-animated-cat-ears.webp"
+          }
+        ]
+      },
+      {
+        "value": "PinkCatEars",
+        "label": "Pink Cat Ears",
+        "link": "https://www.rovalra.com/borders/pink-cat-ears.webp",
+        "gamepassId": 1832435667,
+        "artistId": 48255812,
+        "animated": [
+          {
+            "value": "PinkCatEarsAnimated",
+            "label": "Pink Animated Cat Ears",
+            "link": "https://www.rovalra.com/borders/pink-animated-cat%20ears.webp"
+          }
+        ]
+      },
+      {
+        "value": "PurpleCatEars",
+        "label": "Purple Cat Ears",
+        "link": "https://www.rovalra.com/borders/purple-cat-ears.webp",
+        "gamepassId": 1832435667,
+        "artistId": 48255812,
+        "animated": [
+          {
+            "value": "PurpleCatEarsAnimated",
+            "label": "Purple Animated Cat Ears",
+            "link": "https://www.rovalra.com/borders/purple-animated-cat%20ears.webp"
+          }
+        ]
+      }
+    ]
   }
 ]
