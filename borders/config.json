@@ -16,5 +16,41 @@
     "value": "CatEars",
     "label": "Cat Ears",
     "link": "https://www.rovalra.com/borders/catears.webp"
+  },
+  {
+    "id": 4,
+    "value": "BrownCatEars",
+    "label": "Brown Cat Ears",
+    "link": "https://www.rovalra.com/borders/brown-cat-ears.webp"
+  },
+  {
+    "id": 5,
+    "value": "BrownCatEarsAnimated",
+    "label": "Brown Animated Cat Ears",
+    "link": "https://www.rovalra.com/borders/brown-animated-cat-ears.webp"
+  },
+  {
+    "id": 6,
+    "value": "PinkCatEars",
+    "label": "Pink Cat Ears",
+    "link": "https://www.rovalra.com/borders/pink-cat-ears.webp"
+  },
+  {
+    "id": 7,
+    "value": "PinkCatEarsAnimated",
+    "label": "Pink Animated Cat Ears",
+    "link": "https://www.rovalra.com/borders/pink-animated-cat%20ears.webp"
+  },
+  {
+    "id": 8,
+    "value": "PurpleCatEars",
+    "label": "Purple Cat Ears",
+    "link": "https://www.rovalra.com/borders/purple-cat-ears.webp"
+  },
+  {
+    "id": 9,
+    "value": "PurpleCatEarsAnimated",
+    "label": "Purple Animated Cat Ears",
+    "link": "https://www.rovalra.com/borders/purple-animated-cat%20ears.webp"
   }
 ]
