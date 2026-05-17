@@ -69,6 +69,43 @@
             "link": "https://www.rovalra.com/borders/purple-animated-cat%20ears.webp"
           }
         ]
+      },
+      {
+        "value": "BlackCatEars",
+        "label": "Black Cat Ears",
+        "link": "https://www.rovalra.com/borders/black-cat-ears.webp",
+        "gamepassId": 1840563613,
+        "artistId": 48255812,
+        "animated": [
+          {
+            "value": "BlackCatEarsAnimated",
+            "label": "Black Animated Cat Ears",
+            "link": "https://www.rovalra.com/borders/black-animated-cat%20ears.webp"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "value": "Moons",
+    "label": "Moons",
+    "gamepassId": null,
+    "artistId": null,
+    "variants": [
+      {
+        "value": "MoonRing",
+        "label": "Moon Ring",
+        "link": "https://www.rovalra.com/borders/moonring.webp",
+        "gamepassId": 1841345615,
+        "artistId": 48255812,
+        "animated": [
+          {
+            "value": "MoonRingAnimated",
+            "label": "Animated Moon Ring",
+            "link": "https://www.rovalra.com/borders/animated-moonring.webp"
+          }
+        ]
       }
     ]
   }
