@@ -108,5 +108,77 @@
         ]
       }
     ]
+  },
+  {
+    "id": 4,
+    "value": "Neon",
+    "label": "Neon",
+    "gamepassId": null,
+    "artistId": null,
+    "variants": [
+      {
+        "value": "NeonBlack",
+        "label": "Neon Black",
+        "link": "https://www.rovalra.com/borders/neon-black.webp",
+        "gamepassId": 1841175816,
+        "artistId": 48255812
+      },
+      {
+        "value": "NeonBlue",
+        "label": "Neon Blue",
+        "link": "https://www.rovalra.com/borders/neon-blue.webp",
+        "gamepassId": 1840557657,
+        "artistId": 48255812
+      },
+      {
+        "value": "NeonGold",
+        "label": "Neon Gold",
+        "link": "https://www.rovalra.com/borders/neon-gold.webp",
+        "gamepassId": 1839921913,
+        "artistId": 48255812
+      },
+      {
+        "value": "NeonGreen",
+        "label": "Neon Green",
+        "link": "https://www.rovalra.com/borders/neon-green.webp",
+        "gamepassId": 1840817789,
+        "artistId": 48255812
+      },
+      {
+        "value": "NeonLightBlue",
+        "label": "Neon Light Blue",
+        "link": "https://www.rovalra.com/borders/neon-light%20blue.webp",
+        "gamepassId": 1841333850,
+        "artistId": 48255812
+      },
+      {
+        "value": "NeonOrange",
+        "label": "Neon Orange",
+        "link": "https://www.rovalra.com/borders/neon-orange.webp",
+        "gamepassId": 1840005776,
+        "artistId": 48255812
+      },
+      {
+        "value": "NeonPink",
+        "label": "Neon Pink",
+        "link": "https://www.rovalra.com/borders/neon-pink.webp",
+        "gamepassId": 1840395748,
+        "artistId": 48255812
+      },
+      {
+        "value": "NeonPurple",
+        "label": "Neon Purple",
+        "link": "https://www.rovalra.com/borders/neon-purple.webp",
+        "gamepassId": 1841061922,
+        "artistId": 48255812
+      },
+      {
+        "value": "NeonRed",
+        "label": "Neon Red",
+        "link": "https://www.rovalra.com/borders/neon-red.webp",
+        "gamepassId": 1841543695,
+        "artistId": 48255812
+      }
+    ]
   }
 ]
