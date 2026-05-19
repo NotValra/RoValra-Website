@@ -6,7 +6,7 @@
             "published_date": "May 17, 2026",
             "body": "New stuff:\r\n- Avatar borders, this allows you to select a avatar border thats visible to all RoValra users (Donator tier 3 perk), thanks to @aliceenight for making it.\r\n- Social links support on deleted / private games\r\n- Moderated date on deleted games.\r\n- Item 3d preview and improved 3d item rendering (off by default as experimental), thanks to @steinann for making it.\r\n- Scam prevention, adds a banner to the login page when on the real Roblox site so you know its the real site. (off by default)\r\n- Less Roblox Plus, this reduces or fully removes all roblox plus advertisements on the site, thanks to @cornusandu for making it.\r\n- Community filters on profiles, allows you to filter by newest joined, oldest joined, a-z z-a on anyones profile.\r\n- Join date on communities, on a users profile it shows when they joined a specific community\r\n\r\nChanges:\r\n- Improved the paid games pill, making it show on the thumbnail now and only checking games in view.\r\n- Fixed download button not being added to the create page. https://github.com/NotValra/RoValra/issues/76\r\n- Fixed user.js overwriting authed user with null if it failed to get a user id\r\n- Fixed private games sometimes failing to display gamepasses.\r\n- Fixed private games not displaying maturity rating of deleted games.\r\n- Fixed Private games sometimes doing an inf redirect loop.\r\n- Fixed tooltips not working on private games.\r\n- Fixed and attempted to fix multiple issues related to preferred region\r\n- Fixed recent servers displaying inactive servers as active\r\n- Fixed improved events thumbnail sizes sometimes being wrong.\r\n- Fixed event category not being displayed properly\r\n- Fixed RoValra displaying the wrong deletion reason for very specific deleted games.\r\n- Made RoValra automatically fixed corrupted saved data to prevent issues.\r\n- Made status and gradients show in more places.\r\n- Made the third time setting in rovalra display what the tooltip displays and the second one displays in order based off pc settings.\r\n- Made all RoValra requests require access tokens.\r\n- Improved the loading of top donator leaderboard, and contributors.\r\n- Avatar preview for settings like gradient and avatar borders.\r\n- ToU pop up when setting a status so a user knows what they can or cannot do.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.1",
-            "chrome_release_date": null,
+            "chrome_release_date": "May 19, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.5",
-        "is_latest": false
+        "version": "2.5.1",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-05-19T17:02:37.881823Z"
+    "last_updated": "2026-05-19T18:42:39.658290Z"
 }
