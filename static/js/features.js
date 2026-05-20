@@ -1387,6 +1387,34 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            ageKidsThemeEnabled: {
+                label: 'Age Theme',
+                description:
+                    'Lets you choose which Roblox age theme is used across the site.',
+                type: 'checkbox',
+                default: false,
+                childSettings: {
+                    ageThemeSelection: {
+                        label: 'Theme',
+                        description:
+                            'Choose which Roblox age theme class should be applied.',
+                        type: 'select',
+                        options: [
+                            { label: 'Normal Roblox', value: 'normal' },
+                            { label: 'Roblox Kids', value: 'kids' },
+                            { label: 'Roblox Select', value: 'select' },
+                        ],
+                        default: 'normal',
+                    },
+                    ageThemeNavbarEnabled: {
+                        label: 'Show Age Theme in the navigation bar',
+                        description:
+                            'Adds a navigation bar button for switching the age theme live.',
+                        type: 'checkbox',
+                        default: false,
+                    },
+                },
+            },
             cssfixesEnabled: {
                 label: 'Site Fixes',
                 description: [

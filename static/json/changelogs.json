@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5.3",
+            "name": "v2.5.3",
+            "published_date": "May 20, 2026",
+            "body": "New stuff:\r\n- Added an option to select between the different Roblox themes, Roblox kids, Roblox select and normal Roblox\r\n\r\nChanges:\r\n-  Fixed total robux donated and leaderboard annoymous mode\r\n- Added missing r6 jump animation to item render",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.3",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5.2",
             "name": "v2.5.2",
             "published_date": "May 20, 2026",
@@ -260,15 +269,6 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.6",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.3.1.5",
-            "name": "update 2.3.1.5",
-            "published_date": "August 26, 2025",
-            "body": "**Changes**\r\n- Updated the server version to support a 1 letter capitalization Roblox did \ud83d\udc94\r\n- Updated text saying the hidden catalog was patched to saying it was unpatched (Roblox works in interesting ways)",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.5",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-05-20T11:05:54.360108Z"
+    "last_updated": "2026-05-20T12:59:46.941148Z"
 }
