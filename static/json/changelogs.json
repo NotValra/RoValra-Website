@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5.2",
+            "name": "v2.5.2",
+            "published_date": "May 20, 2026",
+            "body": "New stuff:\r\n- Added R6 / R15 toggle to item renderer\r\n- Added Total donated, shows how much you donated to RoValra\r\n\r\nChanges:\r\n- Fixed spa navigation in item renderer.\r\n- Fixed tou agreement showing where it isnt meant to\r\n- Fixed avatar borders showing locally but not server side\r\n- Fixed RoValra trying to request with user id \"null\"\r\n- Fixed parts of a users profile flickering",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.2",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5.1",
             "name": "v2.5.1",
             "published_date": "May 17, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.5",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "v2.3.1",
-            "name": "v2.3.1",
-            "published_date": "August 25, 2025",
-            "body": "**New Features**\r\n- Added server version to the server list (shows the game version the server is running on), And recoded the script that adds that stuff.\r\n- Added an export and import settings feature.\r\n- Added a thing displaying the current game version and the oldest game version a server is running on.\r\n- Added a RoValra badge for people who contributed to the project <3\r\n- Made the hidden games on profiles show more hidden games.\r\n- Improved the filter by oldest / newest servers by making it way more accurate.\r\n- Server Side Improvements and optimization (Backend stuff)\r\n\r\n**Changes**\r\n- Made it clear to a user that some regions arent running 24/7 to prevent confusion. \r\n- Disabled the Quick Private server link copying for maintenance.\r\n- Fixed the hidden user experiences removing elements that it shouldnt.\r\n- Fixed the Quick Play button only working on the home page, and a lot other improvements.\r\n- Fixed a bug where the globe would not add new regions, and made other improvements.\r\n- Fixed the Instant Join button showing on your profile.\r\n- Removed the tabs permission.\r\n- Small fixes to improve the extensions compatibility",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.3.1",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.5.1",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-05-20T09:14:18.769815Z"
+    "last_updated": "2026-05-20T11:05:54.360108Z"
 }
