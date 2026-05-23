@@ -6,7 +6,7 @@
             "published_date": "May 20, 2026",
             "body": "New stuff:\r\n- Added an option to select between the different Roblox themes, Roblox kids, Roblox select and normal Roblox\r\n\r\nChanges:\r\n-  Fixed total robux donated and leaderboard annoymous mode\r\n- Added missing r6 jump animation to item render",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.3",
-            "chrome_release_date": null,
+            "chrome_release_date": "May 23, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.5.1",
-        "is_latest": false
+        "version": "2.5.3",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-05-23T07:01:13.390529Z"
+    "last_updated": "2026-05-23T08:46:40.984030Z"
 }
