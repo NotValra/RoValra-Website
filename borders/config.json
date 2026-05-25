@@ -180,5 +180,126 @@
         "artistId": 48255812
       }
     ]
+  },
+  {
+    "id": 5,
+    "value": "Gradients",
+    "label": "Gradients",
+    "gamepassId": null,
+    "artistId": 1040942162,
+    "variants": [
+      {
+        "value": "BlueGradient",
+        "label": "Blue Gradient",
+        "link": "https://www.rovalra.com/borders/BlueGradientStatic.webp",
+        "gamepassId": 1856218922,
+        "artistId": 1040942162,
+        "animated": [
+          {
+            "value": "BlueGradientAnimated",
+            "label": "Blue Animated Gradient",
+            "link": "https://www.rovalra.com/borders/BlueGradientAnimated.webp"
+          }
+        ]
+      },
+      {
+        "value": "CyanGradient",
+        "label": "Cyan Gradient",
+        "link": "https://www.rovalra.com/borders/CyanGradientStatic.webp",
+        "gamepassId": 1856264925,
+        "artistId": 1040942162,
+        "animated": [
+          {
+            "value": "CyanGradientAnimated",
+            "label": "Cyan Animated Gradient",
+            "link": "https://www.rovalra.com/borders/CyanGradientAnimated.webp"
+          }
+        ]
+      },
+      {
+        "value": "GreenGradient",
+        "label": "Green Gradient",
+        "link": "https://www.rovalra.com/borders/GreenGradientStatic.webp",
+        "gamepassId": 1856340845,
+        "artistId": 1040942162,
+        "animated": [
+          {
+            "value": "GreenGradientAnimated",
+            "label": "Green Animated Gradient",
+            "link": "https://www.rovalra.com/borders/GreenGradientAnimated.webp"
+          }
+        ]
+      },
+      {
+        "value": "OrangeGradient",
+        "label": "Orange Gradient",
+        "link": "https://www.rovalra.com/borders/OrangeGradientStatic.webp",
+        "gamepassId": 1856204932,
+        "artistId": 1040942162,
+        "animated": [
+          {
+            "value": "OrangeGradientAnimated",
+            "label": "Orange Animated Gradient",
+            "link": "https://www.rovalra.com/borders/OrangeGradientAnimated.webp"
+          }
+        ]
+      },
+      {
+        "value": "PinkGradient",
+        "label": "Pink Gradient",
+        "link": "https://www.rovalra.com/borders/PinkGradientStatic.webp",
+        "gamepassId": 1856028909,
+        "artistId": 1040942162,
+        "animated": [
+          {
+            "value": "PinkGradientAnimated",
+            "label": "Pink Animated Gradient",
+            "link": "https://www.rovalra.com/borders/PinkGradientAnimated.webp"
+          }
+        ]
+      },
+      {
+        "value": "PurpleGradient",
+        "label": "Purple Gradient",
+        "link": "https://www.rovalra.com/borders/PurpleGradientStatic.webp",
+        "gamepassId": 1856116888,
+        "artistId": 1040942162,
+        "animated": [
+          {
+            "value": "PurpleGradientAnimated",
+            "label": "Purple Animated Gradient",
+            "link": "https://www.rovalra.com/borders/PurpleGradientAnimated.webp"
+          }
+        ]
+      },
+      {
+        "value": "RedGradient",
+        "label": "Red Gradient",
+        "link": "https://www.rovalra.com/borders/RedGradientStatic.webp",
+        "gamepassId": 1856330909,
+        "artistId": 1040942162,
+        "animated": [
+          {
+            "value": "RedGradientAnimated",
+            "label": "Red Animated Gradient",
+            "link": "https://www.rovalra.com/borders/RedGradientAnimated.webp"
+          }
+        ]
+      },
+      {
+        "value": "YellowGradient",
+        "label": "Yellow Gradient",
+        "link": "https://www.rovalra.com/borders/YellowGradientStatic.webp",
+        "gamepassId": 1856158985,
+        "artistId": 1040942162,
+        "animated": [
+          {
+            "value": "YellowGradientAnimated",
+            "label": "Yellow Animated Gradient",
+            "link": "https://www.rovalra.com/borders/YellowGradientAnimated.webp"
+          }
+        ]
+      }
+    ]
   }
 ]
