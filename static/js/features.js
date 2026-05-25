@@ -54,6 +54,19 @@ var featuresData = {
                     },
                 },
             },
+            marketplace3DRenderEnabled: {
+                label: 'Enable Custom 3D Marketplace Item Renderer',
+                description: [
+                    'Adds a try-on preview when hovering over items and adds a feature-rich 3D renderer to item pages.',
+                    'This feature was made possible cause of [RoAvatar](https://github.com/steinann/RoAvatar) ❤️',
+                ],
+                type: 'checkbox',
+                default: false,
+                contributors: ['126448532'],
+
+                experimental:
+                    'This feature may cause performance issues. And may be buggy',
+            },
             EnableRobuxAfterPurchase: {
                 label: 'Robux After Purchase',
                 description:
@@ -239,16 +252,16 @@ var featuresData = {
             privateGameViewerEnabled: {
                 label: 'View Private / Moderated Games',
                 description: [
-                    'This recreates the experience page of private / moderated games, allowing you to view them.',
+                    'This recreates the games page of private / moderated games, allowing you to view them.',
                 ],
                 type: 'checkbox',
                 default: true,
                 childSettings: {
                     privateGameDetectionFallbackEnabled: {
-                        label: 'Use background detection fallback',
+                        label: 'Use Robust Private / Moderated Games Detection',
                         description: [
-                            'Uses background web requests to detect private games when the local tracker fails.',
-                            'This method is more reliable but requires additional permissions.',
+                            'This will make it so it never fails to know when you are trying to view a private / moderated game',
+                            'Without this it would fail to show private / moderated game pages if you open their link directly',
                         ],
                         type: 'checkbox',
                         default: false,
@@ -569,6 +582,14 @@ var featuresData = {
                     },
                 },
             },
+            groupFiltersEnabled: {
+                label: 'Community Filters',
+                description: [
+                    'Adds filters to the community section on profiles allowing you to sort by A-Z, Z-A, Newest and Oldest.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
             trustedConnectionsEnabled: {
                 label: 'Trusted Friends',
                 description: [
@@ -580,6 +601,8 @@ var featuresData = {
                 default: true,
                 deprecated:
                     'Roblox is working on an A/B test which does this exact thing. This feature will be disabled when it releases.',
+                locked: 'Roblox released their own version of this.',
+                isPermanent: true,
             },
             currencyTransferEnabled: {
                 label: 'Send Robux',
@@ -588,6 +611,8 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+                locked: 'Roblox released their own version of this feature',
+                isPermanent: true,
             },
             lastOnlineEnabled: {
                 label: 'Show Last Online / Last Seen',
@@ -613,6 +638,13 @@ var featuresData = {
                 default: true,
             },
 
+            groupJoinedDateEnabled: {
+                label: 'Show Community Joined Date',
+                description:
+                    'Shows when a user joined a community on their profile.',
+                type: 'checkbox',
+                default: true,
+            },
             showFriendedFromEnabled: {
                 label: 'Show Friended From',
                 description:
@@ -759,6 +791,7 @@ var featuresData = {
                         description:
                             'Set your own gradient for your own profile',
                         type: 'gradient',
+                        avatarPreview: true,
                         donatorTier: 2,
                         donatorReason:
                             'Donator 2 is required to set a custom profile gradient. This feature is purely cosmetic in order to reward donators',
@@ -787,14 +820,40 @@ var featuresData = {
                 default: true,
                 childSettings: {
                     bannedUserDetectionFallbackEnabled: {
-                        label: 'Use background detection fallback',
+                        label: 'Use Robust Banned User Detection',
                         description: [
-                            'Uses background web requests to detect banned users when the local tracker fails.',
-                            'This method is more reliable but requires additional permissions.',
+                            'This will make it so it never fails to know when you are trying to view a banned user',
+                            'Without this it would fail to show banned user profiles if you open their link directly',
                         ],
                         type: 'checkbox',
                         default: false,
                         requiredPermissions: ['webRequest'],
+                    },
+                },
+            },
+            avatarBorderEnabled: {
+                label: 'Shows a users Avatar Border',
+                description: [
+                    'Shows a decorative border around avatars on friend tiles and profile pages.',
+                    '**Your selected border is saved to RoValras database so other RoValra users can see it.**',
+                ],
+                type: 'checkbox',
+                default: true,
+                contributors: [48255812],
+                childSettings: {
+                    avatarBorderChoice: {
+                        label: 'Avatar Border',
+                        description: [
+                            'Choose which border displays around your own avatar.',
+                        ],
+                        type: 'button',
+                        buttonText: 'Open Border Store',
+                        event: 'rovalra:openBorderStore',
+                        avatarPreview: true,
+                        donatorTier: 3,
+                        donatorReason:
+                            'Donator Tier 3 is required to set a custom avatar border. This is a cosmetic perk to reward donators.',
+                        default: 'none',
                     },
                 },
             },
@@ -1276,6 +1335,15 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            loginBannerEnabled: {
+                label: 'Login Banner',
+                description: [
+                    'Adds a banner to the login page to verify you are on the official Roblox website.',
+                    'This helps prevent phishing by ensuring you know when you are on the real site.',
+                ],
+                type: 'checkbox',
+                default: false,
+            },
             DownloadCreateEnabled: {
                 label: 'Adds a download button to create.roblox.com',
                 description:
@@ -1318,6 +1386,34 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+            },
+            ageKidsThemeEnabled: {
+                label: 'Age Theme',
+                description:
+                    'Lets you choose which Roblox age theme is used across the site.',
+                type: 'checkbox',
+                default: false,
+                childSettings: {
+                    ageThemeSelection: {
+                        label: 'Theme',
+                        description:
+                            'Choose which Roblox age theme class should be applied.',
+                        type: 'select',
+                        options: [
+                            { label: 'Normal Roblox', value: 'normal' },
+                            { label: 'Roblox Kids', value: 'kids' },
+                            { label: 'Roblox Select', value: 'select' },
+                        ],
+                        default: 'normal',
+                    },
+                    ageThemeNavbarEnabled: {
+                        label: 'Show Age Theme in the navigation bar',
+                        description:
+                            'Adds a navigation bar button for switching the age theme live.',
+                        type: 'checkbox',
+                        default: false,
+                    },
+                },
             },
             cssfixesEnabled: {
                 label: 'Site Fixes',
@@ -1399,6 +1495,23 @@ var featuresData = {
                         default: true,
                     },
                 },
+            },
+            reducePlusAds: {
+                label: 'Less Roblox Plus',
+                description: [
+                    'Makes Roblox Plus advertising more subtle.',
+                    'Not recommended if you have an active Roblox Plus subscription.',
+                ],
+                type: 'checkbox',
+                default: false,
+                childSettings: {
+                    removeAllPlusAdds: {
+                        label: 'Remove all Roblox Plus advertising.',
+                        type: 'checkbox',
+                        default: false,
+                    },
+                },
+                contributors: ['1564574922'],
             },
         },
     },

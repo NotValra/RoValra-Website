@@ -1,6 +1,33 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5.3",
+            "name": "v2.5.3",
+            "published_date": "May 20, 2026",
+            "body": "New stuff:\r\n- Added an option to select between the different Roblox themes, Roblox kids, Roblox select and normal Roblox\r\n\r\nChanges:\r\n-  Fixed total robux donated and leaderboard annoymous mode\r\n- Added missing r6 jump animation to item render",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.3",
+            "chrome_release_date": "May 23, 2026",
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.5.2",
+            "name": "v2.5.2",
+            "published_date": "May 20, 2026",
+            "body": "New stuff:\r\n- Added R6 / R15 toggle to item renderer\r\n- Added Total donated, shows how much you donated to RoValra\r\n\r\nChanges:\r\n- Fixed spa navigation in item renderer.\r\n- Fixed tou agreement showing where it isnt meant to\r\n- Fixed avatar borders showing locally but not server side\r\n- Fixed RoValra trying to request with user id \"null\"\r\n- Fixed parts of a users profile flickering",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.2",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
+            "tag_name": "v2.5.1",
+            "name": "v2.5.1",
+            "published_date": "May 17, 2026",
+            "body": "New stuff:\r\n- Avatar borders, this allows you to select a avatar border thats visible to all RoValra users (Donator tier 3 perk), thanks to @aliceenight for making it.\r\n- Social links support on deleted / private games\r\n- Moderated date on deleted games.\r\n- Item 3d preview and improved 3d item rendering (off by default as experimental), thanks to @steinann for making it.\r\n- Scam prevention, adds a banner to the login page when on the real Roblox site so you know its the real site. (off by default)\r\n- Less Roblox Plus, this reduces or fully removes all roblox plus advertisements on the site, thanks to @cornusandu for making it.\r\n- Community filters on profiles, allows you to filter by newest joined, oldest joined, a-z z-a on anyones profile.\r\n- Join date on communities, on a users profile it shows when they joined a specific community\r\n\r\nChanges:\r\n- Improved the paid games pill, making it show on the thumbnail now and only checking games in view.\r\n- Fixed download button not being added to the create page. https://github.com/NotValra/RoValra/issues/76\r\n- Fixed user.js overwriting authed user with null if it failed to get a user id\r\n- Fixed private games sometimes failing to display gamepasses.\r\n- Fixed private games not displaying maturity rating of deleted games.\r\n- Fixed Private games sometimes doing an inf redirect loop.\r\n- Fixed tooltips not working on private games.\r\n- Fixed and attempted to fix multiple issues related to preferred region\r\n- Fixed recent servers displaying inactive servers as active\r\n- Fixed improved events thumbnail sizes sometimes being wrong.\r\n- Fixed event category not being displayed properly\r\n- Fixed RoValra displaying the wrong deletion reason for very specific deleted games.\r\n- Made RoValra automatically fixed corrupted saved data to prevent issues.\r\n- Made status and gradients show in more places.\r\n- Made the third time setting in rovalra display what the tooltip displays and the second one displays in order based off pc settings.\r\n- Made all RoValra requests require access tokens.\r\n- Improved the loading of top donator leaderboard, and contributors.\r\n- Avatar preview for settings like gradient and avatar borders.\r\n- ToU pop up when setting a status so a user knows what they can or cannot do.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.1",
+            "chrome_release_date": "May 19, 2026",
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5",
             "name": "v2.5",
             "published_date": "May 11, 2026",
@@ -242,40 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.6",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.3.1.5",
-            "name": "update 2.3.1.5",
-            "published_date": "August 26, 2025",
-            "body": "**Changes**\r\n- Updated the server version to support a 1 letter capitalization Roblox did \ud83d\udc94\r\n- Updated text saying the hidden catalog was patched to saying it was unpatched (Roblox works in interesting ways)",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.5",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "v2.3.1",
-            "name": "v2.3.1",
-            "published_date": "August 25, 2025",
-            "body": "**New Features**\r\n- Added server version to the server list (shows the game version the server is running on), And recoded the script that adds that stuff.\r\n- Added an export and import settings feature.\r\n- Added a thing displaying the current game version and the oldest game version a server is running on.\r\n- Added a RoValra badge for people who contributed to the project <3\r\n- Made the hidden games on profiles show more hidden games.\r\n- Improved the filter by oldest / newest servers by making it way more accurate.\r\n- Server Side Improvements and optimization (Backend stuff)\r\n\r\n**Changes**\r\n- Made it clear to a user that some regions arent running 24/7 to prevent confusion. \r\n- Disabled the Quick Private server link copying for maintenance.\r\n- Fixed the hidden user experiences removing elements that it shouldnt.\r\n- Fixed the Quick Play button only working on the home page, and a lot other improvements.\r\n- Fixed a bug where the globe would not add new regions, and made other improvements.\r\n- Fixed the Instant Join button showing on your profile.\r\n- Removed the tabs permission.\r\n- Small fixes to improve the extensions compatibility",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.3.1",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "v2.3",
-            "name": "v2.3",
-            "published_date": "August 21, 2025",
-            "body": "**New Features**\r\n- Added a quick play button, with preferred region support.\r\n- Added custom RoValra badges for the Roblox badges section, for specific users only. If you contributed to RoValra in a meaningful way and you want a badge pls lmk.\r\n- Added secret / developer settings.\r\n- Added a search bar to settings.\r\n- Added support for filtering by lowest player count and highest player count when using the region selector.\r\n- Added support for excluding full servers when using the server uptime filter.\r\n- Added bulk setting private servers inactive and active.\r\n\r\n**Changes**\r\n- Made the hidden catalog disabled by default since Roblox patched it :broken_heart:\r\n- Fixed the preferred Region Play Button not having full light mode support (kinda forgot about that)\r\n- Fixed the Remove R6 Warning breaking stuff\r\n- Fixed hidden games on groups showing up where they shouldnt.",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.3",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.5",
+        "version": "2.5.3",
         "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-05-17T18:27:13.400354Z"
+    "last_updated": "2026-05-25T17:35:34.827250Z"
 }
