@@ -269,6 +269,15 @@ var featuresData = {
                     },
                 },
             },
+            gamePassViewerEnabled: {
+                label: 'View Gamepasses in Private / Moderated Games',
+                description: [
+                    'This recreates the gamepass page of private / moderated games, allowing you to view them.',
+                ],
+                type: 'checkbox',
+                default: true,
+                contributors: ['9502859424'],
+            },
             botdataEnabled: {
                 label: 'Bot Data',
                 description: [
@@ -491,6 +500,24 @@ var featuresData = {
                 default: true,
                 contributors: ['8345351117', '447170745'],
             },
+            avatarDownloadEnabled: {
+                label: 'Download Avatar',
+                description: [
+                    'Adds a button to save avatar as a PNG on their profile.',
+                ],
+                type: 'checkbox',
+                default: false,
+                contributors: ['9502859424'],
+            },
+            profileViewsEnabled: {
+                label: 'Profile Views',
+                description: [
+                    'Shows profile view counts on profiles.',
+                    'Disabling this hides profile views locally and hides your profile views from other RoValra users.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
             userSniperEnabled: {
                 label: 'Instant Joiner',
                 description: [
@@ -499,7 +526,7 @@ var featuresData = {
                     '- This feature requires the user to have their joins enabled for everyone or for you to be friends with them.',
                 ],
                 type: 'checkbox',
-                default: true,
+                default: false,
                 childSettings: {
                     deeplinkEnabled: {
                         label: 'Join through deeplinks',
@@ -708,7 +735,7 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
                 contributors: ['447170745', '8345351117'],
-                locked: 'This feature is currently unfinished and will be improved and finished next update.',
+                locked: 'Disabled for Maintenance',
                 isPermanent: false,
             },
 
@@ -1387,6 +1414,22 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            sidebarCollapseEnabled: {
+                label: 'Collapsible Sidebar',
+                description: ['Adds a button to collapse the Roblox sidebar.'],
+                type: 'checkbox',
+                default: true,
+                storageKey: 'rovalraSidebarCollapsed',
+                childSettings: {
+                    sidebarCollapseMoveContentEnabled: {
+                        label: 'Move content with collapsed sidebar',
+                        description:
+                            'Moves the page content to match the current sidebar width.',
+                        type: 'checkbox',
+                        default: true,
+                    },
+                },
+            },
             ageKidsThemeEnabled: {
                 label: 'Age Theme',
                 description:
@@ -1511,6 +1554,15 @@ var featuresData = {
                         default: false,
                     },
                 },
+                contributors: ['1564574922'],
+            },
+            settingChangeNote: {
+                label: 'Setting changes alerts',
+                description: [
+                    'Shows you whenever certain settings were replaced or removed.',
+                ],
+                type: 'checkbox',
+                default: false,
                 contributors: ['1564574922'],
             },
         },
@@ -1875,6 +1927,14 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
             },
+            forceFeatureStatusPrompt: {
+                label: ['Force Feature Status Prompt'],
+                description: [
+                    'When enabled, shows the feature status acknowledgement every time an off by default experimental, beta, or deprecated feature is enabled. For testing purposes.',
+                ],
+                type: 'checkbox',
+                default: false,
+            },
             rendererDeveloperToggles: {
                 label: '3D renderer Developer toggles',
                 type: 'checkbox',
@@ -1914,6 +1974,15 @@ var featuresData = {
                 type: 'button',
                 buttonText: 'Calculate Storage',
                 event: 'rovalra:showLocalStorageUsage',
+            },
+            verboseDebug: {
+                label: 'Verbose Debugging',
+                description: ['Displays extended debugging information.'],
+                type: 'checkbox',
+                default: false,
+                contributors: ['1564574922'],
+                experimental:
+                    'This feature is not yet widely used within RoValra.',
             },
         },
     },
