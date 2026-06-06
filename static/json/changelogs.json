@@ -6,7 +6,7 @@
             "published_date": "May 30, 2026",
             "body": "new stuff:\r\n- Added a setting showing what settings changed in an update (off by default), thanks to @cornusandu for making it\r\n- Avatar download button, allowing you to download an avatar png (off by default), thanks to @moowi1337 for making it\r\n- Added Profile views, showing the total views from RoValra users on a profile.\r\n- Added a confirmation prompt for experimental, beta and deprecated features letting a user know they might cause issues.\r\n- Added gamepass viewer, which allows you to view gamepass pages of private or deleted games, thanks to @moowi1337 for making it\r\n- Added Collapsible Sidebar allowing you to make the sidebar smaller.\r\n\r\nChanges\r\n- Fixed a few issues with item renderer\r\n- Fixed item renderer not replacing buttons properly\r\n- Fixed on going events saying \"Notify me\" instead of changing it to a \"join event\" button\r\n- Fixed avatar borders not always being animated on users profile\r\n- Fixed avatar borders playing in the background, which used more resources\r\n- Fixed quick search waiting for presence\r\n- Fixed streamer mode not hiding email, thanks to @aliceenight for making it.\r\n- Fixed social links on private games showing for users who arent age checked.\r\n- Attempted to fix RoValra making load times on profiles longer.\r\n- Made improved currently wearing support gears\r\n- Improved performance a lot, thanks to @steinann for finding it\r\n- Improved cosmetic related features.\r\n- Added support for rolimons bundle links\r\n- Changed instant joiner to be off by default.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.4",
-            "chrome_release_date": "June 1, 2026",
+            "chrome_release_date": "May 31, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -277,5 +277,5 @@
         "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-06-06T15:31:14.273958Z"
+    "last_updated": "2026-06-06T16:28:38.201803Z"
 }
