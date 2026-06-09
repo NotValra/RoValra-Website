@@ -99,9 +99,17 @@ var featuresData = {
             PreviousPriceEnabled: {
                 label: 'Previous Price to item cards and on item pages.',
                 description:
-                    'This shows the price of an offsale item before it went offsale.',
+                    'This shows the price of an offsale item before it went offsale. And shows when an item was last on sale.',
                 type: 'checkbox',
                 default: true,
+            },
+            lastEquippedEnabled: {
+                label: 'Last Equipped on Item Pages',
+                description:
+                    'Shows when you last equipped an item on item pages.',
+                type: 'checkbox',
+                default: true,
+                contributors: ['4866259395', '447170745'],
             },
             itemTradingEnabled: {
                 label: 'Item Trading Info',
@@ -291,6 +299,24 @@ var featuresData = {
                 label: 'Subplaces',
                 description: [
                     'This adds a tab to an experience page that shows the subplaces of the experience.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
+            hiddenBadgesEnabled: {
+                label: 'Hidden Badges',
+                description: [
+                    'Adds a Hidden Badges tab to experience pages.',
+                    'This only shows hidden badges of a game that you obtained.',
+                ],
+                type: 'checkbox',
+                default: true,
+                storageKey: 'rovalra_badges_v1',
+            },
+            badgeLayoutToggleEnabled: {
+                label: 'Badge Layout Toggle',
+                description: [
+                    'Adds a List / Grid toggle to experience badge sections.',
                 ],
                 type: 'checkbox',
                 default: true,
@@ -518,6 +544,14 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            currentlyPlayingLinkEnabled: {
+                label: 'Clickable Currently Playing Card',
+                description: [
+                    'Makes the currently playing experience card on profiles link directly to the experience the user is playing.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
             userSniperEnabled: {
                 label: 'Instant Joiner',
                 description: [
@@ -663,6 +697,8 @@ var featuresData = {
                     'Shows a users role in a community on their profile.',
                 type: 'checkbox',
                 default: true,
+                locked: 'Roblox released their own version of this.',
+                isPermanent: true,
             },
 
             groupJoinedDateEnabled: {
@@ -680,7 +716,7 @@ var featuresData = {
                 default: true,
             },
             lastPlayedTogetherEnabled: {
-                label: 'Most Played Together',
+                label: 'Most Frequent Played Together',
                 description:
                     'Shows the experience you played the most with a friend on their profile.',
                 type: 'checkbox',
@@ -735,8 +771,8 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
                 contributors: ['447170745', '8345351117'],
-                locked: 'Disabled for Maintenance',
-                isPermanent: false,
+                locked: 'Roblox made this not possible.',
+                isPermanent: true,
             },
 
             categorizeWearingEnabled: {
@@ -884,6 +920,15 @@ var featuresData = {
                     },
                 },
             },
+            usernameColor: {
+                label: 'Username Color Preview',
+                description: [
+                    "Changes the user's display name color on their profile to what color Roblox would give them when talking in game chats. Inspired by https://github.com/RyloRiz/rblx-name-color",
+                ],
+                type: 'checkbox',
+                default: false,
+                contributors: ['3602693727'],
+            },
         },
     },
     Home: {
@@ -896,6 +941,32 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: false,
+            },
+            underratedGamesEnabled: {
+                label: 'Underrated Games',
+                description: [
+                    'Adds RoValra community-picked underrated games to the Home page.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
+            homeLayoutEnabled: {
+                label: 'Home Layout',
+                description: [
+                    'Lets you save a custom order for the rows on the Home page.',
+                ],
+                type: 'checkbox',
+                default: true,
+                childSettings: {
+                    homeLayoutButtonEnabled: {
+                        label: 'Show Home Layout Button',
+                        description: [
+                            'Adds the RoValra Layout button to the Home page.',
+                        ],
+                        type: 'checkbox',
+                        default: true,
+                    },
+                },
             },
         },
     },
@@ -953,6 +1024,18 @@ var featuresData = {
                 default: true,
                 storageKey: 'rovalra_groups_order',
                 contributors: ['7982684834', '447170745'],
+            },
+            bulkLeaveGroupsEnabled: {
+                label: 'Bulk Leave Communities',
+                description: ['This allows you to leave communities in bulk.'],
+                type: 'checkbox',
+                default: true,
+                contributors: [
+                    '447170745',
+                    '9502859424',
+                    '2615068449',
+                    '422540285',
+                ],
             },
             groupPlaceVisitsEnabled: {
                 label: 'Total Community Place Visits',
@@ -1239,12 +1322,65 @@ var featuresData = {
                 default: true,
                 contributors: ['447170745', '8345351117'],
             },
+            sidebarCollapseEnabled: {
+                label: 'Collapsible Sidebar',
+                description: ['Adds a button to collapse the Roblox sidebar.'],
+                type: 'checkbox',
+                default: true,
+                storageKey: 'rovalraSidebarCollapsed',
+                childSettings: {
+                    sidebarCollapseMoveContentEnabled: {
+                        label: 'Move content with collapsed sidebar',
+                        description:
+                            'Moves the page content to match the current sidebar width.',
+                        type: 'checkbox',
+                        default: true,
+                    },
+                },
+            },
+            ageKidsThemeEnabled: {
+                label: 'Age Theme',
+                description:
+                    'Lets you choose which Roblox age theme is used across the site.',
+                type: 'checkbox',
+                default: false,
+                childSettings: {
+                    ageThemeSelection: {
+                        label: 'Theme',
+                        description:
+                            'Choose which Roblox age theme class should be applied.',
+                        type: 'select',
+                        options: [
+                            { label: 'Normal Roblox', value: 'normal' },
+                            { label: 'Roblox Kids', value: 'kids' },
+                            { label: 'Roblox Select', value: 'select' },
+                        ],
+                        default: 'normal',
+                    },
+                    ageThemeNavbarEnabled: {
+                        label: 'Show Age Theme in the navigation bar',
+                        description:
+                            'Adds a navigation bar button for switching the age theme live.',
+                        type: 'checkbox',
+                        default: false,
+                    },
+                },
+            },
             betaProgramsEnabled: {
                 label: 'Adds a beta programs toggle to the navigation bar',
                 description:
                     'This allows you to toggle beta programs you are enrolled into easily.',
                 type: 'checkbox',
                 default: false,
+            },
+            removeDownloadButton: {
+                label: 'Remove Download Button',
+                description: [
+                    'Removes the out of place download button from navigation bar.',
+                ],
+                type: 'checkbox',
+                default: false,
+                contributors: ['3602693727'],
             },
             transactionsSidebarLinkEnabled: {
                 label: 'My Transactions sidebar link',
@@ -1322,7 +1458,7 @@ var featuresData = {
                     'This attempts to fix the memory leak caused by the Roblox website when reloading a page or navigating the site.',
                     "This fix will redirect most url changes to 'about:blank' and then to the intended url, which fixes the memory leak, but may cause a slight flicker when navigating and issues with the back and forward arrows.",
                     "If you don't know what a memory leak is or you don't feel like Roblox is using too much memory, you can leave this off.",
-                    "**This will prompt you to enable the 'webNavigation' permission for the feature to work.**",
+                    '**This feature is not recommended to be used anymore, it seems like Roblox has fixed the memory leak.**',
                 ],
                 experimental: 'May cause some issues.',
                 type: 'checkbox',
@@ -1414,50 +1550,7 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
-            sidebarCollapseEnabled: {
-                label: 'Collapsible Sidebar',
-                description: ['Adds a button to collapse the Roblox sidebar.'],
-                type: 'checkbox',
-                default: true,
-                storageKey: 'rovalraSidebarCollapsed',
-                childSettings: {
-                    sidebarCollapseMoveContentEnabled: {
-                        label: 'Move content with collapsed sidebar',
-                        description:
-                            'Moves the page content to match the current sidebar width.',
-                        type: 'checkbox',
-                        default: true,
-                    },
-                },
-            },
-            ageKidsThemeEnabled: {
-                label: 'Age Theme',
-                description:
-                    'Lets you choose which Roblox age theme is used across the site.',
-                type: 'checkbox',
-                default: false,
-                childSettings: {
-                    ageThemeSelection: {
-                        label: 'Theme',
-                        description:
-                            'Choose which Roblox age theme class should be applied.',
-                        type: 'select',
-                        options: [
-                            { label: 'Normal Roblox', value: 'normal' },
-                            { label: 'Roblox Kids', value: 'kids' },
-                            { label: 'Roblox Select', value: 'select' },
-                        ],
-                        default: 'normal',
-                    },
-                    ageThemeNavbarEnabled: {
-                        label: 'Show Age Theme in the navigation bar',
-                        description:
-                            'Adds a navigation bar button for switching the age theme live.',
-                        type: 'checkbox',
-                        default: false,
-                    },
-                },
-            },
+
             cssfixesEnabled: {
                 label: 'Site Fixes',
                 description: [
@@ -1487,6 +1580,7 @@ var featuresData = {
                             'Fixes the size of the remove item from cart button being super small in the shopping cart.',
                         type: 'checkbox',
                         default: true,
+                        contributors: ['4866259395', '447170745'],
                     },
                 },
             },
@@ -1506,6 +1600,7 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
                 storageKey: 'rovalra_first_account_cache',
+                contributors: ['4866259395', '447170745'],
             },
             revertLogo: {
                 label: 'Change the app launch icon',
