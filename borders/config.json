@@ -301,5 +301,70 @@
         ]
       }
     ]
+  },
+  {
+    "id": 6,
+    "value": "Pride",
+    "label": "Pride",
+    "gamepassId": null,
+    "artistId": 1040942162,
+    "variants": [
+      {
+        "value": "PrideTraditional",
+        "label": "Pride Traditional",
+        "link": "https://www.rovalra.com/borders/Pride-Traditional.webp",
+        "gamepassId": null,
+        "artistId": 1040942162
+      },
+      {
+        "value": "PrideProgress",
+        "label": "Pride Progress",
+        "link": "https://www.rovalra.com/borders/Pride-Progress.webp",
+        "gamepassId": null,
+        "artistId": 1040942162
+      },
+      {
+        "value": "PrideTrans",
+        "label": "Pride Trans",
+        "link": "https://www.rovalra.com/borders/Pride-Trans.webp",
+        "gamepassId": null,
+        "artistId": 1040942162
+      },
+      {
+        "value": "PrideBi",
+        "label": "Pride Bi",
+        "link": "https://www.rovalra.com/borders/Pride-Bi.webp",
+        "gamepassId": null,
+        "artistId": 1040942162
+      },
+      {
+        "value": "PridePan",
+        "label": "Pride Pan",
+        "link": "https://www.rovalra.com/borders/Pride-Pan.webp",
+        "gamepassId": null,
+        "artistId": 1040942162
+      },
+      {
+        "value": "PrideLesbian",
+        "label": "Pride Lesbian",
+        "link": "https://www.rovalra.com/borders/Pride-Lesbian.webp",
+        "gamepassId": null,
+        "artistId": 1040942162
+      },
+      {
+        "value": "PrideGay",
+        "label": "Pride Gay",
+        "link": "https://www.rovalra.com/borders/Pride-Gay.webp",
+        "gamepassId": null,
+        "artistId": 1040942162
+      },
+      {
+        "value": "PrideNonbinary",
+        "label": "Pride Nonbinary",
+        "link": "https://www.rovalra.com/borders/Pride-Nonbinary.webp",
+        "gamepassId": null,
+        "artistId": 1040942162
+      }
+    ]
   }
 ]
