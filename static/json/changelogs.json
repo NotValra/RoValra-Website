@@ -6,7 +6,7 @@
             "published_date": "June 09, 2026",
             "body": "New stuff:\r\n- Added hidden badges, making u able to view hidden badges on games that you previously obtained\r\n- Added grid toggle to badges, allowing you to change the badge layout to a grid.\r\n- Added chat color to display names, which makes a users display name on their profile match their chat color in game (off by default) Thanks to @nxvixz for making it.\r\n- Added Remove Download Button from the nav bar (off by default), thanks to @nxvixz for making it.\r\n- Added home layout changes, allowing you to modify the home page layout.\r\n- Added underrated games, that works kinda like standout games but for underrated games hand picked by the RoValra community.\r\n- Added last on sale to previous price, which shows when the item was last on sale\r\n- Added last equipped, showing when u last equipped an item on the item page.\r\n- Added bulk group leave, allowing you to leave groups in bulk, thanks to @moowi1337 for making it.\r\n- Added Render Options to item renderer, allowing you to toggle a baseplate environment and toggle dark lighting to easily see the emissive textures.\r\n- Added clickable currently playing cards, making the currently playing card on users profile link to the game.\r\n- Added remote feature disabler, allowing us to disable RoValra features globally without updating the extension, in case something breaks.\r\n\r\nChanges:\r\n- Changed \"most played together\" to \"Most Frequent Played Together\" to be more accurately worded.\r\n- Fixed fiat issues with total spent.\r\n- Fixed Improved currently wearing not displaying the sales price of limited gears\r\n- Fixed auth games staying failing to be unfavorited.\r\n- Fixed fiat displaying the wrong amount in specific places.\r\n- Fixed price floor icon not being aligned properly with Roblox Plus\r\n- Fixed renderer issue with new Roblox bundles, thanks to @steinann for fixing it\r\n- Fixed the wrong price being shown on very specific items\r\n- Fixed roseal incompatibility with parent item\r\n- Fixed site content not moving over when side bar is hidden by Roblox\r\n- Somewhat fixed effects showing a black background on the profile renderer\r\n- Attempted to fix issues with preferred region fallback.\r\n- Attempted to improve accuracy of total spent.\r\n- Removed premium subscription breakdown from total spent.\r\n- Added more transactions types to total earned and total spent.\r\n- Added more tos reminders to status\r\n- Added rotate button for the item preview in item renderer\r\n- Added banner to gamepass viewer explaining that its a RoValra feature\r\n- Made the ui of total earned and total spent show what they scanned more clearly\r\n- Made top donators show a users verified badge if they have one.\r\n- Disabled group role feature since roblox released their own version of it.\r\n- Updated the info on the settings page to be more up to date.\r\n- Improved accurate continue playing",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.5",
-            "chrome_release_date": null,
+            "chrome_release_date": "June 10, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.5.4",
-        "is_latest": false
+        "version": "2.5.5",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-06-10T11:19:42.245705Z"
+    "last_updated": "2026-06-10T13:18:26.305513Z"
 }
