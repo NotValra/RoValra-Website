@@ -328,6 +328,41 @@
         "link": "https://www.rovalra.com/borders/flowertownLightPruple.webp",
         "gamepassId": 1896156669,
         "artistId": 4866259395
+      },
+      {
+        "value": "BlackSakura",
+        "label": "Black Sakura",
+        "link": "https://www.rovalra.com/borders/flowertowerBlack.webp",
+        "gamepassId": 1896120700,
+        "artistId": 4866259395
+      },
+      {
+        "value": "DeepPurpleSakura",
+        "label": "Deep Purple Sakura",
+        "link": "https://www.rovalra.com/borders/flowertowerDeepPurple.webp",
+        "gamepassId": 1895430686,
+        "artistId": 4866259395
+      },
+      {
+        "value": "LightBlueSakura",
+        "label": "Light Blue Sakura",
+        "link": "https://www.rovalra.com/borders/flowertowerLightblue.webp",
+        "gamepassId": 1895596750,
+        "artistId": 4866259395
+      },
+      {
+        "value": "OrangeSakura",
+        "label": "Orange Sakura",
+        "link": "https://www.rovalra.com/borders/flowertowerOrange.webp",
+        "gamepassId": 1896372710,
+        "artistId": 4866259395
+      },
+      {
+        "value": "RedSakura",
+        "label": "Red Sakura",
+        "link": "https://www.rovalra.com/borders/flowertowerred.webp",
+        "gamepassId": 1895370710,
+        "artistId": 4866259395
       }
     ]
   },
