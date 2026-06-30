@@ -3,6 +3,7 @@
     "id": 1,
     "value": "none",
     "label": "None",
+    "new": false,
     "link": "",
     "gamepassId": null,
     "artistId": null
@@ -11,6 +12,7 @@
     "id": 2,
     "value": "CatEars",
     "label": "Cat Ears",
+    "new": false,
     "gamepassId": null,
     "artistId": null,
     "variants": [
@@ -90,6 +92,7 @@
     "id": 3,
     "value": "Moons",
     "label": "Moons",
+    "new": false,
     "gamepassId": null,
     "artistId": null,
     "variants": [
@@ -113,6 +116,7 @@
     "id": 4,
     "value": "Neon",
     "label": "Neon",
+    "new": false,
     "gamepassId": null,
     "artistId": null,
     "variants": [
@@ -185,6 +189,7 @@
     "id": 5,
     "value": "Gradients",
     "label": "Gradients",
+    "new": false,
     "gamepassId": null,
     "artistId": 1040942162,
     "variants": [
@@ -306,6 +311,7 @@
     "id": 6,
     "value": "Flowers",
     "label": "Flowers",
+    "new": true,
     "gamepassId": null,
     "artistId": 4866259395,
     "variants": [
@@ -315,6 +321,13 @@
         "link": "https://www.rovalra.com/borders/flowertown.webp",
         "gamepassId": 1895922687,
         "artistId": 4866259395
+      },
+      {
+        "value": "LightPurpleSakura",
+        "label": "Light Purple Sakura",
+        "link": "https://www.rovalra.com/borders/flowertownLightPruple.webp",
+        "gamepassId": 1896156669,
+        "artistId": 4866259395
       }
     ]
   },
@@ -322,6 +335,7 @@
     "id": 7,
     "value": "Pride",
     "label": "Pride",
+    "new": false,
     "gamepassId": null,
     "artistId": 1040942162,
     "variants": [
