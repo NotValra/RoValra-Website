@@ -333,6 +333,79 @@
   },
   {
     "id": 7,
+    "value": "Halos",
+    "label": "Halos",
+    "new": true,
+    "gamepassId": null,
+    "artistId": 48255812,
+    "variants": [
+      {
+        "value": "HaloBlack",
+        "label": "Halo Black",
+        "link": "https://www.rovalra.com/borders/halo_black.webp",
+        "gamepassId": 1898114619,
+        "artistId": 48255812
+      },
+      {
+        "value": "HaloBlue",
+        "label": "Halo Blue",
+        "link": "https://www.rovalra.com/borders/halo_blue.webp",
+        "gamepassId": 1895448729,
+        "artistId": 48255812
+      },
+      {
+        "value": "HaloGreen",
+        "label": "Halo Green",
+        "link": "https://www.rovalra.com/borders/halo_green.webp",
+        "gamepassId": 1895590726,
+        "artistId": 48255812
+      },
+      {
+        "value": "HaloOrange",
+        "label": "Halo Orange",
+        "link": "https://www.rovalra.com/borders/halo_orange.webp",
+        "gamepassId": 1896488712,
+        "artistId": 48255812
+      },
+      {
+        "value": "HaloPink",
+        "label": "Halo Pink",
+        "link": "https://www.rovalra.com/borders/halo_pink.webp",
+        "gamepassId": 1896668701,
+        "artistId": 48255812
+      },
+      {
+        "value": "HaloPurple",
+        "label": "Halo Purple",
+        "link": "https://www.rovalra.com/borders/halo_purple.webp",
+        "gamepassId": 1896342727,
+        "artistId": 48255812
+      },
+      {
+        "value": "HaloRed",
+        "label": "Halo Red",
+        "link": "https://www.rovalra.com/borders/halo_red.webp",
+        "gamepassId": 1895400710,
+        "artistId": 48255812
+      },
+      {
+        "value": "HaloWhite",
+        "label": "Halo White",
+        "link": "https://www.rovalra.com/borders/halo_white.webp",
+        "gamepassId": 1896228735,
+        "artistId": 48255812
+      },
+      {
+        "value": "HaloYellow",
+        "label": "Halo Yellow",
+        "link": "https://www.rovalra.com/borders/halo_yellow.webp",
+        "gamepassId": 1895692715,
+        "artistId": 48255812
+      }
+    ]
+  },
+  {
+    "id": 8,
     "value": "Pride",
     "label": "Pride",
     "new": false,
