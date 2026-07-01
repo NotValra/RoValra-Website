@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5.6",
+            "name": "v2.5.6",
+            "published_date": "July 01, 2026",
+            "body": "New stuff:\r\n- Changed RoValras logo, while keeping a setting to bring the old one back\r\n- Added a setting to disable item hover preview for item renderer\r\n- Added can chat or not or if they havent done an age check tooltip to friends profile\r\n- Added Explorer that allows you to view items and editable experiences as if they were in studio. Thanks to @moowi1337 for making it + GUI render support, thanks to @Pedro-Brito-09 for making it.\r\n- Added all ages review status to games, showing if they are currently reviewing to be playable by all ages\r\n- Added a setting to hide the RoValra settings button from the settings dropdown.\r\n- Added age badge customization and add new select theme. Thanks to @auggeeo  for making it.\r\n- Added Roblox stats to plus page when unsubscribed. Thanks to @auggeeo for making it.\r\n- Added View the Subplace someone is playing (off by default), thanks to @rav4toy for making it.\r\n- Added looks support to the item renderer  thanks to @steinann for adding it\r\n- Added custom site themes, thanks to @cornusandu for making it. (beta and off by default)\r\n- Added bonus item selector (Currently in beta and disabled by default)\r\n- Added a docs feature, for a documentation on undocumented Roblox APIs.\r\n- Added a new shop feature, which adds the in game shop directly to the site\r\n- Added fallback sale from clothing for not age checked or under 16 so they can still buy donator perks\r\n- Readded the adding of trusted friends on the after Roblox seemingly removed it.\r\n\r\nChanges:\r\n- Improved events, making it show an interactive timestamp for upcoming events\r\n- Improved quick search.\r\n- Moved Id verification badge to the more tab on a profile to prevent clutter.\r\n- Made fun stuff tab not show by default\r\n- Made cosmetics show in more spots\r\n- Made account standing only show if a user had some kind of action taken against them\r\n- Added a message saying 500 internal errors are Robloxs fault for total spent and total earned\r\n- Optimized RoValra store page\r\n- Fixed Access code for private server is not valid thanks to @Zed128 for fixing it\r\n- Fixed issues with less Roblox Plus, thanks to @cornusandu for fixing it\r\n- Fixed statuses not supporting different lines in some places\r\n- Fixed render issues, thanks to @steinann for fixing it\r\n- Reduced RoValra load times by 80%, aka improved the performance.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.6",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5.5",
             "name": "v2.5.5",
             "published_date": "June 09, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.9",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.3.1.8",
-            "name": "update 2.3.1.8",
-            "published_date": "September 25, 2025",
-            "body": "**Changes**\r\n- Every change is related to Roblox updating the server list API and me adding support for the change before they roll it out to everyone.\r\n- Removed the user sniper since the api update will completely patch it (thank you Roblox)\r\n- Removed some server list filters as they would also be effected by the api update.\r\n- Added a fallback for the region selector to use RoValra's api to get servers cuz of the api change.\r\n- Added a fallback for the preferred region play button to use RoValra's api to get servers cuz of the api change.\r\n\r\n**This update is just a quick patch, the bigger update that im working on (v2.3.2) is still being worked on.**",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.8",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.5.5",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-01T13:03:03.486554Z"
+    "last_updated": "2026-07-01T15:03:37.426012Z"
 }
