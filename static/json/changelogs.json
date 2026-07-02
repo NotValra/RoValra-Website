@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5.7",
+            "name": "v2.5.7",
+            "published_date": "July 02, 2026",
+            "body": "new stuff:\r\n- Added donator pop up to remind people that they can donate to help support RoValra.\r\n- Added v2 and v1 gamejoin support\r\n\r\nChanges\r\n- Improved the donator page a bit.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.7",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5.6",
             "name": "v2.5.6",
             "published_date": "July 01, 2026",
@@ -260,15 +269,6 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.2",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.3.1.9",
-            "name": "v2.3.1.9",
-            "published_date": "October 26, 2025",
-            "body": "**Changes**\r\n- Removed servers under 1 hour of uptime saying \"new server\" since it was useless.\r\n- Added quickplay support to groups.\r\n- Made subplaces titles able go down to 2 lines instead of just one.\r\n- Fixed a vuln (thanks to zeg for reporting)\r\n\r\nIm still working on v2.4 this update just had to get pushed for safety reasons, so I decided to include some other quality of life changes with it.",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.1.9",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-02T00:56:54.633946Z"
+    "last_updated": "2026-07-02T01:48:21.529551Z"
 }
