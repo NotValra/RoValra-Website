@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5.7.1",
+            "name": "v2.5.7.1",
+            "published_date": "July 02, 2026",
+            "body": "Changes:\r\n- Fixed manifest permissions being updated, this was not meant to end up in a final release.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.7.1",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5.7",
             "name": "v2.5.7",
             "published_date": "July 02, 2026",
@@ -260,15 +269,6 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.1",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "2.3.2",
-            "name": "hotfix 2.3.2",
-            "published_date": "October 29, 2025",
-            "body": "Edit: bug fixes / updates unrelated to 2.4 will not be uploaded here to prevent confusion with the source code difference. They will only be uploaded on the chrome webstore until 2.4 is released\r\n\r\n**changes**\r\n- added support for the new Roblox profile ui\r\n- made the instant joiner on by default",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/2.3.2",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-02T12:58:32.121746Z"
+    "last_updated": "2026-07-02T15:23:44.169906Z"
 }
