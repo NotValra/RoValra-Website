@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5.8.1",
+            "name": "v2.5.8.1",
+            "published_date": "July 04, 2026",
+            "body": "Hot Fix\r\n- Fixed issues with avatar border store.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.8.1",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5.8",
             "name": "v2.5.8",
             "published_date": "July 04, 2026",
@@ -260,15 +269,6 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.3",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "v2.4-beta.2",
-            "name": "v2.4-beta.2",
-            "published_date": "December 19, 2025",
-            "body": "This fixes bugs, and adds some nice qol additions. Thanks to everyone who helped bug hunt!!\r\n\r\n\r\n**Changes**\r\n- Fixed margin issue in the bots text.\r\n- Added root place tag to the rootplace of the subplace\r\n- Fixed the quickplay being in places where it shouldn't\r\n- Fixed some quickplay issues\r\n- Fixed total spent api error handling.\r\n- Fixed settings page z-index being a dumb high number\r\n- Fixed some onboarding issues\r\n- Fixed server info in the join modal getting stuck waiting for client when joining experiences you dont have access to\r\n- Added improved tags to the settings page\r\n- Fixed some incorrect descriptions on the settings page\r\n- Added an option to always show developer settings preventing you from having to do the easter egg everytime",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.2",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-04T15:05:58.163661Z"
+    "last_updated": "2026-07-04T17:07:24.589189Z"
 }
