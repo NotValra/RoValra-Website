@@ -1,3 +1,21 @@
+Project-specific asset notice
+=============================
+
+The GNU General Public License v3.0 below applies to the source code in this
+repository, except where otherwise noted.
+
+All images, logos, and other visual assets in this repository are excluded from
+the GPL v3.0 license. They are copyrighted assets and may not be copied,
+redistributed, reused, sublicensed, or included in other projects without
+explicit written permission from Valra.
+
+The RoValra logo is fully copyrighted by Valra, and Valra retains full ownership
+of the logo.
+
+gilbert.png is fully owned by Valra. Other image assets may include third-party
+or externally owned elements, but they are still not licensed under the GPL v3.0
+and may not be redistributed from this repository.
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
