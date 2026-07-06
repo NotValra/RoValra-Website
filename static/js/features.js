@@ -362,6 +362,15 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            badgeOwnershipEnabled: {
+                label: 'Dim Unowned Badges',
+                description: [
+                    "Makes experience badges you don't own darker on badge pages. (Similar to how BTRoblox does it)",
+                ],
+                type: 'checkbox',
+                default: true,
+                contributors: [546872490],
+            },
             updateHistoryEnabled: {
                 label: 'Update History',
                 description: [
@@ -581,6 +590,14 @@ var featuresData = {
                 description: [
                     'Shows profile view counts on profiles.',
                     'Disabling this hides profile views locally and hides your profile views from other RoValra users.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
+            profileCustomizationEnabled: {
+                label: 'Profile Customization',
+                description: [
+                    'Adds a customization button to your own profile for quickly switching avatar borders.',
                 ],
                 type: 'checkbox',
                 default: true,
@@ -2290,7 +2307,7 @@ var featuresData = {
             forceRegionDonationPopup: {
                 label: ['Force Region Donation Popup'],
                 description: [
-                    "When enabled, shows the region selector donation popup every time it's triggered, ignoring all requirements. For testing purposes.",
+                    "When enabled, shows the region selector donation popup every time it's triggered for non-donators, ignoring cadence requirements. For testing purposes.",
                 ],
                 type: 'checkbox',
                 default: false,
