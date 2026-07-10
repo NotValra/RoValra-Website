@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5.9",
+            "name": "v2.5.9",
+            "published_date": "July 10, 2026",
+            "body": "New stuff:\r\n- Added a stars program badge for people in the stars program and for a custom badge for people in the Roblox community feedback program + more\r\n- Added previous Beta programs, showing what beta programs you were previously enrolled into.\r\n- Added 2 new donator perks for tier 3 donators. Display Name effect, and Display Name Gradient.\r\n- Added roblox plus currency transfer limits to the site, which shows how close u are to hitting the limits\r\n- Added feature clickable friend currently playing card, thanks to @radwl for making it\r\n\r\n\r\nChanges:\r\n- Fixed Private / Moderated game viewers breaking after a Roblox update.\r\n- Fixed shop getting the same gamepasses on a loop\r\n- Fixed streamer mode breaking ad manager, thanks to @auggeeo\r\n- Fixed home layout allowing you to adjust things that wasnt visible.\r\n- Fixed RoValra off centering the friend tooltip\r\n- Improved stuff, thanks to @auggeeo\r\n- Improved Donator page, thanks to @auggeeo\r\n- Improved theme editor quite a bit\r\n- Improved trading with a bunch of under the hood changes, for more stability",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.9",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5.8.1",
             "name": "v2.5.8.1",
             "published_date": "July 04, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.4",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "v2.4-beta.3",
-            "name": "v2.4-beta.3",
-            "published_date": "December 20, 2025",
-            "body": "Hopefully full release will be done soon\r\n\r\nchanges\r\n- Fixed the globe taking a bit too long to load.\r\n- Fixed the place version a server is running sometimes not being displayed\r\n- Renamed the \"Anti Account Stalking\" Tab to \"Privacy\" to allow for more privacy focused features\r\n- Added a streamer mode.\r\n- Fixed a few misc bugs related to developing.\r\n- Added a markdown test page as an easter egg out of pure boredom\r\n- Added a bunch of xss safety to pretty much everything just in case.",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4-beta.3",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.5.8.1",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-10T13:13:28.249508Z"
+    "last_updated": "2026-07-10T16:25:56.377874Z"
 }
