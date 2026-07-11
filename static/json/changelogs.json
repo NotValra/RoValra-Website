@@ -24,7 +24,7 @@
             "published_date": "July 04, 2026",
             "body": "Hot Fix\r\n- Fixed issues with avatar border store.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.8.1",
-            "chrome_release_date": "July 6, 2026",
+            "chrome_release_date": "July 5, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-11T13:21:39.750461Z"
+    "last_updated": "2026-07-11T14:54:57.184761Z"
 }
