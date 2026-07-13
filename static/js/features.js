@@ -1665,6 +1665,14 @@ var featuresData = {
                 default: false,
                 storageKey: 'rovalra-group-funds-data',
                 childSettings: {
+                    GroupFundsNavbarTotalEnabled: {
+                        label: 'Combine Community Funds with Robux Balance',
+                        description:
+                            'Combines your Robux balance with your configured community funds in the navbar. Click the balance to see your Robux and each community separately.',
+                        type: 'checkbox',
+                        default: false,
+                        contributors: ['278039610'],
+                    },
                     GroupFundsIds: {
                         label: 'Community IDs',
                         description:
@@ -2305,6 +2313,14 @@ var featuresData = {
                 label: ['Always show RoValra developer settings tab'],
                 description: [
                     'This will make the RoValra developer settings tab always show. So you dont have to do the easter egg every time.',
+                ],
+                type: 'checkbox',
+                default: false,
+            },
+            overwriteRemoteSettingLocks: {
+                label: ['Override remotely disabled settings'],
+                description: [
+                    'Allows RoValra features to remain enabled even when they are disabled by the remote settings service. This is for testing and may expose unstable features.',
                 ],
                 type: 'checkbox',
                 default: false,
