@@ -902,6 +902,16 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+                childSettings: {
+                    robloxGroupFeaturesEnabled: {
+                        label: 'Roblox Group Badges',
+                        description: [
+                            'Enables Badges for groups, like star creator program, Roblox Community feedback Program etc.',
+                        ],
+                        type: 'checkbox',
+                        default: true,
+                    },
+                },
             },
             profileBackgroundGradientEnabled: {
                 label: 'Custom Profile Background Gradient',
@@ -990,6 +1000,66 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
                 contributors: ['3602693727'],
+            },
+            displayNameGradientEnabled: {
+                label: 'Gradient Display Name',
+                description: [
+                    'Shows three-color gradient display names on profiles to all RoValra users.',
+                    'Donator Tier 3 is required to set your own gradient display name.',
+                ],
+                type: 'checkbox',
+                default: true,
+                childSettings: {
+                    displayNameGradient: {
+                        label: 'Display Name Gradient',
+                        description:
+                            'Choose the three colors used on your display name gradient.',
+                        type: 'gradient',
+                        colorCount: 3,
+                        donatorTier: 3,
+                        donatorReason:
+                            'Donator Tier 3 is required to customize your display name gradient.',
+                        default: {
+                            enabled: true,
+                            color1: '#ff4ecd',
+                            color2: '#ffe66d',
+                            color3: '#4dd4ff',
+                            angle: 90,
+                            fade: 100,
+                        },
+                    },
+                    displayNameGradientEffect: {
+                        label: 'Display Name Effect',
+                        description:
+                            'Adds an optional shine, roll, or bloom effect to your gradient display name.',
+                        type: 'select',
+                        options: [
+                            { value: 'none', label: 'None' },
+                            { value: 'shine', label: 'Shine' },
+                            {
+                                value: 'shine-bloom',
+                                label: 'Shine + Bloom',
+                            },
+                            {
+                                value: 'roll',
+                                label: 'Gradient Roll',
+                            },
+                            {
+                                value: 'roll-bloom',
+                                label: 'Gradient Roll + Bloom',
+                            },
+                            { value: 'sparkles', label: 'Bloom' },
+                            {
+                                value: 'blooming-bloom',
+                                label: 'Blooming Bloom',
+                            },
+                        ],
+                        default: 'none',
+                        donatorTier: 3,
+                        donatorReason:
+                            'Donator Tier 3 is required to use display name effects.',
+                    },
+                },
             },
         },
     },
@@ -1431,11 +1501,14 @@ var featuresData = {
             },
             ageKidsThemeEnabled: {
                 label: 'Age Theme',
-                description:
+                description: [
                     'Lets you choose which Roblox age theme is used across the site.',
+                    'Overrides **Theme Switcher** setting.',
+                ],
                 type: 'checkbox',
                 default: false,
                 contributors: ['447170745', '650766686'],
+                exclusiveWith: ['ThemeSwitcherEnabled'],
                 childSettings: {
                     ageThemeSelection: {
                         label: 'Theme',
@@ -1518,6 +1591,16 @@ var featuresData = {
                     'This allows you to toggle beta programs you are enrolled into easily.',
                 type: 'checkbox',
                 default: false,
+                childSettings: {
+                    previousBetaProgramsEnabled: {
+                        label: 'Show Previous Beta Programs',
+                        description:
+                            'Stores beta programs you have seen before and shows programs that are no longer returned by Roblox as disabled entries in the dropdown.',
+                        type: 'checkbox',
+                        default: true,
+                        storageKey: 'rovalra_previous_beta_programs',
+                    },
+                },
             },
             removeDownloadButton: {
                 label: 'Remove Download Button',
@@ -1582,6 +1665,14 @@ var featuresData = {
                 default: false,
                 storageKey: 'rovalra-group-funds-data',
                 childSettings: {
+                    GroupFundsNavbarTotalEnabled: {
+                        label: 'Combine Community Funds with Robux Balance',
+                        description:
+                            'Combines your Robux balance with your configured community funds in the navbar. Click the balance to see your Robux and each community separately.',
+                        type: 'checkbox',
+                        default: false,
+                        contributors: ['278039610'],
+                    },
                     GroupFundsIds: {
                         label: 'Community IDs',
                         description:
@@ -1602,12 +1693,14 @@ var featuresData = {
                 label: 'Theme Switcher',
                 description: [
                     'Allows RoValra to apply themes selected from the theme gallery.',
+                    'Overrides the **Age Theme** setting.',
                 ],
                 type: 'checkbox',
                 default: false,
                 contributors: ['1564574922', '447170745'],
                 beta: 'Can be slightly buggy',
                 keepChildSettingsEnabled: true,
+                exclusiveWith: ['ageKidsThemeEnabled'],
                 childSettings: {
                     openThemeCatalog: {
                         label: 'Theme Gallery',
@@ -1879,6 +1972,15 @@ var featuresData = {
                     },
                 },
             },
+            friendGameLinkEnabled: {
+                label: 'Clickable Friend Currently Playing Card',
+                description: [
+                    'Makes the currently playing experience card in friend hover cards link directly to the experience the user is playing.',
+                ],
+                contributors: ['2963377564'],
+                type: 'checkbox',
+                default: true,
+            },
             reducePlusAds: {
                 label: 'Less Roblox Plus',
                 description: [
@@ -1903,6 +2005,13 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
                 contributors: ['650766686'],
+            },
+            plusTransferLimitsEnabled: {
+                label: 'Show Plus Transfer Limits',
+                description:
+                    'Shows how much Robux you have left before the daily and monthly Roblox Plus transfer limits on the [Plus](https://www.roblox.com/plus) page.',
+                type: 'checkbox',
+                default: true,
             },
             settingChangeNote: {
                 label: 'Setting changes alerts',
@@ -2208,6 +2317,14 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
             },
+            overwriteRemoteSettingLocks: {
+                label: ['Override remotely disabled settings'],
+                description: [
+                    'Allows RoValra features to remain enabled even when they are disabled by the remote settings service. This is for testing and may expose unstable features.',
+                ],
+                type: 'checkbox',
+                default: false,
+            },
             alwaysShowAccountStandingTab: {
                 label: ['Always show Account Standing tab'],
                 description: [
@@ -2240,6 +2357,15 @@ var featuresData = {
                     'This will trick Roblox into thinking you are in an early access program, making Roblox add the early access program UI to your settings',
                     'This setting wont allow you to join any early access programs you werent invited to.',
                     'This will also overwrite any early access programs you might already be in.',
+                ],
+                type: 'checkbox',
+                default: false,
+            },
+            fakePreviousBetaProgramEnabled: {
+                label: ['Fake Previous Beta Program'],
+                description: [
+                    'Adds a fake previous beta program to the beta programs dropdown for testing.',
+                    'Requires previous beta programs to be enabled.',
                 ],
                 type: 'checkbox',
                 default: false,
