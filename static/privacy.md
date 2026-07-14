@@ -1,6 +1,6 @@
 **Privacy Policy for RoValra Chrome Extension**
 
-**Effective Date:** June 2, 2026
+**Effective Date:** July 14, 2026
 
 **Introduction**
 
@@ -84,6 +84,15 @@ For certain features, the Extension may send specific non-personal data:
 - **Purpose:** Used to enhance server-tracking and uptime features.
 - **Control:** Completely optional; can be disabled in settings at any time.
 - **Privacy:** No data that could link a user to this info is explicitly logged.
+
+<!-- section:non-private-info:fas fa-globe -->
+## Non-Private Information Collection
+
+To maintain compatibility with Roblox platform updates and ensure the extension continues to function correctly, RoValra may collect certain non-private, publicly available information:
+
+- **Public Enrollment Data:** RoValra may collect publicly accessible enrollment from Roblox (such as public channels). This data is used solely to verify that features remain functional and to adapt to changes introduced by Roblox updates.
+- **No Private Enrollments:** We explicitly do **not** collect any private, non-public, or confidential enrollment data. Only information that is publicly accessible on the Roblox platform may be used.
+- **NDA-Safe:** Since we exclusively collect publicly available data, any users who are bound by non-disclosure agreements (NDAs) — such as developers working on unreleased Roblox features — can rest assured that no private or confidential information will be accessed or stored by RoValra.
 
 <!-- section:user-rights:fas fa-user-shield -->
 ## User Rights: Access and Erasure
