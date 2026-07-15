@@ -6,7 +6,7 @@
             "published_date": "July 14, 2026",
             "body": "hot fix:\r\n- Finished channel tracking related stuff, as it was not meant to be in v2.5.10.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.10.1",
-            "chrome_release_date": null,
+            "chrome_release_date": "July 15, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -273,9 +273,9 @@
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.5.10",
-        "is_latest": false
+        "version": "2.5.10.1",
+        "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-07-15T05:32:52.871135Z"
+    "last_updated": "2026-07-15T12:15:43.401140Z"
 }
