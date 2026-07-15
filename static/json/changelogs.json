@@ -1,12 +1,21 @@
 {
     "releases": [
         {
+            "tag_name": "v2.5.10.1",
+            "name": "v2.5.10.1",
+            "published_date": "July 14, 2026",
+            "body": "hot fix:\r\n- Finished channel tracking related stuff, as it was not meant to be in v2.5.10.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.10.1",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5.10",
             "name": "v2.5.10",
             "published_date": "July 13, 2026",
             "body": "New stuff:\r\n- Added combine community funds with navbar balance, thanks to @elDziad00 for making it.\r\n\r\nChanges:\r\n- Heavily improved performance of the extension in rare cases where performance would be awful, big thanks to everyone who helped debug this issue <3\r\n- Attempted to fix a crash related to the profile Customization feature.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.5.10",
-            "chrome_release_date": null,
+            "chrome_release_date": "July 14, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.2",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "v2.4.1",
-            "name": "v2.4.1",
-            "published_date": "December 27, 2025",
-            "body": "New Features\r\n- Added total Earned (Thanks to Kanibal02 on github for contributing)\r\n- Added more sorting to Hidden Experiences on groups and profiles (Thanks to Zed128 for contributing)\r\n- Added Roblox API documentation that documents apis the extension found while you were using Roblox (Developer setting)\r\n- Added Quick outfit switching to game pages (off by default)\r\n\r\nFixes / changes\r\n- Fixed a setting being out of sync\r\n- Reduced the file size.\r\n- Fixed onboarding not scaling with different screen sizes\r\n- Fixed sorting by recently updated not sorting correctly (Thanks to Zed128 for contributing)\r\n- Fixed badges not supporting legacy profile",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.1",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
-        "version": "2.5.9.1",
+        "version": "2.5.10",
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-14T10:47:19.386124Z"
+    "last_updated": "2026-07-15T05:32:52.871135Z"
 }
