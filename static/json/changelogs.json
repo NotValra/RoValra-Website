@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.6",
+            "name": "v2.6",
+            "published_date": "July 20, 2026",
+            "body": "New stuff:\r\n- Added customizable side bar, thanks to @radwl for making it\r\n- Added server list support to private / moderated game viewer\r\n- Added wide game title player count stats, thanks to @radwl for making it\r\n- Added forced admin badge, so the admin badge shows on admins profiles even if they don't have it.\r\n- Added the ability to send Robux Via Roblox Plus directly on the site, thanks to @auggeeo for making it\r\n- Added continue updating without refreshing the site (off by default) thanks to @rav4toy for making it.\r\n- Added trusted friend support to QoL toggles\r\n- Moved Roblox Plus related features to a new \"Roblox Plus\" tab in settings, thanks to @auggeeo for doing it.\r\n- Added support for bundles to the explorer, thanks to  @moowi1337 for making it.\r\n- Added 2d clothing support to dependencies cuz of Robloxs recent \"safety update\" to prevent stealing.\r\n- Added download as .obj for meshes on the create page\r\n- Added site fix making the search bar scale down if theres too much on the right side\r\n- Added pronouns to profiles, thanks to @rav4toy for making it.\r\n- Added private notes to profiles, thanks to @rav4toy for making it.\r\n\r\nChanges:\r\n- Made item render on by default\r\n- Made shop show Robux packages even if there isn't a bonus item\r\n- Made custom name colors that blend into the background be automatically lighten up so its easier to read\r\n- Made the item renderer lighting 1.5x brighter to make it less dark (WHAT REALLY?)\r\n- Made the settings page load without needing to wait for RoValra api requests to be done\r\n- Fixed name gradient being on by default (silly mistake :sob:)\r\n- Fixed Roblox Plus Transfer limits using hard coded numbers instead of fetching the transfer limits for the user.\r\n- Fixed Private Games sometimes doing a loop where it went back to games then went back to private-games repeat.\r\n- Fixed explorer assetdelivery requests failing due to CORS, thanks to @steinann for fixing it\r\n- Fixed quick play visual issue related to wide game cards, thanks to @radwl for fixing it\r\n- Fixed issues related to dropdown\r\n- Fixed tooltip zindex issues\r\n- Fixed fiat estimates adding the estimate to credits and robux.\r\n- Fixed an incompatibility with RoPro and RoValra making the website crash if viewing your own profile\r\n- Fixed Roblox plus sidebar thingy was not centered when sidebar was collapsed, thanks to @gaxolotl for fixing it",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.6",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.5.10.1",
             "name": "v2.5.10.1",
             "published_date": "July 14, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.3",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "v2.4.2",
-            "name": "v2.4.2",
-            "published_date": "December 30, 2025",
-            "body": "This is gonna be the last update for a little while now.\r\n\r\nAlso it is rovalras anniversary today yay\r\n \r\nNew stuff\r\n- Added a site fix for experience title text getting cut off at the top and bottom on profiles.\r\n- Added a thing making \"What am i joining\" close when clicking the background, which is on by default but can be disabled.\r\nFixes/Changes\r\n- Fixed there not being a download button in \"What Am I joining\" if you dont have the client installed\r\n- Fixed inventory checker loading on pages it shouldnt\r\n- Fixed bundles not working with the 40% method\r\n- Added update detection that tells you if your 40% method game is outdated.\r\n- Added a little review reminder to the popup when pressing the extensions logo.\r\n- Started changing all color stuff to variables like how it should have been from the start\r\n- Fixed searching in settings not working",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.2",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.5.10.1",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-20T15:51:08.191661Z"
+    "last_updated": "2026-07-20T18:04:29.645762Z"
 }
