@@ -1,6 +1,15 @@
 {
     "releases": [
         {
+            "tag_name": "v2.6.1",
+            "name": "v2.6.1",
+            "published_date": "July 22, 2026",
+            "body": "New stuff:\r\n- Added much more support for theme switcher.\r\n- Added a setting to hide the Add Friends button on Home page, thanks @IYoLsa for making it\r\n- Added allow joining button for private server list, thanks to @goingcrazydude for making it\r\n- Added customizable Topbar Layout editor (off by default), thanks to @IYoLsa for making it\r\n\r\nChanges:\r\n- Added support to the new Roblox Profile to profile gradients.\r\n- Made username color preview color the username instead of display name, thanks to @moowi1337 for making it\r\n- Made RoValra not retry when APIs fail.\r\n- Fixed when sidebar collapsed communities list doesnt change position, thanks to @gaxolotl for fixing it.",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.6.1",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.6",
             "name": "v2.6",
             "published_date": "July 20, 2026",
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.4",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "v2.4.3",
-            "name": "v2.4.3",
-            "published_date": "January 19, 2026",
-            "body": "Additions\r\n- Added server Ip and Datacenter id to the server list (off by default)\r\n- Added a pop up asking for a review, which is made in a way where it doesnt force you to leave a review and it isnt annoying.\r\n\r\nchanges\r\n- Removed private inventory checker as Roblox patched it.\r\n- Fixed streamer mode robux hiding not hiding robux in places where it should have\r\n- Made the donation button not show on your profile.\r\n- Fixed possible issues where the extension would try and get data before the website was done loading\r\n- Changed the \"player count unknown\" when using the region filter to random thumbnails with a tooltip explaining\r\n- Changed the subplace tab to be on the same line as other tabs instead of below\r\n- Attempted to improve the join closest server to be way more consistent.\r\n- Removed the \"Start server\" when no server is running and instead made it start automatically.\r\n- Fixed quick outfits not handling width of the ui being too small correctly\r\ndevelopment changes\r\n- moved most the css to different files for maintainability.\r\n- made configs for development making it easier to find stuff that should be done differently or stuff like unsafe innerhtml\r\n- made a new sanitizer that uses dompurify + some custom logic to make it easier to add and use.",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.3",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.6",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-22T17:20:33.836562Z"
+    "last_updated": "2026-07-22T19:21:42.365421Z"
 }
