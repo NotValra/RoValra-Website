@@ -15,7 +15,7 @@
             "published_date": "July 22, 2026",
             "body": "New stuff:\r\n- Added much more support for theme switcher.\r\n- Added a setting to hide the Add Friends button on Home page, thanks @IYoLsa for making it\r\n- Added allow joining button for private server list, thanks to @goingcrazydude for making it\r\n- Added customizable Topbar Layout editor (off by default), thanks to @IYoLsa for making it\r\n\r\nChanges:\r\n- Added support to the new Roblox Profile to profile gradients.\r\n- Made username color preview color the username instead of display name, thanks to @moowi1337 for making it\r\n- Made RoValra not retry when APIs fail.\r\n- Fixed when sidebar collapsed communities list doesnt change position, thanks to @gaxolotl for fixing it.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.6.1",
-            "chrome_release_date": "July 24, 2026",
+            "chrome_release_date": "July 23, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -277,5 +277,5 @@
         "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-07-26T18:01:23.777961Z"
+    "last_updated": "2026-07-26T20:09:44.956993Z"
 }
