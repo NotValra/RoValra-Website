@@ -649,6 +649,14 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            profileShowcaseEnabled: {
+                label: 'Profile Showcase',
+                description: [
+                    'Adds a Showcase tab to profiles for featuring a favourite experience and community.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
             currentlyPlayingLinkEnabled: {
                 label: 'Clickable Currently Playing Card',
                 description: [
@@ -1032,10 +1040,18 @@ var featuresData = {
                     },
                 },
             },
+            improvedAvatarCard: {
+                label: 'Improved Avatar Card',
+                description: [
+                    'Adds a gap around the profile avatar making it look a bit nicer and modern.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
             usernameColor: {
                 label: 'Username Color Preview',
                 description: [
-                    "Changes the user's display name color on their profile to what color Roblox would give them when talking in game chats. Inspired by https://github.com/RyloRiz/rblx-name-color",
+                    "Changes the user's username color on their profile to what color Roblox would give them when talking in game chats. Inspired by https://github.com/RyloRiz/rblx-name-color",
                 ],
                 type: 'checkbox',
                 default: false,
@@ -1132,6 +1148,15 @@ var featuresData = {
                 ],
                 type: 'checkbox',
                 default: true,
+            },
+            HideAddFriendsButton: {
+                label: 'Hide Add Friends Button',
+                description: [
+                    'Hides the Add Friends button from the Home page and allows friend cards to use the freed space.',
+                ],
+                type: 'checkbox',
+                default: false,
+                contributors: ['476449201'],
             },
             homeLayoutEnabled: {
                 label: 'Home Layout',
@@ -1633,6 +1658,139 @@ var featuresData = {
                     'rovalra_sidebar_layout_hidden',
                 ],
             },
+            topbarLayoutEnabled: {
+                label: 'Topbar Layout',
+                description: [
+                    'Lets you reorder and hide buttons in the Roblox topbar.',
+                ],
+                type: 'checkbox',
+                default: false,
+                contributors: ['476449201'],
+                storageKey: [
+                    'rovalra_topbar_layout_order',
+                    'rovalra_topbar_layout_hidden',
+                ],
+            },
+            customRobloxBannerEnabled: {
+                label: 'Roblox Logo Customization',
+                description: [
+                    'Replaces the Roblox banner in the top-left navigation bar with an image loaded from a URL you provide.',
+                    'Also supports GIFs!',
+                    'Recommended image: square PNG or WebP with transparency, 256x256 pixels.',
+                    'You can use this link "https://www.roblox.com/images/roblox_logo.png" to get back the old Roblox Logo!',
+                ],
+                type: 'checkbox',
+                default: false,
+                contributors: ['476449201'],
+                storageKey: [
+                    'customRobloxBannerImageUrl',
+                    'customRobloxBannerImage',
+                    'customRobloxBannerPositionX',
+                    'customRobloxBannerPositionY',
+                    'customRobloxBannerZoom',
+                ],
+                childSettings: {
+                    customRobloxBannerImageUrl: {
+                        label: 'Custom Roblox Banner URL',
+                        description: [
+                            'Enter a direct image URL to use as your Roblox banner.',
+                        ],
+                        type: 'input',
+                        inputType: 'url',
+                        inputWidth: '280px',
+                        placeholder: 'https://example.com/banner.png',
+                        trim: true,
+                        validateHttpUrl: true,
+                        imageUrlPreview: true,
+                        default: null,
+                    },
+                    customRobloxBannerFitMode: {
+                        label: 'Display Mode',
+                        description: [
+                            'Contain keeps the whole image visible.',
+                            'Cover fills the banner area while preserving aspect ratio.',
+                            'Stretch fills the full default Roblox banner area and may distort the image.',
+                        ],
+                        type: 'select',
+                        options: [
+                            { label: 'Contain', value: 'contain' },
+                            { label: 'Cover', value: 'cover' },
+                            { label: 'Stretch', value: 'stretch' },
+                        ],
+                        default: 'contain',
+                    },
+                    customRobloxBannerPositionControls: {
+                        label: 'Image Position',
+                        description: [
+                            'Moves the image inside the banner area. This is most useful in Cover mode.',
+                        ],
+                        type: 'buttonGroup',
+                        buttons: [
+                            {
+                                text: '↑',
+                                event: 'rovalra:customRobloxBannerMoveUp',
+                            },
+                            {
+                                text: '↓',
+                                event: 'rovalra:customRobloxBannerMoveDown',
+                            },
+                            {
+                                text: '←',
+                                event: 'rovalra:customRobloxBannerMoveLeft',
+                            },
+                            {
+                                text: '→',
+                                event: 'rovalra:customRobloxBannerMoveRight',
+                            },
+                            {
+                                text: 'Center',
+                                event: 'rovalra:customRobloxBannerCenter',
+                            },
+                            {
+                                text: 'Zoom In',
+                                event: 'rovalra:customRobloxBannerZoomIn',
+                            },
+                            {
+                                text: 'Zoom Out',
+                                event: 'rovalra:customRobloxBannerZoomOut',
+                            },
+                        ],
+                    },
+                    customRobloxBannerPositionX: {
+                        label: 'Image Position X',
+                        description:
+                            'Horizontal image position from left to right. 50 is centered.',
+                        type: 'number',
+                        min: 0,
+                        max: 100,
+                        step: 1,
+                        default: 50,
+                        hidden: true,
+                    },
+                    customRobloxBannerPositionY: {
+                        label: 'Image Position Y',
+                        description:
+                            'Vertical image position from top to bottom. 50 is centered.',
+                        type: 'number',
+                        min: 0,
+                        max: 100,
+                        step: 1,
+                        default: 50,
+                        hidden: true,
+                    },
+                    customRobloxBannerZoom: {
+                        label: 'Image Zoom',
+                        description:
+                            'Image zoom percentage. 100 is the default size.',
+                        type: 'number',
+                        min: 25,
+                        max: 300,
+                        step: 10,
+                        default: 100,
+                        hidden: true,
+                    },
+                },
+            },
             ageKidsThemeEnabled: {
                 label: 'Age Theme',
                 description: [
@@ -2047,6 +2205,13 @@ var featuresData = {
                         type: 'checkbox',
                         default: true,
                         contributors: ['4866259395', '447170745'],
+                    },
+                    profileUsernameSpacingFixEnabled: {
+                        label: 'Keep profile usernames spaced from the top',
+                        description:
+                            'Prevents your username from being moved up to a place where its harder to read. From extensions adding features.',
+                        type: 'checkbox',
+                        default: true,
                     },
                 },
             },
@@ -2463,6 +2628,14 @@ var featuresData = {
                 label: ['Always show Account Standing tab'],
                 description: [
                     'This will make the Account Standing tab show even when your account has no current or previous RoValra moderation action.',
+                ],
+                type: 'checkbox',
+                default: false,
+            },
+            profileTestTabEnabled: {
+                label: ['Profile test tab'],
+                description: [
+                    'Adds a test tab containing the text "test" to profiles.',
                 ],
                 type: 'checkbox',
                 default: false,
