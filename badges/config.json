@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "value": "donator_1",
+    "label": "Donator 1",
+    "link": "https://www.rovalra.com/badges/icons/Bronze.png"
+  },
+  {
+    "id": 2,
+    "value": "donator_2",
+    "label": "Donator 2",
+    "link": "https://www.rovalra.com/badges/icons/Silver.png"
+  },
+  {
+    "id": 3,
+    "value": "donator_3",
+    "label": "Donator 3",
+    "link": "https://www.rovalra.com/badges/icons/Gold.png"
+  },
+  {
+    "id": 4,
+    "value": "legacy_donator",
+    "label": "Legacy Donator",
+    "link": "https://www.rovalra.com/badges/icons/Diamond.png"
+  }
+]
