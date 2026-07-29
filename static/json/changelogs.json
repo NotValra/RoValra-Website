@@ -6,7 +6,7 @@
             "published_date": "July 24, 2026",
             "body": "New stuff:\r\n- Added Improved Avatar Card which adds a gap around your avatar card on your profile, making it look a bit more modern and nice.\r\n- Added a site fix to keep profile usernames spaced from the top to prevent them from being in a spot where its harder to read.\r\n- Added support for backgrounds to categorize wearing, and made it a bit better in general\r\n- Added customizable Roblox banner (off by default) thanks to @IYoLsa for making it.\r\n- Added Favourite experience and Favourite community show case to your profile, so you can show off your Favourite experience and community\r\n\r\nChanges:\r\n- Disabled sound item in the renderer (such a rich people problem :sob: you know who you are LOL)\r\n- Added 3px of margin top to the Profile Views pill\r\n- Fixed a rare bug where rovalra would force a user to be in light mode\r\n- Fixed RoValra spamming requests way more than it should",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.6.2",
-            "chrome_release_date": "July 27, 2026",
+            "chrome_release_date": "July 26, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -277,5 +277,5 @@
         "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-07-29T05:53:03.122179Z"
+    "last_updated": "2026-07-29T08:41:47.474062Z"
 }
