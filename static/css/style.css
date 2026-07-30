@@ -3058,37 +3058,25 @@ body.scrolled .nav-island::after {
 body::before {
     content: '';
     position: fixed;
-    inset: -42%;
+    inset: -22%;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.18;
-    filter: blur(100px) saturate(115%);
-    border-radius: 48%;
-    background: var(--brand-gradient);
-    background-size: 180% 180%;
-    background-position: 0% 35%;
-    transform: translate3d(-16%, -9%, 0) scale(1.02) rotate(-8deg);
-    animation: site-rainbow-drift 22s ease-in-out infinite alternate;
+    opacity: 0.14;
+    filter: blur(58px) saturate(125%);
+    background:
+        radial-gradient(circle at 12% 18%, rgba(255, 130, 92, 0.9), transparent 28%),
+        radial-gradient(circle at 86% 16%, rgba(255, 171, 92, 0.918), transparent 25%),
+        radial-gradient(circle at 82% 84%, rgba(140, 181, 231, 0.88), transparent 29%),
+        radial-gradient(circle at 18% 84%, rgba(148, 99, 201, 0.76), transparent 26%);
+    transform: translate3d(-2%, -1%, 0) scale(1.04) rotate(-2deg);
+    animation: site-rainbow-drift 34s ease-in-out infinite alternate;
     will-change: transform;
 }
 
 @keyframes site-rainbow-drift {
-    0% {
-        background-position: 0% 35%;
-        transform: translate3d(-16%, -9%, 0) scale(1.02) rotate(-8deg);
-    }
-    35% {
-        background-position: 62% 0%;
-        transform: translate3d(9%, -3%, 0) scale(1.12) rotate(5deg);
-    }
-    70% {
-        background-position: 100% 68%;
-        transform: translate3d(2%, 12%, 0) scale(1.06) rotate(11deg);
-    }
-    100% {
-        background-position: 28% 100%;
-        transform: translate3d(-12%, 8%, 0) scale(1.15) rotate(-3deg);
-    }
+    0% { transform: translate3d(-2%, -1%, 0) scale(1.04) rotate(-2deg); }
+    50% { transform: translate3d(2%, 1%, 0) scale(1.08) rotate(1deg); }
+    100% { transform: translate3d(-1%, 2%, 0) scale(1.05) rotate(3deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
