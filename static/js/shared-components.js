@@ -36,7 +36,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli" target="_blank" rel="noopener noreferrer" class="fancy-button nav-install-btn">
+                        <a href="https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli" target="_blank" rel="noopener noreferrer" class="fancy-button nav-install-btn ui-pill inline-flex items-center justify-center rounded-full">
                             <img src="/static/img/install-button-icon.svg" class="icon" alt="Install" width="100" height="24">
                         </a>
                     </li>

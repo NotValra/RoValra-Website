@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stay up to date with the latest updates and changes to RoValra">
@@ -88,7 +89,7 @@
                     
                     data.releases.forEach(release => {
                         const section = document.createElement('div');
-                        section.className = 'privacy-section';
+                        section.className = 'privacy-section ui-container';
                         
                         section.innerHTML = `
                             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4 mb-md-0" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.75rem;">
@@ -98,9 +99,9 @@
                                     ${(release.chrome_url && release.chrome_release_date) ? `
                                     <div class="install-container" style="margin: 0; padding: 0;">
                                         <a href="${release.chrome_url}" target="_blank" rel="noopener noreferrer" class="fancy-cta-link" title="View on Web Store">
-                                            <button class="fancy-button pill" type="button">
-                                                <span style="z-index: 1;">${release.chrome_release_date}</span>
-                                                <i class="fab fa-chrome ms-2" style="z-index: 1;"></i>
+                                            <button class="ui-pill ui-button inline-flex items-center justify-center" type="button">
+                                                <span>${release.chrome_release_date}</span>
+                                                <i class="fab fa-chrome ms-2" aria-hidden="true"></i>
                                             </button>
                                         </a>
                                     </div>
@@ -108,9 +109,9 @@
                                     ${release.url ? `
                                     <div class="install-container" style="margin: 0; padding: 0;">
                                         <a href="${release.url}" target="_blank" rel="noopener noreferrer" class="fancy-cta-link" title="View on GitHub">
-                                            <button class="fancy-button pill" type="button">
-                                                <span style="z-index: 1;">${release.published_date}</span>
-                                                <i class="fab fa-github ms-2" style="z-index: 1;"></i>
+                                            <button class="ui-pill ui-button inline-flex items-center justify-center" type="button">
+                                                <span>${release.published_date}</span>
+                                                <i class="fab fa-github ms-2" aria-hidden="true"></i>
                                             </button>
                                         </a>
                                     </div>

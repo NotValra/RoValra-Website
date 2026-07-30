@@ -2247,7 +2247,7 @@ body.scrolled .nav-island::after {
         gap: 0.5rem;
     }
 
-    .privacy-section .release-pills-container .fancy-button.pill {
+    .privacy-section .release-pills-container .ui-pill {
         min-width: unset;
         width: auto;
         height: 30px;
@@ -2982,4 +2982,115 @@ body.scrolled .nav-island::after {
     line-height: 1.8;
     font-size: 1.05rem;
     margin-top: 10px;
+}
+
+:root {
+    --space-section: clamp(3rem, 8vw, 6rem);
+    --space-card: 1.75rem;
+    --surface-1: rgba(255, 255, 255, 0.04);
+    --surface-2: rgba(255, 255, 255, 0.08);
+    --surface-radius: 20px;
+    --surface-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.ui-container {
+    background: var(--surface-1);
+    border: none;
+    border-radius: var(--surface-radius);
+    box-shadow: var(--surface-shadow);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.ui-section { width: min(100%, 1200px); margin-inline: auto; }
+.ui-card { min-width: 0; }
+
+.ui-pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 20px;
+    background: none;
+    color: var(--text-color);
+    font: 700 0.9rem/1 'BuilderSans', sans-serif;
+    overflow: hidden;
+    box-shadow: 0 0 13.8px rgba(255, 255, 255, 0.11) inset, var(--glass-box-shadow);
+    transition: box-shadow 0.2s ease;
+}
+
+.ui-pill::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 13.8px rgba(255, 255, 255, 0.28) inset;
+    backdrop-filter: blur(16.75px);
+    -webkit-backdrop-filter: blur(16.75px);
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ui-pill > * { position: relative; z-index: 1; }
+.ui-pill:hover { color: var(--text-color); transform: none; box-shadow: 0 0 13.8px rgba(255, 255, 255, 0.11) inset, var(--glass-box-shadow); }
+.ui-pill:hover::before { opacity: 1; }
+.nav-install-btn.ui-pill:hover { transform: none; }
+.nav-install-btn.ui-pill { padding: 0 !important; }
+.ui-pill:focus-visible, .ui-button:focus-visible, .accordion-button:focus-visible { outline: 2px solid #7bf0ff; outline-offset: 3px; }
+.ui-button { cursor: pointer; }
+.section-heading { margin-bottom: 0.5rem; font-size: 1.8rem; opacity: 0.9; }
+.section-subtitle { margin-bottom: 2rem; color: var(--text-muted); }
+.button-row { display: flex; justify-content: center; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
+.feature-category-heading { grid-column: 1 / -1; margin: 3rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); text-align: left; font: 800 2.2rem/1.2 'builderExtended-bold', sans-serif; }
+.ui-pill[hidden] { display: none; }
+
+.accordion-collapse.collapse:not(.show) { display: none; visibility: hidden; }
+.accordion-collapse.collapse.show { display: block; visibility: visible; }
+
+.logo-container .svg-base { display: block; margin-inline: auto; }
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: -42%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.18;
+    filter: blur(100px) saturate(115%);
+    border-radius: 48%;
+    background: var(--brand-gradient);
+    background-size: 180% 180%;
+    background-position: 0% 35%;
+    transform: translate3d(-16%, -9%, 0) scale(1.02) rotate(-8deg);
+    animation: site-rainbow-drift 22s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+@keyframes site-rainbow-drift {
+    0% {
+        background-position: 0% 35%;
+        transform: translate3d(-16%, -9%, 0) scale(1.02) rotate(-8deg);
+    }
+    35% {
+        background-position: 62% 0%;
+        transform: translate3d(9%, -3%, 0) scale(1.12) rotate(5deg);
+    }
+    70% {
+        background-position: 100% 68%;
+        transform: translate3d(2%, 12%, 0) scale(1.06) rotate(11deg);
+    }
+    100% {
+        background-position: 28% 100%;
+        transform: translate3d(-12%, 8%, 0) scale(1.15) rotate(-3deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before { animation: none; }
 }

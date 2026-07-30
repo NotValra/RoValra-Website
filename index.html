@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -73,44 +74,44 @@
             </a>
         </div>
 
-        <div class="stats-section">
-            <div class="stat-card">
+        <div class="stats-section ui-container">
+            <div class="stat-card ui-card">
                 <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;"><span id="ratingValue">4.7</span><i class="fas fa-star ms-2" style="font-size: 0.65em; vertical-align: middle;"></i></h2>
                 <p id="ratingCountText">Loading reviews...</p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card ui-card">
                 <h2 id="activeUsersCount" style="font-size: 1.75rem; margin-bottom: 0.5rem;">200k+</h2>
                 <p>Weekly active users</p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card ui-card">
                 <h2 id="featureCount" style="font-size: 1.75rem; margin-bottom: 0.5rem;">90+</h2>
                 <p>Unique Features</p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card ui-card">
                 <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">100%</h2>
                 <p>Open Source</p>
             </div>
         </div>
 
         <div class="comparison-wrapper" id="features">
-            <div class="comparison-container" style="max-width: 1200px; margin-left: auto; margin-right: auto;">
-                <h2 style="font-family: 'builderExtended-bold', sans-serif; font-size: 1.8rem; margin-bottom: 0.5rem; opacity: 0.9;">Feature Highlights</h2>
-                <p style="opacity: 0.6; font-size: 1rem; margin-bottom: 2rem;">Explore all the features available in RoValra</p>
+            <div class="comparison-container ui-section">
+                <h2 class="section-heading">Feature Highlights</h2>
+                <p class="section-subtitle">Explore all the features available in RoValra</p>
                 
                 <div class="highlights-grid" id="featuresGrid"></div>
 
-                <div id="featuresButtonContainer" style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1rem;">
-                    <button id="loadMoreBtn" class="fancy-button" style="background: rgba(255,255,255,0.08); color: white; padding: 12px 40px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); font-weight: 600; cursor: pointer; white-space: nowrap; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">Show All Features</button>
-                    <button id="collapseBtn" class="fancy-button" style="background: rgba(255,255,255,0.08); color: white; padding: 12px 40px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); font-weight: 600; cursor: pointer; display: none; white-space: nowrap; flex-shrink: 0; align-items: center; justify-content: center;">Collapse</button>
+                <div id="featuresButtonContainer" class="button-row">
+                    <button id="loadMoreBtn" class="ui-pill ui-button inline-flex items-center justify-center" type="button"><span>Show All Features</span></button>
+                    <button id="collapseBtn" class="ui-pill ui-button inline-flex items-center justify-center" type="button" hidden><span>Collapse</span></button>
                 </div>
             </div>
         </div>
 
         <section id="support">
             <div class="container" style="max-width: 900px;">
-                <h2 style="font-family: 'builderExtended-bold', sans-serif; font-size: 1.8rem; margin-bottom: 2rem; text-align: center; opacity: 0.9;">Frequently Asked Questions</h2>
-                <div class="faq-container">
-                    <div class="accordion" id="faqAccordion">
+                <h2 class="section-heading text-center mb-4">Frequently Asked Questions</h2>
+                <div class="faq-container ui-container">
+                    <div class="accordion" id="faqAccordion" data-faq-list="faq">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="faqHeading1">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
@@ -277,6 +278,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 
 <script src="static/js/shared-components.js?v=2.4.15" defer></script>
+<script src="static/js/site-content.js?v=2.4.15" defer></script>
 <script src="static/js/features.js?v=2.4.15" defer></script>
 <script defer>
     async function loadChromeStats() {
@@ -342,12 +344,10 @@
 
     function createFeatureCard(feature) {
         const card = document.createElement('div');
-        card.className = 'highlight-card';
+        card.className = 'highlight-card ui-container';
 
-        const title = document.createElement('h1');
+        const title = document.createElement('h3');
         title.textContent = Array.isArray(feature.label) ? feature.label[0] : feature.label;
-        title.style.fontSize = '1.4rem';
-        title.style.fontWeight = '800';
 
         const desc = document.createElement('p');
         const rawDesc = Array.isArray(feature.description) 
@@ -380,16 +380,7 @@
             
             if (settings.length > 0) {
                 const header = document.createElement('h1');
-                header.className = 'feature-item-full';
-                header.style.gridColumn = '1 / -1';
-                header.style.textAlign = 'left';
-                header.style.marginTop = '3rem';
-                header.style.marginBottom = '1rem';
-                header.style.fontFamily = "'builderExtended-bold', sans-serif";
-                header.style.fontSize = '2.2rem';
-                header.style.fontWeight = '800';
-                header.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
-                header.style.paddingBottom = '0.5rem';
+                header.className = 'feature-item-full feature-category-heading';
                 header.textContent = category.title;
                 grid.appendChild(header);
 
@@ -405,14 +396,14 @@
 
     document.getElementById('loadMoreBtn')?.addEventListener('click', () => {
         document.getElementById('featuresGrid')?.classList.remove('is-collapsed');
-        document.getElementById('loadMoreBtn').style.display = 'none';
-        document.getElementById('collapseBtn').style.display = 'flex';
+        document.getElementById('loadMoreBtn').hidden = true;
+        document.getElementById('collapseBtn').hidden = false;
     });
 
     document.getElementById('collapseBtn')?.addEventListener('click', () => {
         document.getElementById('featuresGrid')?.classList.add('is-collapsed');
-        document.getElementById('loadMoreBtn').style.display = 'flex';
-        document.getElementById('collapseBtn').style.display = 'none';
+        document.getElementById('loadMoreBtn').hidden = false;
+        document.getElementById('collapseBtn').hidden = true;
         document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
     });
 

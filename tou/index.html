@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Terms of Use for RoValra APIs and services.">
@@ -103,7 +104,7 @@
                     const sectionParts = text.split(/<!-- section:(.*?):(.*?) -->/);
                     
                     let finalHtml = `
-                        <div class="privacy-section">
+                        <div class="privacy-section ui-container">
                             <div class="privacy-section-glow"></div>
                             <div class="privacy-section-glow-inner"></div>
                             <div class="section-content">
@@ -121,7 +122,7 @@
                         const body = content.replace(/^##\s+.*\n?/, '');
 
                         finalHtml += `
-                            <div class="privacy-section" id="${id}">
+                            <div class="privacy-section ui-container" id="${id}">
                                 <div class="privacy-section-glow"></div>
                                 <div class="privacy-section-glow-inner"></div>
                                 <div class="section-content">

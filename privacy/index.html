@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -33,7 +34,7 @@
 
     <main class="main-content">
         <div class="container mt-5" style="max-width: 900px;">
-            <div class="privacy-content faq-container">
+            <div class="privacy-content faq-container ui-container">
                 <p>Loading privacy policy... If this persists, the content may be updating.</p>
             </div>
         </div>
@@ -107,7 +108,7 @@
 
                     const sectionParts = text.split(/<!-- section:(.*?):(.*?) -->/);
                     
-                    let finalHtml = `<div class="privacy-section">${marked.parse(sectionParts[0])}</div>`;
+                    let finalHtml = `<div class="privacy-section ui-container">${marked.parse(sectionParts[0])}</div>`;
                     
                     for (let i = 1; i < sectionParts.length; i += 3) {
                         const id = sectionParts[i];
@@ -120,7 +121,7 @@
                         const body = trimmedContent.replace(/^##\s+.*\n?/, '');
 
                         finalHtml += `
-                            <div class="privacy-section" id="${id}">
+                            <div class="privacy-section ui-container" id="${id}">
                                 <h2><i class="${icon}"></i> ${title}</h2>
                                 <div class="section-content">
                                     ${marked.parse(body)}
