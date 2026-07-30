@@ -1,16 +1,11 @@
 // Automatically mocked imports for website compatibility
-var DEFAULT_CUSTOM_THEME = null;
+var DEFAULT_BACKGROUND_IMAGE = null;
 var ROBUX_FIAT_ESTIMATE_DEFAULT_GRADIENT = null;
 var TRANSACTION_FIAT_CURRENCY_OPTIONS = null;
 var TRANSACTION_FIAT_RATE_OPTIONS = null;
 
 
 
-
-const isAprilFools = () => {
-    const d = new Date();
-    return d.getMonth() === 3 && d.getDate() <= 7;
-};
 
 // Settings config (not developer settings)
 
@@ -100,6 +95,12 @@ var featuresData = {
                 description: [
                     'This feature shows an items dependencies which means you are able to view the texture, mesh and more of an item.',
                 ],
+                type: 'checkbox',
+                default: true,
+            },
+            friendOwnershipEnabled: {
+                label: 'Friends Who Own the Item',
+                description: 'Shows which of your friends own the item.',
                 type: 'checkbox',
                 default: true,
             },
@@ -210,13 +211,13 @@ var featuresData = {
                 },
             },
             wideGameTileStatsEnabled: {
-                label: 'Wide Experience Tile Stats',
+                label: 'Player Counts on Wide Tiles',
                 description: [
                     'Shows the concurrent player count alongside the rating on wide experience tiles.',
                 ],
                 type: 'checkbox',
                 default: true,
-                contributors: ['2963377564'],
+                contributors: ['2963377564', '2333236354'],
             },
             whatamIJoiningEnabled: {
                 label: 'What Am I Joining',
@@ -637,6 +638,7 @@ var featuresData = {
                 description: [
                     'Shows profile view counts on profiles.',
                     'Disabling this hides profile views locally and hides your profile views from other RoValra users.',
+                    'Credit to [syra](https://www.roblox.com/users/170038374/profile) for making a concept which this feature is based on.',
                 ],
                 type: 'checkbox',
                 default: true,
@@ -653,6 +655,7 @@ var featuresData = {
                 label: 'Profile Showcase',
                 description: [
                     'Adds a Showcase tab to profiles for featuring a favourite experience and community.',
+                    'Credit to [syra](https://www.roblox.com/users/170038374/profile) for making a concept which this feature is based on.',
                 ],
                 type: 'checkbox',
                 default: true,
@@ -830,7 +833,7 @@ var featuresData = {
                 description:
                     'Shows the experience you played the most with a friend on their profile.',
                 type: 'checkbox',
-                default: true,
+                default: false,
             },
             bulkUnfriendEnabled: {
                 label: 'Bulk Unfriend',
@@ -1577,6 +1580,15 @@ var featuresData = {
                 default: true,
                 contributors: ['447170745', '546872490'],
             },
+            FreeRobloxPlusThemesEnabled: {
+                label: 'Free Roblox Plus Themes',
+                description: [
+                    'Allows you to use Roblox Plus Themes on the site without Roblox Plus',
+                ],
+                type: 'checkbox',
+                default: false,
+                contributors: ['447170745', '4866259395'],
+            },
             currencyTransferEnabled: {
                 label: 'Send Robux',
                 description: [
@@ -1795,12 +1807,11 @@ var featuresData = {
                 label: 'Age Theme',
                 description: [
                     'Lets you choose which Roblox age theme is used across the site.',
-                    'Overrides **Theme Switcher** setting.',
+                    'Overrides other age-theme settings.',
                 ],
                 type: 'checkbox',
                 default: false,
                 contributors: ['447170745', '650766686'],
-                exclusiveWith: ['ThemeSwitcherEnabled'],
                 childSettings: {
                     ageThemeSelection: {
                         label: 'Theme',
@@ -1863,7 +1874,7 @@ var featuresData = {
                         maxLength: 30,
                         showCharacterCount: true,
                         default: null,
-                        contributors: ['10646979010'],
+                        contributors: ['10646979010', '1564574922'],
                     },
                     ageKidsTextPushNavbarEnabled: {
                         label: 'Show Full Badge Text',
@@ -1907,15 +1918,6 @@ var featuresData = {
                         storageKey: 'rovalra_previous_beta_programs',
                     },
                 },
-            },
-            removeDownloadButton: {
-                label: 'Remove Download Button',
-                description: [
-                    'Removes the out of place download button from navigation bar.',
-                ],
-                type: 'checkbox',
-                default: false,
-                contributors: ['3602693727'],
             },
             transactionsSidebarLinkEnabled: {
                 label: 'My Transactions sidebar link',
@@ -1995,89 +1997,29 @@ var featuresData = {
     Miscellaneous: {
         title: 'Miscellaneous',
         settings: {
-            ThemeSwitcherEnabled: {
-                label: 'Theme Switcher',
-                description: [
-                    'Allows RoValra to apply themes selected from the theme gallery.',
-                    'Overrides the **Age Theme** setting.',
-                ],
+            CustomThemeBackgroundEnabled: {
+                label: 'Customizable Background Image',
+                description:
+                    'Allows you to add a custom background image to the Roblox website.',
                 type: 'checkbox',
                 default: false,
-                contributors: ['1564574922', '447170745'],
-                beta: 'Can be slightly buggy',
-                keepChildSettingsEnabled: true,
-                exclusiveWith: ['ageKidsThemeEnabled'],
+                contributors: ['476449201'],
                 childSettings: {
-                    openThemeCatalog: {
-                        label: 'Theme Gallery',
+                    customBackgroundImage: {
+                        label: 'Background Image Configuration',
+                        type: 'backgroundImage',
+                        default: DEFAULT_BACKGROUND_IMAGE,
+                        hidden: true,
+                    },
+                    openCustomThemeBackground: {
+                        label: 'Customize Image Settings',
                         description:
-                            'Browse RoValra themes and preview them before applying one.',
+                            "Adjust the image's opacity, blur, position, size, and more.",
                         type: 'button',
-                        buttonText: 'Browse Themes',
-                        event: 'rovalra:openThemesPage',
-                    },
-                    openCustomThemeEditor: {
-                        label: 'Custom Theme Builder',
-                        description: [
-                            'Opens the editor on roblox.com/theme so you can customize the theme against the actual UI.',
-                            'Your custom theme appears in the Yours tab on the theme gallery.',
-                        ],
-                        type: 'button',
-                        buttonText: 'Open Editor',
-                        event: 'rovalra:openCustomThemeEditor',
-                    },
-                    customUserTheme: {
-                        label: 'Custom Theme Colors',
-                        type: 'themeEditor',
-                        default: DEFAULT_CUSTOM_THEME,
-                        hidden: true,
-                    },
-                    customUserThemeSlots: {
-                        label: 'Custom Theme Slots',
-                        type: 'themeSlots',
-                        default: [],
-                        hidden: true,
+                        buttonText: 'Edit',
+                        event: 'rovalra:openCustomThemeBackground',
                     },
                 },
-            },
-            ThemeSwitcher: {
-                label: 'Selected Theme',
-                type: 'select',
-                options: [
-                    { label: 'Default', value: 'default' },
-                    {
-                        label: isAprilFools() ? '"Ow my eyes"' : 'Light',
-                        value: 'builtin-light',
-                    },
-                    {
-                        label: isAprilFools() ? 'Cave' : 'Dark',
-                        value: 'builtin-dark',
-                    },
-                    {
-                        label: isAprilFools()
-                            ? '(RoValra) Headache mode'
-                            : '(RoValra) Nighty',
-                        value: 'custom-nighty',
-                    },
-                    {
-                        label: isAprilFools()
-                            ? '(RoValra) Lemon'
-                            : '(RoValra) Sunset',
-                        value: 'custom-sunset',
-                    },
-                    {
-                        label: isAprilFools()
-                            ? "(RoValra) I'm almost colorblind"
-                            : '(RoValra) High Contrast',
-                        value: 'custom-highcontrast',
-                    },
-                    {
-                        label: 'Custom',
-                        value: 'custom-user',
-                    },
-                ],
-                default: 'default',
-                hidden: true,
             },
 
             ExplorerEnabled: {
@@ -2148,7 +2090,6 @@ var featuresData = {
                 default: false,
                 contributors: ['2615068449'],
             },
-
             copyIdEnabled: {
                 label: 'Allows you to quickly copy an id of a thing you are right clicking.',
                 description:
