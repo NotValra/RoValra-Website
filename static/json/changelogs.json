@@ -6,7 +6,7 @@
             "published_date": "July 29, 2026",
             "body": "New stuff:\r\n- Added free Roblox Plus themes, allowing you to enable Roblox Plus themes without Roblox Plus\r\n- Added an indicator if an item is hidden from the marketplace\r\n- Added FAE (facial age estimation) icon to item cards of items requiring FAE to buy.\r\n- Added a feature showing who on your friends list owns an item\r\n- Added accepting robux on the buy page cause that exists!, thanks to @auggeeo for making it\r\n- Added customizable background image, thanks to @IYoLsa for making it\r\n- Added decal support for showcases, to showcase art!\r\n\r\nChanges:\r\n- Made under 16 able to donate via a the game if they get parental permission, thanks to @auggeeo for making it.\r\n- Removed the theme switcher since it was too buggy\r\n- Removed download button hider as Roblox removed it themself, thanks to @nxvixz\r\n- Fixed badge text being offset upwards, thanks to @bogdan-glitchm for fixing it\r\n- Fixed thumbnails sometimes not displaying the broken icon for images that doesnt work\r\n- Fixed categorize wearing not being able to categorize hidden items\r\n- Fixed RoValra containers not having proper support for stuff like themes\r\n- Fixed categorized wearing failing to put animations in its own category in some cases\r\n- Fixed categorized wearing sometimes not showing an item a user is wearing\r\n- Attempted to fix showcases sometimes not showing showcased items\r\n- Changed Most Frequent Played Together to be off by default.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.6.3",
-            "chrome_release_date": "July 30, 2026",
+            "chrome_release_date": "July 31, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -277,5 +277,5 @@
         "is_latest": true
     },
     "error_message": null,
-    "last_updated": "2026-07-31T17:39:04.102064Z"
+    "last_updated": "2026-07-31T19:26:41.261579Z"
 }
