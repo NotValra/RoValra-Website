@@ -11,7 +11,7 @@
         { icon: 'fas fa-comment', question: 'I have feedback where can I share it?', answer: 'You can share any feedback in our <a href="https://discord.gg/GHd5cSKJRk" target="_blank" rel="noopener noreferrer" class="text-info text-decoration-underline fw-bold">Discord Server</a> in the suggestions channel.' },
         { icon: 'fas fa-user-cog', question: 'Who is developing RoValra?', answer: 'Valra is the only maintainer for RoValra. But multiple people have contributed on GitHub.' },
         { icon: 'fas fa-toggle-off', question: "There's a feature I don't want, can I disable it?", answer: 'Yes, all features can be disabled in <a href="https://www.roblox.com/my/account?rovalra=info#!/info" target="_blank" rel="noopener noreferrer" class="text-info text-decoration-underline fw-bold">settings</a>.' },
-        { icon: 'fas fa-check', question: 'Does RoValra work with other extensions?', answer: 'Yes! RoValra officially supports extensions like RoPro, BTRoblox, BetterBlox v1, RoGold, RoSeal, and RoQoL.' },
+        { icon: 'fas fa-check', question: 'Does RoValra work with other extensions?', answer: 'Yes! RoValra officially supports extensions like RoPro, BTRoblox, BetterBlox v1, RoSeal, and RoQoL.' },
         { icon: 'fas fa-sync', question: 'Does the extension automatically update?', answer: 'Yes, but only if you installed it from the Chrome Web Store. It will automatically update unless specifically disabled.' }
     ];
 
