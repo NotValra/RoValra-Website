@@ -3,7 +3,7 @@ name: Deploy to Pages
 
 on:
   push:
-    branches: ["*"] # Remember to change back to main for testing
+    branches: ["**"] # Remember to change back to main for testing
 
   workflow_dispatch:
 
