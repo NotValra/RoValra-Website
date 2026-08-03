@@ -55,14 +55,14 @@ def update_changelogs():
     current_version = None
     existing_chrome_dates = {}
 
-    if os.path.exists(OUTPUT_FILE):
+    if os.path.exists(CHROME_RELEASE_DATA):
         try:
-            with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
+            with open(CHROME_RELEASE_DATA, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                if data.get("releases") and len(data["releases"]) > 0:
-                    current_version = data["releases"][0].get("tag_name")
+                if data.get("chrome_release_data") and len(data["chrome_release_data"]) > 0:
+                    current_version = data["chrome_release_data"][0].get("tag_name")
 
-                for r in data.get("releases", []):
+                for r in data.get("chrome_release_data", []):
                     if r.get("tag_name") and r.get("chrome_release_date"):
                         existing_chrome_dates[r["tag_name"]] = r["chrome_release_date"]
         except Exception:
