@@ -32,9 +32,9 @@ jobs:
             cp -r borders src/
             cp -r badges src/
             cp -r geolocation src/
-            cp -r globalSettings src
+            cp -r global-settings src
             mkdir -p src/RoValra/Settings
-            cp globalSettings/featurekill.json src/RoValra/Settings/config.json
+            cp global-settings/feature-kill.json src/RoValra/Settings/config.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
