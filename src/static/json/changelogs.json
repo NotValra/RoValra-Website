@@ -2,7 +2,7 @@
     "releases": [
         {
             "tag_name": "v0.0.0",
-            "name": "FAILED TO FETCH RELEASES",
+            "name": "Failed to Fetch Releases",
             "published_date": "Unknown",
             "body": "Uh oh! The releases failed to build, this is an error most likely on our end. You can still access our extension on Chrome Web Store or GitHub Releases in the top right.",
             "url": "https://github.com/NotValra/RoValra/releases/latest",
