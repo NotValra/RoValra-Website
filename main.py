@@ -68,7 +68,7 @@ def update_changelogs():
             pass
 
     url = f"https://api.github.com/repos/NotValra/RoValra/releases"
-    headers = os.getenv("GH_TOKEN")
+    headers = {"authentication": f"{os.getenv("GH_TOKEN")}"}
     print(f"Fetching releases from {url}...")
 
     response = requests.get(url, headers=headers)
