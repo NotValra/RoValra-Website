@@ -25,7 +25,7 @@ var featuresData = {
                 default: false,
             },
             SaveLotsRobuxEnabled: {
-                label: 'Save 10%-40% Robux on Purchases',
+                label: 'all of this is bogus data from a previous update because now its automatically updated on build',
                 description: [
                     'This adds a button allowing you to save 40% on items on the marketplace',
                     'Keep in mind a group is required for this to work.',
