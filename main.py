@@ -128,12 +128,12 @@ def update_changelogs():
 
             processed_releases.append({
                 "tag_name": tag_name,
-                #"name": release.get("name"),
-                #"published_date": published_date,
-                #"body": release.get("body"),
-                #"url": release.get("html_url"),
-                "chrome_release_date": c_date
-                #"chrome_url": chrome_url
+                "name": release.get("name"),
+                "published_date": published_date,
+                "body": release.get("body"),
+                "url": release.get("html_url"),
+                "chrome_release_date": c_date,
+                "chrome_url": chrome_url
             })
 
         final_data = {
