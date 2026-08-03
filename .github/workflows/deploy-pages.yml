@@ -29,6 +29,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Setup out Folder
+        run: cp -r src/ out/
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -37,22 +40,22 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run update script
-        run: python main.py
-
       - name: Setup Misc
         run: |
-            cp -r borders src/
-            cp -r badges src/
-            cp -r geolocation src/
-            cp -r global-settings src
-            mkdir -p src/RoValra/Settings
-            cp global-settings/feature-kill.json src/RoValra/Settings/config.json
+            cp -r borders out/
+            cp -r badges out/
+            cp -r geolocation out/
+            cp -r global-settings out
+            mkdir -p out/RoValra/Settings
+            cp global-settings/feature-kill.json out/RoValra/Settings/config.json
+
+      - name: Run update script
+        run: python main.py
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './src'
+          path: 'out/'
 
       - name: Deploy to GitHub Pages
         id: deployment

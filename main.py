@@ -5,8 +5,8 @@ import re
 from datetime import datetime, timezone
 
 
-OUTPUT_FILE = "src/static/json/changelogs.json"
-FEATURES_FILE = "src/static/js/features.js"
+OUTPUT_FILE = "out/static/json/changelogs.json"
+FEATURES_FILE = "out/static/js/features.js"
 
 def update_features_config(tag_name):
     url = f"https://raw.githubusercontent.com/NotValra/RoValra/{tag_name}/src/content/core/settings/settingConfig.js"
