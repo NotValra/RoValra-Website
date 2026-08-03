@@ -13,7 +13,7 @@ var featuresData = {
             FeaturesFailedToLoad: {
                 label: 'Failed to Load Features',
                 description: [
-                    'Oopsie! there was an error during the build proces!',
+                    'Oopsie! there was an error during the build process!',
                 ],
                 type: 'checkbox',
                 default: true,

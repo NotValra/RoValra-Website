@@ -5,7 +5,7 @@ import re
 from datetime import datetime, timezone
 
 
-OUTPUT_FILE = "out/static/json/changelogs.json"
+OUTPUT_FILE = "out/static/json/changelogs.json.test"
 FEATURES_FILE = "out/static/js/features.js.test"
 CHROME_RELEASE_DATA = ".github/assets/chrome-release-data.json"
 
