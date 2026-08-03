@@ -51,6 +51,8 @@ jobs:
 
       - name: Run update script
         run: python main.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

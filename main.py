@@ -68,9 +68,10 @@ def update_changelogs():
             pass
 
     url = f"https://api.github.com/repos/NotValra/RoValra/releases"
+    headers = os.getenv("GH_TOKEN")
     print(f"Fetching releases from {url}...")
 
-    response = requests.get(url)
+    response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
         releases = response.json()
