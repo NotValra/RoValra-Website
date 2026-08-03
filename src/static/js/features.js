@@ -11,7 +11,7 @@ var TRANSACTION_FIAT_RATE_OPTIONS = null;
 
 var featuresData = {
     Marketplace: {
-        title: 'Marketplace',
+        title: 'all of this is bogus data from a previous update because now its automatically updated on build',
         settings: {
             itemSalesEnabled: {
                 label: 'Item Sales',
