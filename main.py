@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 
 
 OUTPUT_FILE = "out/static/json/changelogs.json"
-FEATURES_FILE = "out/static/js/features.js"
+FEATURES_FILE = "out/static/js/features.js.test"
 CHROME_RELEASE_DATA = ".github/assets/chrome-release-data.json"
 
 def update_features_config(tag_name):

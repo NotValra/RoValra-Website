@@ -11,9 +11,9 @@
     <title>RoValra - ROBLOX Improved</title>
     <link rel="preload" href="static/img/logo-base.svg" as="image" type="image/svg+xml" fetchpriority="high">
     <link rel="preload" href="static/img/roblox-logo-text.svg" as="image" type="image/svg+xml" fetchpriority="high">
-    <link rel="preload" href="static/fonts/builderExtended-bold-700_0.otf" as="font" type="font/otf" 
+    <link rel="preload" href="static/fonts/builderExtended-bold-700_0.otf" as="font" type="font/otf"
         crossorigin="anonymous">
-    <link rel="preload" href="static/fonts/BuilderSans-Regular-400.otf" as="font" type="font/otf" 
+    <link rel="preload" href="static/fonts/BuilderSans-Regular-400.otf" as="font" type="font/otf"
         crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +21,8 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" 
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
 
@@ -97,7 +97,7 @@
             <div class="comparison-container ui-section">
                 <h2 class="section-heading">Feature Highlights</h2>
                 <p class="section-subtitle">Explore all the features available in RoValra</p>
-                
+
                 <div class="highlights-grid" id="featuresGrid"></div>
 
                 <div id="featuresButtonContainer" class="button-row">
@@ -274,7 +274,7 @@
         </section>
     </main>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 
 <script src="static/js/shared-components.js?v=2.4.15" defer></script>
@@ -315,13 +315,13 @@
 
     function initFilteredFeatures() {
         if (typeof featuresData === 'undefined') return;
-        
+
         const priorityKeys = ['SaveLotsRobuxEnabled', 'PreferredRegionEnabled', 'privateGameDetectionEnabled'];
         const allValidFeatures = {};
-        
+
         for (const categoryKey in featuresData) {
             if (categoryKey === 'Developer' || categoryKey === 'FunStuff') continue;
-            
+
             const settings = featuresData[categoryKey].settings;
             for (const settingKey in settings) {
                 const feature = settings[settingKey];
@@ -332,7 +332,7 @@
         }
 
         filteredFeatures = [];
-        
+
         priorityKeys.forEach(key => {
             if (allValidFeatures[key]) filteredFeatures.push(allValidFeatures[key]);
         });
@@ -350,10 +350,10 @@
         title.textContent = Array.isArray(feature.label) ? feature.label[0] : feature.label;
 
         const desc = document.createElement('p');
-        const rawDesc = Array.isArray(feature.description) 
-            ? feature.description.join(' ') 
+        const rawDesc = Array.isArray(feature.description)
+            ? feature.description.join(' ')
             : (feature.description || '');
-        
+
         desc.textContent = rawDesc.replace(/\*\*/g, '').replace(/\[(.*?)\]\(.*?\)/g, '$1');
 
         card.appendChild(title);
@@ -374,10 +374,10 @@
 
         for (const categoryKey in featuresData) {
             if (categoryKey === 'Developer' || categoryKey === 'FunStuff') continue;
-            
+
             const category = featuresData[categoryKey];
             const settings = Object.values(category.settings).filter(f => !f.deprecated);
-            
+
             if (settings.length > 0) {
                 const header = document.createElement('h1');
                 header.className = 'feature-item-full feature-category-heading';
@@ -421,7 +421,7 @@
         }
 
         const accordionItems = document.querySelectorAll('#faqAccordion .accordion-collapse');
-        
+
         accordionItems.forEach(item => {
             item.addEventListener('shown.bs.collapse', function() {
                 const faqId = item.id;
@@ -468,7 +468,7 @@
                     const id = entry.target.id;
                     if (activeSectionId !== id) {
                         activeSectionId = id;
-                        
+
                         const currentHash = window.location.hash;
                         if (!currentHash.startsWith('#' + id + '_')) {
                             history.replaceState(null, null, '#' + id);
