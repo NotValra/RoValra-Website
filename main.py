@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 
 OUTPUT_FILE = "out/static/json/changelogs.json"
 FEATURES_FILE = "out/static/js/features.js"
+CHROME_RELEASE_DATA = ".github/assets/chrome-release-data.json"
 
 def update_features_config(tag_name):
     url = f"https://raw.githubusercontent.com/NotValra/RoValra/{tag_name}/src/content/core/settings/settingConfig.js"
@@ -110,6 +111,7 @@ def update_changelogs():
                 is_chrome_latest = True
 
         processed_releases = []
+        processed_chrome_releases = []
         for release in releases:
             published_date = release.get("published_at")
             if published_date:
@@ -137,6 +139,11 @@ def update_changelogs():
                 "chrome_url": chrome_url
             })
 
+            processed_chrome_releases.append({
+                "tag_name": tag_name,
+                "chrome_release_date": c_date
+            })
+
         final_data = {
             "releases": processed_releases,
             "chrome_extension": {
@@ -148,10 +155,17 @@ def update_changelogs():
             "last_updated": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
         }
 
+        final_chrome_release_data = {
+            "chrome_release_data": processed_chrome_releases
+        }
+
         os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             json.dump(final_data, f, indent=4)
+
+        with open(CHROME_RELEASE_DATA, 'w', encoding='utf-8') as f:
+            json.dump(final_chrome_release_data, f, indent=4)
 
         print(f"Successfully updated {OUTPUT_FILE} with {len(processed_releases)} releases.")
     else:

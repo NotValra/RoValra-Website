@@ -1,5 +1,5 @@
 {
-    "chromeReleaseDates": [
+    "chrome_release_data": [
         {
             "tag_name": "v2.6.3",
             "chrome_release_date": "July 31, 2026"
