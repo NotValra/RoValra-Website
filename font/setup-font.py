@@ -22,8 +22,8 @@ def main():
         for char in glyph['name']:
             ligature.append(str(hex(ord(char))).lstrip('0x'))
 
-        shutil.copyfile(src=glyph['file'], dst=f'{str(currentPUA).lstrip('0x')}.svg')
-        shutil.copyfile(src=glyph['file'], dst=f'{'_'.join(ligature)}.svg')
+        shutil.copyfile(src=glyph['file'], dst=f'setup/{str(currentPUA).lstrip('0x')}.svg')
+        shutil.copyfile(src=glyph['file'], dst=f'setup/{'_'.join(ligature)}.svg')
 
 
 if __name__ == "__main__":
