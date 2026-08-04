@@ -24,6 +24,7 @@ def main():
 
         shutil.copyfile(src=glyph['file'], dst=f'setup/{str(hex(currentPUA)).lstrip('0x')}.svg')
         shutil.copyfile(src=glyph['file'], dst=f'setup/{'_'.join(ligature)}.svg')
+        currentPUA += 0x1
 
 
 if __name__ == "__main__":
