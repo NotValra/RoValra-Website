@@ -22,7 +22,7 @@ def main():
         for char in glyph['name']:
             ligature.append(str(hex(ord(char))).lstrip('0x'))
 
-        shutil.copyfile(src=glyph['file'], dst=f'setup/{str(currentPUA).lstrip('0x')}.svg')
+        shutil.copyfile(src=glyph['file'], dst=f'setup/{str(hex(currentPUA)).lstrip('0x')}.svg')
         shutil.copyfile(src=glyph['file'], dst=f'setup/{'_'.join(ligature)}.svg')
 
 
