@@ -38,7 +38,7 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install requests picosvg nanoemoji
+        run: pip install requests picosvg nanoemoji brotli fonttools
 
       - name: Setup Misc
         run: |
@@ -48,6 +48,15 @@ jobs:
             cp -r global-settings out
             mkdir -p out/RoValra/Settings
             cp global-settings/feature-kill.json out/RoValra/Settings/config.json
+
+      - name: Setup RoValra Font
+        run: |
+            cd font
+            mkdir setup
+            python setup-font.py
+            cd setup
+            nanoemoji --output_file "RoValraFont.ttf" --family "RoValra Icons" --color_format picosvgz ./*.svg
+            python -c "from fontTools.ttLib import TTFont; f = TTFont('build/RoValraFont.ttf'); f.flavor='woff2'; f.save('../../out/static/fonts/RoValraIcons.woff2')"
 
       - name: Run update script
         run: python main.py
