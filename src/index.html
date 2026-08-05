@@ -311,7 +311,7 @@
         let count = 0;
         for (const category in featuresData) {
             if (category === 'Developer') continue;
-            count += Object.keys(filterObject(featuresData[category].settings, setting => !setting.deprecated && !setting.hidden))).length;
+            count += Object.keys(filterObject(featuresData[category].settings, setting => !setting.deprecated && !setting.hidden)).length;
         }
         const featureEl = document.getElementById('featureCount');
         if (featureEl) featureEl.textContent = `${count}+`;
