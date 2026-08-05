@@ -60,7 +60,7 @@ def main():
         shutil.copyfile(src=glyph['file'], dst=f'{OUT_DIR}/{'_'.join(mainLigature)}.svg')
 
         # Additional ligature aliases
-        if glyph['aliases']:
+        if glyph.get('aliases'):
             for alias in glyph['aliases']:
                 aliasLigature = []
 
