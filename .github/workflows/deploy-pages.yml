@@ -52,16 +52,25 @@ jobs:
             mkdir -p out/RoValra/Settings
             cp global-settings/feature-kill.json out/RoValra/Settings/config.json
 
-      - name: Setup RoValra Font
+      - name: Setup RoValra Icons Font
         run: |
             cd font
-            mkdir setup
+            mkdir -p setup
+            mkdir -p setup/buildericons
             python setup-font.py
             cd setup
             nanoemoji --output_file "RoValraFont.ttf" --family "RoValra Icons" --color_format glyf_colr_1 ./*.svg
             python -c "from fontTools.ttLib import TTFont; f = TTFont('build/RoValraFont.ttf'); f.flavor='woff2'; f.save('../../out/static/fonts/RoValraIcons.woff2')"
             cp build/RoValraFont.ttf ../../out/static/fonts/RoValraIcons.ttf
 
+      - name: Setup Builder Icons Font
+        run: |
+            mkdir -p setup/buildericons
+
+      - name: Setup Logos/Icons
+        run: |
+            cp -r icons out/static/icons
+            cp icons/png/logo.png out/static/GILBERT.png
       - name: Run update script
         run: python main.py
         env:

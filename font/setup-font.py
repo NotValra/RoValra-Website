@@ -6,10 +6,16 @@ GLYPHS = [ # the file name will be a ligature, aliases will be additional ones
         "file": "rovalra.svg",
     },
     {
-        "file": "square.svg",
+        "file": "borderless.svg",
+        "aliases": [
+            "noborder",
+        ],
     },
     {
-        "file": "borderless.svg",
+        "file": "borderless-clean.svg",
+        "aliases": [
+            "noborder-clean",
+        ],
     },
     {
         "file": "circle.svg",
@@ -17,8 +23,8 @@ GLYPHS = [ # the file name will be a ligature, aliases will be additional ones
     {
         "file": "icon.svg",
         "aliases": [
-            "contributor"
-        ]
+            "contributor",
+        ],
     },
     {
         "file": "bronze.svg",
