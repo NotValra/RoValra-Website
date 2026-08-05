@@ -76,7 +76,7 @@ jobs:
             GH_RAW_DOMAIN: 'raw.githubusercontent.com'
             GIT_REPO: 'MaximumADHD/Roblox-Client-Tracker'
             GIT_REF: 'heads/roblox'
-            MAIN_SOURCE: 'https://${{ env.GH_RAW_DOMAIN }}/${{ env.GIT_REPO }}/${{ env.GIT_REF }}/LuaPackages/Packages/_Index/BuilderIcons/BuilderIcons/Font'
+            MAIN_SOURCE: 'https://$GH_RAW_DOMAIN/$GIT_REPO/$GIT_REF/LuaPackages/Packages/_Index/BuilderIcons/BuilderIcons/Font'
 
       - name: Setup Logos/Icons
         run: |
