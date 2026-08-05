@@ -305,7 +305,7 @@
         let count = 0;
         for (const category in featuresData) {
             if (category === 'Developer') continue;
-            count += Object.keys(featuresData[category].settings).length;
+            count += Object.keys(featuresData[category].settings.filter(setting => !setting.deprecated && !setting.hidden)).length;
         }
         const featureEl = document.getElementById('featureCount');
         if (featureEl) featureEl.textContent = `${count}+`;
@@ -325,7 +325,7 @@
             const settings = featuresData[categoryKey].settings;
             for (const settingKey in settings) {
                 const feature = settings[settingKey];
-                if (!feature.deprecated) {
+                if (!feature.deprecated && !feature.hidden) {
                     allValidFeatures[settingKey] = feature;
                 }
             }
