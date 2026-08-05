@@ -66,8 +66,8 @@ jobs:
         run: |
             mkdir -p font/setup/buildericons
             cd font/setup/buildericons
-            wget '${MAIN_SOURCE}/BuilderIcons-Filled.ttf'
-            wget '${MAIN_SOURCE}/BuilderIcons-Regular.ttf'
+            wget '$MAIN_SOURCE/BuilderIcons-Filled.ttf'
+            wget '$MAIN_SOURCE/BuilderIcons-Regular.ttf'
             python -c "from fontTools.ttLib import TTFont; f = TTFont('BuilderIcons-Filled.ttf'); f.flavor='woff2'; f.save('../../../out/static/fonts/BuilderIcons-Filled.woff2')"
             python -c "from fontTools.ttLib import TTFont; f = TTFont('BuilderIcons-Regular.ttf'); f.flavor='woff2'; f.save('../../../out/static/fonts/BuilderIcons-Regular.woff2')"
             cp BuilderIcons-Filled.ttf ../../../out/static/fonts/BuilderIcons-Filled.ttf
