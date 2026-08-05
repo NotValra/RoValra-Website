@@ -382,7 +382,7 @@
             if (categoryKey === 'Developer' || categoryKey === 'FunStuff') continue;
 
             const category = featuresData[categoryKey];
-            const settings = Object.values(category.settings).filter(f => !f.deprecated);
+            const settings = Object.values(category.settings).filter(f => !f.deprecated && !f.hidden);
 
             if (settings.length > 0) {
                 const header = document.createElement('h1');
