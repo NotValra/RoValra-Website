@@ -1,0 +1,20 @@
+{
+    "releases": [
+        {
+            "tag_name": "v0.0.0",
+            "name": "Failed to Fetch Releases",
+            "published_date": "GitHub Releases",
+            "body": "Uh oh! The releases failed to build, this is an error most likely on our end. You can still access our extension on Chrome Web Store or GitHub Releases in the top right.",
+            "url": "https://github.com/NotValra/RoValra/releases/latest",
+            "chrome_release_date": "Chrome Web Store",
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        }
+    ],
+    "chrome_extension": {
+        "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
+        "version": "0.0.0",
+        "is_latest": true
+    },
+    "error_message": null,
+    "last_updated": "1970-01-01T00:00:00.000000Z"
+}

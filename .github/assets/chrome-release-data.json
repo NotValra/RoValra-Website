@@ -1,0 +1,124 @@
+{
+    "chrome_release_data": [
+        {
+            "tag_name": "v2.6.4",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.6.3",
+            "chrome_release_date": "July 31, 2026"
+        },
+        {
+            "tag_name": "v2.6.2",
+            "chrome_release_date": "July 26, 2026"
+        },
+        {
+            "tag_name": "v2.6.1",
+            "chrome_release_date": "July 23, 2026"
+        },
+        {
+            "tag_name": "v2.6",
+            "chrome_release_date": "July 21, 2026"
+        },
+        {
+            "tag_name": "v2.5.10.1",
+            "chrome_release_date": "July 15, 2026"
+        },
+        {
+            "tag_name": "v2.5.10",
+            "chrome_release_date": "July 14, 2026"
+        },
+        {
+            "tag_name": "v2.5.9.1",
+            "chrome_release_date": "July 12, 2026"
+        },
+        {
+            "tag_name": "v2.5.9",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.5.8.1",
+            "chrome_release_date": "July 6, 2026"
+        },
+        {
+            "tag_name": "v2.5.8",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.5.7.1",
+            "chrome_release_date": "July 3, 2026"
+        },
+        {
+            "tag_name": "v2.5.7",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.5.6",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.5.5",
+            "chrome_release_date": "June 10, 2026"
+        },
+        {
+            "tag_name": "v2.5.4",
+            "chrome_release_date": "June 1, 2026"
+        },
+        {
+            "tag_name": "v2.5.3",
+            "chrome_release_date": "May 23, 2026"
+        },
+        {
+            "tag_name": "v2.5.2",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.5.1",
+            "chrome_release_date": "May 19, 2026"
+        },
+        {
+            "tag_name": "v2.5",
+            "chrome_release_date": "May 12, 2026"
+        },
+        {
+            "tag_name": "v2.4.15",
+            "chrome_release_date": "May 7, 2026"
+        },
+        {
+            "tag_name": "v2.4.14",
+            "chrome_release_date": "April 15, 2026"
+        },
+        {
+            "tag_name": "v2.4.13",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.4.12.5",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.4.12",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.4.11",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.4.10",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.4.9",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.4.8",
+            "chrome_release_date": null
+        },
+        {
+            "tag_name": "v2.4.7",
+            "chrome_release_date": null
+        }
+    ]
+}

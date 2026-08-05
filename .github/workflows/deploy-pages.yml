@@ -1,0 +1,84 @@
+
+name: Deploy to Pages
+
+on:
+  push:
+    branches: ["main"]
+
+  schedule:
+    - cron: "0 * * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup out Folder
+        run: cp -r src/ out/
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests picosvg nanoemoji brotli fonttools lxml
+
+      - name: Setup Misc
+        run: |
+            cp -r borders out/
+            cp -r badges out/
+            cp -r geolocation out/
+            cp -r global-settings out
+            mkdir -p out/RoValra/Settings
+            cp global-settings/feature-kill.json out/RoValra/Settings/config.json
+
+      - name: Setup RoValra Font
+        run: |
+            cd font
+            mkdir setup
+            python setup-font.py
+            cd setup
+            nanoemoji --output_file "RoValraFont.ttf" --family "RoValra Icons" --color_format glyf_colr_1 ./*.svg
+            python -c "from fontTools.ttLib import TTFont; f = TTFont('build/RoValraFont.ttf'); f.flavor='woff2'; f.save('../../out/static/fonts/RoValraIcons.woff2')"
+            cp build/RoValraFont.ttf ../../out/static/fonts/RoValraIcons.ttf
+
+      - name: Run update script
+        run: python main.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push Chrome Extension Release Data Changes
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add .github/assets/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update changelogs [skip ci]" && git push)
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'out/'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
