@@ -56,7 +56,6 @@ jobs:
         run: |
             cd font
             mkdir -p setup
-            mkdir -p setup/buildericons
             python setup-font.py
             cd setup
             nanoemoji --output_file "RoValraFont.ttf" --family "RoValra Icons" --color_format glyf_colr_1 ./*.svg
@@ -65,12 +64,24 @@ jobs:
 
       - name: Setup Builder Icons Font
         run: |
-            mkdir -p setup/buildericons
+            mkdir -p font/setup/buildericons
+            cd font/setup/buildericons
+            wget '${MAIN_SOURCE}/BuilderIcons-Filled.ttf'
+            wget '${MAIN_SOURCE}/BuilderIcons-Regular.ttf'
+            python -c "from fontTools.ttLib import TTFont; f = TTFont('BuilderIcons-Filled.ttf'); f.flavor='woff2'; f.save('../../../out/static/fonts/BuilderIcons-Filled.woff2')"
+            python -c "from fontTools.ttLib import TTFont; f = TTFont('BuilderIcons-Regular.ttf'); f.flavor='woff2'; f.save('../../../out/static/fonts/BuilderIcons-Regular.woff2')"
+            cp BuilderIcons-Filled.ttf ../../../out/static/fonts/BuilderIcons-Filled.ttf
+            cp BuilderIcons-Regular.ttf ../../../out/static/fonts/BuilderIcons-Regular.ttf
+        env:
+            GH_RAW_DOMAIN: 'raw.githubusercontent.com'
+            GIT_REPO: 'MaximumADHD/Roblox-Client-Tracker'
+            GIT_REF: 'heads/roblox'
+            MAIN_SOURCE: 'https://${{ env.GH_RAW_DOMAIN }}/${{ env.GIT_REPO }}/${{ env.GIT_REF }}/LuaPackages/Packages/_Index/BuilderIcons/BuilderIcons/Font'
 
       - name: Setup Logos/Icons
         run: |
             cp -r icons out/static/icons
-            cp icons/png/logo.png out/static/GILBERT.png
+            cp icons/png/logo.png out/static/img/GILBERT.png
       - name: Run update script
         run: python main.py
         env:
