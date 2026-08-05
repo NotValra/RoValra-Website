@@ -170,6 +170,23 @@ var featuresData = {
                         showFlags: true,
                         default: 'AUTO',
                     },
+                    preferredRegionUseRobloxLatency: {
+                        label: 'Prioritize biggest servers when using Automatic Mode',
+                        description: [
+                            'This makes preferred region join the servers closest to you with the most players',
+                        ],
+                        type: 'checkbox',
+                        default: true,
+                    },
+                    preferredRegionLocalSearchEnabled: {
+                        label: 'Force Local Server Search',
+                        description: [
+                            'Searches Roblox servers locally instead of using RoValra to find servers by region.',
+                            '**This is NOT recommended for normal users, as it will be way slower**',
+                        ],
+                        type: 'checkbox',
+                        default: false,
+                    },
                 },
             },
             QuickPlayEnable: {
@@ -232,7 +249,7 @@ var featuresData = {
                         label: 'Always Get Server Info',
                         description: [
                             'This will always get the server info, even if no server data is available.',
-                            'It has a very small change to get inaccurate information.',
+                            'It has a very small chance to get inaccurate information.',
                         ],
                         type: 'checkbox',
                         default: true,
@@ -660,14 +677,7 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
-            currentlyPlayingLinkEnabled: {
-                label: 'Clickable Currently Playing Card',
-                description: [
-                    'Makes the currently playing experience card on profiles link directly to the experience the user is playing.',
-                ],
-                type: 'checkbox',
-                default: true,
-            },
+
             chatEligibilityTooltipEnabled: {
                 label: 'Chat Eligibility Tooltip',
                 description: [
@@ -2064,6 +2074,15 @@ var featuresData = {
                 type: 'checkbox',
                 default: true,
             },
+            disableChannelTracking: {
+                label: 'Disable Channel Tracking',
+                description: [
+                    'Stops RoValra from sending your channel to the RoValra backends. We use this to improve RoValra and data is Public. We have safety messures in place to prevent private channels from ever being stored.',
+                    'After this feature has been disabled any data stored related to channels from you will be removed.',
+                ],
+                type: 'checkbox',
+                default: false,
+            },
             loginBannerEnabled: {
                 label: 'Login Banner',
                 description: [
@@ -2073,13 +2092,7 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
             },
-            DownloadCreateEnabled: {
-                label: 'Adds a download button to create.roblox.com',
-                description:
-                    'This feature allows you to download assets like meshes, images, audios, etc from the create page.',
-                type: 'checkbox',
-                default: true,
-            },
+
             legacyThemeSwitcherEnabled: {
                 label: 'Legacy Theme Switcher',
                 description: [
@@ -2089,22 +2102,6 @@ var featuresData = {
                 type: 'checkbox',
                 default: false,
                 contributors: ['2615068449'],
-            },
-            copyIdEnabled: {
-                label: 'Allows you to quickly copy an id of a thing you are right clicking.',
-                description:
-                    "This adds a copy id button directly into the right click context menu so you don't have  to open the link and copy the id from the link.",
-                type: 'checkbox',
-                default: false,
-                requiredPermissions: ['contextMenus'],
-            },
-            copyUniverseIdEnabled: {
-                label: 'Allows you to quickly copy a universe id',
-                description:
-                    'This adds a copy universe id button directly into the right click context menu.',
-                type: 'checkbox',
-                default: false,
-                requiredPermissions: ['contextMenus'],
             },
 
             modernIconsEnabled: {
@@ -2180,9 +2177,10 @@ var featuresData = {
                     "If you don't know what a memory leak is or you don't feel like Roblox is using too much memory, you can leave this off.",
                     '**This feature is not recommended to be used anymore, it seems like Roblox has fixed the memory leak.**',
                 ],
-                experimental: 'May cause some issues.',
                 type: 'checkbox',
                 default: false,
+                locked: 'This issue has long since been fixed by Roblox, so the feature isnt needed anymore.',
+                isPermanent: true,
                 requiredPermissions: ['webNavigation'],
             },
             firstAccountEnabled: {
@@ -2226,15 +2224,7 @@ var featuresData = {
                     },
                 },
             },
-            friendGameLinkEnabled: {
-                label: 'Clickable Friend Currently Playing Card',
-                description: [
-                    'Makes the currently playing experience card in friend hover cards link directly to the experience the user is playing.',
-                ],
-                contributors: ['2963377564'],
-                type: 'checkbox',
-                default: true,
-            },
+
             settingChangeNote: {
                 label: 'Setting changes alerts',
                 description: [
@@ -2247,14 +2237,6 @@ var featuresData = {
             FunStuffEnabled: {
                 label: 'Fun Stuff tab',
                 description: ['Shows the Fun Stuff tab in RoValra settings.'],
-                type: 'checkbox',
-                default: false,
-            },
-            disableChannelTracking: {
-                label: 'Disable Channel Tracking',
-                description: [
-                    'Stops RoValra from sending your channel to the RoValra backends. We use this to improve RoValra and data is Public. We have safety messures in place to prevent private channels from ever being stored.',
-                ],
                 type: 'checkbox',
                 default: false,
             },
@@ -2272,6 +2254,7 @@ var featuresData = {
                 default: false,
                 experimental:
                     "This may cause some issues since it tricks Roblox into thinking your private info is something it isn't.",
+                contributors: ['447170745', '48255812'],
                 childSettings: {
                     settingsPageInfo: {
                         label: 'Hide Private Information on the settings page',
@@ -2528,6 +2511,40 @@ var featuresData = {
                     },
                 },
             },
+            viewIdEnabled: {
+                label: 'View Bundled IDs',
+                description:
+                    'Allows you to view all bundles items and their IDs of any catalog item.',
+                type: 'checkbox',
+                default: false,
+                requiredPermissions: ['contextMenus'],
+                contributors: ['1564574922'],
+            },
+            copyIdEnabled: {
+                label: 'Allows you to quickly copy an id of a thing you are right clicking.',
+                description:
+                    "This adds a copy id button directly into the right click context menu so you don't have  to open the link and copy the id from the link.",
+                type: 'checkbox',
+                default: false,
+                requiredPermissions: ['contextMenus'],
+                contributors: ['447170745', '1564574922'],
+            },
+            copyUniverseIdEnabled: {
+                label: 'Allows you to quickly copy a universe id',
+                description:
+                    'This adds a copy universe id button directly into the right click context menu.',
+                type: 'checkbox',
+                default: false,
+                requiredPermissions: ['contextMenus'],
+            },
+            DownloadCreateEnabled: {
+                label: 'Adds a download button to create.roblox.com',
+                description:
+                    'This feature allows you to download assets like meshes, images, audios, etc from the create page.',
+                type: 'checkbox',
+                default: true,
+                contributors: ['447170745', '126448532'],
+            },
         },
     },
     Developer: {
@@ -2681,7 +2698,7 @@ var featuresData = {
             forceRegionDonationPopup: {
                 label: ['Force Region Donation Popup'],
                 description: [
-                    "When enabled, shows the region selector donation popup every time it's triggered for non-donators, ignoring cadence requirements. For testing purposes.",
+                    "When enabled, shows the region selector donation popup every time it's triggered, ignoring donor and cadence requirements. For testing purposes.",
                 ],
                 type: 'checkbox',
                 default: false,

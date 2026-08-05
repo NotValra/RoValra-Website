@@ -1,12 +1,21 @@
 {
     "releases": [
         {
+            "tag_name": "v2.6.4",
+            "name": "v2.6.4",
+            "published_date": "August 05, 2026",
+            "body": "New stuff:\r\n- Made preferred region a lot better, now joining the biggest server it can with the most players if using automatic mode.\r\n- Added an option to search locally for the preferred region cuz someone complained *cough cough alice*\r\n- Added allow viewing all bundled ids of a catalog item by right clicking (off by default) thanks to @bogdan-glitchm for making it\r\n\r\nChanges:\r\n- Added support for Robloxs new trade ui, so now all RoValras trading features should work with it.\r\n- Updated settings to be in a better category.\r\n- Improved contributing page in settings a lot, thanks to @bogdan-glitchm\r\n- Added Valra as a contributor on contributors and made it show total features\r\n- Removed Clickable Currently Playing Card since Roblox added it themselves.\r\n- Removed Clickable Friend Currently Playing Card since Roblox added it themselves.\r\n- Removed memory leak fix since that has long since been fixed by Roblox and is no longer needed.\r\n- Fixed under 16 being able to see social links on private games\r\n- Fixed spelling mistake\r\n- Fixed issues related to RoValras custom additions to the server list.\r\n- Fixed categorize wearing still showing items category even if there isnt anything in it\r\n- Fixed trade difference pills not showing when making a trade",
+            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.6.4",
+            "chrome_release_date": null,
+            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
+        },
+        {
             "tag_name": "v2.6.3",
             "name": "v2.6.3",
             "published_date": "July 29, 2026",
             "body": "New stuff:\r\n- Added free Roblox Plus themes, allowing you to enable Roblox Plus themes without Roblox Plus\r\n- Added an indicator if an item is hidden from the marketplace\r\n- Added FAE (facial age estimation) icon to item cards of items requiring FAE to buy.\r\n- Added a feature showing who on your friends list owns an item\r\n- Added accepting robux on the buy page cause that exists!, thanks to @auggeeo for making it\r\n- Added customizable background image, thanks to @IYoLsa for making it\r\n- Added decal support for showcases, to showcase art!\r\n\r\nChanges:\r\n- Made under 16 able to donate via a the game if they get parental permission, thanks to @auggeeo for making it.\r\n- Removed the theme switcher since it was too buggy\r\n- Removed download button hider as Roblox removed it themself, thanks to @nxvixz\r\n- Fixed badge text being offset upwards, thanks to @bogdan-glitchm for fixing it\r\n- Fixed thumbnails sometimes not displaying the broken icon for images that doesnt work\r\n- Fixed categorize wearing not being able to categorize hidden items\r\n- Fixed RoValra containers not having proper support for stuff like themes\r\n- Fixed categorized wearing failing to put animations in its own category in some cases\r\n- Fixed categorized wearing sometimes not showing an item a user is wearing\r\n- Attempted to fix showcases sometimes not showing showcased items\r\n- Changed Most Frequent Played Together to be off by default.",
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.6.3",
-            "chrome_release_date": "July 30, 2026",
+            "chrome_release_date": "July 31, 2026",
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         },
         {
@@ -260,22 +269,13 @@
             "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.7",
             "chrome_release_date": null,
             "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
-        },
-        {
-            "tag_name": "v2.4.6",
-            "name": "v2.4.6",
-            "published_date": "January 29, 2026",
-            "body": "Changes:\r\n- Removed all uses of auth.roblox.com/v1/logout to get the csrf token\r\n- Fixed the quick play button snapping when added to featured games containers. Thanks to alice for the help.\r\n- Fixed recent servers duplicating when spam clicking refresh.\r\n- Fixed https://github.com/NotValra/RoValra/issues/34\r\n- Updated the quickplay.scss to be readable lol\r\n- Changed quickplay private server name from dompurify to safeHtml since it is better for that use case.\r\n- Moved more css to a .scss file\r\n- Fixed what am i joining server id sometimes going on a different line if too long\r\n- Fixed corrupted preferred region value not being reset to the default",
-            "url": "https://github.com/NotValra/RoValra/releases/tag/v2.4.6",
-            "chrome_release_date": null,
-            "chrome_url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         }
     ],
     "chrome_extension": {
         "url": "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli",
         "version": "2.6.3",
-        "is_latest": true
+        "is_latest": false
     },
     "error_message": null,
-    "last_updated": "2026-08-05T12:52:59.624552Z"
+    "last_updated": "2026-08-05T15:13:31.125162Z"
 }
