@@ -64,6 +64,7 @@ jobs:
 
       - name: Setup Builder Icons Font
         run: |
+            MAIN_SOURCE="https://$GH_RAW_DOMAIN/$GIT_REPO/$GIT_REF/LuaPackages/Packages/_Index/BuilderIcons/BuilderIcons/Font"
             mkdir -p font/setup/buildericons
             cd font/setup/buildericons
             wget "$MAIN_SOURCE/BuilderIcons-Filled.ttf"
@@ -76,7 +77,6 @@ jobs:
             GH_RAW_DOMAIN: 'raw.githubusercontent.com'
             GIT_REPO: 'MaximumADHD/Roblox-Client-Tracker'
             GIT_REF: 'heads/roblox'
-            MAIN_SOURCE: 'https://$GH_RAW_DOMAIN/$GIT_REPO/$GIT_REF/LuaPackages/Packages/_Index/BuilderIcons/BuilderIcons/Font'
 
       - name: Setup Logos/Icons
         run: |
