@@ -8,4 +8,4 @@ All images, logos, and other visual assets in this repository are not licensed u
 
 The RoValra logo is fully copyrighted by Valra, and Valra retains full ownership of the logo.
 
-`gilbert.png` is fully owned by Valra. Other image assets may include third-party or externally owned elements, but they are still not licensed under the GPL v3.0 and may not be redistributed from this repository.
+The `icons` directory is fully owned by Valra. Other image assets may include third-party or externally owned elements, but they are still not licensed under the GPL v3.0 and may not be redistributed from this repository.

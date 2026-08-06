@@ -52,16 +52,36 @@ jobs:
             mkdir -p out/RoValra/Settings
             cp global-settings/feature-kill.json out/RoValra/Settings/config.json
 
-      - name: Setup RoValra Font
+      - name: Setup RoValra Icons Font
         run: |
             cd font
-            mkdir setup
+            mkdir -p setup
             python setup-font.py
             cd setup
             nanoemoji --output_file "RoValraFont.ttf" --family "RoValra Icons" --color_format glyf_colr_1 ./*.svg
             python -c "from fontTools.ttLib import TTFont; f = TTFont('build/RoValraFont.ttf'); f.flavor='woff2'; f.save('../../out/static/fonts/RoValraIcons.woff2')"
             cp build/RoValraFont.ttf ../../out/static/fonts/RoValraIcons.ttf
 
+      - name: Setup Builder Icons Font
+        run: |
+            MAIN_SOURCE="https://$GH_RAW_DOMAIN/$GIT_REPO/$GIT_REF/LuaPackages/Packages/_Index/BuilderIcons/BuilderIcons/Font"
+            mkdir -p font/setup/buildericons
+            cd font/setup/buildericons
+            wget "$MAIN_SOURCE/BuilderIcons-Filled.ttf"
+            wget "$MAIN_SOURCE/BuilderIcons-Regular.ttf"
+            python -c "from fontTools.ttLib import TTFont; f = TTFont('BuilderIcons-Filled.ttf'); f.flavor='woff2'; f.save('../../../out/static/fonts/BuilderIcons-Filled.woff2')"
+            python -c "from fontTools.ttLib import TTFont; f = TTFont('BuilderIcons-Regular.ttf'); f.flavor='woff2'; f.save('../../../out/static/fonts/BuilderIcons-Regular.woff2')"
+            cp BuilderIcons-Filled.ttf ../../../out/static/fonts/BuilderIcons-Filled.ttf
+            cp BuilderIcons-Regular.ttf ../../../out/static/fonts/BuilderIcons-Regular.ttf
+        env:
+            GH_RAW_DOMAIN: 'raw.githubusercontent.com'
+            GIT_REPO: 'MaximumADHD/Roblox-Client-Tracker'
+            GIT_REF: 'heads/roblox'
+
+      - name: Setup Logos/Icons
+        run: |
+            cp -r icons out/static/icons
+            cp icons/png/logo.png out/static/img/GILBERT.png
       - name: Run update script
         run: python main.py
         env:
