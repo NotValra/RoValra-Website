@@ -46,6 +46,7 @@ jobs:
       - name: Setup Misc
         run: |
             cp -r borders out/
+            cp -r berts out/
             cp -r badges out/
             cp -r geolocation out/
             cp -r global-settings out
