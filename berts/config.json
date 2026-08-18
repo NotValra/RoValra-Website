@@ -1,13 +1,124 @@
 [
+
   {
-    "id": 1,
-    "value": "test",
-    "label": "test",
-    "link": "https://www.rovalra.com/berts/static/94739345738063.webp",
-    "category": "Tests",
-    "artistId": 447170745,
+    "id": 2,
+    "value": "NeonBlack",
+    "label": "Neon Black",
+    "link": "https://www.rovalra.com/berts/static/neon-black.webp",
+    "category": "Neon",
+    "artistId": 48255812,
     "isNew": true,
     "isFree": false,
-    "assetId": "78973450587906"
+    "assetId": 87110385366523
+  },
+  {
+    "id": 3,
+    "value": "NeonBlue",
+    "label": "Neon Blue",
+    "link": "https://www.rovalra.com/berts/static/neon-blue.webp",
+    "category": "Neon",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 109978126465473
+  },
+  {
+    "id": 4,
+    "value": "NeonCyan",
+    "label": "Neon Cyan",
+    "link": "https://www.rovalra.com/berts/static/neon-cyan.webp",
+    "category": "Neon",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 87858461429470
+  },
+  {
+    "id": 5,
+    "value": "NeonGold",
+    "label": "Neon Gold",
+    "link": "https://www.rovalra.com/berts/static/neon-gold.webp",
+    "category": "Neon",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 89075054403372
+  },
+  {
+    "id": 6,
+    "value": "NeonGreen",
+    "label": "Neon Green",
+    "link": "https://www.rovalra.com/berts/static/neon-green.webp",
+    "category": "Neon",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 99462563623037
+  },
+  {
+    "id": 7,
+    "value": "NeonOrange",
+    "label": "Neon Orange",
+    "link": "https://www.rovalra.com/berts/static/neon-orange.webp",
+    "category": "Neon",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 111326075473907
+  },
+  {
+    "id": 8,
+    "value": "NeonPink",
+    "label": "Neon Pink",
+    "link": "https://www.rovalra.com/berts/static/neon-pink.webp",
+    "category": "Neon",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 88447236468214
+  },
+  {
+    "id": 9,
+    "value": "NeonPurple",
+    "label": "Neon Purple",
+    "link": "https://www.rovalra.com/berts/static/neon-purple.webp",
+    "category": "Neon",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 74595976060426
+  },
+  {
+    "id": 10,
+    "value": "NeonRed",
+    "label": "Neon Red",
+    "link": "https://www.rovalra.com/berts/static/neon-red.webp",
+    "category": "Neon",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 122217701149908
+  },
+  {
+    "id": 11,
+    "value": "ChristmasLights",
+    "label": "Christmas Lights",
+    "link": "https://www.rovalra.com/berts/static/christmas-lights.webp",
+    "category": "Christmas",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 136605055263276
+  },
+  {
+    "id": 12,
+    "value": "RainyDay",
+    "label": "Rainy Day",
+    "link": "https://www.rovalra.com/berts/static/rainy-day.webp",
+    "category": "Rain",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 78973450587906
   }
 ]
