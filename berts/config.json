@@ -120,5 +120,16 @@
     "isNew": true,
     "isFree": false,
     "assetId": 78973450587906
+  },
+  {
+    "id": 13,
+    "value": "NeonRainbow",
+    "label": "Neon Rainbow",
+    "link": "https://www.rovalra.com/berts/static/neon-rainbow.webp",
+    "category": "Neon",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 113165198582141
   }
 ]
