@@ -142,5 +142,115 @@
     "isNew": true,
     "isFree": false,
     "assetId": 111136897175359
+  },
+  {
+    "id": 15,
+    "value": "StudsBlack",
+    "label": "Studs Black",
+    "link": "https://www.rovalra.com/berts/static/retro-black.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 107830891627829
+  },
+  {
+    "id": 16,
+    "value": "StudsBlue",
+    "label": "Studs Blue",
+    "link": "https://www.rovalra.com/berts/static/retro-blue.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 140124574022922
+  },
+  {
+    "id": 17,
+    "value": "StudsCyan",
+    "label": "Studs Cyan",
+    "link": "https://www.rovalra.com/berts/static/retro-cyan.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 75672719022367
+  },
+  {
+    "id": 18,
+    "value": "StudsGold",
+    "label": "Studs Gold",
+    "link": "https://www.rovalra.com/berts/static/retro-gold.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 127294961500329
+  },
+  {
+    "id": 19,
+    "value": "StudsGreen",
+    "label": "Studs Green",
+    "link": "https://www.rovalra.com/berts/static/retro-green.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 128573656942958
+  },
+  {
+    "id": 20,
+    "value": "StudsGrey",
+    "label": "Studs Grey",
+    "link": "https://www.rovalra.com/berts/static/retro-grey.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 128777555241222
+  },
+  {
+    "id": 21,
+    "value": "StudsOrange",
+    "label": "Studs Orange",
+    "link": "https://www.rovalra.com/berts/static/retro-orange.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 119656867461524
+  },
+  {
+    "id": 22,
+    "value": "StudsPink",
+    "label": "Studs Pink",
+    "link": "https://www.rovalra.com/berts/static/retro-pink.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 91488545985313
+  },
+  {
+    "id": 23,
+    "value": "StudsPurple",
+    "label": "Studs Purple",
+    "link": "https://www.rovalra.com/berts/static/retro-purple.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 75031112139019
+  },
+  {
+    "id": 24,
+    "value": "StudsRed",
+    "label": "Studs Red",
+    "link": "https://www.rovalra.com/berts/static/retro-red.webp",
+    "category": "Studs",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 126485878080988
   }
 ]
