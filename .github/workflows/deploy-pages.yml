@@ -77,7 +77,7 @@ jobs:
             GH_RAW_DOMAIN: 'raw.githubusercontent.com'
             GIT_REPO: 'MaximumADHD/Roblox-Client-Tracker'
             GIT_REF: 'heads/roblox'
-            GH_AUTH_HEADER: 'authentication: Bearer ${{ secrets.GITHUB_TOKEN }}'
+            GH_AUTH_HEADER: 'authentication: Bearer ${{ secrets.GH_PAT }}'
 
       - name: Setup Logos/Icons
         run: |
@@ -86,7 +86,7 @@ jobs:
       - name: Run update script
         run: python main.py
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Push Chrome Extension Release Data Changes
         run: |
