@@ -42,7 +42,7 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
-        run: pip install requests picosvg nanoemoji brotli fonttools lxml
+        run: pip install -r requirements.txt
 
       - name: Setup Misc
         run: |
