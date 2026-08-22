@@ -1,0 +1,25 @@
+{
+    "$schema": "./roblox-themes.schema.json",
+    "themes": [
+        { "setting": "CosmicDust", "class": "cosmic-dust-theme" },
+        { "setting": "NebulaDrift", "class": "nebula-drift-theme" },
+
+        { "setting": "PolarFreeze", "class": "polar-freeze-theme" },
+        { "setting": "NitroFrost", "class": "nitro-frost-theme" },
+
+        { "setting": "SuperCharge", "class": "super-charge-theme" },
+        { "setting": "CircuitRush", "class": "circuit-rush-theme" },
+
+        { "setting": "ElectricLime", "class": "electric-lime-theme" },
+        { "setting": "KineticEnergy", "class": "kinetic-energy-theme" },
+
+        { "setting": "LavaGlow", "class": "lava-glow-theme" },
+        { "setting": "InfernoBlast", "class": "inferno-blast-theme" },
+
+        { "setting": "StarBurst", "class": "star-burst-theme" },
+        { "setting": "HyperPlum", "class": "hyper-plum-theme" },
+
+        { "setting": "PixelPop", "class": "pixel-pop-theme" },
+        { "setting": "QuantumPulse", "class": "quantum-pulse-theme" }
+    ]
+}
