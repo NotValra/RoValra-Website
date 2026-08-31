@@ -7,7 +7,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-black.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 87110385366523
   },
@@ -18,7 +18,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-blue.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 109978126465473
   },
@@ -29,7 +29,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-cyan.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 87858461429470
   },
@@ -40,7 +40,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-gold.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 89075054403372
   },
@@ -51,7 +51,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-green.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 99462563623037
   },
@@ -62,7 +62,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-orange.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 111326075473907
   },
@@ -73,7 +73,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-pink.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 88447236468214
   },
@@ -84,7 +84,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-purple.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 74595976060426
   },
@@ -95,7 +95,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-red.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 122217701149908
   },
@@ -106,7 +106,7 @@
     "link": "https://www.rovalra.com/berts/static/christmas-lights.webp",
     "category": "Christmas",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 136605055263276
   },
@@ -117,7 +117,7 @@
     "link": "https://www.rovalra.com/berts/static/rainy-day.webp",
     "category": "Rain",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 78973450587906
   },
@@ -128,7 +128,7 @@
     "link": "https://www.rovalra.com/berts/static/neon-rainbow.webp",
     "category": "Neon",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 113165198582141
   },
@@ -139,7 +139,7 @@
     "link": "https://www.rovalra.com/berts/static/source-error.webp",
     "category": "Misc",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 111136897175359
   },
@@ -150,7 +150,7 @@
     "link": "https://www.rovalra.com/berts/static/retro-black.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 107830891627829
   },
@@ -161,7 +161,7 @@
     "link": "https://www.rovalra.com/berts/static/retro-blue.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 140124574022922
   },
@@ -172,7 +172,7 @@
     "link": "https://www.rovalra.com/berts/static/retro-cyan.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 75672719022367
   },
@@ -183,7 +183,7 @@
     "link": "https://www.rovalra.com/berts/static/retro-gold.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 127294961500329
   },
@@ -194,7 +194,7 @@
     "link": "https://www.rovalra.com/berts/static/retro-green.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 128573656942958
   },
@@ -205,7 +205,7 @@
     "link": "https://www.rovalra.com/berts/static/retro-grey.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 128777555241222
   },
@@ -216,7 +216,7 @@
     "link": "https://www.rovalra.com/berts/static/retro-orange.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 119656867461524
   },
@@ -227,7 +227,7 @@
     "link": "https://www.rovalra.com/berts/static/retro-pink.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 91488545985313
   },
@@ -238,7 +238,7 @@
     "link": "https://www.rovalra.com/berts/static/retro-purple.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 75031112139019
   },
@@ -249,8 +249,41 @@
     "link": "https://www.rovalra.com/berts/static/retro-red.webp",
     "category": "Studs",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 126485878080988
+  },
+  {
+    "id": 25,
+    "value": "Point",
+    "label": "Point",
+    "link": "https://www.rovalra.com/berts/static/point.webp",
+    "category": "Misc",
+    "artistId": 4866259395,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 114100583716775
+  },
+  {
+    "id": 26,
+    "value": "Stupid",
+    "label": "Stupid",
+    "link": "https://www.rovalra.com/berts/static/stupid.webp",
+    "category": "Misc",
+    "artistId": 4866259395,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 136174795556128
+  },
+  {
+    "id": 27,
+    "value": "IPadInSnowMeow",
+    "label": "iPad in Snow Meow",
+    "link": "https://www.rovalra.com/berts/static/ipad_in_snow_meow.webp",
+    "category": "Cats",
+    "artistId": 4866259395,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 99086447257205
   }
 ]
