@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://www.rovalra.com/global-settings/roblox-themes.schema.json",
+    "title": "Roblox Plus Theme Identifiers JSON",
+    "description": "This file groups Roblox Plus Themes with their value in settings and actual class name.",
+    "type": "object",
+    "properties": {
+        "themes": {
+            "title": "Roblox Plus Theme Identifiers",
+            "description": "This groups Roblox Plus Themes with their value in settings and actual class name.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "setting": {
+                        "title": "Setting Value",
+                        "description": "The value that is set in Roblox's settings data. An example is NebulaDrift",
+                        "type": "string",
+                        "pattern": "^[A-Za-z]+$",
+                        "examples": [ "NebulaDrift", "CosmicDust" ]
+                    },
+                    "class": {
+                        "title": "Class Name",
+                        "description": "The CSS class name that the theme uses. An example is nebula-drift-theme",
+                        "type": "string",
+                        "pattern": "^[a-z]+(?:-{1,2}[a-z]+)*$"
+                    }
+                },
+                "uniqueItems": true,
+                "required": ["setting", "class"]
+            },
+            "minItems": 1
+        }
+    },
+    "required": [ "themes" ]
+}
