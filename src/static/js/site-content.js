@@ -37,7 +37,11 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        renderFaqs(document.querySelector('[data-faq-list="faq"]'), faqItems);
+
+        const faqRoot = document.querySelector('[data-faq-list="faq"]');
+        if (faqRoot && !faqRoot.children.length) {
+            renderFaqs(faqRoot, faqItems);
+        }
     });
 
     window.SiteContent = Object.freeze({ faqItems, renderFaqs });

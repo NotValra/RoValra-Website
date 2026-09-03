@@ -93,17 +93,52 @@
             </div>
         </div>
 
-        <div class="comparison-wrapper" id="features">
+        <section class="feature-showcase" id="features" aria-label="RoValra feature examples">
+            <h2 class="feature-showcase-title">Features</h2>
+            <div class="feature-steps">
+                <article class="feature-step">
+                    <div class="feature-step-media">
+                        <img src="images/regionSelector.png" alt="RoValra server information and region selector" width="1280" height="853" fetchpriority="high" decoding="async">
+                    </div>
+                </article>
+
+                <article class="feature-step">
+                    <div class="feature-step-media">
+                        <img src="images/saveRobux.png" alt="RoValra showing a purchase with Robux savings" width="1280" height="853" loading="lazy" decoding="async">
+                    </div>
+                </article>
+
+                <article class="feature-step">
+                    <div class="feature-step-media">
+                        <img src="images/QuickPlay.png" alt="RoValra Quick Play and preferred regions tools" width="1280" height="853" loading="lazy" decoding="async">
+                    </div>
+                </article>
+
+                <article class="feature-step">
+                    <div class="feature-step-media">
+                        <img src="images/hiddenGames.png" alt="RoValra showing hidden Roblox experiences" width="1280" height="853" loading="lazy" decoding="async">
+                        <p class="image-credit">
+                            Images made by
+                            <a class="image-credit-link" href="https://discord.com/users/955052932078923837" target="_blank" rel="noopener noreferrer">
+                                @dormibo <i class="fab fa-discord" aria-hidden="true"></i>
+                            </a>
+                            <a class="image-credit-link" href="https://www.roblox.com/users/1337447242/profile" target="_blank" rel="noopener noreferrer">
+                                @dookwork <img src="static/img/roblox-o.svg" alt="Roblox" width="13" height="13">
+                            </a>
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="comparison-wrapper">
             <div class="comparison-container ui-section">
-                <h2 class="section-heading">Feature Highlights</h2>
-                <p class="section-subtitle">Explore all the features available in RoValra</p>
-
-                <div class="highlights-grid" id="featuresGrid"></div>
-
                 <div id="featuresButtonContainer" class="button-row">
                     <button id="loadMoreBtn" class="ui-pill ui-button inline-flex items-center justify-center" type="button"><span>Show All Features</span></button>
                     <button id="collapseBtn" class="ui-pill ui-button inline-flex items-center justify-center" type="button" hidden><span>Collapse</span></button>
                 </div>
+
+                <div class="highlights-grid" id="featuresGrid"></div>
             </div>
         </div>
 
@@ -367,7 +402,7 @@
         return card;
     }
 
-    function renderFeatures() {
+    function renderHighlights() {
         const grid = document.getElementById('featuresGrid');
         if (!grid) return;
         grid.innerHTML = '';
@@ -377,6 +412,15 @@
             card.classList.add('feature-item-highlight');
             grid.appendChild(card);
         });
+
+        grid.classList.add('is-collapsed');
+    }
+
+    let fullFeaturesRendered = false;
+
+    function renderAllFeatures() {
+        const grid = document.getElementById('featuresGrid');
+        if (!grid || fullFeaturesRendered) return;
 
         for (const categoryKey in featuresData) {
             if (categoryKey === 'Developer' || categoryKey === 'FunStuff') continue;
@@ -397,10 +441,11 @@
                 });
             }
         }
-        grid.classList.add('is-collapsed');
+        fullFeaturesRendered = true;
     }
 
     document.getElementById('loadMoreBtn')?.addEventListener('click', () => {
+        renderAllFeatures();
         document.getElementById('featuresGrid')?.classList.remove('is-collapsed');
         document.getElementById('loadMoreBtn').hidden = true;
         document.getElementById('collapseBtn').hidden = false;
@@ -413,12 +458,11 @@
         document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
     });
 
-    (window.requestIdleCallback || (cb => setTimeout(cb, 1)))(() => {
-        loadChromeStats();
-        initFilteredFeatures();
-        updateFeatureCount();
-        renderFeatures();
-    });
+
+    initFilteredFeatures();
+    updateFeatureCount();
+    renderHighlights();
+    loadChromeStats();
 
     document.addEventListener('DOMContentLoaded', function() {
         const copyrightYear = document.getElementById('copyright-year');
@@ -497,6 +541,7 @@
                 sectionObserver.observe(element);
             }
         });
+
     });
 </script>
 </body>
