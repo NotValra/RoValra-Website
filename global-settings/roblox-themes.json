@@ -20,6 +20,8 @@
         { "setting": "HyperPlum", "class": "hyper-plum-theme" },
 
         { "setting": "PixelPop", "class": "pixel-pop-theme" },
-        { "setting": "QuantumPulse", "class": "quantum-pulse-theme" }
+        { "setting": "QuantumPulse", "class": "quantum-pulse-theme" },
+        
+        { "setting": "Classic", "class": "classic-theme" }
     ]
 }
