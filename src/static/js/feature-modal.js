@@ -92,6 +92,7 @@ if (featureModal) {
 function parseMarkdown(text) {
     if (!text) return '';
     return text
+        .replace(/\{\{\s*([\s\S]*?)\s+\w+\s*\}\}/g, '$1')
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
         .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
 }
