@@ -39,9 +39,10 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
+          cache: 'pip'
 
       - name: Install dependencies
-        run: pip install requests picosvg nanoemoji brotli fonttools lxml
+        run: pip install -r requirements.txt
 
       - name: Setup Misc
         run: |
@@ -68,8 +69,8 @@ jobs:
             MAIN_SOURCE="https://$GH_RAW_DOMAIN/$GIT_REPO/$GIT_REF/LuaPackages/Packages/_Index/BuilderIcons/BuilderIcons/Font"
             mkdir -p font/setup/buildericons
             cd font/setup/buildericons
-            wget "$MAIN_SOURCE/BuilderIcons-Filled.ttf"
-            wget "$MAIN_SOURCE/BuilderIcons-Regular.ttf"
+            wget --header="$GH_AUTH_HEADER" "$MAIN_SOURCE/BuilderIcons-Filled.ttf"
+            wget --header="$GH_AUTH_HEADER" "$MAIN_SOURCE/BuilderIcons-Regular.ttf"
             python -c "from fontTools.ttLib import TTFont; f = TTFont('BuilderIcons-Filled.ttf'); f.flavor='woff2'; f.save('../../../out/static/fonts/BuilderIcons-Filled.woff2')"
             python -c "from fontTools.ttLib import TTFont; f = TTFont('BuilderIcons-Regular.ttf'); f.flavor='woff2'; f.save('../../../out/static/fonts/BuilderIcons-Regular.woff2')"
             cp BuilderIcons-Filled.ttf ../../../out/static/fonts/BuilderIcons-Filled.ttf
@@ -78,6 +79,7 @@ jobs:
             GH_RAW_DOMAIN: 'raw.githubusercontent.com'
             GIT_REPO: 'MaximumADHD/Roblox-Client-Tracker'
             GIT_REF: 'heads/roblox'
+            GH_AUTH_HEADER: 'authentication: Bearer ${{ secrets.GH_PAT }}'
 
       - name: Setup Logos/Icons
         run: |
@@ -86,7 +88,7 @@ jobs:
       - name: Run update script
         run: python main.py
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Push Chrome Extension Release Data Changes
         run: |

@@ -125,9 +125,9 @@ def update_changelogs():
             tag_name = release.get("tag_name")
             c_date = existing_chrome_dates.get(tag_name)
 
-            if chrome_version and chrome_updated_date and tag_name:
-                if tag_name.lstrip('v') == chrome_version:
-                    c_date = chrome_updated_date
+            #if chrome_version and chrome_updated_date and tag_name:
+                #if tag_name.lstrip('v') == chrome_version:
+                    #c_date = chrome_updated_date
 
             processed_releases.append({
                 "tag_name": tag_name,
