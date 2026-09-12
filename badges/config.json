@@ -3,24 +3,24 @@
     "id": 1,
     "value": "donator_1",
     "label": "Donator 1",
-    "link": "https://www.rovalra.com/badges/icons/Bronze.png"
+    "link": "https://www.rovalra.com/badges/icons/Bronze.webp"
   },
   {
     "id": 2,
     "value": "donator_2",
     "label": "Donator 2",
-    "link": "https://www.rovalra.com/badges/icons/Silver.png"
+    "link": "https://www.rovalra.com/badges/icons/Silver.webp"
   },
   {
     "id": 3,
     "value": "donator_3",
     "label": "Donator 3",
-    "link": "https://www.rovalra.com/badges/icons/Gold.png"
+    "link": "https://www.rovalra.com/badges/icons/Gold.webp"
   },
   {
     "id": 4,
     "value": "legacy_donator",
     "label": "Legacy Donator",
-    "link": "https://www.rovalra.com/badges/icons/Diamond.png"
+    "link": "https://www.rovalra.com/badges/icons/Diamond.webp"
   }
 ]
