@@ -1,0 +1,6 @@
+requests
+picosvg
+nanoemoji
+brotli
+fonttools
+lxml
