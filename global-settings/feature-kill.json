@@ -1,4 +1,23 @@
 {
-    "incidentTrackingEnabled": "",
-    "FreeRobloxPlusThemesEnabledv3": ""
+    "$schema": "./feature-kill.schema.json",
+    "features": [
+        {
+            "setting": "incidentTrackingEnabled",
+            "versions": [
+                {
+                    "ver": "<=2.6.10",
+                    "reason": "Caused server issues."
+                }
+            ]
+        },
+        {
+            "setting": "FreeRobloxPlusThemesEnabledv3",
+            "versions": [
+                {
+                    "ver": "*",
+                    "reason": "Roblox broke saving on their server."
+                }
+            ]
+        }
+    ]
 }
