@@ -44,13 +44,13 @@ jobs:
         run: pip install requests picosvg nanoemoji brotli fonttools lxml
 
       - name: Validate Feature Kill JSON
-        uses: dsanders11/json-schema-validate-action@v2
+        uses: dsanders11/json-schema-validate-action@v2.1.0
         with:
           schema: global-settings/feature-kill.schema.json
           files: global-settings/feature-kill.json
 
       - name: Validate Plus Theme Registry JSON
-        uses: dsanders11/json-schema-validate-action@v2
+        uses: dsanders11/json-schema-validate-action@v2.1.0
         continue-on-error: true
         with:
           schema: global-settings/roblox-themes.schema.json
