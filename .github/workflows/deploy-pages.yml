@@ -51,7 +51,7 @@ jobs:
             cp -r geolocation out/
             cp -r global-settings out
             mkdir -p out/RoValra/Settings
-            cp global-settings/feature-kill.json out/RoValra/Settings/config.json
+            python .github/assets/backport-feature-kill.py
 
       - name: Setup RoValra Icons Font
         run: |

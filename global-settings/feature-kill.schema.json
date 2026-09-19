@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.rovalra.com/global-settings/feature-kill.schema.json",
+  "title": "Feature Kill List for RoValra",
+  "type": "object",
+  "properties": {
+    "features": {
+      "title": "Feature Kill List",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "setting": {
+            "title": "The setting to disable",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Provide a generic reason for the reason this feature was disabled",
+            "type": "string"
+          },
+          "versions": {
+            "title": "Versions Disabled",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/versionIncompStr"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "ver": {
+                      "$ref": "#/$defs/versionIncompStr"
+                    },
+                    "reason": {
+                      "title": "A reason to provide for the version incompatibilies.",
+                      "type": "string"
+                    }
+                  },
+                  "required": ["ver"]
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "setting"
+        ]
+      }
+    }
+  },
+  "required": [
+    "features"
+  ],
+  "$defs": {
+    "versionIncompStr": {
+      "type": "string",
+      "title": "A version incompatibility",
+      "pattern": "^(?:(?:(==|!=|>=|<=|>|<|=)?\\s*v?(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?)|\\*)$"
+    }
+  }
+}
