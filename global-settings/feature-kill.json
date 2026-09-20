@@ -3,19 +3,30 @@
     "features": [
         {
             "setting": "incidentTrackingEnabled",
-            "versions": [
+            "incompatibilities": [
                 {
-                    "ver": "<=2.6.10",
-                    "reason": "Caused server issues."
+                    "versions": [
+                        "*"
+                    ],
+                    "reason": "Caused issues with the server hosting the status page."
                 }
             ]
         },
         {
             "setting": "FreeRobloxPlusThemesEnabledv3",
-            "versions": [
+            "incompatibilities": [
                 {
-                    "ver": "*",
-                    "reason": "Roblox broke saving on their server."
+                    "versions": "*",
+                    "reason": "Roblox broke saving themes on their servers."
+                }
+            ]
+        },
+        {
+            "setting": "displayAppThemeUserProfile",
+            "incompatibilities": [
+                {
+                    "versions": "*",
+                    "reason": "Disabled because of Free Roblox Plus Themes having issues due to Roblox breaking theme saving on their own servers."
                 }
             ]
         }

@@ -12,7 +12,7 @@ with open(FEATURE_KILL_FILE, 'r', encoding='utf-8') as f:
 
 
 for feat in feature_kill_contents.get("features", []):
-    if feat.get("versions") and len(feat["versions"]) > 0:
+    if feat.get("incompatibilities") and len(feat["incompatibilities"]) > 0:
         feature_kill_backport[feat["setting"]] = ""
 
 
