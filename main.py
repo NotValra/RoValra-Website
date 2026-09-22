@@ -13,7 +13,16 @@ def update_features_config(tag_name):
     url = f"https://raw.githubusercontent.com/NotValra/RoValra/{tag_name}/src/content/core/settings/settingConfig.js"
     print(f"Fetching settings config from {url}...")
 
-    response = requests.get(url)
+    response = requests.get(url, timeout=30)
+
+    # A release can briefly appear in the GitHub releases API before its tag
+    # is available through raw.githubusercontent.com. Use the default branch
+    # as a safe fallback instead of leaving the website with its placeholder
+    # feature list.
+    if response.status_code != 200 and tag_name != "main":
+        fallback_url = "https://raw.githubusercontent.com/NotValra/RoValra/main/src/content/core/settings/settingConfig.js"
+        print(f"Tag fetch returned {response.status_code}; trying {fallback_url}...")
+        response = requests.get(fallback_url, timeout=30)
 
     if response.status_code == 200:
         content = response.text
@@ -55,8 +64,10 @@ def update_features_config(tag_name):
             f.write(new_content)
 
         print(f"Successfully updated {FEATURES_FILE} based on tag {tag_name}.")
+        return True
     else:
         print(f"Failed to fetch settings config. Status code: {response.status_code}")
+        return False
 
 def update_changelogs():
     current_version = None
@@ -99,9 +110,19 @@ def update_changelogs():
             latest_release = releases[0]
             latest_tag = latest_release.get("tag_name")
 
-            if latest_tag:
+            needs_feature_refresh = True
+            if os.path.exists(FEATURES_FILE):
+                try:
+                    with open(FEATURES_FILE, 'r', encoding='utf-8') as f:
+                        needs_feature_refresh = 'FeaturesFailedToLoad' in f.read()
+                except OSError:
+                    needs_feature_refresh = True
+
+            if latest_tag and (latest_tag != current_version or needs_feature_refresh):
                 print(f"New release detected: {latest_tag} (Old: {current_version}).")
                 update_features_config(latest_tag)
+            elif latest_tag:
+                print(f"Release {latest_tag} is already reflected in the website data; skipping feature config fetch.")
 
         chrome_url = "https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli"
         chrome_version = None
