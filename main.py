@@ -28,13 +28,6 @@ def update_features_config(tag_name):
         clean_content = re.sub(import_pattern, '', content)
         new_content = clean_content.replace("export const SETTINGS_CONFIG =", "var featuresData =")
 
-
-        browser_shim = (
-            "var chrome = { runtime: { getManifest: function () { "
-            "return { version: 'website' }; } } };\n"
-        )
-        new_content = browser_shim + new_content
-
         if mocks:
             mock_definitions = "\n".join([f"var {m} = null;" for m in sorted(set(mocks))])
             new_content = f"// Automatically mocked imports for website compatibility\n{mock_definitions}\n\n{new_content}"
@@ -61,7 +54,6 @@ def update_features_config(tag_name):
 def update_changelogs():
     current_version = None
     existing_chrome_dates = {}
-    previous_chrome_version = None
 
     if os.path.exists(CHROME_RELEASE_DATA):
         try:
@@ -76,18 +68,8 @@ def update_changelogs():
         except Exception:
             pass
 
-
-    if os.path.exists(OUTPUT_FILE):
-        try:
-            with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
-                previous_chrome_version = json.load(f).get('chrome_extension', {}).get('version')
-        except (OSError, ValueError, TypeError):
-            pass
-
     url = f"https://api.github.com/repos/NotValra/RoValra/releases"
-    headers = {"Accept": "application/vnd.github+json", "User-Agent": "RoValra-Website-Updater"}
-    if os.getenv("GH_TOKEN"):
-        headers["Authorization"] = f"Bearer {os.getenv('GH_TOKEN')}"
+    headers = {"authentication": f"Bearer {os.getenv("GH_TOKEN")}"}
     print(f"Fetching releases from {url}...")
 
     response = requests.get(url, headers=headers)
@@ -110,38 +92,18 @@ def update_changelogs():
 
         print(f"Fetching Chrome Web Store version...")
         try:
-            c_response = requests.get(
-                chrome_url,
-                headers={"User-Agent": "Mozilla/5.0 (compatible; RoValra-Website-Updater/1.0)"},
-                timeout=30,
-            )
+            c_response = requests.get(chrome_url)
             if c_response.status_code == 200:
-                version_patterns = (
-                    r'"version"\s*:\s*"(\d+(?:\.\d+)+)"',
-                    r'(?is)>\s*Version\s*</[^>]+>\s*<[^>]+>\s*(\d+(?:\.\d+)+)\s*<',
-                    r'(?is)\bVersion\b.{0,160}?\b(\d+(?:\.\d+)+)\b',
-                )
-                for pattern in version_patterns:
-                    match = re.search(pattern, c_response.text)
-                    if match:
-                        chrome_version = match.group(1).strip()
-                        break
-                if chrome_version:
+                match = re.search(r'<div class="nBZElf">([^<]+)</div>', c_response.text)
+                if match:
+                    chrome_version = match.group(1).strip()
                     print(f"Chrome Web Store version: {chrome_version}")
 
-                date_match = re.search(
-                    r'(?is)\bUpdated\b.{0,180}?([A-Z][a-z]+\s+\d{1,2},\s+\d{4})',
-                    c_response.text,
-                )
+                date_match = re.search(r'>Updated</div>\s*<div[^>]*>([^<]+)</div>', c_response.text)
                 if date_match:
                     chrome_updated_date = date_match.group(1).strip()
         except Exception as e:
             print(f"Error fetching Chrome version: {e}")
-
-        if not chrome_version:
-            chrome_version = previous_chrome_version
-            if chrome_version:
-                print(f"Using previously known Chrome Web Store version: {chrome_version}")
 
         if releases and chrome_version:
             latest_tag_check = releases[0].get("tag_name", "").lstrip('v')
