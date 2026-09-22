@@ -320,7 +320,7 @@
 
 <script src="static/js/shared-components.js?v=2.4.15" defer></script>
 <script src="static/js/site-content.js?v=2.4.15" defer></script>
-<script src="static/js/features.js?v=2.4.15" defer></script>
+<script src="static/js/features.js?v=2.4.16" defer></script>
 <script defer>
 
     let = filterObject = (obj, predicate) =>
@@ -474,11 +474,12 @@
     });
 
 
-    initFilteredFeatures();
-    updateFeatureCount();
-    loadChromeStats();
-
     document.addEventListener('DOMContentLoaded', function() {
+        initFilteredFeatures();
+        renderHighlights();
+        updateFeatureCount();
+        loadChromeStats();
+
         const copyrightYear = document.getElementById('copyright-year');
         if (copyrightYear) {
             copyrightYear.innerHTML = `© ${new Date().getFullYear()} RoValra. Not affiliated with Roblox Corporation.`;
