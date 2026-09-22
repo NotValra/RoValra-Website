@@ -56,6 +56,14 @@
         ],
         "additionalProperties": false
       }
+    },
+    "quick": {
+      "type": "array",
+      "title": "Quick disable settings",
+      "items": {
+        "type": "string",
+        "title": "A setting to quick disable"
+      }
     }
   },
   "required": [
