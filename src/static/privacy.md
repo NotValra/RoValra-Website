@@ -1,6 +1,6 @@
 **Privacy Policy for RoValra Chrome Extension**
 
-**Effective Date:** September 16, 2026
+**Effective Date:** September 22, 2026
 
 **Introduction**
 
@@ -78,6 +78,7 @@ The Extension may handle the following data for specific features:
 - **Location coordinates:** If a feature uses your location, RoValra may store your latitude and longitude in the Extension's local storage on your device. These coordinates are stored locally only and are not sent to RoValra servers or third parties by the Extension's location feature.
 - **Local Roblox API key:** RoValra may generate a Roblox API key for local use on your device. The key is created with **no permissions** and cannot perform actions on your Roblox account. It is used only to support Roblox APIs that require a key, is stored locally, and is not transmitted to RoValra servers or third parties.
 - **Optional Discord connection:** If you choose to connect your Discord account to RoValra to receive donator roles in RoValra's official Discord server, we may store your Discord user ID. We use it only to associate your Discord account with your RoValra donator status and assign or manage the applicable server role. Connecting Discord is optional; you can request removal of this association using the contact information below.
+- **Playtime tracking:** When playtime tracking is enabled, RoValra collects and stores information about your Roblox playtime on RoValra's servers so playtime features can display your playtime within RoValra. Playtime tracking can be disabled at any time; when disabled, RoValra stops collecting and storing playtime data for these features.
 
 We do **not** store your Discord username, Discord OAuth tokens, or Discord server-membership data.
 
