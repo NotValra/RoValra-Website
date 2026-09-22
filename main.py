@@ -2,6 +2,7 @@ import requests
 import json
 import os
 import re
+import subprocess
 from datetime import datetime, timezone
 
 
@@ -9,14 +10,32 @@ OUTPUT_FILE = "out/static/json/changelogs.json"
 FEATURES_FILE = "out/static/js/features.js"
 CHROME_RELEASE_DATA = ".github/assets/chrome-release-data.json"
 
+def report_feature_failure(reason, details=None):
+    message = f"FEATURES FAILED: {reason}"
+    if details:
+        message += f" — {details}"
+    print(message)
+
+
 def update_features_config(tag_name):
     url = f"https://raw.githubusercontent.com/NotValra/RoValra/{tag_name}/src/content/core/settings/settingConfig.js"
     print(f"Fetching settings config from {url}...")
 
-    response = requests.get(url)
+    try:
+        response = requests.get(url, timeout=30)
+    except requests.RequestException as error:
+        report_feature_failure("could not fetch settings config", repr(error))
+        return False
 
+    if response.status_code != 200:
+        report_feature_failure(
+            "could not fetch settings config",
+            f"HTTP {response.status_code}: {response.text[:300]!r}",
+        )
+        return False
+
+    content = response.text
     if response.status_code == 200:
-        content = response.text
 
         import_pattern = r'import\s+\{([\s\S]*?)\}\s+from\s+[\'"].*?[\'"];?'
         imports = re.findall(import_pattern, content)
@@ -26,11 +45,34 @@ def update_features_config(tag_name):
             mocks.extend([v for v in vars_to_mock if v])
 
         clean_content = re.sub(import_pattern, '', content)
-        new_content = clean_content.replace("export const SETTINGS_CONFIG =", "var featuresData =")
+        export_marker = "export const SETTINGS_CONFIG ="
+        if export_marker not in clean_content:
+            report_feature_failure(
+                "settings config has an unexpected format",
+                f"missing {export_marker!r}; found {len(imports)} imports",
+            )
+            return False
 
-        if mocks:
-            mock_definitions = "\n".join([f"var {m} = null;" for m in sorted(set(mocks))])
-            new_content = f"// Automatically mocked imports for website compatibility\n{mock_definitions}\n\n{new_content}"
+        new_content = clean_content.replace(export_marker, "var featuresData =", 1)
+
+        mock_definitions = "\n".join([f"var {m} = null;" for m in sorted(set(mocks))])
+        mock_definitions += "\nvar chrome = { runtime: { getManifest: function () { return { version: 'website' }; } } };"
+        new_content = f"// Automatically mocked imports and extension APIs for website compatibility\n{mock_definitions}\n\n{new_content}"
+
+        try:
+            validation = subprocess.run(
+                ["node", "--check"], input=new_content, text=True,
+                capture_output=True, check=False,
+            )
+        except OSError as error:
+            print(f"FEATURES WARNING: skipped JavaScript syntax validation — {error}")
+        else:
+            if validation.returncode != 0:
+                report_feature_failure(
+                    "generated features.js contains invalid JavaScript",
+                    validation.stderr.strip() or validation.stdout.strip(),
+                )
+                return False
 
         if os.path.exists(FEATURES_FILE):
             try:
@@ -39,17 +81,21 @@ def update_features_config(tag_name):
                 if current_content == new_content:
                     print(f"Features config is already up to date with tag {tag_name}.")
                     return
-            except Exception:
-                pass
+            except OSError as error:
+                report_feature_failure("could not read existing features.js", repr(error))
+                return False
 
         os.makedirs(os.path.dirname(FEATURES_FILE), exist_ok=True)
 
-        with open(FEATURES_FILE, 'w', encoding='utf-8') as f:
-            f.write(new_content)
+        try:
+            with open(FEATURES_FILE, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+        except OSError as error:
+            report_feature_failure(f"could not write {FEATURES_FILE}", repr(error))
+            return False
 
         print(f"Successfully updated {FEATURES_FILE} based on tag {tag_name}.")
-    else:
-        print(f"Failed to fetch settings config. Status code: {response.status_code}")
+        return True
 
 def update_changelogs():
     current_version = None
