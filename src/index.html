@@ -474,11 +474,14 @@
     });
 
 
-    initFilteredFeatures();
-    updateFeatureCount();
-    loadChromeStats();
-
     document.addEventListener('DOMContentLoaded', function() {
+        // features.js is deferred, so it is guaranteed to have executed by
+        // DOMContentLoaded. Running this earlier made the feature grid stay
+        // empty because featuresData did not exist yet.
+        initFilteredFeatures();
+        updateFeatureCount();
+        loadChromeStats();
+
         const copyrightYear = document.getElementById('copyright-year');
         if (copyrightYear) {
             copyrightYear.innerHTML = `© ${new Date().getFullYear()} RoValra. Not affiliated with Roblox Corporation.`;
