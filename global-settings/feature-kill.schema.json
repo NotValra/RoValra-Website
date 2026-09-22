@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.rovalra.com/global-settings/feature-kill.schema.json",
+  "title": "\"Feature Kill\" List for RoValra",
+  "type": "object",
+  "properties": {
+    "features": {
+      "title": "Feature Kill/Incompatibilities List",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "setting": {
+            "title": "The setting to disable for incompatibilities",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Provide a generic reason for the reason this feature was disabled. You should ususally provide a specific one for each incompatibility.",
+            "type": "string"
+          },
+          "incompatibilities": {
+            "title": "Incompatibilities that disable features",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "versions": {
+                        "anyOf": [
+                            {
+                                "title": "An array of version ranges",
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/$defs/versionRange"
+                                },
+                                "uniqueItems": true,
+                                "minItems": 1
+                            },
+                            {
+                                "$ref": "#/$defs/versionRange"
+                            }
+                        ]
+                    },
+                    "reason": {
+                        "title": "A reason to provide for the version incompatibilies.",
+                        "type": "string"
+                    }
+                },
+                "required": ["versions"],
+                "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "setting",
+          "incompatibilities"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "quick": {
+      "type": "array",
+      "title": "Quick disable settings",
+      "items": {
+        "type": "string",
+        "title": "A setting to quick disable"
+      }
+    }
+  },
+  "required": [
+    "features",
+    "quick"
+  ],
+  "$defs": {
+    "versionRange": {
+      "type": "string",
+      "title": "A version range (READ DESCRIPTION)",
+      "description": "Refer to the semver npm package (https://www.npmjs.com/package/semver) (or even use it's cli) to check if a version is correct. The extension will check if the range is valid, if not, then the extension will ignore it."
+    }
+  }
+}

@@ -1,4 +1,37 @@
 {
-    "incidentTrackingEnabled": "",
-    "FreeRobloxPlusThemesEnabledv3": ""
+    "$schema": "./feature-kill.schema.json",
+    "features": [
+        {
+            "setting": "incidentTrackingEnabled",
+            "incompatibilities": [
+                {
+                    "versions": [
+                        "*"
+                    ],
+                    "reason": "Caused issues with the server hosting the status page."
+                }
+            ]
+        },
+        {
+            "setting": "FreeRobloxPlusThemesEnabledv3",
+            "incompatibilities": [
+                {
+                    "versions": "*",
+                    "reason": "Roblox broke saving themes on their servers."
+                }
+            ]
+        },
+        {
+            "setting": "displayAppThemeUserProfile",
+            "incompatibilities": [
+                {
+                    "versions": "*",
+                    "reason": "Disabled because of Free Roblox Plus Themes having issues due to Roblox breaking theme saving on their own servers."
+                }
+            ]
+        }
+    ],
+    "quick": [
+        "test"
+    ]
 }
