@@ -260,7 +260,7 @@
     "link": "https://www.rovalra.com/berts/static/point.webp",
     "category": "Misc",
     "artistId": 4866259395,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 114100583716775
   },
@@ -271,7 +271,7 @@
     "link": "https://www.rovalra.com/berts/static/stupid.webp",
     "category": "Misc",
     "artistId": 4866259395,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 136174795556128
   },
@@ -282,8 +282,41 @@
     "link": "https://www.rovalra.com/berts/static/ipad_in_snow_meow.webp",
     "category": "Cats",
     "artistId": 4866259395,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 99086447257205
+  },
+  {
+    "id": 28,
+    "value": "ModernApplication",
+    "label": "Modern Application",
+    "link": "https://www.rovalra.com/berts/static/ModernApplication.webp",
+    "category": "Applications",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 132896313807974
+  },
+  {
+    "id": 29,
+    "value": "OldApplication",
+    "label": "Old Application",
+    "link": "https://www.rovalra.com/berts/static/OldApplication.webp",
+    "category": "Applications",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 101717433662951
+  },
+  {
+    "id": 30,
+    "value": "UncApplication",
+    "label": "Unc Application",
+    "link": "https://www.rovalra.com/berts/static/UncApplication.webp",
+    "category": "Applications",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 72292373730220
   }
 ]
