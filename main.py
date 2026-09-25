@@ -55,7 +55,13 @@ def update_features_config(tag_name):
 
         new_content = clean_content.replace(export_marker, "var featuresData =", 1)
 
-        mock_definitions = "\n".join([f"var {m} = null;" for m in sorted(set(mocks))])
+
+        mock_definitions = "\n".join(
+            f"var {m} = function () {{ return null; }};"
+            if m == "getTranslationProgress"
+            else f"var {m} = null;"
+            for m in sorted(set(mocks))
+        )
         mock_definitions += "\nvar chrome = { runtime: { getManifest: function () { return { version: 'website' }; } } };"
         new_content = f"// Automatically mocked imports and extension APIs for website compatibility\n{mock_definitions}\n\n{new_content}"
 
@@ -115,7 +121,7 @@ def update_changelogs():
             pass
 
     url = f"https://api.github.com/repos/NotValra/RoValra/releases"
-    headers = {"authentication": f"Bearer {os.getenv("GH_TOKEN")}"}
+    headers = {"Authorization": f"Bearer {os.getenv('GH_TOKEN')}"}
     print(f"Fetching releases from {url}...")
 
     response = requests.get(url, headers=headers)
