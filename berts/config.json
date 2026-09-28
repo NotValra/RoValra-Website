@@ -318,5 +318,16 @@
     "isNew": true,
     "isFree": false,
     "assetId": 72292373730220
+  },
+    {
+    "id": 31,
+    "value": "Halloween",
+    "label": "Halloween",
+    "link": "https://www.rovalra.com/berts/static/halloween.webp",
+    "category": "Halloween",
+    "artistId": 48255812,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 118551981287846
   }
 ]
