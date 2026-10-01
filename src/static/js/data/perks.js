@@ -25,6 +25,6 @@ export const PERKS = [
         icon: 'fa-solid fa-sliders',
         title: 'Fully configurable',
         text: 'Any feature can be turned off from the settings page.',
-        visual: { type: 'toggles', items: ['Quick Play', 'Streamer mode'] },
+        visual: { type: 'toggles', items: ['Quick Play', { label: 'Streamer mode', robux: '12,345' }] },
     },
 ];

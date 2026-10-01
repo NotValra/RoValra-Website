@@ -6,6 +6,31 @@ import { openFeatureDialog } from './feature-dialog.js';
 const COLLAPSED_COUNT = 8;
 const ALL = 'all';
 
+function trackChipOverflow(chips) {
+    const update = () => {
+        const max = chips.scrollWidth - chips.clientWidth;
+        chips.classList.toggle('can-scroll-start', chips.scrollLeft > 1);
+        chips.classList.toggle('can-scroll-end', chips.scrollLeft < max - 1);
+    };
+
+    chips.addEventListener('scroll', update, { passive: true });
+    new ResizeObserver(update).observe(chips);
+    document.fonts?.ready.then(update);
+
+    chips.addEventListener('wheel', (event) => {
+        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+        const max = chips.scrollWidth - chips.clientWidth;
+        if ((event.deltaY < 0 && chips.scrollLeft <= 0) || (event.deltaY > 0 && chips.scrollLeft >= max)) return;
+        event.preventDefault();
+        chips.scrollLeft += event.deltaY;
+        update();
+    }, { passive: false });
+
+    chips.addEventListener('focusin', (event) => {
+        event.target.closest('.chip')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    });
+}
+
 export function mountFeatureBrowser(root) {
     if (!root) return;
 
@@ -27,6 +52,7 @@ export function mountFeatureBrowser(root) {
 
     renderChips();
     render();
+    trackChipOverflow(ui.chips);
 
     ui.chips.addEventListener('click', (event) => {
         const chip = event.target.closest('[data-category]');

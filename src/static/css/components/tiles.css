@@ -19,6 +19,18 @@
     min-width: 0;
     flex: 1 1 420px;
     padding: 2px;
+    --fade-start: 0px;
+    --fade-end: 0px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--fade-start), #000 calc(100% - var(--fade-end)), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 var(--fade-start), #000 calc(100% - var(--fade-end)), transparent);
+}
+
+.chips.can-scroll-start {
+    --fade-start: 48px;
+}
+
+.chips.can-scroll-end {
+    --fade-end: 48px;
 }
 
 .chips::-webkit-scrollbar {
