@@ -3,7 +3,6 @@ import { LINKS } from '../core/config.js';
 const link = (href, text) => `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
 const DISCORD_FEEDBACK = 'https://discord.gg/GHd5cSKJRk';
 
-/* `answer` is trusted HTML authored here. Order matters: ids are faq1, faq2, ... */
 export const FAQ_ITEMS = [
     { icon: 'fas fa-shield-alt', question: 'Is this extension malicious?', answer: `No. But don't just take my word for it, read the ${link(LINKS.github, 'source code')} yourself.` },
     { icon: 'fab fa-firefox-browser', question: 'Does this extension support Firefox?', answer: 'No, but it might be coming at some point. Any extension on the Firefox Store claiming to be RoValra is not official and are ports made by the community.' },

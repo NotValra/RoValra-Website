@@ -1,4 +1,3 @@
-/* Links and IDs shared across every page. Change them here, not in markup. */
 export const CHROME_EXTENSION_ID = 'njcickgebhnpgmoodjdgohkclfplejli';
 
 export const LINKS = Object.freeze({

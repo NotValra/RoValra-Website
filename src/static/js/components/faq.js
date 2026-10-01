@@ -1,7 +1,3 @@
-/*
- * FAQ list built on <details>. Only one item stays open at a time, and the
- * open item is mirrored to the URL as #support_faqN so answers can be linked.
- */
 const HASH_PREFIX = '#support_';
 
 export function renderFaq(root, items) {
@@ -33,7 +29,6 @@ function openFromHash(root) {
     if (!target) return;
 
     target.open = true;
-    // Wait for images above to lay out, otherwise the scroll lands short.
     const scroll = () => target.scrollIntoView({ block: 'start', behavior: 'instant' });
     if (document.readyState === 'complete') requestAnimationFrame(scroll);
     else window.addEventListener('load', scroll, { once: true });

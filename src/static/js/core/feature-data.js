@@ -1,9 +1,3 @@
-/*
- * Adapter over `featuresData`, the global generated from the extension's
- * settingConfig.js by main.py (static/js/features.js). Everything else reads
- * features through here so the raw config shape only matters in one file.
- */
-
 const EXCLUDED_FROM_LIST = new Set(['Developer', 'FunStuff']);
 const PRIORITY_KEYS = ['SaveLotsRobuxEnabled', 'PreferredRegionEnabled', 'privateGameDetectionEnabled'];
 
@@ -25,7 +19,7 @@ const CATEGORY_ICONS = {
 };
 const DEFAULT_ICON = 'fa-solid fa-puzzle-piece';
 
-const raw = () => (typeof featuresData !== 'undefined' ? featuresData : null); // eslint-disable-line no-undef
+const raw = () => (typeof featuresData !== 'undefined' ? featuresData : null);
 
 const isVisible = (setting) => setting && !setting.deprecated && !setting.hidden;
 const firstOf = (value) => (Array.isArray(value) ? value[0] : value) || '';
@@ -51,7 +45,6 @@ function toFeature(key, setting, category) {
     };
 }
 
-/** Categories that are shown in the public feature list, each with its visible features. */
 export function getCategories() {
     const data = raw();
     if (!data) return [];
@@ -68,14 +61,12 @@ export function getCategories() {
         .filter((category) => category.features.length > 0);
 }
 
-/** All listed features, flagship ones first. */
 export function getFeatures(categories = getCategories()) {
     const all = categories.flatMap((category) => category.features);
     const priority = PRIORITY_KEYS.map((key) => all.find((f) => f.key === key)).filter(Boolean);
     return [...priority, ...all.filter((f) => !PRIORITY_KEYS.includes(f.key))];
 }
 
-/** Headline feature count (everything except developer-only settings). */
 export function getFeatureCount() {
     const data = raw();
     if (!data) return null;

@@ -2,8 +2,8 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 920px;
-    margin: 80px auto 0;
+    max-width: 980px;
+    margin: clamp(32px, 5vh, 64px) auto 0;
     padding: 28px 12px;
     border-radius: var(--radius-xl);
     background: var(--surface-1);

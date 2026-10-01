@@ -47,7 +47,6 @@
     font-size: 14px;
 }
 
-/* The glass "Install" button that wraps install-button-icon.svg. */
 .btn-install {
     position: relative;
     display: inline-flex;
@@ -87,8 +86,8 @@
 }
 
 .btn-install--lg {
-    width: 182px;
-    height: 56px;
+    width: 228px;
+    height: 70px;
     border-radius: var(--radius-pill);
 }
 
@@ -97,10 +96,9 @@
 }
 
 .btn-install--lg img {
-    width: 132px;
+    width: 166px;
 }
 
-/* Rainbow bloom behind the large install button. */
 .install-glow {
     position: relative;
     display: inline-flex;

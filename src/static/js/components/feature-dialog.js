@@ -25,7 +25,6 @@ function ensureDialog() {
 
     document.body.append(dialog);
     dialog.querySelector('.feature-dialog__close').addEventListener('click', () => dialog.close());
-    // Clicking the backdrop (the dialog element itself, outside the inner box) closes it.
     dialog.addEventListener('click', (event) => event.target === dialog && dialog.close());
     return dialog;
 }

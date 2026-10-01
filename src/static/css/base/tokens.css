@@ -1,43 +1,35 @@
-/* Design tokens: every color, radius, and spacing value the site uses lives here. */
 :root {
     color-scheme: dark;
 
-    /* Surfaces */
     --bg: #030303;
     --surface-1: rgba(255, 255, 255, 0.04);
     --surface-2: rgba(255, 255, 255, 0.06);
     --surface-3: rgba(255, 255, 255, 0.1);
     --surface-solid: #0c0c0c;
 
-    /* Text */
     --text: #ffffff;
     --text-2: rgba(255, 255, 255, 0.7);
     --text-3: rgba(255, 255, 255, 0.5);
     --link: #7bf0ff;
     --link-hover: #a1f5ff;
 
-    /* Lines */
     --line: rgba(255, 255, 255, 0.08);
     --line-strong: rgba(255, 255, 255, 0.14);
 
-    /* Brand */
     --brand-gradient: linear-gradient(135deg, #FF0000 0%, #FF6200 20.5%, #FFD900 47%, #00FFFF 73%, #A200FF 100%);
-    --brand-gradient-text: linear-gradient(90deg, #FF4D4D 0%, #FF8A3D 22%, #FFD900 45%, #00FFFF 72%, #B84DFF 100%);
+    --brand-gradient-text: linear-gradient(90deg, #FF6C6C 0%, #FFA268 20.5%, #FFE96B 47%, #6BFFFF 73%, #C869FF 100%);
     --glass-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     --glass-inset: inset 0 0 13.8px rgba(255, 255, 255, 0.11);
 
-    /* Type */
     --font-body: 'BuilderSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --font-display: 'builderExtended-bold', 'BuilderSans', sans-serif;
 
-    /* Shape */
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
     --radius-xl: 24px;
     --radius-pill: 999px;
 
-    /* Layout */
     --container: 1120px;
     --gutter: 24px;
     --nav-height: 64px;

@@ -8,7 +8,6 @@ async function badgeLabel(kind, pattern) {
     return svg.match(pattern)?.[1] ?? null;
 }
 
-/** Fills [data-stat] elements with live Chrome Web Store numbers; the HTML holds fallbacks. */
 export async function loadStoreStats(root = document) {
     const set = (name, value) => {
         const el = root.querySelector(`[data-stat="${name}"]`);
@@ -26,7 +25,6 @@ export async function loadStoreStats(root = document) {
     if (users.value) set('users', `${users.value}+`);
 }
 
-/** Counts a number up from zero when it scrolls into view. */
 export function countUp(el, target, { suffix = '', duration = 1400 } = {}) {
     if (!el || !Number.isFinite(target)) return;
 
@@ -37,14 +35,17 @@ export function countUp(el, target, { suffix = '', duration = 1400 } = {}) {
         if (!entry.isIntersecting) return;
         observer.disconnect();
 
+        let done = false;
         const start = performance.now();
         const tick = (now) => {
+            if (done) return;
             const t = Math.min((now - start) / duration, 1);
             const eased = 1 - Math.pow(1 - t, 3);
             el.textContent = `${Math.round(target * eased)}${suffix}`;
             if (t < 1) requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
-    });
+        setTimeout(() => { done = true; finish(); }, duration + 100);
+    }, { rootMargin: '0px 0px 15% 0px' });
     observer.observe(el);
 }

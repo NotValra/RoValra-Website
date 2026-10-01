@@ -37,8 +37,9 @@
     font-size: 1.1rem;
 }
 
-/* Rainbow text used for the emphasised word in headings. */
 .accent {
+    position: relative;
+    display: inline-block;
     background: var(--brand-gradient-text);
     -webkit-background-clip: text;
     background-clip: text;
@@ -46,7 +47,30 @@
     color: transparent;
 }
 
-/* Soft brand light behind a block. Put it inside a positioned parent. */
+.accent::before {
+    content: "";
+    position: absolute;
+    inset: 10% -4%;
+    z-index: -1;
+    border-radius: 999px;
+    background: var(--brand-gradient-text);
+    filter: blur(28px);
+    opacity: 0.3;
+    pointer-events: none;
+    animation: accent-pulse 4s infinite alternate ease-in-out;
+}
+
+@keyframes accent-pulse {
+    from {
+        opacity: 0.2;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 0.45;
+        transform: scale(1.08);
+    }
+}
+
 .glow {
     position: absolute;
     left: 50%;
@@ -62,7 +86,6 @@
     z-index: -1;
 }
 
-/* Scroll reveal: elements start hidden only once JS has marked the page ready. */
 .js .reveal {
     opacity: 0;
     transform: translateY(18px);

@@ -19,21 +19,14 @@
     justify-content: space-between;
     gap: 1rem;
     padding: 0 8px 0 18px;
-    border: 1px solid transparent;
+    border: 1px solid var(--line);
     border-radius: var(--radius-pill);
-    transition: background 0.4s var(--ease-out), border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
-}
-
-.site-nav.is-scrolled .site-nav__bar,
-.site-nav.is-open .site-nav__bar {
     background: rgba(255, 255, 255, 0.06);
-    border-color: var(--line);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Brand glow behind the bar once it detaches from the page. */
 .site-nav__bar::after {
     content: "";
     position: absolute;
@@ -42,11 +35,6 @@
     border-radius: inherit;
     background: var(--brand-gradient);
     filter: blur(18px);
-    opacity: 0;
-    transition: opacity 0.4s var(--ease-out);
-}
-
-.site-nav.is-scrolled .site-nav__bar::after {
     opacity: 0.18;
 }
 

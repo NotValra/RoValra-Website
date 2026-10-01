@@ -6,10 +6,6 @@ import { openFeatureDialog } from './feature-dialog.js';
 const COLLAPSED_COUNT = 8;
 const ALL = 'all';
 
-/**
- * Searchable, filterable grid of every feature from featuresData.
- * Markup contract: root contains [data-chips], [data-search], [data-grid], [data-more].
- */
 export function mountFeatureBrowser(root) {
     if (!root) return;
 
@@ -89,7 +85,6 @@ export function mountFeatureBrowser(root) {
         if (!list.length) {
             ui.grid.innerHTML = '<p class="tile-empty">No features match that search.</p>';
         } else if (state.expanded && !filtering) {
-            // Full, unfiltered list reads best grouped by category.
             let index = 0;
             ui.grid.innerHTML = categories.map((c) =>
                 `<h3 class="tile-group-title">${escapeHtml(c.title)}</h3>${c.features.map((f) => tile(f, index++)).join('')}`,

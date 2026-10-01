@@ -1,10 +1,7 @@
-// Automatically mocked imports for website compatibility
 var DEFAULT_BACKGROUND_IMAGE = null;
 var ROBUX_FIAT_ESTIMATE_DEFAULT_GRADIENT = null;
 var TRANSACTION_FIAT_CURRENCY_OPTIONS = null;
 var TRANSACTION_FIAT_RATE_OPTIONS = null;
-
-// Settings config (not developer settings)
 
 var featuresData = {
     Marketplace: {

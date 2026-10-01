@@ -1,3 +1,4 @@
+import { mountCarousel } from '../components/carousel.js';
 import { mountFeatureBrowser } from '../components/feature-browser.js';
 import { renderFaq } from '../components/faq.js';
 import { mountLayout } from '../components/layout.js';
@@ -11,6 +12,7 @@ import { PERKS } from '../data/perks.js';
 import { IMAGE_CREDIT, SHOWCASE_ITEMS } from '../data/showcase.js';
 
 onReady(() => {
+    mountCarousel(document.querySelector('[data-carousel]'), SHOWCASE_ITEMS);
     renderShowcase(document.querySelector('[data-showcase]'), SHOWCASE_ITEMS, IMAGE_CREDIT);
     renderPerks(document.querySelector('[data-perks]'), PERKS);
     renderFaq(document.querySelector('[data-faq]'), FAQ_ITEMS);

@@ -55,8 +55,4 @@ export function mountNav() {
     toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
     nav.querySelectorAll('.site-nav__links a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
     document.addEventListener('keydown', (event) => event.key === 'Escape' && setOpen(false));
-
-    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
 }

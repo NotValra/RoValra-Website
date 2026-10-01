@@ -1,30 +1,29 @@
-/* The large image cards in the "Features" section. */
 export const SHOWCASE_ITEMS = [
     {
         kicker: 'Region selector',
-        title: 'Pick the server that suits you.',
-        description: 'See every server on a globe, sort and filter the server list by players, version and uptime, and join the region you want.',
+        title: 'Choose your server region',
+        description: 'View servers on an interactive globe, filter the server list by player count, version and uptime, and join a server in the region of your choice.',
         image: '/images/regionSelector.png',
         alt: 'RoValra server information and region selector',
     },
     {
         kicker: 'Save Robux',
-        title: 'Keep more Robux on every purchase.',
-        description: 'Buy catalog items through an experience to save Robux, with a summary that shows exactly how much you keep before you buy.',
+        title: 'Save Robux on catalog purchases',
+        description: 'Purchase catalog items through an experience to lower the cost. A purchase summary shows exactly how much you save before you confirm.',
         image: '/images/saveRobux.png',
         alt: 'RoValra showing a purchase with Robux savings',
     },
     {
         kicker: 'Quick Play & preferred regions',
-        title: 'Straight into the game.',
-        description: 'Join private servers right from the home page, and set a preferred region so you always land there.',
+        title: 'Join games faster',
+        description: 'Join private servers directly from the home page, and set a preferred region so you always join servers there.',
         image: '/images/QuickPlay.png',
         alt: 'RoValra Quick Play and preferred regions tools',
     },
     {
         kicker: 'Hidden experiences',
-        title: 'See what profiles are hiding.',
-        description: 'View the experiences hidden from the public on community and user profiles.',
+        title: 'View hidden experiences',
+        description: 'See experiences that are hidden from public view on user and community profiles.',
         image: '/images/hiddenGames.png',
         alt: 'RoValra showing hidden Roblox experiences',
     },

@@ -1,9 +1,3 @@
-/*
- * Renders a legal markdown document (privacy policy, terms of use).
- * The page's <main> carries data-doc="<markdown url>" and optional data-fallback.
- * Sections in the markdown are marked with `<!-- section:id:icon classes -->`
- * followed by a `## Title`.
- */
 import { mountLayout } from '../components/layout.js';
 import { initReveal } from '../components/reveal.js';
 import { escapeHtml, onReady } from '../core/dom.js';

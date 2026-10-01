@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--bg);
+    background: transparent;
     color: var(--text);
     font-family: var(--font-body);
     font-size: 16px;

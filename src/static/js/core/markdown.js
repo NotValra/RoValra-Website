@@ -3,11 +3,6 @@ import { escapeHtml } from './dom.js';
 
 const SAFE_URL = /^(https?:|mailto:|\/|#)/i;
 
-/**
- * Renders the tiny markdown subset used in feature descriptions:
- * `**bold**`, `[text](url)` and `{{ text key }}` placeholders.
- * Input is escaped first, so it is safe for innerHTML.
- */
 export function inlineMarkdown(text, { links = true } = {}) {
     return escapeHtml(text)
         .replace(/\{\{\s*([\s\S]*?)\s+\w+\s*\}\}/g, '$1')
@@ -18,7 +13,6 @@ export function inlineMarkdown(text, { links = true } = {}) {
         });
 }
 
-/** Loads the full markdown renderer only on pages that need it. */
 let markedPromise;
 export function loadMarked() {
     markedPromise ??= import(MARKED_URL).then(({ marked }) => {
