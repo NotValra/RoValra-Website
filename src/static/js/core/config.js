@@ -2,6 +2,7 @@ export const CHROME_EXTENSION_ID = 'njcickgebhnpgmoodjdgohkclfplejli';
 
 export const LINKS = Object.freeze({
     chromeStore: `https://chromewebstore.google.com/detail/rovalra-roblox-improved/${CHROME_EXTENSION_ID}`,
+    install: '/install/',
     discord: 'https://discord.gg/aw6rEnFSjV',
     github: 'https://github.com/NotValra/RoValra',
     settings: 'https://www.roblox.com/my/account?rovalra=info#!/info',

@@ -3,8 +3,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     max-width: 980px;
-    margin: clamp(32px, 5vh, 64px) auto 0;
-    padding: 28px 12px;
+    margin: clamp(20px, 3vh, 40px) auto 0;
+    padding: 14px 12px;
     border-radius: var(--radius-xl);
     background: var(--surface-1);
     backdrop-filter: blur(15px);
@@ -30,7 +30,7 @@
 
 .stat__value {
     font-family: var(--font-display);
-    font-size: clamp(1.5rem, 3.4vw, 2rem);
+    font-size: clamp(1.25rem, 2.6vw, 1.6rem);
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
 }
@@ -42,15 +42,15 @@
 }
 
 .stat__label {
-    margin-top: 4px;
+    margin-top: 2px;
     color: var(--text-3);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 @media (max-width: 720px) {
     .stats {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 24px;
+        row-gap: 14px;
     }
 
     .stat:nth-child(3) {
