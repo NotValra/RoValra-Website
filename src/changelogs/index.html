@@ -1,135 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stay up to date with the latest updates and changes to RoValra">
+    <meta name="theme-color" content="#030303">
     <title>RoValra - Changelogs</title>
-    <link rel="preload" href="../static/fonts/BuilderSans-Regular-400.otf" as="font" type="font/otf" crossorigin="anonymous">
-    <link rel="preload" href="../static/fonts/builderExtended-bold-700_0.otf" as="font" type="font/otf" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="icon" href="../static/img/GILBERT.png">
 
+    <script>document.documentElement.classList.add('js');</script>
 
+    <link rel="preload" href="/static/fonts/builderExtended-bold-700_0.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/static/fonts/BuilderSans-Regular-400.otf" as="font" type="font/otf" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="icon" href="/static/img/GILBERT.png">
+
+    <script type="module" src="/static/js/pages/changelogs.js"></script>
 </head>
-<body class="scrolled">
 
-    <div class="background-wrapper">
-        <div class="logo-glow"></div>
-        <div class="logo-glow-inner"></div>
-        <div class="background" id="bg"></div>
-        <div class="gradient-mask"></div>
-    </div>
-    <main class="main-content" style="padding-top: 20px;">
-        <div class="container mt-5" style="max-width: 900px;">
-            <header class="text-center mb-5" style="padding-top: 1rem;">
-                <h1 class="display-4 mb-3" style="font-family: 'builderExtended-bold', sans-serif; background: rgb(255, 255, 255); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Changelogs</h1>
-                <p class="lead opacity-75">Stay up to date with the latest features and improvements.</p>
-            </header>
+<body>
+    <main class="page">
+        <header class="page-head container">
+            <div class="glow"></div>
+            <h1>Changelogs</h1>
+            <p>Stay up to date with the latest features and improvements.</p>
+        </header>
 
-            <div class="privacy-content">
-                <div id="changelog-container" class="pb-5">
-                    <div class="text-center opacity-50">
-                        <i class="fas fa-circle-notch fa-spin fa-2x mb-3"></i>
-                        <p>Fetching latest updates...</p>
-                    </div>
+        <div class="container container--narrow">
+            <div class="doc" data-changelog>
+                <div class="doc-status">
+                    <i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i>
+                    <p>Fetching latest updates...</p>
                 </div>
             </div>
         </div>
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="../static/js/shared-components.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
-
-    <script defer>
-        const config = { initialBlur: 5, blurDuration: 1, scaleStart: 1.14, scaleEnd: 1, scaleDuration: 2000 };
-        const bg = document.getElementById("bg");
-        if (bg) {
-            bg.style.filter = `blur(${config.initialBlur}px)`;
-            setTimeout(() => {
-                bg.style.transition = `filter ${config.blurDuration}s ease-out`;
-                bg.style.filter = `blur(0px)`;
-            }, 50);
-
-            let scaleStartTime = performance.now();
-            function updateScale() {
-                const elapsed = performance.now() - scaleStartTime;
-                const t = Math.min(elapsed / config.scaleDuration, 1);
-                const easeOut = 1 - Math.pow(1 - t, 3);
-                const currentScale = config.scaleStart + (config.scaleEnd - config.scaleStart) * easeOut;
-                bg.style.transform = `translate(-50%, -50%) rotate(-15deg) scale(${currentScale})`;
-                if (t < 1) requestAnimationFrame(updateScale);
-            }
-            updateScale();
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('changelog-container');
-            
-            marked.setOptions({
-                gfm: true,
-                breaks: true,
-                headerIds: true,
-                mangle: false
-            });
-
-            fetch('../static/json/changelogs.json')
-                .then(response => {
-                    if (!response.ok) throw new Error('Failed to load changelogs');
-                    return response.json();
-                })
-                .then(data => {
-                    container.innerHTML = ''; 
-                    
-                    data.releases.forEach(release => {
-                        const section = document.createElement('div');
-                        section.className = 'privacy-section ui-container';
-                        
-                        section.innerHTML = `
-                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4 mb-md-0" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.75rem;">
-                                <h3 style="margin: 0; border: none !important; padding: 0 !important; font-size: 2rem !important;">${release.name}</h3>
-                                
-                                <div class="d-flex gap-3 flex-wrap release-pills-container">
-                                    ${(release.chrome_url && release.chrome_release_date) ? `
-                                    <div class="install-container" style="margin: 0; padding: 0;">
-                                        <a href="${release.chrome_url}" target="_blank" rel="noopener noreferrer" class="fancy-cta-link" title="View on Web Store">
-                                            <button class="ui-pill ui-button inline-flex items-center justify-center" type="button">
-                                                <span>${release.chrome_release_date}</span>
-                                                <i class="fab fa-chrome ms-2" aria-hidden="true"></i>
-                                            </button>
-                                        </a>
-                                    </div>
-                                    ` : ''}
-                                    ${release.url ? `
-                                    <div class="install-container" style="margin: 0; padding: 0;">
-                                        <a href="${release.url}" target="_blank" rel="noopener noreferrer" class="fancy-cta-link" title="View on GitHub">
-                                            <button class="ui-pill ui-button inline-flex items-center justify-center" type="button">
-                                                <span>${release.published_date}</span>
-                                                <i class="fab fa-github ms-2" aria-hidden="true"></i>
-                                            </button>
-                                        </a>
-                                    </div>
-                                    ` : ''}
-                                </div>
-                            </div>
-                            <div class="privacy-section-glow"></div>
-                            <div class="privacy-section-glow-inner"></div>
-                            <div class="changelog-body section-content">${marked.parse(release.body)}</div>
-                        `;
-                        container.appendChild(section);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    container.innerHTML = '<div class="text-center opacity-50"><p>Unable to load changelogs at this time.</p></div>';
-                });
-        });
-    </script>
 </body>
+
 </html>

@@ -1,0 +1,90 @@
+.page {
+    flex: 1;
+    width: 100%;
+    padding-top: var(--nav-height);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.container--narrow {
+    max-width: 880px;
+}
+
+.section {
+    position: relative;
+    padding: 110px 0 40px;
+}
+
+.section-head {
+    max-width: 720px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.section-head h2 {
+    font-size: clamp(2rem, 4.4vw, 3rem);
+    letter-spacing: -0.02em;
+}
+
+.section-head p {
+    margin-top: 14px;
+    color: var(--text-2);
+    font-size: 1.1rem;
+}
+
+/* Rainbow text used for the emphasised word in headings. */
+.accent {
+    background: var(--brand-gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Soft brand light behind a block. Put it inside a positioned parent. */
+.glow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    background: var(--brand-gradient);
+    filter: blur(120px);
+    opacity: 0.1;
+    border-radius: 100px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Scroll reveal: elements start hidden only once JS has marked the page ready. */
+.js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding-top: 80px;
+    }
+
+    .section-head {
+        margin-bottom: 36px;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}

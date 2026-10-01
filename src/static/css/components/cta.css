@@ -1,0 +1,26 @@
+.cta {
+    position: relative;
+    padding: 120px 0 120px;
+    text-align: center;
+}
+
+.cta .glow {
+    width: 50%;
+    height: 60%;
+    opacity: 0.14;
+}
+
+.cta h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    letter-spacing: -0.02em;
+}
+
+.cta p {
+    margin-top: 14px;
+    color: var(--text-2);
+    font-size: 1.1rem;
+}
+
+.cta .hero__actions {
+    margin-top: 32px;
+}

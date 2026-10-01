@@ -2,144 +2,40 @@
 <html lang="en">
 
 <head>
-    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Privacy Policy for RoValra - Learn about our data practices, how we handle your information, and our commitment to protecting your privacy.">
+    <meta name="description" content="Privacy Policy for RoValra - Learn about our data practices, how we handle your information, and our commitment to protecting your privacy.">
+    <meta name="theme-color" content="#030303">
     <title>RoValra - Privacy Policy</title>
 
-    <link rel="preload" href="../static/fonts/BuilderSans-Regular-400.otf" as="font" type="font/otf"
-        crossorigin="anonymous">
-    <link rel="preload" href="../static/fonts/builderExtended-bold-700_0.otf" as="font" type="font/otf"
-        crossorigin="anonymous">
-    <link rel="icon" href="../static/img/GILBERT.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
 
-    <style>
-       
-    </style>
+    <link rel="preload" href="/static/fonts/builderExtended-bold-700_0.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/static/fonts/BuilderSans-Regular-400.otf" as="font" type="font/otf" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="icon" href="/static/img/GILBERT.png">
+
+    <script type="module" src="/static/js/pages/legal.js"></script>
 </head>
 
-<body class="scrolled">
-    <div class="background-wrapper">
-        <div class="logo-glow"></div>
-        <div class="logo-glow-inner"></div>
-        <div class="background" id="bg"></div>
-        <div class="gradient-mask"></div>
-    </div>
+<body>
+    <main class="page" data-doc="/static/privacy.md" data-fallback="https://github.com/NotValra/RoValra/blob/main/PrivacyPolicy.md">
+        <header class="page-head container">
+            <div class="glow"></div>
+            <h1>Privacy Policy</h1>
+            <p data-doc-date>How RoValra handles your data.</p>
+        </header>
 
-
-    <main class="main-content">
-        <div class="container mt-5" style="max-width: 900px;">
-            <div class="privacy-content faq-container ui-container">
-                <p>Loading privacy policy... If this persists, the content may be updating.</p>
+        <div class="container container--narrow">
+            <div class="doc" data-doc-body>
+                <div class="doc-status">
+                    <i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i>
+                    <p>Loading privacy policy...</p>
+                </div>
             </div>
         </div>
     </main>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="../static/js/shared-components.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
-
-    <script defer>
-        const config = { initialBlur: 5, blurDuration: 1, scaleStart: 1.14, scaleEnd: 1, scaleDuration: 2000 };
-        const bg = document.getElementById("bg");
-        if (bg) {
-            bg.style.filter = `blur(${config.initialBlur}px)`;
-            setTimeout(() => {
-                bg.style.transition = `filter ${config.blurDuration}s ease-out`;
-                bg.style.filter = `blur(0px)`;
-            }, 50);
-
-            let currentScale = config.scaleStart;
-            let scaleStartTime = performance.now();
-
-            function update() {
-                const now = performance.now();
-                const elapsed = now - scaleStartTime;
-                const t = Math.min(elapsed / config.scaleDuration, 1);
-                const easeOut = 1 - Math.pow(1 - t, 3);
-
-                currentScale = config.scaleStart + (config.scaleEnd - config.scaleStart) * easeOut;
-
-                bg.style.transform = `translate(-50%, -50%) rotate(-15deg) scale(${currentScale})`;
-                requestAnimationFrame(update);
-            }
-            update();
-        }
-    </script>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const copyrightYear = document.getElementById('copyright-year');
-            if (copyrightYear) {
-                copyrightYear.innerHTML = `© ${new Date().getFullYear()} RoValra. Not affiliated with Roblox Corporation.`;
-            }
-
-            const privacyContainer = document.querySelector('.privacy-content');
-            const policyUrl = '/static/privacy.md';
-
-            marked.setOptions({
-                gfm: true,
-                breaks: true,
-                headerIds: true,
-                mangle: false
-            });
-
-            fetch(policyUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    let effectiveDate = '';
-                    const dateMatch = text.match(/\*\*Effective Date:\*\* (.*)/);
-                    if (dateMatch) {
-                        effectiveDate = `<p class="effective-date">Last updated: ${dateMatch[1]}</p>`;
-                        text = text.replace(dateMatch[0], '');
-                    }
-
-                    const sectionParts = text.split(/<!-- section:(.*?):(.*?) -->/);
-                    
-                    let finalHtml = `<div class="privacy-section ui-container">${marked.parse(sectionParts[0])}</div>`;
-                    
-                    for (let i = 1; i < sectionParts.length; i += 3) {
-                        const id = sectionParts[i];
-                        const icon = sectionParts[i+1];
-                        const content = sectionParts[i+2];
-                        const trimmedContent = content.trim();
-                        
-                        const titleMatch = trimmedContent.match(/^##\s+(.*)/);
-                        const title = titleMatch ? titleMatch[1] : 'Section';
-                        const body = trimmedContent.replace(/^##\s+.*\n?/, '');
-
-                        finalHtml += `
-                            <div class="privacy-section ui-container" id="${id}">
-                                <h2><i class="${icon}"></i> ${title}</h2>
-                                <div class="section-content">
-                                    ${marked.parse(body)}
-                                </div>
-                            </div>
-                        `;
-                    }
-
-                    finalHtml = finalHtml.replace(/<p><strong>Privacy Policy/, `${effectiveDate}<p><strong>Privacy Policy`);
-
-                    privacyContainer.innerHTML = finalHtml;
-                })
-                .catch(error => {
-                    console.error('Error fetching privacy policy:', error);
-                    privacyContainer.innerHTML = '<p>Could not load the privacy policy. Please try again later or visit our <a href="https://github.com/NotValra/RoValra/blob/main/PrivacyPolicy.md" target="_blank" rel="noopener noreferrer">GitHub repository</a> to view it directly.</p>';
-                });
-        });
-    </script>
 </body>
 
 </html>
