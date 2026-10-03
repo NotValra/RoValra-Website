@@ -1,0 +1,113 @@
+.page {
+    flex: 1;
+    width: 100%;
+    padding-top: var(--nav-height);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.container--narrow {
+    max-width: 880px;
+}
+
+.section {
+    position: relative;
+    padding: 110px 0 40px;
+}
+
+.section-head {
+    max-width: 720px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.section-head h2 {
+    font-size: clamp(2rem, 4.4vw, 3rem);
+    letter-spacing: -0.02em;
+}
+
+.section-head p {
+    margin-top: 14px;
+    color: var(--text-2);
+    font-size: 1.1rem;
+}
+
+.accent {
+    position: relative;
+    display: inline-block;
+    background: var(--brand-gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.accent::before {
+    content: "";
+    position: absolute;
+    inset: 10% -4%;
+    z-index: -1;
+    border-radius: 999px;
+    background: var(--brand-gradient-text);
+    filter: blur(28px);
+    opacity: 0.3;
+    pointer-events: none;
+    animation: accent-pulse 4s infinite alternate ease-in-out;
+}
+
+@keyframes accent-pulse {
+    from {
+        opacity: 0.2;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 0.45;
+        transform: scale(1.08);
+    }
+}
+
+.glow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    background: var(--brand-gradient);
+    filter: blur(120px);
+    opacity: 0.1;
+    border-radius: 100px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding-top: 80px;
+    }
+
+    .section-head {
+        margin-bottom: 36px;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}

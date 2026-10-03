@@ -1,0 +1,209 @@
+.page-head {
+    position: relative;
+    padding: 72px 0 48px;
+    text-align: center;
+}
+
+.page-head .glow {
+    width: 60%;
+    height: 120%;
+    opacity: 0.12;
+}
+
+.page-head h1 {
+    font-size: clamp(2.2rem, 6vw, 3.75rem);
+    letter-spacing: -0.03em;
+}
+
+.page-head p {
+    margin-top: 14px;
+    color: var(--text-2);
+    font-size: 1.1rem;
+}
+
+.doc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 96px;
+}
+
+.doc-card {
+    position: relative;
+    padding: 28px 32px;
+    border-radius: var(--radius-lg);
+    background: var(--surface-1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: var(--glass-shadow);
+}
+
+.doc-card__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+}
+
+.doc-card__title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+}
+
+.doc-card__title i {
+    font-size: 0.8em;
+    color: var(--text-2);
+}
+
+.doc-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.doc-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 64px 0;
+    color: var(--text-3);
+    text-align: center;
+}
+
+.doc-status i {
+    font-size: 1.6rem;
+}
+
+.prose {
+    color: var(--text-2);
+    font-size: 1.02rem;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.prose > :first-child {
+    margin-top: 0;
+}
+
+.prose > :last-child {
+    margin-bottom: 0;
+}
+
+.prose p,
+.prose ul,
+.prose ol,
+.prose table,
+.prose pre {
+    margin: 0 0 1rem;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+    margin: 1.8rem 0 0.75rem;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 700;
+}
+
+.prose h2 {
+    font-size: 1.35rem;
+}
+
+.prose h3 {
+    font-size: 1.15rem;
+}
+
+.prose strong {
+    color: var(--text);
+}
+
+.prose ul,
+.prose ol {
+    padding-left: 1.4rem;
+}
+
+.prose li + li {
+    margin-top: 0.35rem;
+}
+
+.prose li::marker {
+    color: var(--text-3);
+}
+
+.prose code {
+    padding: 0.15em 0.4em;
+    border-radius: 6px;
+    background: var(--surface-2);
+    font-size: 0.9em;
+}
+
+.prose pre {
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    background: var(--surface-2);
+    overflow-x: auto;
+}
+
+.prose pre code {
+    padding: 0;
+    background: none;
+}
+
+.prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+}
+
+.prose table {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    display: block;
+    overflow-x: auto;
+}
+
+.prose th,
+.prose td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+.prose tr:last-child td {
+    border-bottom: 0;
+}
+
+.prose th {
+    background: var(--surface-2);
+    color: var(--text);
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+.effective-date {
+    color: var(--text-3);
+    font-style: italic;
+}
+
+@media (max-width: 640px) {
+    .page-head {
+        padding-top: 48px;
+    }
+
+    .doc-card {
+        padding: 22px 20px;
+    }
+}

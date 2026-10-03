@@ -1,0 +1,125 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    height: 44px;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-pill);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn--ghost {
+    background: var(--surface-2);
+    border-color: var(--line);
+    color: var(--text);
+}
+
+.btn--ghost:hover {
+    background: var(--surface-3);
+    border-color: var(--line-strong);
+    color: var(--text);
+}
+
+.btn--icon {
+    width: 44px;
+    padding: 0;
+    font-size: 1.15rem;
+}
+
+.btn--sm {
+    height: 34px;
+    padding: 0 14px;
+    font-size: 14px;
+}
+
+.btn-install {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: var(--glass-inset), 0 4px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.btn-install::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 0 13.8px rgba(255, 255, 255, 0.28);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-install:hover::before {
+    opacity: 1;
+}
+
+.btn-install img {
+    position: relative;
+    width: 76%;
+    height: auto;
+}
+
+.btn-install--lg {
+    width: 228px;
+    height: 70px;
+    border-radius: var(--radius-pill);
+}
+
+.btn-install--lg:hover {
+    transform: scale(1.06);
+}
+
+.btn-install--lg img {
+    width: 166px;
+}
+
+.install-glow {
+    position: relative;
+    display: inline-flex;
+}
+
+.install-glow::before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: -15%;
+    width: 130%;
+    height: 110%;
+    background: var(--brand-gradient);
+    filter: blur(40px);
+    opacity: 0.3;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.btn--icon.btn--sm {
+    width: 34px;
+    font-size: 0.95rem;
+}
