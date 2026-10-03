@@ -1,0 +1,61 @@
+:root[data-theme="classic"] {
+    --link: #ff5c5c;
+    --link-hover: #ff8a8a;
+
+    --brand-gradient: linear-gradient(135deg, #8f0000 0%, #e80000 35%, #ff2a2a 60%, #ffffff 100%);
+    --brand-gradient-text: linear-gradient(90deg, #ff4d4d 0%, #ffffff 50%, #ff4d4d 100%);
+
+    --font-body: 'Comic Sans MS', 'Comic Sans', 'Comic Neue', cursive;
+    --font-display: 'Comic Sans MS', 'Comic Sans', 'Comic Neue', cursive;
+}
+
+:root[data-theme="classic"] h1,
+:root[data-theme="classic"] h2,
+:root[data-theme="classic"] h3,
+:root[data-theme="classic"] .hero__brand span {
+    font-weight: 700;
+}
+
+:root[data-theme="classic"] .hero__wordmark,
+:root[data-theme="classic"] .site-nav__logo img,
+:root[data-theme="classic"] .site-footer__logo img {
+    content: url('/static/img/classic-logo-text.webp');
+}
+
+:root[data-theme="classic"] .hero__brand img {
+    content: url('/static/img/classic-roblox-logo.webp');
+    opacity: 1;
+}
+
+:root[data-theme="classic"] .site-nav__logo:hover img {
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25)) drop-shadow(0 0 24px rgba(232, 0, 0, 0.35));
+}
+
+:root[data-theme="classic"] .notice--beta {
+    box-shadow: inset 3px 0 0 #ffffff;
+}
+
+:root[data-theme="classic"] .notice--experimental {
+    box-shadow: inset 3px 0 0 #e80000;
+}
+
+.hero__wordmark[data-theme-toggle] {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hero__wordmark.is-switching {
+    animation: theme-pop 0.4s var(--ease-out);
+}
+
+@keyframes theme-pop {
+    40% {
+        transform: scale(0.94) rotate(-1.5deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero__wordmark.is-switching {
+        animation: none;
+    }
+}

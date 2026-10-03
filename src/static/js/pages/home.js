@@ -8,6 +8,7 @@ import { renderShowcase } from '../components/showcase.js';
 import { countUp, loadStoreStats } from '../components/stats.js';
 import { onReady } from '../core/dom.js';
 import { getFeatureCount } from '../core/feature-data.js';
+import { mountThemeToggle } from '../core/theme.js';
 import { CREATORS } from '../data/creators.js';
 import { FAQ_ITEMS } from '../data/faq.js';
 import { PERKS } from '../data/perks.js';
@@ -30,5 +31,6 @@ onReady(() => {
     }
 
     mountLayout();
+    mountThemeToggle(document.querySelector('.hero__wordmark'));
     loadStoreStats().catch((error) => console.error('Error loading stats', error));
 });

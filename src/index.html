@@ -58,7 +58,7 @@
     }
     </script>
 
-    <script>document.documentElement.classList.add('js');</script>
+    <script>document.documentElement.classList.add('js');try{if(localStorage.getItem('rovalra-theme')==='classic')document.documentElement.dataset.theme='classic'}catch(e){}</script>
 
     <link rel="preload" href="/static/img/logo-base.svg" as="image" type="image/svg+xml" fetchpriority="high">
     <link rel="preload" href="/static/fonts/builderExtended-bold-700_0.otf" as="font" type="font/otf" crossorigin>
