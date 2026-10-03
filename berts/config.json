@@ -319,7 +319,7 @@
     "isFree": false,
     "assetId": 72292373730220
   },
-    {
+  {
     "id": 31,
     "value": "Halloween",
     "label": "Halloween",
@@ -329,5 +329,16 @@
     "isNew": true,
     "isFree": false,
     "assetId": 118551981287846
+  },
+  {
+    "id": 32,
+    "value": "candycane",
+    "label": "Candy Cane",
+    "link": "https://www.rovalra.com/berts/static/candycane.webp",
+    "category": "Christmas",
+    "artistId": 747081921,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 109692908329880
   }
 ]
