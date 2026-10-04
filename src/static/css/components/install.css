@@ -24,12 +24,14 @@
 }
 
 .install__fallback {
+    display: flex;
+    width: fit-content;
     max-width: 100%;
-    margin-top: 28px;
+    margin: 28px auto 0;
     white-space: normal;
 }
 
-.install .ads {
+.install .ad-unit {
     margin-top: clamp(40px, 8vh, 72px);
 }
 

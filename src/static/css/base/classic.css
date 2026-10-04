@@ -19,12 +19,29 @@
 :root[data-theme="classic"] .hero__wordmark,
 :root[data-theme="classic"] .site-nav__logo img,
 :root[data-theme="classic"] .site-footer__logo img {
-    content: url('/static/img/classic-logo-text.webp');
+    content: url('/static/img/classic-logo-text.svg');
 }
 
 :root[data-theme="classic"] .hero__brand img {
-    content: url('/static/img/classic-roblox-logo.webp');
+    content: url('/static/img/classic-roblox-logo.svg');
     opacity: 1;
+}
+
+:root[data-theme="classic"] .site-nav__bar,
+:root[data-theme="classic"] .site-nav__links {
+    background: #2a0d0e url('/static/img/lazy.png') center / cover no-repeat;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+:root[data-theme="classic"] .site-nav__bar::after {
+    display: none;
+}
+
+@media (min-width: 861px) {
+    :root[data-theme="classic"] .site-nav__links {
+        background: none;
+    }
 }
 
 :root[data-theme="classic"] .site-nav__logo:hover img {
