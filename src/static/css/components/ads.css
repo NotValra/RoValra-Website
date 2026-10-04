@@ -1,7 +1,7 @@
 
 .ad-unit {
     vertical-align: top;
-    max-width: calc(50% - 16px);
+    max-width: 100%;
     margin: clamp(20px, 3vh, 32px) 8px 0;
     overflow: hidden;
     border-radius: var(--radius-md);
@@ -10,8 +10,6 @@
 @media (max-width: 720px) {
     .ad-unit {
         display: block !important;
-        width: 100% !important;
-        max-width: none;
-        margin: 12px 0 0;
+        margin: 12px auto 0;
     }
 }
