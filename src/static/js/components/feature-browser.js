@@ -96,7 +96,6 @@ export function mountFeatureBrowser(root) {
     function tile(feature, index) {
         return `
         <button class="tile" type="button" data-feature="${escapeHtml(feature.key)}" style="--tile-delay:${Math.min(index, 12) * 30}ms">
-            <span class="tile__icon"><i class="${feature.category.icon}" aria-hidden="true"></i></span>
             <h4 class="tile__title">${escapeHtml(feature.label)}</h4>
             <p class="tile__desc">${inlineMarkdown(feature.summary, { links: false })}</p>
         </button>`;

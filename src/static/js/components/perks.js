@@ -81,7 +81,6 @@ export function renderPerks(root, perks) {
         return `
         <article class="perk perk--${perk.layout || 'default'} reveal" data-reveal-delay="${index * 70}">
             <div class="perk__body">
-                <span class="perk__icon"><i class="${perk.icon}" aria-hidden="true"></i></span>
                 <h3>${escapeHtml(perk.title)}</h3>
                 <p>${escapeHtml(perk.text)}</p>
             </div>

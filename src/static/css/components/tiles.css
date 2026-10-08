@@ -151,7 +151,6 @@
 }
 
 .tile__title {
-    margin-top: 16px;
     font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 600;
