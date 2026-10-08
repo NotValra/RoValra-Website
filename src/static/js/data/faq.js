@@ -5,7 +5,7 @@ const DISCORD_FEEDBACK = 'https://discord.gg/GHd5cSKJRk';
 
 export const FAQ_ITEMS = [
     { icon: 'fas fa-shield-alt', question: 'Is this extension malicious?', answer: `No. But don't just take my word for it, read the ${link(LINKS.github, 'source code')} yourself.` },
-    { icon: 'fab fa-firefox-browser', question: 'Does this extension support Firefox?', answer: 'No, but it might be coming at some point. Any extension on the Firefox Store claiming to be RoValra is not official and are ports made by the community.' },
+    { icon: 'fab fa-firefox-browser', question: 'Does this extension support Firefox?', answer: 'Yes! You can install RoValra on FireFox here https://addons.mozilla.org/en-US/firefox/addon/rovalra-roblox-improved-/' },
     { icon: 'fas fa-ban', question: 'Is it bannable to use the extension?', answer: "No. This extension follows Roblox's ToS. Roblox is well aware of the extension existing, and will never ban you for using it. Keep in mind the extension is not endorsed by Roblox." },
     { icon: 'fas fa-dollar-sign', question: 'Is everything free?', answer: 'Yes, every non-cosmetic feature is free and will forever be free.' },
     { icon: 'fas fa-gift', question: 'Why was this extension made?', answer: 'It was made as a project to learn and to make quality of life free for everyone.' },
