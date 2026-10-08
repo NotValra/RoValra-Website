@@ -13,6 +13,7 @@ function pill(href, label, icon, title) {
 function releaseCard(release, marked) {
     const pills = [
         release.chrome_url && release.chrome_release_date ? pill(release.chrome_url, release.chrome_release_date, 'fab fa-chrome', 'View on Web Store') : '',
+        release.firefox_url && release.firefox_release_date ? pill(release.firefox_url, release.firefox_release_date, 'fab fa-firefox-browser', 'View on Firefox Add-ons') : '',
         release.url ? pill(release.url, release.published_date, 'fab fa-github', 'View on GitHub') : '',
     ].join('');
 

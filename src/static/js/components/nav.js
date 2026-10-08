@@ -30,7 +30,7 @@ function template() {
                 <li><a class="site-nav__link site-nav__link--icon" href="${LINKS.discord}" ${external} title="Discord"><i class="fab fa-discord" aria-hidden="true"></i><span class="label">Discord</span></a></li>
                 <li><a class="site-nav__link site-nav__link--icon" href="${LINKS.github}" ${external} title="GitHub"><i class="fab fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
                 <li class="site-nav__install">
-                    <a class="btn-install" href="${LINKS.install}" ${external} aria-label="Install RoValra">
+                    <a class="btn-install" href="${LINKS.chromeStore}" ${external} aria-label="Install RoValra" data-install>
                         <img src="${ASSETS.installButton}" alt="" width="136" height="30">
                     </a>
                 </li>

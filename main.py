@@ -9,6 +9,9 @@ from datetime import datetime, timezone
 OUTPUT_FILE = "out/static/json/changelogs.json"
 FEATURES_FILE = "out/static/js/features.js"
 CHROME_RELEASE_DATA = ".github/assets/chrome-release-data.json"
+FIREFOX_RELEASE_DATA = ".github/assets/firefox-release-data.json"
+FIREFOX_URL = "https://addons.mozilla.org/en-US/firefox/addon/rovalra-roblox-improved-/"
+FIREFOX_API_URL = "https://addons.mozilla.org/api/v5/addons/addon/rovalra-roblox-improved-/versions/"
 
 def report_feature_failure(reason, details=None):
     message = f"FEATURES FAILED: {reason}"
@@ -103,6 +106,57 @@ def update_features_config(tag_name):
         print(f"Successfully updated {FEATURES_FILE} based on tag {tag_name}.")
         return True
 
+def load_firefox_dates():
+    if not os.path.exists(FIREFOX_RELEASE_DATA):
+        return {}
+    try:
+        with open(FIREFOX_RELEASE_DATA, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except Exception:
+        return {}
+    return {
+        r["tag_name"]: r["firefox_release_date"]
+        for r in data.get("firefox_release_data", [])
+        if r.get("tag_name") and r.get("firefox_release_date")
+    }
+
+
+def fetch_firefox_versions():
+    print("Fetching Firefox Add-ons versions...")
+    versions = []
+    url = FIREFOX_API_URL
+    try:
+        while url:
+            response = requests.get(url, timeout=30)
+            response.raise_for_status()
+            page = response.json()
+            for entry in page.get("results", []):
+                version = entry.get("version")
+                timestamp = entry.get("reviewed") or (entry.get("file") or {}).get("created")
+                if not version:
+                    continue
+                release_date = None
+                if timestamp:
+                    try:
+                        dt = datetime.strptime(timestamp, "%Y-%m-%dT%H:%M:%SZ")
+                        release_date = f"{dt.strftime('%B')} {dt.day}, {dt.year}"
+                    except ValueError:
+                        pass
+                versions.append((version, release_date))
+            url = page.get("next")
+    except Exception as e:
+        print(f"Error fetching Firefox versions: {e}")
+        return []
+
+    print(f"Firefox Add-ons versions: {', '.join(v for v, _ in versions) or 'none'}")
+    return versions
+
+
+def store_version_matches(tag_name, store_version):
+    tag = tag_name.lstrip('v')
+    return store_version == tag or store_version.startswith(tag + ".")
+
+
 def update_changelogs():
     current_version = None
     existing_chrome_dates = {}
@@ -157,6 +211,14 @@ def update_changelogs():
         except Exception as e:
             print(f"Error fetching Chrome version: {e}")
 
+        firefox_versions = fetch_firefox_versions()
+        firefox_version = firefox_versions[0][0] if firefox_versions else None
+        existing_firefox_dates = load_firefox_dates()
+        is_firefox_latest = bool(
+            releases and firefox_version
+            and store_version_matches(releases[0].get("tag_name", ""), firefox_version)
+        )
+
         if releases and chrome_version:
             latest_tag_check = releases[0].get("tag_name", "").lstrip('v')
             if latest_tag_check == chrome_version:
@@ -164,6 +226,7 @@ def update_changelogs():
 
         processed_releases = []
         processed_chrome_releases = []
+        processed_firefox_releases = []
         for release in releases:
             published_date = release.get("published_at")
             if published_date:
@@ -181,6 +244,13 @@ def update_changelogs():
                 if tag_name.lstrip('v') == chrome_version:
                     c_date = chrome_updated_date
 
+            f_date = existing_firefox_dates.get(tag_name)
+            if tag_name:
+                for version, release_date in reversed(firefox_versions):
+                    if release_date and store_version_matches(tag_name, version):
+                        f_date = release_date
+                        break
+
             processed_releases.append({
                 "tag_name": tag_name,
                 "name": release.get("name"),
@@ -188,12 +258,19 @@ def update_changelogs():
                 "body": release.get("body"),
                 "url": release.get("html_url"),
                 "chrome_release_date": c_date,
-                "chrome_url": chrome_url
+                "chrome_url": chrome_url,
+                "firefox_release_date": f_date,
+                "firefox_url": FIREFOX_URL
             })
 
             processed_chrome_releases.append({
                 "tag_name": tag_name,
                 "chrome_release_date": c_date
+            })
+
+            processed_firefox_releases.append({
+                "tag_name": tag_name,
+                "firefox_release_date": f_date
             })
 
         final_data = {
@@ -202,6 +279,11 @@ def update_changelogs():
                 "url": chrome_url,
                 "version": chrome_version,
                 "is_latest": is_chrome_latest
+            },
+            "firefox_extension": {
+                "url": FIREFOX_URL,
+                "version": firefox_version,
+                "is_latest": is_firefox_latest
             },
             "error_message": None,
             "last_updated": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
@@ -218,6 +300,9 @@ def update_changelogs():
 
         with open(CHROME_RELEASE_DATA, 'w', encoding='utf-8') as f:
             json.dump(final_chrome_release_data, f, indent=4)
+
+        with open(FIREFOX_RELEASE_DATA, 'w', encoding='utf-8') as f:
+            json.dump({"firefox_release_data": processed_firefox_releases}, f, indent=4)
 
         print(f"Successfully updated {OUTPUT_FILE} with {len(processed_releases)} releases.")
     else:
