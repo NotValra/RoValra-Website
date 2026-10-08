@@ -1,0 +1,124 @@
+{
+    "firefox_release_data": [
+        {
+            "tag_name": "v2.6.15",
+            "firefox_release_date": "October 8, 2026"
+        },
+        {
+            "tag_name": "v2.6.14.1",
+            "firefox_release_date": "October 8, 2026"
+        },
+        {
+            "tag_name": "v2.6.14",
+            "firefox_release_date": "October 8, 2026"
+        },
+        {
+            "tag_name": "v2.6.13",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.12",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.11",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.9.10",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.9",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.8",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.7.3",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.7.2",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.7.1",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.7",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.6",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.5",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.4",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.3",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.2",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6.1",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.6",
+            "firefox_release_date": "October 8, 2026"
+        },
+        {
+            "tag_name": "v2.5.10.1",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.5.10",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.5.9.1",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.5.9",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.5.8.1",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.5.8",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.5.7.1",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.5.7",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.5.6",
+            "firefox_release_date": null
+        },
+        {
+            "tag_name": "v2.5.5",
+            "firefox_release_date": null
+        }
+    ]
+}
