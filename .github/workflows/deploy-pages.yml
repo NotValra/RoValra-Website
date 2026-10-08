@@ -41,7 +41,7 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install requests picosvg nanoemoji brotli fonttools lxml
+        run: pip install requests picosvg nanoemoji brotli fonttools lxml typing_extensions
 
       - name: Setup Misc
         run: |
