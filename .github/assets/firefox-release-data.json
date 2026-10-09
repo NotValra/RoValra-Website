@@ -1,6 +1,10 @@
 {
     "firefox_release_data": [
         {
+            "tag_name": "v2.6.16",
+            "firefox_release_date": "October 9, 2026"
+        },
+        {
             "tag_name": "v2.6.15",
             "firefox_release_date": "October 8, 2026"
         },
@@ -114,10 +118,6 @@
         },
         {
             "tag_name": "v2.5.6",
-            "firefox_release_date": null
-        },
-        {
-            "tag_name": "v2.5.5",
             "firefox_release_date": null
         }
     ]
