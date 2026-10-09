@@ -5,4 +5,5 @@ export const CREATORS = [
     { name: 'Bundun', href: 'https://www.youtube.com/@Bundun', avatar: '/static/img/creators/bundun.png' },
     { name: 'MyUsernamesThis', href: 'https://www.youtube.com/@MyUsernamesThis', avatar: '/static/img/creators/myusernamesthis.png' },
     { name: 'WeirdBlox', href: 'https://www.youtube.com/@WeirdBlox', avatar: '/static/img/creators/weirdblox.png' },
+    { name: 'SharkBlox', href: 'https://www.youtube.com/@SharkBlox', avatar: '/static/img/creators/sharkblox.jpg' },
 ];
