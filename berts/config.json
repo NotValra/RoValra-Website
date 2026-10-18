@@ -293,7 +293,7 @@
     "link": "https://www.rovalra.com/berts/static/ModernApplication.webp",
     "category": "Applications",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 132896313807974
   },
@@ -304,7 +304,7 @@
     "link": "https://www.rovalra.com/berts/static/OldApplication.webp",
     "category": "Applications",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 101717433662951
   },
@@ -315,7 +315,7 @@
     "link": "https://www.rovalra.com/berts/static/UncApplication.webp",
     "category": "Applications",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 72292373730220
   },
@@ -326,7 +326,7 @@
     "link": "https://www.rovalra.com/berts/static/halloween.webp",
     "category": "Halloween",
     "artistId": 48255812,
-    "isNew": true,
+    "isNew": false,
     "isFree": false,
     "assetId": 118551981287846
   },
@@ -362,5 +362,38 @@
     "isNew": true,
     "isFree": false,
     "assetId": 109692908329880
+  },
+  {
+    "id": 35,
+    "value": "StockPhotoOverlay1",
+    "label": "Stock Photo Overlay 1",
+    "link": "https://www.rovalra.com/berts/static/stockphoto_overlay_varient_1.webp",
+    "category": "Misc",
+    "artistId": 4866259395,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 108713393503918
+  },
+  {
+    "id": 36,
+    "value": "StockPhotoOverlay2",
+    "label": "Stock Photo Overlay 2",
+    "link": "https://www.rovalra.com/berts/static/stockphoto_overlay_varient_2.webp",
+    "category": "Misc",
+    "artistId": 4866259395,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 82999271159823
+  },
+  {
+    "id": 37,
+    "value": "StockPhotoOverlay3",
+    "label": "Stock Photo Overlay 3",
+    "link": "https://www.rovalra.com/berts/static/stockphoto_overlay_vareint_3.webp",
+    "category": "Misc",
+    "artistId": 4866259395,
+    "isNew": true,
+    "isFree": false,
+    "assetId": 118444240147278
   }
 ]
