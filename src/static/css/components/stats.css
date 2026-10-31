@@ -1,8 +1,8 @@
 .stats {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 980px;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1100px;
     margin: clamp(20px, 3vh, 40px) auto 0;
     padding: 14px 12px;
     border-radius: var(--radius-xl);
@@ -53,7 +53,12 @@
         row-gap: 14px;
     }
 
-    .stat:nth-child(3) {
+    .stat:nth-child(4),
+    .stat:nth-child(6) {
         border-left: 0;
+    }
+
+    .stat:last-child {
+        grid-column: 1 / -1;
     }
 }

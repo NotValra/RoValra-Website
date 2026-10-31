@@ -2,10 +2,17 @@ import { CHROME_EXTENSION_ID } from '../core/config.js';
 import { prefersReducedMotion } from '../core/dom.js';
 
 const SHIELDS = 'https://img.shields.io/chrome-web-store';
+const TOTAL_USERS_URL = 'https://apis.rovalra.com/v1/users/authed/total';
 
 async function badgeLabel(kind, pattern) {
     const svg = await fetch(`${SHIELDS}/${kind}/${CHROME_EXTENSION_ID}`).then((r) => r.text());
     return svg.match(pattern)?.[1] ?? null;
+}
+
+async function totalUsers() {
+    const { total } = await fetch(TOTAL_USERS_URL).then((r) => r.json());
+    if (!Number.isFinite(total)) return null;
+    return new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 }).format(total);
 }
 
 export async function loadStoreStats(root = document) {
@@ -14,15 +21,17 @@ export async function loadStoreStats(root = document) {
         if (el && value) el.textContent = value;
     };
 
-    const [rating, reviews, users] = await Promise.allSettled([
+    const [rating, reviews, users, total] = await Promise.allSettled([
         badgeLabel('rating', /aria-label="rating: ([0-9.]+)\/5"/),
         badgeLabel('rating-count', /aria-label="rating: ([^"]+) total"/),
         badgeLabel('users', /aria-label="users: ([^"]+)"/),
+        totalUsers(),
     ]);
 
     if (rating.value) set('rating', rating.value);
     if (reviews.value) set('reviews', `${reviews.value}+ reviews`);
     if (users.value) set('users', `${users.value}+`);
+    if (total.value) set('total-users', `${total.value}+`);
 }
 
 export function countUp(el, target, { suffix = '', duration = 1400 } = {}) {
