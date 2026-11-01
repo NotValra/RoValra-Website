@@ -1,0 +1,44 @@
+.contributors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.contributor a {
+    display: block;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--surface-3);
+    box-shadow: var(--glass-inset), 0 0 0 1px var(--line);
+    transition: transform 0.2s var(--ease-out), box-shadow 0.2s ease;
+}
+
+.contributor a:hover,
+.contributor a:focus-visible {
+    transform: translateY(-3px) scale(1.06);
+    box-shadow: var(--glass-inset), 0 0 0 2px var(--line-strong);
+}
+
+.contributor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+    .contributors {
+        gap: 10px;
+    }
+
+    .contributor a {
+        width: 46px;
+        height: 46px;
+    }
+}

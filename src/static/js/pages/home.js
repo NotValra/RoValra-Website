@@ -1,4 +1,5 @@
 import { mountCarousel } from '../components/carousel.js';
+import { loadContributors } from '../components/contributors.js';
 import { renderCreators } from '../components/creators.js';
 import { mountFeatureBrowser } from '../components/feature-browser.js';
 import { renderFaq } from '../components/faq.js';
@@ -33,4 +34,5 @@ onReady(() => {
     mountLayout();
     mountThemeToggle(document.querySelector('.hero__wordmark'));
     loadStoreStats().catch((error) => console.error('Error loading stats', error));
+    loadContributors(document.querySelector('[data-contributors]')).catch((error) => console.error('Error loading contributors', error));
 });
