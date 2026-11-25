@@ -1,6 +1,6 @@
 # RoValra Terms of Service & API Terms of Use
 
-**Last Updated:** September 16, 2026
+**Last Updated:** November 25, 2026
 
 By installing, accessing, or using any RoValra service, or by purchasing or making a donation for RoValra benefits, you agree to these Terms. If you do not agree, do not use the services. If you are using RoValra on behalf of another person or organization, you confirm that you have authority to accept these Terms for them.
 
@@ -76,8 +76,8 @@ These terms ensure a fair and sustainable environment for all users. By accessin
 ## Permitted Use
 
 You are free to use the RoValra API for your projects under the following conditions:
-*   **Attribution:** You must provide clear attribution to RoValra in your project. A simple "Powered by RoValra" with a link to our website (https://rovalra.com) is sufficient.
-*   **User-Agent:** We strongly recommend identifying your application by setting a custom User-Agent header for all API requests (e.g., `MyAwesomeProject/1.0`). Including a valid contact address is also recommended. This helps us identify traffic and contact you if needed.
+*   **Attribution:** You must provide clear attribution to RoValra in your project. A simple "Powered by RoValra" with a **proper** link to our website (https://rovalra.com) is sufficient.
+*   **User-Agent:** You must clearly identify your application by setting a custom User-Agent header for all API requests (e.g., `MyAwesomeProject/1.0`). Including a valid contact address is also recommended. This helps us identify traffic and contact you if needed.
 *   **Rate Limiting:** You must respect the API rate limits. Abusing the API may result in a temporary or permanent block.
 *   **Caching and Efficiency:** Our API responses are cached for a minimum of 60 seconds. You must implement your application to respect this by caching responses on your end and avoiding unnecessary or excessive requests.
 *   **Non-Commercial Use:** The API is provided for non-commercial use only. For commercial inquiries, please contact us to discuss a partnership.
