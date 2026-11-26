@@ -158,9 +158,18 @@
 
     .site-nav__install {
         margin: 6px 0 0;
+        width: 100%;
     }
 
     .site-nav__install .btn-install {
+        box-sizing: border-box;
         width: 100%;
+        min-width: 0;
+    }
+
+    .site-nav__install .btn-install img {
+        width: 166px;
+        max-width: 100%;
+        height: auto;
     }
 }
