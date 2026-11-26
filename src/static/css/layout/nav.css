@@ -109,10 +109,17 @@
 }
 
 @media (max-width: 860px) {
+    .site-nav__bar {
+        height: auto;
+        min-height: 52px;
+        padding: 6px 8px 6px 18px;
+    }
+
     .site-nav__toggle {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
     }
 
     .site-nav__links {
@@ -133,13 +140,16 @@
         opacity: 0;
         transform: translateY(-6px);
         pointer-events: none;
-        transition: opacity 0.25s ease, transform 0.25s var(--ease-out);
+        visibility: hidden;
+        transition: opacity 0.25s ease, transform 0.25s var(--ease-out), visibility 0s linear 0.25s;
     }
 
     .site-nav.is-open .site-nav__links {
         opacity: 1;
         transform: none;
         pointer-events: auto;
+        visibility: visible;
+        transition: opacity 0.25s ease, transform 0.25s var(--ease-out), visibility 0s;
     }
 
     .site-nav__link,
@@ -163,6 +173,8 @@
 
     .site-nav__install .btn-install {
         box-sizing: border-box;
+        display: flex;
+        justify-content: center;
         width: 100%;
         min-width: 0;
     }
