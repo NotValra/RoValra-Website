@@ -1,6 +1,6 @@
 **Privacy Policy for RoValra Chrome Extension**
 
-**Effective Date:** September 22, 2026
+**Effective Date:** November 26, 2026
 
 **Introduction**
 
@@ -76,7 +76,7 @@ RoValra uses your browser's local storage to remember your preferences and suppo
 The Extension may handle the following data for specific features:
 
 - **Location coordinates:** If a feature uses your location, RoValra may store your latitude and longitude in the Extension's local storage on your device. These coordinates are stored locally only and are not sent to RoValra servers or third parties by the Extension's location feature.
-- **Local Roblox API key:** RoValra may generate a Roblox API key for local use on your device. The key is created with **no permissions** and cannot perform actions on your Roblox account. It is used only to support Roblox APIs that require a key, is stored locally, and is not transmitted to RoValra servers or third parties.
+- **Local Roblox API key:** RoValra may generate a Roblox API key for local use on your device. The key is created with read inventory permissions and cannot perform actions on your Roblox account. It is used only to support Roblox APIs that require a key, is stored locally, and is not transmitted to RoValra servers or third parties.
 - **Optional Discord connection:** If you choose to connect your Discord account to RoValra to receive donator roles in RoValra's official Discord server, we may store your Discord user ID. We use it only to associate your Discord account with your RoValra donator status and assign or manage the applicable server role. Connecting Discord is optional; you can request removal of this association using the contact information below.
 - **Playtime tracking:** When playtime tracking is enabled, RoValra collects and stores information about your Roblox playtime on RoValra's servers so playtime features can display your playtime within RoValra. Playtime tracking can be disabled at any time; when disabled, RoValra stops collecting and storing playtime data for these features.
 
@@ -98,7 +98,7 @@ The Extension requests the following permissions to provide its features:
 - **`storage`:** Used to save Extension settings, cached data, location coordinates, and the local Roblox API key in the browser's Extension storage.
 - **`scripting`:** Used to inject the Extension's feature scripts into Roblox pages.
 
-The Extension's host access is limited to Roblox domains and Roblox APIs listed in its manifest. Its content scripts run on Roblox pages to provide the Extension's features. Optional permissions, including `webNavigation`, `contextMenus`, and `webRequest`, are requested only when a feature requires them.
+The Extension's host access is limited to Roblox domains and Roblox APIs listed in its manifest. Its content scripts run on Roblox pages to provide the Extension's features. Optional permissions, including `webNavigation`, `contextMenus`, `Cookies` and `webRequest`, are requested only when a feature requires them.
 
 The permissions and data practices described here are intended to match the Extension's Chrome Web Store listing and manifest. If a future version introduces a new permission or a materially different data practice, we will update this policy and the relevant store disclosures before or when that feature is introduced.
 
