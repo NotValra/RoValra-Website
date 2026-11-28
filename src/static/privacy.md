@@ -98,7 +98,7 @@ The Extension requests the following permissions to provide its features:
 - **`storage`:** Used to save Extension settings, cached data, location coordinates, and the local Roblox API key in the browser's Extension storage.
 - **`scripting`:** Used to inject the Extension's feature scripts into Roblox pages.
 
-The Extension's host access is limited to Roblox domains and Roblox APIs listed in its manifest. Its content scripts run on Roblox pages to provide the Extension's features. Optional permissions, including `webNavigation`, `contextMenus`, `Cookies` and `webRequest`, are requested only when a feature requires them.
+The Extension's host access is limited to Roblox domains and Roblox APIs listed in its manifest. Its content scripts run on Roblox pages to provide the Extension's features. Optional permissions, including `webNavigation`, `contextMenus`, `Cookies`, `Notifications` and `webRequest`, are requested only when a feature requires them.
 
 The permissions and data practices described here are intended to match the Extension's Chrome Web Store listing and manifest. If a future version introduces a new permission or a materially different data practice, we will update this policy and the relevant store disclosures before or when that feature is introduced.
 
